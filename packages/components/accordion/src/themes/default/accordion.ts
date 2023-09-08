@@ -18,6 +18,7 @@ const accordion = {
             baseAccordion.trigger.parent.base +
             " " +
             baseAccordion.trigger.parent.appearances[config.appearance],
+        content: baseAccordion.trigger.content,
         icon: baseAccordion.trigger.icon.base + " " + baseAccordion.trigger.icon.motion,
     },
     content:
