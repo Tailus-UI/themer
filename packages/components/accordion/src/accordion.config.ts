@@ -1,4 +1,4 @@
 export default {
-    appearance: "dark",
+    appearance: "both",
     rounded: "2xl",
 };

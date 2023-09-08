@@ -1,8 +1,8 @@
-import config from "./../../accordion.config";
+import config from "../../accordion.config";
 import * as baseAccordion from "./base";
 
 const item = {
-    base: `${baseAccordion.item} px-6 rounded-[--accordion-border-radius] border`,
+    base: `${baseAccordion.item} border-b border-gray-200 dark:border-gray-700`,
     appearances: {
         light: "border-gray-200 hover:border-gray-300",
         dark: "border-gray-800 hover:border-gray-700",
@@ -10,7 +10,7 @@ const item = {
     },
 };
 
-const outlinedVariant = {
+const accordion = {
     root: "space-y-4",
     item: item.base + " " + item.appearances[config.appearance],
     trigger: {
@@ -28,5 +28,5 @@ const outlinedVariant = {
         baseAccordion.content.appearances[config.appearance],
 };
 
-export default outlinedVariant;
-export { outlinedVariant };
+export default accordion;
+export { accordion };
