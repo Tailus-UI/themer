@@ -6,7 +6,7 @@ const root = {
     appearances: {
         light: "border-gray-400 focus:border-gray-600 active:ring-primary-600/10 data-[disabled]:border-gray-200 data-[disabled]:data-[state=checked]:border-gray-200 data-[disabled]:bg-gray-50",
         dark: "border-gray-700 ring-offset-gray-950 focus:border-white/50 focus:ring-primary-900/50 data-[disabled]:border-gray-900 data-[disabled]:data-[state=checked]:border-gray-800 data-[disabled]:bg-transparent data-[state=checked]:checked:border-gray-900 data-[state=checked]:focus:ring-primary-600 data-[state=checked]:focus:ring-offset-gray-950",
-        both: "dark:border-gray-600 dark:ring-offset-gray-950 dark:focus:border-white/50 dark:focus:ring-primary-900/50 dark:data-[disabled]:border-gray-900 dark:data-[disabled]:data-[state=checked]:border-gray-800 dark:data-[disabled]:bg-transparent dark:data-[state=checked]:checked:border-gray-900 dark:data-[state=checked]:focus:ring-primary-600 dark:data-[state=checked]:focus:ring-offset-gray-950",
+        both: "border-gray-400 focus:border-gray-600 active:ring-primary-600/10 data-[disabled]:border-gray-200 data-[disabled]:data-[state=checked]:border-gray-200 data-[disabled]:bg-gray-50 dark:border-gray-600 dark:ring-offset-gray-950 dark:focus:border-white/50 dark:focus:ring-primary-900/50 dark:data-[disabled]:border-gray-900 dark:data-[disabled]:data-[state=checked]:border-gray-800 dark:data-[disabled]:bg-transparent dark:data-[state=checked]:checked:border-gray-900 dark:data-[state=checked]:focus:ring-primary-600 dark:data-[state=checked]:focus:ring-offset-gray-950",
     },
 };
 

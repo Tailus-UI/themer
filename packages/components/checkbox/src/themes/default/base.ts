@@ -1,9 +1,9 @@
 const root = {
     base: "group peer relative flex h-[1.375rem] w-[1.375rem] appearance-none items-center justify-center rounded-md border outline-none transition duration-150 before:absolute before:inset-0 before:m-auto before:h-[1.125rem] before:w-[1.125rem] before:rounded-[4px] before:shadow-inner data-[state=checked]:before:border-t data-[state=checked]:before:bg-primary-600 data-[disabled]:before:hidden",
     appearances: {
-        light: "border-gray-300 bg-white before:border-transparent before:bg-white before:shadow-gray-950/[0.15] focus:border-gray-600/50 active:ring-[3px] active:ring-primary-600/10 data-[state=checked]:before:border-white/30",
-        dark: " border-gray-800 bg-transparent before:border before:bg-gray-900/95 before:shadow-gray-950/80 focus:border-white/30 active:ring-primary-400/20 data-[state=checked]:before:border-transparent data-[state=checked]:before:bg-primary-500",
-        both: "border-gray-300 bg-white before:border-transparent before:bg-white before:shadow-gray-950/[0.15] focus:border-gray-600/50 active:ring-[3px] active:ring-primary-600/10 data-[state=checked]:before:border-white/30 dark:border-gray-800 dark:bg-transparent dark:before:border dark:before:bg-gray-900/95 dark:before:shadow-gray-950/80 dark:focus:border-white/30 dark:active:ring-primary-400/20 dark:data-[state=checked]:before:border-transparent dark:data-[state=checked]:before:bg-primary-500",
+        light: "border-gray-400 bg-white before:border-transparent before:bg-white before:shadow-gray-950/[0.15] focus:border-gray-600/50 active:ring-[3px] active:ring-primary-600/10 data-[state=checked]:before:border-white/30",
+        dark: " border-gray-700 bg-transparent before:border before:bg-gray-900/95 before:shadow-gray-950/80 focus:border-white/30 active:ring-primary-400/20 data-[state=checked]:before:border-transparent data-[state=checked]:before:bg-primary-500",
+        both: "border-gray-400 bg-white before:border-transparent before:bg-white before:shadow-gray-950/[0.15] focus:border-gray-600/50 active:ring-[3px] active:ring-primary-600/10 data-[state=checked]:before:border-white/30 dark:border-gray-700 dark:bg-transparent dark:before:border dark:before:bg-gray-900/95 dark:before:shadow-gray-950/80 dark:focus:border-white/30 dark:active:ring-primary-400/20 dark:data-[state=checked]:before:border-transparent dark:data-[state=checked]:before:bg-primary-500",
     },
 };
 
