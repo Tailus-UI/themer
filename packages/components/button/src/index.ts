@@ -13,5 +13,10 @@ export { softIconButton } from "./themes/default/soft-variant/iconButton";
 export { softLeadingIconButton } from "./themes/default/soft-variant/leadingIconButton";
 export { softTrailingIconButton } from "./themes/default/soft-variant/trailingIconButton";
 
+export { ghostButton } from "./themes/default/ghost-variant/button";
+export { ghostIconButton } from "./themes/default/ghost-variant/iconButton";
+export { ghostLeadingIconButton } from "./themes/default/ghost-variant/leadingIconButton";
+export { ghostTrailingIconButton } from "./themes/default/ghost-variant/trailingIconButton";
+
 import button from "./themes/default/button";
 export default button;
