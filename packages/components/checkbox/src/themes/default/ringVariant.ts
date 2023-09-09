@@ -1,5 +1,5 @@
 import * as baseCheckbox from "./base";
-import themer from "./../../../../../tailus.config";
+import config from "./../../checkbox.config";
 
 const root = {
     base: "group peer relative flex h-5 w-5 appearance-none items-center justify-center rounded border  outline-none ring-0 transition duration-150 active:ring-[3px] data-[disabled]:border data-[state=checked]:border-0 data-[state=checked]:border-transparent data-[disabled]:data-[state=checked]:bg-transparent data-[state=checked]:bg-primary-600 data-[state=checked]:ring-primary-500 data-[state=checked]:focus:border-transparent data-[state=checked]:focus:ring-[1.5px] data-[state=checked]:focus:ring-offset-[1.5px]",
@@ -11,10 +11,10 @@ const root = {
 };
 
 const ringVariant = {
-    root: root.base + " " + root.appearances[themer.appearance],
-    label: baseCheckbox.label.base + " " + baseCheckbox.label.appearances[themer.appearance],
+    root: root.base + " " + root.appearances[config.appearance],
+    label: baseCheckbox.label.base + " " + baseCheckbox.label.appearances[config.appearance],
     indicator:
-        baseCheckbox.indicator.base + " " + baseCheckbox.indicator.appearances[themer.appearance],
+        baseCheckbox.indicator.base + " " + baseCheckbox.indicator.appearances[config.appearance],
 };
 
 export default ringVariant;
