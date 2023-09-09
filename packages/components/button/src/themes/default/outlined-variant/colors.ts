@@ -57,6 +57,7 @@ const colors = {
     warning: colorsVariants.warning[config.appearance],
     info: colorsVariants.info[config.appearance],
     neutral: colorsVariants.neutral[config.appearance],
+    gray: colorsVariants.gray[config.appearance],
 };
 
 export default colors;
