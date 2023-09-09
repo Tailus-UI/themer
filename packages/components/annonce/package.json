@@ -1,7 +1,7 @@
 {
-    "name": "@tailus/themer-accordion",
+    "name": "@tailus/themer-annonce",
     "version": "0.0.1",
-    "description": "Accordion themes",
+    "description": "Annonce themes",
     "exports": {
         ".": {
             "import": {

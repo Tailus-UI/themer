@@ -26,7 +26,7 @@
         "build": "npx tsc ./src/index.ts --outDir dist --declaration",
         "start": "nodemon run build --watch && node ./dist/theme.js"
     },
-    "author": "",
+    "author": "tailus.io",
     "license": "MIT",
     "dependencies": {
         "@types/node": "^20.5.9"
