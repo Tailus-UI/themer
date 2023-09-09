@@ -8,5 +8,10 @@ export { outlinedIconButton } from "./themes/default/outlined-variant/iconButton
 export { outlinedLeadingIconButton } from "./themes/default/outlined-variant/leadingIconButton";
 export { outlinedTrailingIconButton } from "./themes/default/outlined-variant/trailingIconButton";
 
+export { softButton } from "./themes/default/soft-variant/button";
+export { softIconButton } from "./themes/default/soft-variant/iconButton";
+export { softLeadingIconButton } from "./themes/default/soft-variant/leadingIconButton";
+export { softTrailingIconButton } from "./themes/default/soft-variant/trailingIconButton";
+
 import button from "./themes/default/button";
 export default button;
