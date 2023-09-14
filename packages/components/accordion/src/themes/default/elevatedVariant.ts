@@ -2,11 +2,11 @@ import config from "../../accordion.config";
 import * as baseAccordion from "./base";
 
 const item = {
-    base: `${baseAccordion.item} group/item px-6 data-[state=open]:rounded-[--accordion-border-radius] data-[state=open]:border-transparent data-[state=open]:shadow-xl`,
+    base: `${baseAccordion.item} group/item px-6 data-[state=open]:rounded-[--accordion-border-radius] data-[state=open]:border-transparent`,
     appearances: {
-        light: "data-[state=open]:shadow-gray-950/10",
-        dark: "data-[state=open]:bg-gray-900",
-        both: "data-[state=open]:shadow-gray-950/5 dark:data-[state=open]:bg-gray-900",
+        light: "data-[state=open]:card-shadow",
+        dark: "data-[state=open]:card-shadow",
+        both: "data-[state=open]:card-shadow dark:data-[state=open]:bg-[--card-dark-bg]",
     },
 };
 const parentAppearances = {
