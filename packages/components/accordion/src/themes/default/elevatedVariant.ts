@@ -10,9 +10,9 @@ const item = {
     },
 };
 const parentAppearances = {
-    light: "border-gray-200 data-[state=open]:border-transparent",
-    dark: "border-gray-800 data-[state=open]:border-transparent",
-    both: "border-gray-200 dark:border-gray-800 data-[state=open]:border-transparent dark:data-[state=open]:border-transparent",
+    light: "border-[--ui-light-border-color] data-[state=open]:border-transparent",
+    dark: "border-[--ui-dark-border-color] data-[state=open]:border-transparent",
+    both: "border-[--ui-light-border-color] dark:border-[--ui-dark-border-color] data-[state=open]:border-transparent dark:data-[state=open]:border-transparent",
 };
 const triggerParent = {
     base: baseAccordion.trigger.parent.base + " " + "border-b group-last/item:border-none",

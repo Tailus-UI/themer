@@ -2,11 +2,11 @@ import config from "./../../accordion.config";
 import * as baseAccordion from "./base";
 
 const item = {
-    base: `${baseAccordion.item} px-6 rounded-[--accordion-border-radius] border data-[state=open]:shadow-xl`,
+    base: `${baseAccordion.item} px-6 rounded-[--accordion-border-radius] border data-[state=open]:card-shadow`,
     appearances: {
-        light: "border-gray-200 hover:border-gray-300 data-[state=open]:shadow-gray-950/5",
-        dark: "border-gray-800 hover:border-gray-700 data-[state=open]:bg-gray-900",
-        both: "border-gray-200 hover:border-gray-300 dark:border-gray-800 dark:hover:border-gray-700 data-[state=open]:shadow-gray-950/5 dark:data-[state=open]:bg-gray-900",
+        light: "border-[--ui-light-border-color] hover:border-[--ui-light-border-hover-color]",
+        dark: "border-[--ui-dark-border-color] hover:border-[--ui-dark-border-hover-color] data-[state=open]:bg-[--card-dark-bg]",
+        both: "border-[--ui-light-border-color] hover:border-[--ui-light-border-hover-color] dark:border-[--ui-dark-border-color] dark:hover:border-[--ui-dark-border-hover-color] dark:data-[state=open]:bg-[--card-dark-bg]",
     },
 };
 

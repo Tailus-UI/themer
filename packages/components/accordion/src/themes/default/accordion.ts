@@ -2,11 +2,11 @@ import config from "../../accordion.config";
 import * as baseAccordion from "./base";
 
 const item = {
-    base: `${baseAccordion.item} border-b border-gray-200 dark:border-gray-700`,
+    base: `${baseAccordion.item} border-b`,
     appearances: {
-        light: "border-gray-200 hover:border-gray-300",
-        dark: "border-gray-800 hover:border-gray-700",
-        both: "border-gray-200 hover:border-gray-300 dark:border-gray-800 dark:hover:border-gray-700",
+        light: "border-[--ui-light-border-color] hover:border-[--ui-light-border-hover-color]",
+        dark: "border-[--ui-dark-border-color] hover:border-[--ui-dark-border-hover-color]",
+        both: "border-[--ui-light-border-color] hover:border-[--ui-light-border-hover-color] dark:border-[--ui-dark-border-color] dark:hover:border-[--ui-dark-border-hover-color]",
     },
 };
 
