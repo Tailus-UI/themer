@@ -4,9 +4,9 @@ import config from "./../../annonce.config";
 const root = {
     base: "border " + baseAnnonce.root,
     appearances: {
-        light: "border-gray-950/10 hover:border-gray-950/20",
-        dark: "border-white/10 hover:border-white/20",
-        both: "border-gray-950/10 hover:border-gray-950/20 dark:border-white/10 dark:hover:border-white/20",
+        light: "border-[--ui-light-border-color] hover:border-[--ui-light-border-hover-color]",
+        dark: "border-[--ui-dark-border-color] hover:border-[--ui-dark-border-hover-color]",
+        both: "border-[--ui-light-border-color] hover:border-[--ui-light-border-hover-color] dark:border-[--ui-dark-border-color] dark:hover:border-[--ui-dark-border-hover-color]",
     },
 };
 
