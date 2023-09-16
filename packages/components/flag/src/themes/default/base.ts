@@ -1,9 +1,9 @@
 const root = {
-    base: "relative flex max-w-md items-center gap-1 rounded-[--alert-border-radius] border px-4 py-2 feedback-shadow",
+    base: "relative w-full flex max-w-md items-center gap-1 rounded-[--flag-border-radius] border px-4 py-2 feedback-shadow",
     appearances: {
         light: "border-[--feedback-light-border-color] bg-white",
         dark: "border-[--feedback-dark-border-color] bg-[--feedback-dark-bg]",
-        both: "border-[--feedback-light-border-color] bg-white border-[--feedback-dark-border-color] bg-[--feedback-dark-bg]",
+        both: "border-[--feedback-light-border-color] bg-white dark:border-[--feedback-dark-border-color] dark:bg-[--feedback-dark-bg]",
     },
 };
 
