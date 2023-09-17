@@ -1,22 +1,22 @@
 export { button } from "./themes/default/button";
-export { iconButton } from "./themes/default/iconButton";
+export { iconButton } from "./themes/default/iconOnlyButton";
 export { leadingIconButton } from "./themes/default/leadingIconButton";
 export { trailingIconButton } from "./themes/default/trailingIconButton";
 
-export { outlinedButton } from "./themes/default/outlined-variant/button";
-export { outlinedIconButton } from "./themes/default/outlined-variant/iconButton";
-export { outlinedLeadingIconButton } from "./themes/default/outlined-variant/leadingIconButton";
-export { outlinedTrailingIconButton } from "./themes/default/outlined-variant/trailingIconButton";
+export { ghostButton } from "./themes/default/variants/ghost-variant";
+export { ghostIconButton } from "./themes/default/variants/ghost-variant";
+export { ghostLeadingIconButton } from "./themes/default/variants/ghost-variant";
+export { ghostTrailingIconButton } from "./themes/default/variants/ghost-variant";
 
-export { softButton } from "./themes/default/soft-variant/button";
-export { softIconButton } from "./themes/default/soft-variant/iconButton";
-export { softLeadingIconButton } from "./themes/default/soft-variant/leadingIconButton";
-export { softTrailingIconButton } from "./themes/default/soft-variant/trailingIconButton";
+export { outlinedButton } from "./themes/default/variants/outlined-variant";
+export { outlinedIconButton } from "./themes/default/variants/outlined-variant";
+export { outlinedLeadingIconButton } from "./themes/default/variants/outlined-variant";
+export { outlinedTrailingIconButton } from "./themes/default/variants/outlined-variant";
 
-export { ghostButton } from "./themes/default/ghost-variant/button";
-export { ghostIconButton } from "./themes/default/ghost-variant/iconButton";
-export { ghostLeadingIconButton } from "./themes/default/ghost-variant/leadingIconButton";
-export { ghostTrailingIconButton } from "./themes/default/ghost-variant/trailingIconButton";
+export { softButton } from "./themes/default/variants/soft-variant";
+export { softIconButton } from "./themes/default/variants/soft-variant";
+export { softLeadingIconButton } from "./themes/default/variants/soft-variant";
+export { softTrailingIconButton } from "./themes/default/variants/soft-variant";
 
 import button from "./themes/default/button";
 export default button;

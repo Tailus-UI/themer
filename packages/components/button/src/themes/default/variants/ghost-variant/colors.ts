@@ -1,6 +1,6 @@
-import config from "../../../button.config";
+import config from "../../../../button.config";
 
-const colorsVariants = {
+const colors = {
     primary: {
         light: "text-primary-900 hover:before:bg-primary-200 focus:before:bg-primary-300/75",
         dark: "text-primary-400 hover:before:bg-primary-500/20 focus:before:bg-primary-500/30",
@@ -41,17 +41,23 @@ const colorsVariants = {
         dark: "text-gray-400 hover:before:bg-gray-500/20 focus:before:bg-gray-500/30",
         both: "text-gray-900 dark:text-gray-400 hover:before:bg-gray-200 focus:before:bg-gray-300/75 dark:hover:before:bg-gray-500/20 dark:focus:before:bg-gray-500/30",
     },
+    neutral: {
+        light: "text-gray-900 hover:before:bg-gray-900 focus:before:bg-gray-800 active:before:bg-gray-700",
+        dark: "text-gray-400 hover:before:bg-white focus:before:bg-white/90 active:before:bg-white/70",
+        both: "text-gray-900 dark:text-gray-400 hover:before:bg-gray-900 focus:before:bg-gray-800 active:before:bg-gray-700 dark:hover:before:bg-white dark:focus:before:bg-white/90 dark:active:before:bg-white/70",
+    },
 };
 
-const colors = {
-    primary: colorsVariants.primary[config.appearance],
-    secondary: colorsVariants.secondary[config.appearance],
-    accent: colorsVariants.accent[config.appearance],
-    danger: colorsVariants.danger[config.appearance],
-    success: colorsVariants.success[config.appearance],
-    warning: colorsVariants.warning[config.appearance],
-    info: colorsVariants.info[config.appearance],
-    gray: colorsVariants.gray[config.appearance],
+const ghostColors = {
+    primary: colors.primary[config.appearance],
+    secondary: colors.secondary[config.appearance],
+    accent: colors.accent[config.appearance],
+    danger: colors.danger[config.appearance],
+    success: colors.success[config.appearance],
+    warning: colors.warning[config.appearance],
+    info: colors.info[config.appearance],
+    gray: colors.gray[config.appearance],
+    neutral: colors.neutral[config.appearance],
 };
 
-export default colors;
+export default ghostColors;

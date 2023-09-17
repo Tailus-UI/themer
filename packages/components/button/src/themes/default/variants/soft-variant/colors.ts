@@ -1,4 +1,4 @@
-import config from "../../../button.config";
+import config from "../../../../button.config";
 
 const colorsVariants = {
     primary: {

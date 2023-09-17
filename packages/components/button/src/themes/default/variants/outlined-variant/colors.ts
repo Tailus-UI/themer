@@ -1,6 +1,6 @@
-import config from "./../../../button.config";
+import config from "./../../../../button.config";
 
-const colorsVariants = {
+const colors = {
     primary: {
         light: "text-primary-600 before:border-primary-800/40 hover:before:border-primary-500 active:before:bg-primary-50",
         dark: "text-primary-300 before:border-primary-300/40 focus:before:bg-primary-500/5",
@@ -48,16 +48,16 @@ const colorsVariants = {
     },
 };
 
-const colors = {
-    primary: colorsVariants.primary[config.appearance],
-    secondary: colorsVariants.secondary[config.appearance],
-    accent: colorsVariants.accent[config.appearance],
-    danger: colorsVariants.danger[config.appearance],
-    success: colorsVariants.success[config.appearance],
-    warning: colorsVariants.warning[config.appearance],
-    info: colorsVariants.info[config.appearance],
-    neutral: colorsVariants.neutral[config.appearance],
-    gray: colorsVariants.gray[config.appearance],
+const outlinedColors = {
+    primary: colors.primary[config.appearance],
+    secondary: colors.secondary[config.appearance],
+    accent: colors.accent[config.appearance],
+    danger: colors.danger[config.appearance],
+    success: colors.success[config.appearance],
+    warning: colors.warning[config.appearance],
+    info: colors.info[config.appearance],
+    neutral: colors.neutral[config.appearance],
+    gray: colors.gray[config.appearance],
 };
 
-export default colors;
+export default outlinedColors;

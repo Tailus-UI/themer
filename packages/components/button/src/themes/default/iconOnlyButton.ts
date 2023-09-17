@@ -1,6 +1,10 @@
-import { getIconButtonSizes, leadingIconSizes } from "./base";
+import { getButtonSizes, iconSizes, iconOnlyButtonSizes } from "./base";
 
-const leadingIconButton = {
+const getIconButtonSizes = (color) => {
+    return getButtonSizes(color, iconOnlyButtonSizes);
+};
+
+const iconButton = {
     primary: getIconButtonSizes("primary"),
     secondary: getIconButtonSizes("secondary"),
     accent: getIconButtonSizes("accent"),
@@ -10,8 +14,8 @@ const leadingIconButton = {
     info: getIconButtonSizes("info"),
     gray: getIconButtonSizes("gray"),
     neutral: getIconButtonSizes("neutral"),
-    icon: leadingIconSizes,
+    icon: iconSizes,
 };
 
-export default leadingIconButton;
-export { leadingIconButton };
+export default iconButton;
+export { iconButton };
