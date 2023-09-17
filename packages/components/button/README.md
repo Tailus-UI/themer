@@ -4,7 +4,11 @@ The button theme is a collection of Tailwindcss CSS utilities that can be used t
 
 ## Usage
 
-To use the button object, first import the package:
+To use the button object, first install the theme package:
+
+`npm install @tailus/themer-button`
+
+Then import the package
 
 `import { button } from "@tailus/themer-button";`
 
