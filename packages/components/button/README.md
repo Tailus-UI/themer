@@ -89,3 +89,19 @@ The following objects can be imported from the `@tailus/themer-button` package:
 -   `ghostTrailingIconButton`
 
 Each of these objects is a collection of Tailwind CSS utilities that can be used to create a button with the specified variant, color, and size.
+
+## Customization
+
+The border-radius of the buttons can be customized using the border-radius Tailwind CSS utility.
+
+```
+tailus: {
+    components: {
+        button: {
+            borderRadius: "md",
+        },
+    },
+},
+```
+
+Accepted values : none, sm, md, lg, xl, 2xl, 3xl, full
