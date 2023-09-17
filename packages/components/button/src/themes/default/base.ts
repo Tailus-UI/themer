@@ -21,11 +21,11 @@ const buttonSizes = {
 };
 
 const iconOnlyButtonSizes = {
-    xs: "m-auto h-8 w-8",
-    sm: "m-auto h-9 w-9",
-    md: "m-auto h-10 w-10",
-    lg: "m-auto h-12 w-12",
-    xl: "m-auto h-14 w-14",
+    xs: "h-8 w-8",
+    sm: "h-9 w-9",
+    md: "h-10 w-10",
+    lg: "h-12 w-12",
+    xl: "h-14 w-14",
 };
 
 const iconSizes = {
