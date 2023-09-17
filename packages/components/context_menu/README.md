@@ -82,6 +82,7 @@ tailus: {
             borderColor : "200",
             separator : "200",
             backgroundOpacity : "90%",
+            backdropBlur : "xl",
             shadow : {
                 size : "lg",
                 opacity : "10"
@@ -91,6 +92,7 @@ tailus: {
                 separator : "800",
                 background : "950",
                 backgroundOpacity : "90%",
+                backdropBlur : "2xl",
             }
         },
     },
