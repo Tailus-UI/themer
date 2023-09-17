@@ -37,12 +37,16 @@ const item = baseItem.base + " " + baseItem.appearance[config.appearance];
 const separator = baseSeparator.base + " " + baseSeparator.appearance[config.appearance];
 const subContent = baseContent.base + " " + baseContent.appearance[config.appearance];
 
-const getItem = (color) => {
-    return item + " " + solidColors[color];
+const getItem = (color, colors: any = solidColors) => {
+    return item + " " + colors[color];
 };
 
-const getSubTrigger = (color) => {
-    return item + " " + solidColors[color] + " " + solidSubTrigerColors[color];
+const getSubTrigger = (
+    color,
+    colors: any = solidColors,
+    subTriggerColors: any = solidSubTrigerColors
+) => {
+    return item + " " + colors[color] + " " + subTriggerColors[color];
 };
 
 export { content, getItem, separator, command, subContent, getSubTrigger };
