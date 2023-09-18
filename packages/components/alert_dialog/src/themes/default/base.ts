@@ -4,7 +4,7 @@ import imageContainerColors from "./colors";
 const baseContent = {
     base: "rounded-[--alert-border-radius] border p-8 alert-shadow focus:outline-none data-[state=open]:animate-contentShow",
     alignment:
-        "fixed left-[50%] top-[50%] max-h-[85vh] w-[90vw] max-w-lg translate-x-[-50%] translate-y-[-50%]",
+        "fixed left-[50%] top-[50%] max-h-[85vh] w-[90vw] translate-x-[-50%] translate-y-[-50%]",
     appearances: {
         light: "border-[--feedback-light-border-color] bg-white",
         dark: "border-[--feedback-dark-border-color] bg-[--feedback-dark-bg]",
@@ -47,7 +47,7 @@ const image = "m-auto h-8 w-8";
 
 const content =
     baseContent.alignment +
-    " " +
+    " max-w-lg " +
     baseContent.base +
     " " +
     baseContent.appearances[config.appearance];
@@ -60,4 +60,14 @@ const getImageContainer = (color: string) => {
     return imageContainer + " " + imageContainerColors[color];
 };
 
-export { content, overlay, title, description, actions, centredActions, getImageContainer, image };
+export {
+    content,
+    overlay,
+    title,
+    description,
+    actions,
+    centredActions,
+    imageContainer,
+    getImageContainer,
+    image,
+};
