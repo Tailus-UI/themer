@@ -16,7 +16,7 @@ const subTriger = {
     neutral: baseDropdown.getSubTrigger("neutral"),
 };
 
-const dropdownmenu = {
+const dropdownMenu = {
     content: baseDropdown.content,
     item: item,
     icon: baseDropdown.icon,
@@ -26,5 +26,5 @@ const dropdownmenu = {
     subContent: baseDropdown.subContent,
 };
 
-export default dropdownmenu;
-export { dropdownmenu };
+export default dropdownMenu;
+export { dropdownMenu };
