@@ -1,0 +1,33 @@
+{
+    "name": "@tailus/themer-alert-dialog",
+    "version": "0.0.1",
+    "description": "Alert dialog themes",
+    "exports": {
+        ".": {
+            "import": {
+                "types": "./dist/index.d.ts",
+                "default": "./dist/index.js"
+            },
+            "require": {
+                "types": "./dist/index.d.ts",
+                "default": "./dist/index.js"
+            }
+        }
+    },
+    "source": "./src/index.ts",
+    "main": "./dist/index.js",
+    "module": "./dist/index.d.ts",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist",
+        "README.md"
+    ],
+    "scripts": {
+        "build": "npx tsc ./src/index.ts --outDir dist --declaration"
+    },
+    "author": "tailus.io",
+    "license": "MIT",
+    "dependencies": {
+        "@types/node": "^20.5.9"
+    }
+}
