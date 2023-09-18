@@ -48,5 +48,55 @@ const solidColors = {
     neutral: colors.neutral[config.appearance],
 };
 
+const subTrigerColors = {
+    base: {
+        light: "data-[state=open]:bg-gray-950/5",
+        dark: "data-[state=open]:bg-white/5",
+        both: "data-[state=open]:bg-gray-950/5 dark:data-[state=open]:bg-white/5",
+    },
+    primary: "data-[highlighted]:data-[state=open]:bg-primary-600",
+    danger: "data-[highlighted]:data-[state=open]:bg-danger-600",
+    warning: "data-[highlighted]:data-[state=open]:bg-warning-600",
+    gray: "data-[highlighted]:data-[state=open]:bg-gray-600",
+    neutral: {
+        light: "data-[highlighted]:data-[state=open]:bg-gray-900",
+        dark: "data-[highlighted]:data-[state=open]:bg-white",
+        both: "data-[highlighted]:data-[state=open]:bg-gray-900 dark:data-[highlighted]:data-[state=open]:bg-white",
+    },
+};
+
+const solidSubTrigerColors = {
+    primary:
+        subTrigerColors.primary +
+        " " +
+        colors.primary.appearance[config.appearance] +
+        " " +
+        subTrigerColors.base[config.appearance],
+    danger:
+        subTrigerColors.danger +
+        " " +
+        colors.danger.appearance[config.appearance] +
+        " " +
+        subTrigerColors.base[config.appearance],
+    warning:
+        subTrigerColors.warning +
+        " " +
+        colors.warning.appearance[config.appearance] +
+        " " +
+        subTrigerColors.base[config.appearance],
+    gray:
+        subTrigerColors.gray +
+        " " +
+        colors.gray.appearance[config.appearance] +
+        " " +
+        subTrigerColors.base[config.appearance],
+    neutral:
+        subTrigerColors.neutral[config.appearance] +
+        " " +
+        colors.neutral[config.appearance] +
+        " " +
+        subTrigerColors.base[config.appearance],
+};
+
 export default solidColors;
-export { solidColors };
+export { solidColors, solidSubTrigerColors };

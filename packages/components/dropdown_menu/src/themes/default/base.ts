@@ -1,5 +1,5 @@
 import config from "./../../dropdownmenu.config";
-import solidColors from "./colors";
+import { solidColors, solidSubTrigerColors } from "./colors";
 
 const baseContent = {
     base: "min-w-[10rem] overflow-hidden rounded-[--menu-border-radius] menu-shadow border p-2",
@@ -29,13 +29,25 @@ const baseSeparator = {
     },
 };
 
+const icon = "h-[1.125rem] w-[1.125rem]";
+const rightIcon = "ml-auto pl-5";
+
 const content =
     baseContent.base + " " + baseContent.appearance[config.appearance] + " " + baseContent.motion;
 const item = baseItem.base + " " + baseItem.appearance[config.appearance];
 const separator = baseSeparator.base + " " + baseSeparator.appearance[config.appearance];
+const subContent = baseContent.base + " " + baseContent.appearance[config.appearance];
 
 const getItem = (color, colors: any = solidColors) => {
     return item + " " + colors[color];
 };
 
-export { content, getItem, separator };
+const getSubTrigger = (
+    color,
+    colors: any = solidColors,
+    subTriggerColors: any = solidSubTrigerColors
+) => {
+    return item + " " + colors[color] + " " + subTriggerColors[color];
+};
+
+export { content, getItem, separator, icon, subContent, rightIcon, getSubTrigger };

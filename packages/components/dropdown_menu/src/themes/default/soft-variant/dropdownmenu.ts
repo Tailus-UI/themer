@@ -1,16 +1,27 @@
-import * as baseContext from "./base";
+import * as baseDropdown from "./base";
 
 const item = {
-    primary: baseContext.getSoftItem("primary"),
-    danger: baseContext.getSoftItem("danger"),
-    warning: baseContext.getSoftItem("warning"),
-    gray: baseContext.getSoftItem("gray"),
+    primary: baseDropdown.getSoftItem("primary"),
+    danger: baseDropdown.getSoftItem("danger"),
+    warning: baseDropdown.getSoftItem("warning"),
+    gray: baseDropdown.getSoftItem("gray"),
+};
+
+const subTriger = {
+    primary: baseDropdown.getSoftSubTrigger("primary"),
+    danger: baseDropdown.getSoftSubTrigger("danger"),
+    warning: baseDropdown.getSoftSubTrigger("warning"),
+    gray: baseDropdown.getSoftSubTrigger("gray"),
 };
 
 const softDropdownMenu = {
-    content: baseContext.content,
+    content: baseDropdown.content,
     item: item,
-    separator: baseContext.separator,
+    separator: baseDropdown.separator,
+    icon: baseDropdown.icon,
+    rightIcon: baseDropdown.rightIcon,
+    subContent: baseDropdown.subContent,
+    subTriger: subTriger,
 };
 
 export default softDropdownMenu;

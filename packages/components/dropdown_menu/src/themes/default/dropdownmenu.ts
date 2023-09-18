@@ -8,10 +8,22 @@ const item = {
     neutral: baseDropdown.getItem("neutral"),
 };
 
+const subTriger = {
+    primary: baseDropdown.getSubTrigger("primary"),
+    danger: baseDropdown.getSubTrigger("danger"),
+    warning: baseDropdown.getSubTrigger("warning"),
+    gray: baseDropdown.getSubTrigger("gray"),
+    neutral: baseDropdown.getSubTrigger("neutral"),
+};
+
 const dropdownmenu = {
     content: baseDropdown.content,
     item: item,
+    icon: baseDropdown.icon,
+    rightIcon: baseDropdown.rightIcon,
     separator: baseDropdown.separator,
+    subTriger: subTriger,
+    subContent: baseDropdown.subContent,
 };
 
 export default dropdownmenu;
