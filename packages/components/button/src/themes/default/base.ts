@@ -13,19 +13,19 @@ const base = {
 const iconButtonUtilities = "flex items-center gap-2 items-center";
 
 const buttonSizes = {
-    xs: "text-sm h-8 px-3",
-    sm: "text-sm h-9 px-4",
-    md: "text-base h-10 px-5",
-    lg: "text-base h-12 px-6",
-    xl: "text-base h-14 px-7",
+    xs: "text-sm h-7 px-2.5",
+    sm: "text-sm h-8 px-3.5",
+    md: "text-base h-9 px-4",
+    lg: "text-base h-10 px-5",
+    xl: "text-base h-12 px-6",
 };
 
 const iconOnlyButtonSizes = {
-    xs: "h-8 w-8",
-    sm: "h-9 w-9",
-    md: "h-10 w-10",
-    lg: "h-12 w-12",
-    xl: "h-14 w-14",
+    xs: "h-7 w-7",
+    sm: "h-8 w-8",
+    md: "h-9 w-9",
+    lg: "h-10 w-10",
+    xl: "h-12 w-12",
 };
 
 const iconSizes = {
