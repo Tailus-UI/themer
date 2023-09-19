@@ -1,7 +1,7 @@
 import config from "../../flag.config";
 import { iconColors, titleColors } from "./colors";
 import { ghostIconButton } from "@tailus/themer-button";
-import { twMerge } from "tailwind-merge";
+import { twJoin, twMerge } from "tailwind-merge";
 
 const root = {
     base: "relative w-full flex max-w-md gap-2 rounded-[--flag-border-radius] border feedback-shadow",
@@ -42,7 +42,7 @@ const baseCloseButton = {
 };
 
 const closeButton = {
-    button: baseCloseButton.base + " " + baseCloseButton.appearances[config.appearance],
+    button: twJoin(baseCloseButton.base, baseCloseButton.appearances[config.appearance]),
     icon: closeProps.icon,
 };
 
@@ -64,19 +64,19 @@ const baseMessage = {
 
 const icon = {
     parent: baseIcon.parent,
-    success: baseIcon.icon + " " + iconColors.success[config.appearance],
-    info: baseIcon.icon + " " + iconColors.info[config.appearance],
-    warning: baseIcon.icon + " " + iconColors.warning[config.appearance],
-    danger: baseIcon.icon + " " + iconColors.danger[config.appearance],
-    gray: baseIcon.icon + " " + iconColors.gray[config.appearance],
+    success: twJoin(baseIcon.icon, iconColors.success[config.appearance]),
+    info: twJoin(baseIcon.icon, iconColors.info[config.appearance]),
+    warning: twJoin(baseIcon.icon, iconColors.warning[config.appearance]),
+    danger: twJoin(baseIcon.icon, iconColors.danger[config.appearance]),
+    gray: twJoin(baseIcon.icon, iconColors.gray[config.appearance]),
 };
 
 const title = {
-    success: baseTitle + " " + titleColors.success[config.appearance],
-    info: baseTitle + " " + titleColors.info[config.appearance],
-    warning: baseTitle + " " + titleColors.warning[config.appearance],
-    danger: baseTitle + " " + titleColors.danger[config.appearance],
-    gray: baseTitle + " " + titleColors.gray[config.appearance],
+    success: twJoin(baseTitle, titleColors.success[config.appearance]),
+    info: twJoin(baseTitle, titleColors.info[config.appearance]),
+    warning: twJoin(baseTitle, titleColors.warning[config.appearance]),
+    danger: twJoin(baseTitle, titleColors.danger[config.appearance]),
+    gray: twJoin(baseTitle, titleColors.gray[config.appearance]),
 };
 
 const link = baseLink.base + " " + baseLink.appearances[config.appearance];
