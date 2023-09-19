@@ -1,12 +1,15 @@
 import * as baseFlag from "./base";
 import config from "../../flag.config";
+import { twJoin, twMerge } from "tailwind-merge";
 
-const root = baseFlag.root.base + " p-4 " + baseFlag.root.appearances[config.appearance];
-
-const closeButton = baseFlag.closeButton.button.replace("relative", "absolute");
+const root = twJoin(
+    baseFlag.root.base,
+    "p-[--flag-padding]",
+    baseFlag.root.appearances[config.appearance]
+);
 
 const close = {
-    button: closeButton + " top-2 right-2 ",
+    button: twMerge(baseFlag.closeButton.button, "my-0 -right-2 -top-2 bottom-auto"),
     icon: baseFlag.closeButton.icon,
 };
 

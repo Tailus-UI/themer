@@ -28,6 +28,7 @@
     "author": "tailus.io",
     "license": "MIT",
     "dependencies": {
-        "@types/node": "^20.5.9"
+        "@types/node": "^20.5.9",
+        "tailwind-merge": "^1.14.0"
     }
 }

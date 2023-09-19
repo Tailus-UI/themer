@@ -1,9 +1,10 @@
 import config from "../../flag.config";
 import { iconColors, titleColors } from "./colors";
 import { ghostIconButton } from "@tailus/themer-button";
+import { twMerge } from "tailwind-merge";
 
 const root = {
-    base: "relative w-full flex max-w-md gap-1 rounded-[--flag-border-radius] border feedback-shadow",
+    base: "relative w-full flex max-w-md gap-2 rounded-[--flag-border-radius] border feedback-shadow",
     appearances: {
         light: "border-[--feedback-light-border-color] bg-white",
         dark: "border-[--feedback-dark-border-color] bg-[--feedback-dark-bg]",
@@ -20,45 +21,37 @@ const baseLink = {
     },
 };
 
-let closeButton = {
-    button: ghostIconButton.gray.xs,
+const closeProps = {
+    button: ghostIconButton.gray.sm,
     icon: ghostIconButton.icon.lg,
 };
-closeButton.button = closeButton.button.replace(
-    "before:rounded-[--btn-border-radius]",
-    "before:rounded-[calc(var(--flag-border-radius)-0.5rem)]"
-);
-closeButton.button = closeButton.button.replace(
-    "hover:before:bg-gray-200",
-    "hover:before:bg-gray-50"
-);
-closeButton.button = closeButton.button.replace(
-    "focus:before:bg-gray-300/75",
-    "focus:before:bg-gray-100/75"
-);
-closeButton.button = closeButton.button.replace(
-    "hover:before:bg-gray-500/20",
-    "hover:before:bg-gray-500/5"
-);
-closeButton.button = closeButton.button.replace(
-    "focus:before:bg-gray-500/30",
-    "focus:before:bg-gray-500/10"
-);
-closeButton.button = closeButton.button.replace(
-    "dark:hover:before:bg-gray-500/20",
-    "dark:hover:before:bg-gray-500/5"
-);
-closeButton.button = closeButton.button.replace(
-    "dark:focus:before:bg-gray-500/30",
-    "dark:focus:before:bg-gray-500/10"
-);
+
+const baseCloseButton = {
+    base: twMerge(
+        closeProps.button,
+        "absolute before:rounded-[calc(var(--flag-border-radius)-0.5rem)]"
+    ),
+    appearances: {
+        light: twMerge(closeProps.button, "hover:before:bg-gray-50 focus:before:bg-gray-100/75"),
+        dark: twMerge(closeProps.button, "hover:before:bg-gray-500/5 focus:before:bg-gray-500/10"),
+        both: twMerge(
+            closeProps.button,
+            "hover:before:bg-gray-50 focus:before:bg-gray-100/75 dark:hover:before:bg-gray-500/5 dark:focus:before:bg-gray-500/10"
+        ),
+    },
+};
+
+const closeButton = {
+    button: baseCloseButton.base + " " + baseCloseButton.appearances[config.appearance],
+    icon: closeProps.icon,
+};
 
 const baseIcon = {
     parent: "flex w-8",
     icon: "h-6 w-6",
 };
 
-const baseTitle = "text-sm font-medium";
+const baseTitle = "mr-2 text-sm font-medium";
 
 const baseMessage = {
     base: "mt-2 text-sm leading-tight",

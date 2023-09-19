@@ -1,11 +1,15 @@
 import * as baseFlag from "./base";
 import config from "../../flag.config";
+import { twJoin, twMerge } from "tailwind-merge";
 
-const root =
-    baseFlag.root.base + " px-4 py-2 items-center " + baseFlag.root.appearances[config.appearance];
+const root = twJoin(
+    baseFlag.root.base,
+    "py-3 px-5 items-center",
+    baseFlag.root.appearances[config.appearance]
+);
 
 const close = {
-    button: baseFlag.closeButton.button + " ml-2 -mr-2 ",
+    button: twMerge(baseFlag.closeButton.button, "inset-y-0 -right-3 my-auto ml-auto"),
     icon: baseFlag.closeButton.icon,
 };
 
