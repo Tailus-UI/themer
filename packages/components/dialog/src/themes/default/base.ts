@@ -39,6 +39,7 @@ const baseDescription = {
 };
 
 const actions = "mt-6 flex justify-end gap-4";
+const closeButton = "absolute top-2 right-2";
 
 const content =
     baseContent.alignment +
@@ -51,4 +52,4 @@ const overlay = baseOverlay.base + " " + baseOverlay.appearances[config.appearan
 const title = baseTitle.base + " " + baseTitle.appearances[config.appearance];
 const description = baseDescription.base + " " + baseDescription.appearances[config.appearance];
 
-export { content, overlay, title, description, actions };
+export { content, overlay, title, description, actions, closeButton };
