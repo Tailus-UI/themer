@@ -1,3 +1,5 @@
+import config from "./../../toggle.config";
+
 const colors = {
     primary: {
         light: "text-primary-600",
@@ -41,5 +43,16 @@ const colors = {
     },
 };
 
-export default colors;
-export { colors };
+const iconAfterColors = {
+    primary: colors.primary[config.appearance],
+    secondary: colors.secondary[config.appearance],
+    accent: colors.accent[config.appearance],
+    danger: colors.danger[config.appearance],
+    warning: colors.warning[config.appearance],
+    success: colors.success[config.appearance],
+    gray: colors.gray[config.appearance],
+    neutral: colors.neutral[config.appearance],
+};
+
+export default iconAfterColors;
+export { iconAfterColors };
