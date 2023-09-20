@@ -38,7 +38,7 @@ const baseDescription = {
     },
 };
 
-const actions = "mt-6 flex justify-end gap-4";
+const actions = "mt-8 flex justify-end gap-4";
 const closeButton = "absolute top-2 right-2";
 
 const content =
