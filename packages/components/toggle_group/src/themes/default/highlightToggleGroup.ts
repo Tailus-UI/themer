@@ -1,6 +1,6 @@
-import { toggle } from "@tailus/themer-toggle";
+import { highlightRootToggle as toggle } from "@tailus/themer-toggle";
 
-const toggleGroup = {
+const highlightToggleGroup = {
     root: "flex items-center justify-center gap-px",
     item: toggle.root,
     icon: toggle.icon,
@@ -8,5 +8,5 @@ const toggleGroup = {
     iconAfter: toggle.iconAfter,
 };
 
-export default toggleGroup;
-export { toggleGroup };
+export default highlightToggleGroup;
+export { highlightToggleGroup };
