@@ -10,7 +10,7 @@ const base = {
     },
 };
 
-const iconButtonUtilities = "flex items-center gap-2 items-center";
+const iconButtonUtilities = "flex items-center gap-1.5 items-center";
 
 const buttonSizes = {
     xs: "text-sm h-7 px-2.5",
