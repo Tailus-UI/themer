@@ -83,6 +83,7 @@ const iconBefore = {
 
 export {
     baseRoot,
+    baseIconAfter,
     root,
     rootSizes,
     getRootSize,

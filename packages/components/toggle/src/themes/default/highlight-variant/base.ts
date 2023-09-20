@@ -1,4 +1,4 @@
-import { baseRoot, iconSizes, rootSizes, getIconAfter } from "../base";
+import { baseRoot, baseIconAfter, iconSizes, rootSizes, getIconAfter } from "../base";
 import config from "../../../toggle.config";
 import rootColors from "./colors";
 
@@ -16,15 +16,13 @@ const getRootSizes = (color: string, sizes: any = rootSizes) => {
     };
 };
 
-const getIconAfterSizes = (color: string, sizes: any = iconSizes) => {
-    return {
-        xs: `${getIconAfter(color, rootColors)} ${sizes.xs}`,
-        sm: `${getIconAfter(color, rootColors)} ${sizes.sm}`,
-        md: `${getIconAfter(color, rootColors)} ${sizes.md}`,
-        lg: `${getIconAfter(color, rootColors)} ${sizes.lg}`,
-        xl: `${getIconAfter(color, rootColors)} ${sizes.xl}`,
-    };
+const iconAfter = {
+    xs: `${baseIconAfter} ${iconSizes.xs}`,
+    sm: `${baseIconAfter} ${iconSizes.sm}`,
+    md: `${baseIconAfter} ${iconSizes.md}`,
+    lg: `${baseIconAfter} ${iconSizes.lg}`,
+    xl: `${baseIconAfter} ${iconSizes.xl}`,
 };
 
-export { getRootSizes, getIconAfterSizes };
+export { getRootSizes, iconAfter };
 export { icon, iconBefore } from "../base";
