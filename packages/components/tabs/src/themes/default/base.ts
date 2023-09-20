@@ -53,4 +53,4 @@ const softTabs = {
     content,
 };
 
-export { list, trigger, indicator, content, softTabs };
+export { list, trigger, indicator, content, softTabs, elevatedIndicator };
