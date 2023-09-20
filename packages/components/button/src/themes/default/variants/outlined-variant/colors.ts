@@ -48,16 +48,19 @@ const colors = {
     },
 };
 
+const getOutlinedColor = (color: string) => {
+    return `before:[borderWidth:--btn-border-width] ${colors[color][config.appearance]}`;
+};
 const outlinedColors = {
-    primary: colors.primary[config.appearance],
-    secondary: colors.secondary[config.appearance],
-    accent: colors.accent[config.appearance],
-    danger: colors.danger[config.appearance],
-    success: colors.success[config.appearance],
-    warning: colors.warning[config.appearance],
-    info: colors.info[config.appearance],
-    neutral: colors.neutral[config.appearance],
-    gray: colors.gray[config.appearance],
+    primary: getOutlinedColor("primary"),
+    secondary: getOutlinedColor("secondary"),
+    accent: getOutlinedColor("accent"),
+    danger: getOutlinedColor("danger"),
+    success: getOutlinedColor("success"),
+    warning: getOutlinedColor("warning"),
+    info: getOutlinedColor("info"),
+    gray: getOutlinedColor("gray"),
+    neutral: getOutlinedColor("neutral"),
 };
 
 export default outlinedColors;
