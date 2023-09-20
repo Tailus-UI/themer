@@ -1,7 +1,7 @@
 import imageContainerColors from "./colors";
 import config from "./../../emptystate.config";
 
-const root = "text-center";
+const root = "text-center flex flex-col items-center justify-center";
 const baseImageContainer = "mx-auto flex h-40 w-40 rounded-full";
 
 const image = "m-auto h-20 w-20";
