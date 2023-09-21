@@ -1,7 +1,7 @@
 import config from "./../../tabs.config";
 
 const baseList = {
-    base: "relative w-full shrink-0 h-10 flex p-1 rounded-[--tabs-border-radius]",
+    base: "relative w-full shrink-0 h-10 flex items-center p-1 rounded-[--tabs-border-radius]",
     appearances: {
         light: "bg-[--tabs-light-bg]",
         dark: "bg-[--tabs-dark-bg]",
@@ -10,7 +10,7 @@ const baseList = {
 };
 
 const baseTrigger = {
-    base: "relative px-5 h-full flex-1 flex items-center justify-center leading-none select-none rounded-[calc(var(--tabs-border-radius)-0.25rem)] outline-none cursor-pointer",
+    base: "relative px-5 h-full flex-1 flex gap-2 items-center justify-center leading-none select-none rounded-[calc(var(--tabs-border-radius)-0.25rem)] outline-none cursor-pointer",
     appearances: {
         light: "text-gray-700 data-[state=active]:text-gray-900",
         dark: "text-gray-300 data-[state=active]:text-white",
@@ -36,6 +36,8 @@ const baseContent = {
     },
 };
 
+const triggerIcon = "h-[1.125rem] w-[1.125rem]";
+
 const list = baseList.base + " " + baseList.appearances[config.appearance];
 const trigger = baseTrigger.base + " " + baseTrigger.appearances[config.appearance];
 const indicator = baseIndicator.base + " " + baseIndicator.appearances[config.appearance];
@@ -49,8 +51,9 @@ const elevatedIndicator =
 const softTabs = {
     list,
     trigger,
+    triggerIcon,
     indicator: elevatedIndicator,
     content,
 };
 
-export { list, trigger, indicator, content, softTabs, elevatedIndicator };
+export { list, trigger, indicator, triggerIcon, content, softTabs, elevatedIndicator };
