@@ -1,4 +1,4 @@
-import { list, trigger, elevatedIndicator, content } from "./../base";
+import { list, trigger, elevatedIndicator, content, triggerIcon } from "./../base";
 import config from "./../../../tabs.config";
 
 const outlinedList = {
@@ -15,6 +15,7 @@ const tabs = {
     trigger: trigger,
     indicator: elevatedIndicator,
     content,
+    triggerIcon,
 };
 
 export { tabs };

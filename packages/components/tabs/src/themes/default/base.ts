@@ -10,7 +10,7 @@ const baseList = {
 };
 
 const baseTrigger = {
-    base: "relative px-5 h-full flex-1 flex gap-2 items-center justify-center leading-none select-none rounded-[calc(var(--tabs-border-radius)-0.25rem)] outline-none cursor-pointer",
+    base: "relative px-5 h-full flex-1 flex gap-2 items-center justify-center leading-none select-none rounded-[calc(var(--tabs-border-radius)-0.25rem)] cursor-pointer",
     appearances: {
         light: "text-gray-700 data-[state=active]:text-gray-900",
         dark: "text-gray-300 data-[state=active]:text-white",
