@@ -4,7 +4,8 @@
     "description": "Tailwind Css and radix-ui styles for react, vue, svelte, html and all librairies built using the same Radix components anatomy.",
     "main": "index.ts",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
     },
     "repository": {
         "type": "git",
