@@ -6,15 +6,19 @@ The button theme is a collection of Tailwindcss CSS utilities that can be used t
 
 To use the button object, first install the theme package:
 
-`npm install @tailus/themer-button`
+```bash
+npm install @tailus/themer-button
+```
 
 Then import the package
 
-`import { button } from "@tailus/themer-button";`
+```tsx
+import { button } from "@tailus/themer-button";
+```
 
 Then, create a button element and add the appropriate Tailwindcss utilities:
 
-```
+```tsx
 <button className={button.primary.sm}>
     <span>Button</span>
 </button>
@@ -58,7 +62,7 @@ Icon only buttons, leading icon buttons, and trailing icon buttons have an icon 
 
 ### Example
 
-```
+```tsx
 <button className={button.primary.sm}>
     <span className="sr-only">Boost button</span>
     <BoltIcon className={button.icon.sm} aria-hidden />
@@ -94,7 +98,7 @@ Each of these objects is a collection of Tailwind CSS utilities that can be used
 
 The border-radius and border-widh of the buttons can be customized.
 
-```
+```js
 tailus: {
     components: {
         button: {

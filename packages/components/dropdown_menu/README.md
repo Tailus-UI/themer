@@ -8,13 +8,15 @@ The dropdown menu component theme is a collection of Tailwind utilities that can
 
 To install the dropdown menu component theme, run the following command:
 
-`npm install @tailus/themer-dropdown-menu`
+```bash
+npm install @tailus/themer-dropdown-menu
+```
 
 ## Importation
 
 To import the dropdown menu component theme, you can use one of the following imports:
 
-```
+```tsx
 import { dropdownMenu } from "@tailus/themer-dropdown-menu";
 import { softDropdownMenu } from "@tailus/themer-dropdown-menu";
 ```
@@ -23,9 +25,15 @@ import { softDropdownMenu } from "@tailus/themer-dropdown-menu";
 
 ### Radix-UI
 
-```
+```tsx
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import { Pencil1Icon, ArchiveIcon, TrashIcon, FileIcon, DotsVerticalIcon } from "@radix-ui/react-icons";
+import {
+    Pencil1Icon,
+    ArchiveIcon,
+    TrashIcon,
+    FileIcon,
+    DotsVerticalIcon,
+} from "@radix-ui/react-icons";
 import { dropdownMenu as theme } from "@tailus/themer-dropdown-menu";
 import { ghostIconButton as buttonTheme } from "@tailus/themer-button";
 
@@ -49,7 +57,7 @@ const DropdownMenuUI = () => {
                         <FileIcon className={theme.icon} />
                         Duplicate
                     </DropdownMenu.Item>
-                        <DropdownMenu.Separator className={theme.separator} />
+                    <DropdownMenu.Separator className={theme.separator} />
                     <DropdownMenu.Item className={theme.item.primary} disabled>
                         <ArchiveIcon className={theme.icon} />
                         Archive
@@ -122,7 +130,7 @@ The following properties can be customized:
 
 To customize the dropdown menu component theme, you can override The Tailwind css utilitieses in your own tailwind.config file.
 
-```
+```js
 tailus: {
     components: {
         menu: {

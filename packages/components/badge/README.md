@@ -8,13 +8,15 @@ The badge component theme is a collection of Tailwindcss Utilities that can be u
 
 To install the badge component theme, run the following command:
 
-`npm install @tailus/themer-badge`
+```bash
+npm install @tailus/themer-badge
+```
 
 ## Importation
 
 To import the badge component theme, you can use one of the following imports:
 
-```
+```tsx
 import { badge } from "@tailus/themer-badge";
 import { softBadge } from "@tailus/themer-badge";
 import { outlinedBadge } from "@tailus/themer-badge";

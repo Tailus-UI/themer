@@ -8,15 +8,17 @@ The alert dialog theme is a collection of Tailwindcss utilities that can be used
 
 To install the alert dialog theme, run the following command:
 
-`npm install @tailus/themer-alert-dialog`
+```bash
+npm install @tailus/themer-alert-dialog
+```
 
 ## Importation
 
 To import the alert dialog theme, use the following import:
 
-```
+```tsx
 import { alertDialog, centeredAlertDialog } from "@tailus/themer-alert-dialog";
-import { centredAlertDialog as alertDialogTheme } from "@tailus/themer-alert-dialog"
+import { centredAlertDialog as alertDialogTheme } from "@tailus/themer-alert-dialog";
 ```
 
 ## Variants
@@ -47,9 +49,10 @@ The following properties are available for both variants:
 
 #### Default variant
 
-```
-import { alertDialog as alertDialogTheme } from "@tailus/themer-alert-dialog"
-import { button as solidButton, ghostButton, softIconButton } from "@tailus/themer-button"
+```tsx
+import { alertDialog as alertDialogTheme } from "@tailus/themer-alert-dialog";
+import { button as solidButton, ghostButton, softIconButton } from "@tailus/themer-button";
+import { TrashIcon } from "@radix-ui/react-icons";
 import * as AlertDialog from "@radix-ui/react-alert-dialog";
 
 const AlertDialogUI = () => (
@@ -57,16 +60,19 @@ const AlertDialogUI = () => (
         <AlertDialog.Trigger asChild>
             <button className={softIconButton.danger.md}>
                 <span className="sr-only">Delete</span>
-                <svg className={softIconButton.icon.md} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                </svg>
+                <TrashIcon className={softIconButton.icon.md} aria-hidden />
             </button>
         </AlertDialog.Trigger>
         <AlertDialog.Portal>
             <AlertDialog.Overlay className={alertDialogTheme.overlay} />
             <AlertDialog.Content className={alertDialogTheme.content}>
-                <AlertDialog.Title className={alertDialogTheme.title}>Are you absolutely sure?</AlertDialog.Title>
-                <AlertDialog.Description className={alertDialogTheme.description}>This action cannot be undone. This will permanently delete your account and remove your data from our servers.</AlertDialog.Description>
+                <AlertDialog.Title className={alertDialogTheme.title}>
+                    Are you absolutely sure?
+                </AlertDialog.Title>
+                <AlertDialog.Description className={alertDialogTheme.description}>
+                    This action cannot be undone. This will permanently delete your account and
+                    remove your data from our servers.
+                </AlertDialog.Description>
                 <div className={alertDialogTheme.actions}>
                     <AlertDialog.Cancel asChild>
                         <button className={ghostButton.gray.md}>
@@ -89,9 +95,10 @@ export default AlertDialogUI;
 
 #### Centered variant
 
-```
-import { centredAlertDialog as alertDialogTheme } from "@tailus/themer-alert-dialog"
-import { button as solidButton, ghostButton, softIconButton } from "@tailus/themer-button"
+```tsx
+import { centredAlertDialog as alertDialogTheme } from "@tailus/themer-alert-dialog";
+import { button as solidButton, ghostButton, softIconButton } from "@tailus/themer-button";
+import { TrashIcon } from "@radix-ui/react-icons";
 import * as AlertDialog from "@radix-ui/react-alert-dialog";
 
 const CentredAlertDialog = () => (
@@ -99,19 +106,26 @@ const CentredAlertDialog = () => (
         <AlertDialog.Trigger asChild>
             <button className={softIconButton.danger.md}>
                 <span className="sr-only">Delete</span>
-                <svg className={softIconButton.icon.md} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                </svg>
+                <TrashIcon className={softIconButton.icon.md} aria-hidden />
             </button>
         </AlertDialog.Trigger>
         <AlertDialog.Portal>
             <AlertDialog.Overlay className={alertDialogTheme.overlay} />
             <AlertDialog.Content className={alertDialogTheme.content}>
                 <div className={alertDialogTheme.imageContainer.danger}>
-                    <img className={alertDialogTheme.image} src="https://cdn-icons-png.flaticon.com/512/6460/6460112.png" alt="" />
+                    <img
+                        className={alertDialogTheme.image}
+                        src="https://cdn-icons-png.flaticon.com/512/6460/6460112.png"
+                        alt=""
+                    />
                 </div>
-                <AlertDialog.Title className={alertDialogTheme.title}>Are you absolutely sure?</AlertDialog.Title>
-                <AlertDialog.Description className={alertDialogTheme.description}>This action cannot be undone. This will permanently delete your account and remove your data from our servers.</AlertDialog.Description>
+                <AlertDialog.Title className={alertDialogTheme.title}>
+                    Are you absolutely sure?
+                </AlertDialog.Title>
+                <AlertDialog.Description className={alertDialogTheme.description}>
+                    This action cannot be undone. This will permanently delete your account and
+                    remove your data from our servers.
+                </AlertDialog.Description>
                 <div className={alertDialogTheme.actions}>
                     <AlertDialog.Cancel asChild>
                         <button className={ghostButton.gray.md}>
@@ -130,7 +144,6 @@ const CentredAlertDialog = () => (
 );
 
 export default CentredAlertDialog;
-
 ```
 
 ## Customization
@@ -145,7 +158,7 @@ The following properties can be customized:
 -   alert dialog dark background color
 -   alert dialog border radius
 
-```
+```js
 tailus: {
     components: {
         alertDialog: {

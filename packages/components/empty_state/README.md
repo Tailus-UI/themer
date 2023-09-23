@@ -8,13 +8,15 @@ The empty state component theme is a collection of Tailwindcss utilities that ca
 
 To install the empty state component theme, run the following command:
 
-`npm install @tailus/themer-empty-state`
+```bash
+npm install @tailus/themer-empty-state
+```
 
 ## Importation
 
 To import the empty state component theme, you can use the following import:
 
-```
+```tsx
 import { emptyState } from "@tailus/themer-empty-state";
 ```
 
@@ -39,14 +41,20 @@ The empty state object contains the following properties:
 
 ## Example
 
-```
-import { emptyState } from "@tailus/themer-empty-state"
-import { outlinedButton } from "@tailus/themer-button"
+```tsx
+import { emptyState } from "@tailus/themer-empty-state";
+import { outlinedButton } from "@tailus/themer-button";
 
 const EmptyStateUI = () => (
     <div className={emptyState.root}>
         <div className={emptyState.imageContainer.gray}>
-            <img className={emptyState.image} src="" alt="Tailus disconnected user empty state" width={512} height={512} />
+            <img
+                className={emptyState.image}
+                src=""
+                alt="Tailus disconnected user empty state"
+                width={512}
+                height={512}
+            />
         </div>
         <div className={emptyState.content}>
             <h3 className={emptyState.title}>You're offline</h3>

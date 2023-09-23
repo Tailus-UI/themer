@@ -8,13 +8,15 @@ Installation
 
 To install the select component theme, run the following command:
 
-`npm install @tailus/themer-select`
+```bash
+npm install @tailus/themer-select
+```
 
 ## Import
 
 To import the select component theme, you can use the following import:
 
-```
+```tsx
 import { select } from "@tailus/themer-select";
 ```
 
@@ -22,12 +24,12 @@ import { select } from "@tailus/themer-select";
 
 ### Radix UI
 
-```
+```tsx
 import React from "react";
 import * as Select from "@radix-ui/react-select";
 import classnames from "classnames";
 import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from "@radix-ui/react-icons";
-import {select as selectTheme} from "@tailus/themer-select"
+import { select as selectTheme } from "@tailus/themer-select";
 
 const SelectUI = () => (
     <Select.Root>
@@ -85,7 +87,11 @@ const SelectUI = () => (
 
 const SelectItem = React.forwardRef(({ children, className, ...props }: any, forwardedRef) => {
     return (
-        <Select.Item className={classnames(selectTheme.item, className)} {...props} ref={forwardedRef}>
+        <Select.Item
+            className={classnames(selectTheme.item, className)}
+            {...props}
+            ref={forwardedRef}
+        >
             <Select.ItemText>{children}</Select.ItemText>
             <Select.ItemIndicator className={selectTheme.itemIndicator}>
                 <CheckIcon />
@@ -95,7 +101,6 @@ const SelectItem = React.forwardRef(({ children, className, ...props }: any, for
 });
 
 export default SelectUI;
-
 ```
 
 ## Properties
@@ -120,7 +125,7 @@ Following properties can be customized :
 -   light border color : same as all `menu` component (context and dropdown),
 -   dark border color : same as all `menu` component (context and dropdown),
 
-```
+```js
 tailus: {
     components: {
         flag: {

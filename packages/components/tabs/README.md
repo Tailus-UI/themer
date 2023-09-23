@@ -8,7 +8,9 @@ The tabs component theme is a collection of Tailwindcss utilities that can be us
 
 To install the tabs component theme, run the following command:
 
-`npm install @tailus/themer-tabs`
+```bash
+npm install @tailus/themer-tabs
+```
 
 ## Variants
 
@@ -23,11 +25,11 @@ The tabs component theme provides four variants:
 
 To import the tabs component theme, you can use the following import:
 
-```
-import {tabs} from "@tailus/themer-tabs";
-import {outlinedTabs} from "@tailus/themer-tabs";
-import {softTabs} from "@tailus/themer-tabs";
-import {bottomIndicatorTabs} from "@tailus/themer-tabs";
+```tsx
+import { tabs } from "@tailus/themer-tabs";
+import { outlinedTabs } from "@tailus/themer-tabs";
+import { softTabs } from "@tailus/themer-tabs";
+import { bottomIndicatorTabs } from "@tailus/themer-tabs";
 ```
 
 ## Object Structure
@@ -36,7 +38,7 @@ import {bottomIndicatorTabs} from "@tailus/themer-tabs";
 
 The object structure for the default variants is as follows:
 
-```
+```js
 tabs: {
   list: {
     soft,
@@ -58,7 +60,7 @@ tabs: {
 
 The object structure for the bottom indicator variants is as follows:
 
-```
+```js
 tabs: {
   list,
   indicator,
@@ -74,7 +76,7 @@ tabs: {
 
 The object structure for the soft and outlined variants is as follows:
 
-```
+```js
 tabs: {
     list: {
         xs,
@@ -113,18 +115,21 @@ To use the tabs component theme, simply import the appropriate variant and add t
 
 ### Radix UI
 
-```
+```tsx
 import * as Tabs from "@radix-ui/react-tabs";
 import { tabs as tabsTheme } from "@tailus/themer-tabs";
 
-function moveTabIndicator(): void {
-}
+function moveTabIndicator(): void {}
 
 moveTabIndicator();
 
 const TabsAppUI = () => (
-    <Tabs.Root className="w-[22rem] flex flex-col" defaultValue="nike" onValueChange={moveTabIndicator}>
-         <Tabs.List className={tabsTheme.list.soft + " w-max"} aria-label="stores" id="ecommerce">
+    <Tabs.Root
+        className="w-[22rem] flex flex-col"
+        defaultValue="nike"
+        onValueChange={moveTabIndicator}
+    >
+        <Tabs.List className={tabsTheme.list.soft + " w-max"} aria-label="stores" id="ecommerce">
             <span id="indicator" className={tabsTheme.indicator.elevated} aria-hidden="true"></span>
             <Tabs.Trigger className={tabsTheme.trigger.parent} value="nike">
                 Nike
@@ -149,7 +154,6 @@ const TabsAppUI = () => (
 );
 
 export default TabsAppUI;
-
 ```
 
 ## Customization
@@ -168,7 +172,7 @@ The following properties can be customized for the bottom indicator variant:
 -   bottom indicator light bg
 -   bottom indicator dark bg
 
-```
+```js
 tailus: {
     components: {
         tabs: {

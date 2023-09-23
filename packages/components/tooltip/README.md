@@ -8,7 +8,7 @@ The tooltip component theme is a collection of Tailwindcss utilities that can be
 
 To install the tooltip component theme, run the following command:
 
-```terminal
+```bash
 npm install @tailus/themer-tooltip
 ```
 

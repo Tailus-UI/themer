@@ -8,13 +8,15 @@ The slider component theme is a collection of Tailwindcss utilities that can be 
 
 To install the slider component theme, run the following command:
 
-`npm install @tailus/themer-slider`
+```bash
+npm install @tailus/themer-slider
+```
 
 ## Importation
 
 To import the slider component theme, you can use the following import:
 
-```
+```tsx
 import { slider } from "@tailus/themer-slider";
 ```
 
@@ -22,13 +24,19 @@ import { slider } from "@tailus/themer-slider";
 
 ### Radix UI
 
-```
+```tsx
 import * as Slider from "@radix-ui/react-slider";
-import {slider as sliderTheme} from "@tailus/themer-slider"
+import { slider as sliderTheme } from "@tailus/themer-slider";
 
 const SliderUI = () => (
     <form>
-        <Slider.Root className={sliderTheme.root} defaultValue={[50]} data-orientation="vertical" max={100} step={1}>
+        <Slider.Root
+            className={sliderTheme.root}
+            defaultValue={[50]}
+            data-orientation="vertical"
+            max={100}
+            step={1}
+        >
             <Slider.Track className={sliderTheme.track}>
                 <Slider.Range className={sliderTheme.range} />
             </Slider.Track>

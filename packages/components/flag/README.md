@@ -6,15 +6,22 @@ The @tailus/themer-flag package provides a theme for the flag component. The fla
 
 To install the flag package, run the following command:
 
-`npm install @tailus/themer-flag`
+```bash
+npm install @tailus/themer-flag
+```
 
 ## Example
 
-```
-import { flag as flagTheme } from "@tailus/themer-flag"
+```tsx
+import { flag as flagTheme } from "@tailus/themer-flag";
 
 const FlagUI = () => (
-    <div className={flagTheme.root} aria-label="Error flag" aria-describedby="error-flag-description" role="alert" >
+    <div
+        className={flagTheme.root}
+        aria-label="Error flag"
+        aria-describedby="error-flag-description"
+        role="alert"
+    >
         <div className={flagTheme.icon.parent}>
             <TimeIcon className={flagTheme.icon.danger} aria-hidden />
         </div>
@@ -29,7 +36,7 @@ const FlagUI = () => (
             <TimeIcon className={flagTheme.close.icon} aria-hidden />
         </button>
     </div>
-)
+);
 
 export default FlagUI;
 ```
@@ -62,7 +69,7 @@ The with message variant of the flag component contains the following properties
 
 ### Example
 
-```
+```tsx
 import { flagWithMessage as flagTheme } from "@tailus/themer-flag
 
 const FlagWithMessage = () => (
@@ -106,7 +113,7 @@ The following properties can be customized:
 -   Dark Border color
 -   Dark background
 
-```
+```js
 tailus: {
     components: {
         flag: {

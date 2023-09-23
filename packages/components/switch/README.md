@@ -8,13 +8,15 @@ The switch component theme is a collection of Tailwindcss utilities that can be 
 
 To install the switch component theme, run the following command:
 
-`npm install @tailus/themer-switch`
+```bash
+npm install @tailus/themer-switch
+```
 
 ## Importation
 
 To import the switch component theme, you can use the following import:
 
-```
+```js
 import { switchThemer } from "@tailus/themer-switch";
 ```
 
@@ -22,8 +24,7 @@ import { switchThemer } from "@tailus/themer-switch";
 
 ### Radix UI
 
-```
-
+```tsx
 import * as Switch from "@radix-ui/react-switch";
 import { switchTheme } from "@tailus/themer-switch";
 
@@ -41,7 +42,6 @@ const SwitchUI = () => (
 );
 
 export default SwitchUI;
-
 ```
 
 ## Properties
@@ -59,7 +59,7 @@ The following property can be customized:
 
 -   `border-radius`
 
-```
+```js
 tailus: {
     components: {
         switch: {
