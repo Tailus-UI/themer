@@ -9,6 +9,21 @@ const baseList = {
     },
 };
 
+const outlinedList = {
+    light: "border-[--tabs-light-border-color]",
+    dark: "border-[--tabs-dark-border-color]",
+    both: "border-[--tabs-light-border-color] dark:border-[--tabs-dark-border-color]",
+};
+
+const outlinedIndicator = {
+    base: "border",
+    appearances: {
+        light: "border-[--tabs-light-border-color]",
+        dark: "border-[--tabs-dark-border-color]",
+        both: "border-[--tabs-light-border-color] dark:border-[--tabs-dark-border-color]",
+    },
+};
+
 const baseTrigger = {
     base: "relative px-5 h-full flex-1 flex gap-2 items-center justify-center leading-none select-none rounded-[calc(var(--tabs-border-radius)-0.25rem)] cursor-pointer",
     appearances: {
@@ -38,22 +53,38 @@ const baseContent = {
 
 const triggerIcon = "h-[1.125rem] w-[1.125rem]";
 
-const list = baseList.base + " " + baseList.appearances[config.appearance];
-const trigger = baseTrigger.base + " " + baseTrigger.appearances[config.appearance];
-const indicator = baseIndicator.base + " " + baseIndicator.appearances[config.appearance];
-const content = baseContent.base + " " + baseContent.appearances[config.appearance];
+const list = {
+    soft: baseList.base + " " + baseList.appearances[config.appearance],
+    outlined:
+        baseList.base +
+        " border " +
+        baseList.appearances[config.appearance] +
+        " " +
+        outlinedList[config.appearance],
+};
 
-const elevatedIndicator =
-    baseIndicator.base +
-    " shadow shadow-gray-950/10 " +
-    baseIndicator.appearances[config.appearance];
+const trigger = baseTrigger.base + " " + baseTrigger.appearances[config.appearance];
+
+const indicator = {
+    elevated:
+        baseIndicator.base +
+        " shadow shadow-gray-950/10 " +
+        baseIndicator.appearances[config.appearance],
+    outlined:
+        baseIndicator.base +
+        " border " +
+        baseIndicator.appearances[config.appearance] +
+        " " +
+        outlinedIndicator.appearances[config.appearance],
+};
+const content = baseContent.base + " " + baseContent.appearances[config.appearance];
 
 const softTabs = {
     list,
     trigger,
     triggerIcon,
-    indicator: elevatedIndicator,
+    indicator: indicator,
     content,
 };
 
-export { list, trigger, indicator, triggerIcon, content, softTabs, elevatedIndicator };
+export { list, trigger, triggerIcon, content, softTabs };

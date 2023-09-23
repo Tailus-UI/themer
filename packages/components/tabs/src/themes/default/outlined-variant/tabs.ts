@@ -1,7 +1,7 @@
-import { tabs } from "./base";
+import { tabs as baseTabs } from "./base";
 
 const outlinedTabs = {
-    ...tabs,
+    ...baseTabs,
 };
 
 export default outlinedTabs;
