@@ -1,5 +1,6 @@
-import { base } from "../../../../badge/dist/themes/default/base";
 import config from "./../../popover.config";
+
+const baseClose = "!absolute top-1 right-1";
 
 const baseContent = {
     base: "relative max-w-xs border rounded-[--popover-border-radius] p-[--popover-padding] menu-shadow",
@@ -11,12 +12,9 @@ const baseContent = {
 };
 
 const baseArrow = {
-    base: "border",
-    appearance: {
-        light: "fill-white border-[--menu-light-border-color]",
-        dark: "fill-[--menu-dark-bg] border-[--menu-dark-border-color]",
-        both: "fill-white border-[--menu-light-border-color] dark:fill-[--menu-dark-bg] dark:border-[--menu-dark-border-color]",
-    },
+    light: "fill-[--menu-light-border-color]",
+    dark: "fill-[--menu-dark-border-color]",
+    both: "fill-[--menu-light-border-color] dark:fill-[--menu-dark-border-color]",
 };
 
 const baseTitle = {
@@ -35,8 +33,9 @@ const baseDescription = {
 };
 
 const content = baseContent.base + " " + baseContent.appearance[config.appearance];
-const arrow = baseArrow.base + " " + baseArrow.appearance[config.appearance];
+const arrow = baseArrow[config.appearance];
 const description = baseDescription[config.appearance];
 const title = baseTitle.base + " " + baseTitle.appearances[config.appearance];
+const close = baseClose;
 
-export { content, arrow, title, description };
+export { content, arrow, title, description, close };
