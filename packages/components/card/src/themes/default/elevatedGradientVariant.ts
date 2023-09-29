@@ -7,6 +7,22 @@ const appearances = {
     both: "from-[--ui-light-border-color] to-[--card-light-bg] dark:from-[--ui-dark-border-color] dark:to-[--card-dark-bg]",
 };
 
+const paddings = {
+    none: "",
+    one: "",
+    two: "",
+    three: "",
+    four: "",
+    five: "",
+    six: "",
+    seven: "",
+    height: "",
+    nine: "",
+    ten: "",
+    eleven: "",
+    twelve: "",
+  };
+
 const innnerCard = {
     base: "p-[calc(var(--card-padding)-1px)] rounded-[calc(var(--card-border-radius)-1px)]",
     appearances: {
@@ -17,8 +33,8 @@ const innnerCard = {
 };
 
 const elevatedGradientVariant = {
-    outer: base + " " + appearances[config.appearance],
-    inner: innnerCard.base + " " + innnerCard.appearances[config.appearance],
+    outer: base + " " + appearances[config.appearance] + " " + paddings[config.padding],
+    inner: innnerCard.base + " " + innnerCard.appearances[config.appearance] + " " + paddings[config.padding],
 };
 
 export default elevatedGradientVariant;

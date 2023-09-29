@@ -8,7 +8,23 @@ const appearances = {
     both: "bg-[--card-light-bg] dark:bg-[--card-dark-bg]",
 };
 
-const softVariant = base + " " + appearances[config.appearance];
+const paddings = {
+    none: "",
+    one: "",
+    two: "",
+    three: "",
+    four: "",
+    five: "",
+    six: "",
+    seven: "",
+    height: "",
+    nine: "",
+    ten: "",
+    eleven: "",
+    twelve: "",
+  };
+
+const softVariant = base + " " + appearances[config.appearance] + " " + paddings[config.padding];
 
 export default softVariant;
 export { softVariant };

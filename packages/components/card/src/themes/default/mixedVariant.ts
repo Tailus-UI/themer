@@ -8,7 +8,23 @@ const appearances = {
     both: "bg-white border-[--ui-light-border-color] dark:bg-[--card-dark-bg] dark:border-[--ui-dark-border-color]",
 };
 
-const mixedVariant = base + " " + appearances[config.appearance];
+const paddings = {
+    none: "",
+    one: "",
+    two: "",
+    three: "",
+    four: "",
+    five: "",
+    six: "",
+    seven: "",
+    height: "",
+    nine: "",
+    ten: "",
+    eleven: "",
+    twelve: "",
+  };
+
+const mixedVariant = base + " " + appearances[config.appearance] + " " + paddings[config.padding];
 
 export default mixedVariant;
 export { mixedVariant };
