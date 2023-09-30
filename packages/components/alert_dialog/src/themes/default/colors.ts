@@ -1,4 +1,5 @@
 import config from "./../../alertdialog.config";
+import { Colors } from "../alertdialog.types";
 
 const colors = {
     info: {
@@ -18,7 +19,7 @@ const colors = {
     },
 };
 
-const imageContainerColors = {
+const imageContainerColors: Colors = {
     info: colors.info[config.appearance],
     warning: colors.warning[config.appearance],
     danger: colors.danger[config.appearance],

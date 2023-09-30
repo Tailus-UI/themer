@@ -1,12 +1,13 @@
+import { CentredAlertDialog, Colors } from "../../alertdialog.types";
 import * as baseAlertDialog from "./base";
 
-const imageContainer = {
+const imageContainer: Colors = {
     info: baseAlertDialog.getImageContainer("info"),
     warning: baseAlertDialog.getImageContainer("warning"),
     danger: baseAlertDialog.getImageContainer("danger"),
 };
 
-const centredAlertDialog = {
+const centredAlertDialog: CentredAlertDialog = {
     content: baseAlertDialog.content,
     overlay: baseAlertDialog.overlay,
     title: baseAlertDialog.title,
