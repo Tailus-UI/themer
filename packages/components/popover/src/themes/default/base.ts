@@ -32,10 +32,10 @@ const baseDescription = {
     both: "text-gray-700 dark:text-gray-300",
 };
 
-const content = baseContent.base + " " + baseContent.appearance[config.appearance];
-const arrow = baseArrow[config.appearance];
-const description = baseDescription[config.appearance];
-const title = baseTitle.base + " " + baseTitle.appearances[config.appearance];
-const close = baseClose;
+const content: string = baseContent.base + " " + baseContent.appearance[config.appearance];
+const arrow: string = baseArrow[config.appearance];
+const description: string = baseDescription[config.appearance];
+const title: string = baseTitle.base + " " + baseTitle.appearances[config.appearance];
+const close: string = baseClose;
 
 export { content, arrow, title, description, close };

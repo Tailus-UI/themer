@@ -1,6 +1,14 @@
 import * as basePopover from "./base";
 
-const popover = {
+type Popover = {
+    content: string;
+    arrow: string;
+    title: string;
+    description: string;
+    close: string;
+};
+
+const popover: Popover = {
     ...basePopover,
 };
 
