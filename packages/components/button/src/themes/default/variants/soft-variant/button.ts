@@ -1,6 +1,7 @@
+import { Button } from "../../../button.types";
 import { getSoftButtonSizes } from "./base";
 
-const softButton = {
+const softButton: Button = {
     primary: getSoftButtonSizes("primary"),
     secondary: getSoftButtonSizes("secondary"),
     accent: getSoftButtonSizes("accent"),

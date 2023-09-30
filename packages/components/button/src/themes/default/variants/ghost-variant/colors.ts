@@ -1,4 +1,5 @@
 import config from "../../../../button.config";
+import { Colors } from "../../../button.types";
 
 const colors = {
     primary: {
@@ -48,7 +49,7 @@ const colors = {
     },
 };
 
-const ghostColors = {
+const ghostColors: Colors = {
     primary: colors.primary[config.appearance],
     secondary: colors.secondary[config.appearance],
     accent: colors.accent[config.appearance],

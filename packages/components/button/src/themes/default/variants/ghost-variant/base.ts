@@ -1,15 +1,16 @@
+import { Sizes } from "../../../button.types";
 import { buttonSizes, getButtonSizes, getIconButtonSizes, iconOnlyButtonSizes } from "./../index";
 import ghostColors from "./colors";
 
-const getGhostButtonSizes = (color, sizes = buttonSizes) => {
+const getGhostButtonSizes = (color: string, sizes: Sizes = buttonSizes): Sizes => {
     return getButtonSizes(color, ghostColors, sizes);
 };
 
-const getGhostIconButtonSizes = (color, sizes = buttonSizes) => {
+const getGhostIconButtonSizes = (color: string, sizes: Sizes = buttonSizes): Sizes => {
     return getIconButtonSizes(color, ghostColors, sizes);
 };
 
-const getGhostIconOnlyButtonSizes = (color) => {
+const getGhostIconOnlyButtonSizes = (color: string) => {
     return getGhostButtonSizes(color, iconOnlyButtonSizes);
 };
 

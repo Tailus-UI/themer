@@ -1,4 +1,5 @@
 import config from "../../button.config";
+import { Colors } from "../button.types";
 
 const neutralColors = {
     appearances: {
@@ -8,7 +9,7 @@ const neutralColors = {
     },
 };
 
-const solidColors = {
+const solidColors: Colors = {
     primary:
         "text-white before:bg-primary-600 hover:before:bg-primary-700 focus:before:bg-primary-700",
     secondary:

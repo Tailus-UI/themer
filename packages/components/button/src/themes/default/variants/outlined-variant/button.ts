@@ -1,6 +1,7 @@
+import { Button } from "../../../button.types";
 import { getOutlinedButtonSizes } from "./base";
 
-const outlinedButton = {
+const outlinedButton: Button = {
     primary: getOutlinedButtonSizes("primary"),
     secondary: getOutlinedButtonSizes("secondary"),
     accent: getOutlinedButtonSizes("accent"),

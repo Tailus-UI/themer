@@ -1,6 +1,7 @@
+import { Button } from "../../../button.types";
 import { getGhostButtonSizes } from "./base";
 
-const ghostButton = {
+const ghostButton: Button = {
     primary: getGhostButtonSizes("primary"),
     secondary: getGhostButtonSizes("secondary"),
     accent: getGhostButtonSizes("accent"),

@@ -1,3 +1,4 @@
+import { Colors } from "../../../button.types";
 import config from "./../../../../button.config";
 
 const colors = {
@@ -51,7 +52,7 @@ const colors = {
 const getOutlinedColor = (color: string) => {
     return `before:[borderWidth:--btn-border-width] ${colors[color][config.appearance]}`;
 };
-const outlinedColors = {
+const outlinedColors: Colors = {
     primary: getOutlinedColor("primary"),
     secondary: getOutlinedColor("secondary"),
     accent: getOutlinedColor("accent"),

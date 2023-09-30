@@ -1,6 +1,7 @@
+import { Button } from "../button.types";
 import { getButtonSizes } from "./base";
 
-const button = {
+const button: Button = {
     primary: getButtonSizes("primary"),
     secondary: getButtonSizes("secondary"),
     accent: getButtonSizes("accent"),

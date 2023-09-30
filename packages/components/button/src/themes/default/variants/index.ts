@@ -1,3 +1,4 @@
+import { Colors, Sizes } from "../../button.types";
 import { buttonSizes, iconButtonUtilities, getBaseButton } from "./../base";
 
 /**
@@ -10,7 +11,7 @@ import { buttonSizes, iconButtonUtilities, getBaseButton } from "./../base";
  * **Note:** This function should not be used for leading Icon buttons or trailing Icon buttons. For those types of buttons, use the `getIconButtonWithSizes()` function instead.
  */
 
-const getButtonSizes = (color, colors, sizes = buttonSizes) => {
+const getButtonSizes = (color: string, colors: Colors, sizes = buttonSizes): Sizes => {
     return {
         xs: `${getBaseButton(color, colors)} ${sizes.xs}`,
         sm: `${getBaseButton(color, colors)} ${sizes.sm}`,
@@ -29,7 +30,7 @@ const getButtonSizes = (color, colors, sizes = buttonSizes) => {
 
  * **Note:** This function should not be used for icon-only buttons. For icon-only buttons, use the `getButtonWithSizes()` function instead.
  */
-const getIconButtonSizes = (color, colors, sizes = buttonSizes) => {
+const getIconButtonSizes = (color: string, colors: Colors, sizes = buttonSizes): Sizes => {
     return {
         xs: `${getBaseButton(color, colors)} ${iconButtonUtilities} ${sizes.xs}`,
         sm: `${getBaseButton(color, colors)} ${iconButtonUtilities} ${sizes.sm}`,

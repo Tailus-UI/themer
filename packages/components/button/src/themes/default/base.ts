@@ -1,5 +1,6 @@
 import solidColors from "./solidColors";
 import config from "./../../button.config";
+import { Colors, Sizes } from "../button.types";
 
 const base = {
     layout: "group relative [&>*:not(.sr-only)]:relative before:absolute before:inset-0 before:rounded-[--btn-border-radius] before:transition before:duration-300 active:before:scale-95 disabled:cursor-not-allowed disabled:active:before:scale-100",
@@ -10,9 +11,9 @@ const base = {
     },
 };
 
-const iconButtonUtilities = "flex items-center gap-1.5 items-center";
+const iconButtonUtilities: string = "flex items-center gap-1.5 items-center";
 
-const buttonSizes = {
+const buttonSizes: Sizes = {
     xs: "text-sm h-7 px-2.5",
     sm: "text-sm h-8 px-3.5",
     md: "text-base h-9 px-4",
@@ -20,7 +21,7 @@ const buttonSizes = {
     xl: "text-base h-12 px-6",
 };
 
-const iconOnlyButtonSizes = {
+const iconOnlyButtonSizes: Sizes = {
     xs: "h-7 w-7",
     sm: "h-8 w-8",
     md: "h-9 w-9",
@@ -28,7 +29,7 @@ const iconOnlyButtonSizes = {
     xl: "h-12 w-12",
 };
 
-const iconSizes = {
+const iconSizes: Sizes = {
     xs: "m-auto h-3.5 w-3.5",
     sm: "m-auto h-4 w-4",
     md: "m-auto h-[1.125rem] w-[1.125rem]",
@@ -36,7 +37,7 @@ const iconSizes = {
     xl: "m-auto h-6 w-6",
 };
 
-const leadingIconSizes = {
+const leadingIconSizes: Sizes = {
     xs: "-ml-1 h-3.5 w-3.5",
     sm: "-ml-1 h-4 w-4",
     md: "-ml-1 h-[1.125rem] w-[1.125rem]",
@@ -44,7 +45,7 @@ const leadingIconSizes = {
     xl: "-ml-1 h-6 w-6",
 };
 
-const trailingIconSizes = {
+const trailingIconSizes: Sizes = {
     xs: "-mr-1 h-3.5 w-3.5",
     sm: "-mr-1 h-4 w-4",
     md: "-mr-1 h-[1.125rem] w-[1.125rem]",
@@ -60,7 +61,7 @@ const trailingIconSizes = {
  * @returns A string containing the Tailwind utilities, including color utilities for the button.
  */
 
-const getBaseButton = (color, colors = solidColors) => {
+const getBaseButton = (color: string, colors: Colors = solidColors): string => {
     return `${base.layout} ${base.appearances[config.appearance]} ${colors[color]}`;
 };
 
@@ -74,7 +75,7 @@ const getBaseButton = (color, colors = solidColors) => {
  * **Note:** This function should not be used for leading Icon buttons or trailing Icon buttons. For those types of buttons, use the `getIconButtonWithSizes()` function instead.
  */
 
-const getButtonSizes = (color, sizes = buttonSizes) => {
+const getButtonSizes = (color: string, sizes: Sizes = buttonSizes) => {
     return {
         xs: `${getBaseButton(color)} ${sizes.xs}`,
         sm: `${getBaseButton(color)} ${sizes.sm}`,
@@ -93,7 +94,7 @@ const getButtonSizes = (color, sizes = buttonSizes) => {
 
  * **Note:** This function should not be used for icon-only buttons. For icon-only buttons, use the `getButtonWithSizes()` function instead.
  */
-const getIconButtonSizes = (color, sizes = buttonSizes) => {
+const getIconButtonSizes = (color: string, sizes: Sizes = buttonSizes) => {
     return {
         xs: `${getBaseButton(color)} ${iconButtonUtilities} ${sizes.xs}`,
         sm: `${getBaseButton(color)} ${iconButtonUtilities} ${sizes.sm}`,
