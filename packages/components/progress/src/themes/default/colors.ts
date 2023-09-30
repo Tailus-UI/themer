@@ -1,3 +1,4 @@
+import { Colors } from "../types";
 import config from "./../../progress.config";
 import { baseIndicator } from "./base";
 
@@ -23,6 +24,11 @@ const colors = {
         light: "bg-secondary-600",
         dark: "bg-secondary-500",
         both: "bg-secondary-600 dark:bg-secondary-500",
+    },
+    accent: {
+        light: "bg-accent-600",
+        dark: "bg-accent-500",
+        both: "bg-accent-600 dark:bg-accent-500",
     },
     success: {
         light: "bg-success-600",
@@ -57,9 +63,10 @@ const colors = {
     gradient: "bg-gradient-to-r",
 };
 
-const indicatorColors = {
+const indicatorColors: Colors = {
     primary: colors.primary[config.appearance],
     secondary: colors.secondary[config.appearance],
+    accent: colors.accent[config.appearance],
     success: colors.success[config.appearance],
     info: colors.info[config.appearance],
     warning: colors.warning[config.appearance],
@@ -87,7 +94,7 @@ const indicatorColors = {
  *
  * @returns The Tailwindcss utilities for the specified indicator color.
  */
-function getIndicatorColor(color: IndicatorColor, colors: any = indicatorColors): string {
+function getIndicatorColor(color: IndicatorColor, colors: Colors = indicatorColors): string {
     return baseIndicator + " " + colors[color];
 }
 
