@@ -1,3 +1,4 @@
+import type { Accordion } from "../accordion.types";
 import config from "./../../accordion.config";
 import * as baseAccordion from "./base";
 
@@ -10,7 +11,7 @@ const item = {
     },
 };
 
-const outlinedElevatedVariant = {
+const outlinedElevatedVariant: Accordion = {
     root: "space-y-4",
     item: item.base + " " + item.appearances[config.appearance],
     trigger: {

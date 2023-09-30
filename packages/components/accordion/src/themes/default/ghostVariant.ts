@@ -1,4 +1,5 @@
 import config from "../../accordion.config";
+import type { Accordion } from "../accordion.types";
 import * as baseAccordion from "./base";
 
 const item = {
@@ -22,7 +23,7 @@ const triggerParent = {
         parentAppearances[config.appearance],
 };
 
-const ghostVariant = {
+const ghostVariant: Accordion = {
     root: "",
     item: item.base + " " + item.appearances[config.appearance],
     trigger: {

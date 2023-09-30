@@ -1,5 +1,6 @@
 import config from "../../accordion.config";
 import * as baseAccordion from "./base";
+import type { Accordion } from "../accordion.types";
 
 const item = {
     base: `${baseAccordion.item} group/item px-6 data-[state=open]:rounded-[--accordion-border-radius] data-[state=open]:border-transparent`,
@@ -22,7 +23,7 @@ const triggerParent = {
         parentAppearances[config.appearance],
 };
 
-const elevatedVariant = {
+const elevatedVariant: Accordion = {
     root: "",
     item: item.base + " " + item.appearances[config.appearance],
     trigger: {

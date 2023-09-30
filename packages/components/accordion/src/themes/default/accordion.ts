@@ -1,4 +1,5 @@
 import config from "../../accordion.config";
+import type { Accordion } from "../accordion.types";
 import * as baseAccordion from "./base";
 
 const item = {
@@ -10,7 +11,7 @@ const item = {
     },
 };
 
-const accordion = {
+const accordion: Accordion = {
     root: "space-y-4",
     item: item.base + " " + item.appearances[config.appearance],
     trigger: {
