@@ -1,3 +1,4 @@
+import { Colors } from "../types";
 import config from "./../../contextmenu.config";
 import { solidColors, solidSubTrigerColors } from "./colors";
 
@@ -37,15 +38,15 @@ const item = baseItem.base + " " + baseItem.appearance[config.appearance];
 const separator = baseSeparator.base + " " + baseSeparator.appearance[config.appearance];
 const subContent = baseContent.base + " " + baseContent.appearance[config.appearance];
 
-const getItem = (color, colors: any = solidColors) => {
+const getItem = (color: string, colors: Colors = solidColors): string => {
     return item + " " + colors[color];
 };
 
 const getSubTrigger = (
-    color,
-    colors: any = solidColors,
-    subTriggerColors: any = solidSubTrigerColors
-) => {
+    color: string,
+    colors: Colors = solidColors,
+    subTriggerColors: Colors = solidSubTrigerColors
+): string => {
     return item + " " + colors[color] + " " + subTriggerColors[color];
 };
 

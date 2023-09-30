@@ -1,4 +1,5 @@
 import config from "./../../dropdownmenu.config";
+import type { Colors } from "../types";
 
 const colors = {
     primary: {
@@ -40,7 +41,7 @@ const colors = {
     },
 };
 
-const solidColors = {
+const solidColors: Colors = {
     primary: colors.primary.base + " " + colors.primary.appearance[config.appearance],
     danger: colors.danger.base + " " + colors.danger.appearance[config.appearance],
     warning: colors.warning.base + " " + colors.warning.appearance[config.appearance],
@@ -65,7 +66,7 @@ const subTrigerColors = {
     },
 };
 
-const solidSubTrigerColors = {
+const solidSubTrigerColors: Colors = {
     primary:
         subTrigerColors.primary +
         " " +

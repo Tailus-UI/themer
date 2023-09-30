@@ -169,7 +169,7 @@ tailus: {
             shadow : {
                 size : "",
                 opacity:""
-            },
+            },x
             dark : {
                 borderColor : "",
                 alertBackground : ""

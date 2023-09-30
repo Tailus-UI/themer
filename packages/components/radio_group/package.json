@@ -23,11 +23,14 @@
         "README.md"
     ],
     "scripts": {
-        "build": "npx tsc ./src/index.ts --outDir dist --declaration"
+        "lint": "eslint ./src/**/*.ts --fix",
+        "build": "npx tsc ./src/index.ts --outDir dist --declaration",
+        "prepublishOnly": "npm run build",
+        "publish": "npm run build && npm publish --access public"
+    },
+    "bugs": {
+        "url": "https://github.com/tailus-ui/themer/issues"
     },
     "author": "tailus.io",
-    "license": "MIT",
-    "dependencies": {
-        "@types/node": "^20.5.9"
-    }
+    "license": "MIT"
 }

@@ -1,6 +1,7 @@
+import { Colors, DropDownMenu } from "../types";
 import * as baseDropdown from "./base";
 
-const item = {
+const item: Colors = {
     primary: baseDropdown.getItem("primary"),
     danger: baseDropdown.getItem("danger"),
     warning: baseDropdown.getItem("warning"),
@@ -8,7 +9,7 @@ const item = {
     neutral: baseDropdown.getItem("neutral"),
 };
 
-const subTriger = {
+const subTriger: Colors = {
     primary: baseDropdown.getSubTrigger("primary"),
     danger: baseDropdown.getSubTrigger("danger"),
     warning: baseDropdown.getSubTrigger("warning"),
@@ -16,7 +17,7 @@ const subTriger = {
     neutral: baseDropdown.getSubTrigger("neutral"),
 };
 
-const dropdownMenu = {
+const dropdownMenu: DropDownMenu = {
     content: baseDropdown.content,
     item: item,
     icon: baseDropdown.icon,

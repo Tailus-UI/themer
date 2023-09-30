@@ -1,3 +1,4 @@
+import { Colors } from "../../types";
 import config from "./../../../contextmenu.config";
 
 const colors = {
@@ -35,7 +36,7 @@ const colors = {
     },
 };
 
-const softColors = {
+const softColors: Colors = {
     primary: colors.primary.base + " " + colors.primary.appearance[config.appearance],
     danger: colors.danger.base + " " + colors.danger.appearance[config.appearance],
     warning: colors.warning.base + " " + colors.warning.appearance[config.appearance],
@@ -82,7 +83,7 @@ const subTrigerColors = {
     },
 };
 
-const softSubTrigerColors = {
+const softSubTrigerColors: Colors = {
     primary:
         colors.primary.appearance[config.appearance] +
         " " +
