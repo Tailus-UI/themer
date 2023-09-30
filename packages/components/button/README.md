@@ -19,9 +19,12 @@ import { button } from "@tailus/themer-button";
 Then, create a button element and add the appropriate Tailwindcss utilities:
 
 ```tsx
-<button className={button.primary.sm}>
-    <span>Button</span>
-</button>
+import { button } from "@tailus/themer-button";
+const Button = () => (
+    <button className={button.primary.sm}>
+        <span>Button</span>
+    </button>
+);
 ```
 
 ## Variants
@@ -63,10 +66,14 @@ Icon only buttons, leading icon buttons, and trailing icon buttons have an icon 
 ### Example
 
 ```tsx
-<button className={button.primary.sm}>
-    <span className="sr-only">Boost button</span>
-    <BoltIcon className={button.icon.sm} aria-hidden />
-</button>
+import { iconButton } from "@tailus/themer-button";
+import { BoltIcon } from "@radix-ui/react-icons";
+
+const Button = () => (
+    <button className={iconButton.primary.sm}>
+        <BoltIcon className={iconButton.icon.sm} />
+    </button>
+);
 ```
 
 This would create a small primary button with a bolt icon.
