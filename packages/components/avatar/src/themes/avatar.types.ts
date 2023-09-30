@@ -17,14 +17,6 @@ type Sizes = {
     xl: string;
 };
 
-type Avatar = {
-    root: Sizes;
-    fallback: Fallback;
-    image: string;
-    topStatus: StatusColors;
-    bottomStatus: StatusColors;
-};
-
 type StatusColors = {
     online: string;
     offline: string;
@@ -32,4 +24,4 @@ type StatusColors = {
     busy: string;
 };
 
-export { Fallback, Sizes, Avatar, StatusColors };
+export { Fallback, Sizes, StatusColors };

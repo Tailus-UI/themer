@@ -1,5 +1,5 @@
 import config from "../../../avatar.config";
-import { Fallback, Sizes, StatusColors } from "../../avatar.types";
+import { Sizes, StatusColors } from "../../avatar.types";
 const baseRoot = "relative block rounded-[--avatar-border-radius]";
 
 const sizes: Sizes = {

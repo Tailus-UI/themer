@@ -1,6 +1,5 @@
 import { fallback as baseFallback } from ".";
 import config from "../../../avatar.config";
-import { Fallback } from "../../avatar.types";
 
 const solidColors = {
     primary: "text-white bg-primary-600",
@@ -61,7 +60,7 @@ const softColors = {
     },
 };
 
-const solidFallback: Fallback = {
+const solidFallback = {
     primary: baseFallback + " " + solidColors.primary,
     secondary: baseFallback + " " + solidColors.secondary,
     accent: baseFallback + " " + solidColors.accent,
@@ -72,7 +71,7 @@ const solidFallback: Fallback = {
     gray: baseFallback + " " + solidColors.gray,
 };
 
-const softFallback: Fallback = {
+const softFallback = {
     primary: baseFallback + " " + softColors.primary[config.appearance],
     secondary: baseFallback + " " + softColors.secondary[config.appearance],
     accent: baseFallback + " " + softColors.accent[config.appearance],
