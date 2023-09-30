@@ -1,6 +1,7 @@
+import { EmptyState } from "../types";
 import * as baseEmptyState from "./base";
 
-const emptyState = {
+const emptyState: EmptyState = {
     ...baseEmptyState,
 };
 

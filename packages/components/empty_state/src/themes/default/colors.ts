@@ -1,3 +1,4 @@
+import { Colors } from "../types";
 import config from "./../../emptystate.config";
 
 const colors = {
@@ -43,7 +44,7 @@ const colors = {
     },
 };
 
-const imageContainerColors = {
+const imageContainerColors: Colors = {
     gray: colors.gray[config.appearance],
     primary: colors.primary[config.appearance],
     secondary: colors.secondary[config.appearance],

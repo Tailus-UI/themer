@@ -1,5 +1,6 @@
 import imageContainerColors from "./colors";
 import config from "./../../emptystate.config";
+import type { Colors } from "../types";
 
 const root = "text-center flex flex-col items-center justify-center";
 const baseImageContainer = "mx-auto flex h-40 w-40 rounded-full";
@@ -23,7 +24,7 @@ const baseDescription = {
     },
 };
 
-const imageContainer = {
+const imageContainer: Colors = {
     gray: baseImageContainer + " " + imageContainerColors.gray,
     primary: baseImageContainer + " " + imageContainerColors.primary,
     secondary: baseImageContainer + " " + imageContainerColors.secondary,
