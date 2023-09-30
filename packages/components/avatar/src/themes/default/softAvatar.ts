@@ -1,5 +1,5 @@
-import * as baseAvatar from "./base";
 import { Avatar } from "../avatar.types";
+import * as baseAvatar from "./base";
 
 const softFallbackAvatar: Avatar = {
     root: baseAvatar.root,

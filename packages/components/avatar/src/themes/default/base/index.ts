@@ -1,6 +1,5 @@
 import config from "../../../avatar.config";
-import { Sizes, StatusColors } from "../../avatar.types";
-
+import { Fallback, Sizes, StatusColors } from "../../avatar.types";
 const baseRoot = "relative block rounded-[--avatar-border-radius]";
 
 const sizes: Sizes = {
@@ -38,27 +37,44 @@ const fallback =
  * @param status
  * @returns {string} The avatar status utilities
  */
-function getAvatarStatus(position: string, status: string): string {
+function getAvatarStatus(status: string): string {
     return (
         avatarStatus.base +
+        " " +
         avatarStatus.appearances[config.appearance] +
-        ` before:${position}-[--avatar-status-position] ` +
+        " before:top-[--avatar-status-position] " +
         statusColors[status]
     );
 }
 
-const topStatus: StatusColors = {
-    online: getAvatarStatus("top", "online"),
-    offline: getAvatarStatus("top", "offline"),
-    away: getAvatarStatus("top", "away"),
-    busy: getAvatarStatus("top", "busy"),
+/**
+ * @description Get the avatar status utilities
+ * @param position
+ * @param status
+ * @returns {string} The avatar status utilities
+ */
+function getAvatarBottomStatus(status: string): string {
+    return (
+        avatarStatus.base +
+        " " +
+        avatarStatus.appearances[config.appearance] +
+        " before:bottom-[--avatar-status-position] " +
+        statusColors[status]
+    );
+}
+
+const topStatus = {
+    online: getAvatarStatus("online"),
+    offline: getAvatarStatus("offline"),
+    away: getAvatarStatus("away"),
+    busy: getAvatarStatus("busy"),
 };
 
 const bottomStatus: StatusColors = {
-    online: getAvatarStatus("bottom", "online"),
-    offline: getAvatarStatus("bottom", "offline"),
-    away: getAvatarStatus("bottom", "away"),
-    busy: getAvatarStatus("bottom", "busy"),
+    online: getAvatarBottomStatus("online"),
+    offline: getAvatarBottomStatus("offline"),
+    away: getAvatarBottomStatus("away"),
+    busy: getAvatarBottomStatus("busy"),
 };
 
 const root: Sizes = {

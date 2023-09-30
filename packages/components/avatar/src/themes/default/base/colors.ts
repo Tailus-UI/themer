@@ -1,6 +1,6 @@
 import { fallback as baseFallback } from ".";
-import type { Fallback } from "../../avatar.types";
 import config from "../../../avatar.config";
+import { Fallback } from "../../avatar.types";
 
 const solidColors = {
     primary: "text-white bg-primary-600",
