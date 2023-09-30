@@ -1,4 +1,5 @@
 import config from "../../badge.config";
+import { Colors } from "../badge.types";
 
 const colors = {
     primary: {
@@ -43,7 +44,7 @@ const colors = {
     },
 };
 
-const solidColors = {
+const solidColors: Colors = {
     primary: colors.primary[config.appearance],
     secondary: colors.secondary[config.appearance],
     accent: colors.accent[config.appearance],

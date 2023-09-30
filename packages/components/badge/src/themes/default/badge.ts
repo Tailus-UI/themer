@@ -1,6 +1,7 @@
 import { getBadgeSizes } from "./base";
+import { Badge } from "../badge.types";
 
-const badge = {
+const badge: Badge = {
     primary: getBadgeSizes("primary"),
     secondary: getBadgeSizes("secondary"),
     accent: getBadgeSizes("accent"),

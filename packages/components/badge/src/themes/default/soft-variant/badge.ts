@@ -1,6 +1,7 @@
 import { getSoftBadgeSizes } from "./base";
+import { Badge } from "../../badge.types";
 
-const softBadge = {
+const softBadge: Badge = {
     primary: getSoftBadgeSizes("primary"),
     secondary: getSoftBadgeSizes("secondary"),
     accent: getSoftBadgeSizes("accent"),
