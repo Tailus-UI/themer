@@ -1,5 +1,6 @@
 import colors from "./colors";
 import config from "./../../annonce.config";
+import { Colors } from "../annonce.types";
 
 const root =
     "block w-fit flex gap-2 justify-between items-center pr-3 p-1.5 transition duration-200 rounded-[--annonce-border-radius]";
@@ -7,18 +8,19 @@ const root =
 const baseConcerm =
     "block text-sm px-2 py-0.5 rounded-[calc(var(--annonce-border-radius)-0.375rem)]";
 
-const concern = {
-    primary: baseConcerm + " " + colors.primary[config.appearance],
-    secondary: baseConcerm + " " + colors.secondary[config.appearance],
-    accent: baseConcerm + " " + colors.accent[config.appearance],
-    danger: baseConcerm + " " + colors.danger[config.appearance],
-    success: baseConcerm + " " + colors.success[config.appearance],
-    warning: baseConcerm + " " + colors.warning[config.appearance],
-    gray: baseConcerm + " " + colors.gray[config.appearance],
-    neutral: baseConcerm + " " + colors.neutral[config.appearance],
+const concern: Colors = {
+    primary: baseConcerm + " " + colors.primary,
+    secondary: baseConcerm + " " + colors.secondary,
+    accent: baseConcerm + " " + colors.accent,
+    danger: baseConcerm + " " + colors.danger,
+    success: baseConcerm + " " + colors.success,
+    warning: baseConcerm + " " + colors.warning,
+    info: baseConcerm + " " + colors.info,
+    gray: baseConcerm + " " + colors.gray,
+    neutral: baseConcerm + " " + colors.neutral,
 };
 
-const message = {
+const baseMessage = {
     base: "text-sm font-medium block",
     appearances: {
         light: "text-gray-700",
@@ -26,5 +28,7 @@ const message = {
         both: "text-gray-700 dark:text-gray-300",
     },
 };
+
+const message = baseMessage.base + " " + baseMessage.appearances[config.appearance];
 
 export { root, concern, message };

@@ -1,3 +1,6 @@
+import type { Colors } from "./../annonce.types";
+import config from "./../../annonce.config";
+
 const colors = {
     primary: {
         light: "text-white bg-primary-600",
@@ -46,4 +49,16 @@ const colors = {
     },
 };
 
-export default colors;
+const concernColors: Colors = {
+    primary: colors.primary[config.appearance],
+    secondary: colors.secondary[config.appearance],
+    accent: colors.accent[config.appearance],
+    danger: colors.danger[config.appearance],
+    success: colors.success[config.appearance],
+    warning: colors.warning[config.appearance],
+    info: colors.info[config.appearance],
+    gray: colors.gray[config.appearance],
+    neutral: colors.neutral[config.appearance],
+};
+
+export default concernColors;

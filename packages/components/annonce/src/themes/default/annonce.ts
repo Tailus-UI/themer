@@ -1,5 +1,6 @@
 import * as baseAnnonce from "./base";
 import config from "./../../annonce.config";
+import { Annonce } from "../annonce.types";
 
 const root = {
     base: "border " + baseAnnonce.root,
@@ -10,10 +11,10 @@ const root = {
     },
 };
 
-const annonce = {
+const annonce: Annonce = {
     root: root.base + " " + root.appearances[config.appearance],
     concern: baseAnnonce.concern,
-    message: baseAnnonce.message.base + " " + baseAnnonce.message.appearances[config.appearance],
+    message: baseAnnonce.message,
 };
 
 export default annonce;
