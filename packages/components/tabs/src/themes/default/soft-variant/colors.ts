@@ -1,4 +1,5 @@
 import config from "../../../tabs.config";
+import { Colors } from "../../types";
 
 const colors = {
     primary: {
@@ -40,7 +41,7 @@ const colors = {
     },
 };
 
-const softTabsColors = {
+const softTabsColors: Colors = {
     primary: colors.primary.base + " " + colors.primary.appearances[config.appearance],
     secondary: colors.secondary.base + " " + colors.secondary.appearances[config.appearance],
     accent: colors.accent.base + " " + colors.accent.appearances[config.appearance],

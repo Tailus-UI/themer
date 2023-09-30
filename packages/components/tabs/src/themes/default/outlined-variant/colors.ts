@@ -1,4 +1,5 @@
 import config from "../../../tabs.config";
+import { Colors } from "../../types";
 
 const colors = {
     primary: "data-[state=active]:bg-primary-600 data-[state=active]:text-white",
@@ -13,7 +14,7 @@ const colors = {
     },
 };
 
-const outlinedTabsColors = {
+const outlinedTabsColors: Colors = {
     primary: colors.primary,
     secondary: colors.secondary,
     accent: colors.accent,

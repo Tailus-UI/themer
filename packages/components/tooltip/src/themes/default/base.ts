@@ -16,8 +16,8 @@ const baseArrow = {
     both: "fill-gray-800 dark:fill-white",
 };
 
-const content =
+const content: string =
     baseContent.base + " " + baseContent.appearances[config.appearance] + " " + baseContent.motion;
-const arrow = baseArrow[config.appearance];
+const arrow: string = baseArrow[config.appearance];
 
 export { content, arrow };

@@ -1,5 +1,6 @@
 import iconAfterColors from "./colors";
 import config from "./../../toggle.config";
+import { Colors, Sizes } from "../types";
 
 const baseRoot = {
     base: "relative group transition duration-300 flex items-center justify-center border border-transparent rounded-[--btn-border-radius] outline-none",
@@ -10,7 +11,7 @@ const baseRoot = {
     },
 };
 
-const rootSizes = {
+const rootSizes: Sizes = {
     xs: "h-8 w-8",
     sm: "h-9 w-9",
     md: "h-10 w-10",
@@ -23,7 +24,7 @@ const baseIconBefore = "m-auto group-data-[state=on]:scale-75 group-data-[state=
 const baseIconAfter =
     "absolute inset-0 m-auto scale-75 opacity-0 transition duration-200 group-data-[state=on]:scale-100 group-data-[state=on]:opacity-100";
 
-const iconSizes = {
+const iconSizes: Sizes = {
     xs: "h-[1.125rem] w-[1.125rem]",
     sm: "h-5 w-5",
     md: "h-6 w-6",
@@ -31,23 +32,23 @@ const iconSizes = {
     xl: "h-10 w-10",
 };
 
-const getIcon = (size: string) => {
+const getIcon = (size: string): string => {
     return `${baseIcon} ${iconSizes[size]}`;
 };
 
-const getIconAfter = (color: string, colors: any = iconAfterColors) => {
+const getIconAfter = (color: string, colors: Colors = iconAfterColors): string => {
     return baseIconAfter + " " + colors[color];
 };
 
-const getRootSize = (size: string) => {
+const getRootSize = (size: string): string => {
     return `${baseRoot.base} ${baseRoot.appearances[config.appearance]} ${rootSizes[size]}`;
 };
 
-const getIconBeforeSize = (size: string) => {
+const getIconBeforeSize = (size: string): string => {
     return `${baseIconBefore} ${iconSizes[size]}`;
 };
 
-const getIconAfterSizes = (color: string, sizes: any = iconSizes) => {
+const getIconAfterSizes = (color: string, sizes: Sizes = iconSizes): Sizes => {
     return {
         xs: `${getIconAfter(color)} ${sizes.xs}`,
         sm: `${getIconAfter(color)} ${sizes.sm}`,
@@ -57,7 +58,7 @@ const getIconAfterSizes = (color: string, sizes: any = iconSizes) => {
     };
 };
 
-const root = {
+const root: Sizes = {
     xs: getRootSize("xs"),
     sm: getRootSize("sm"),
     md: getRootSize("md"),
@@ -65,7 +66,7 @@ const root = {
     xl: getRootSize("xl"),
 };
 
-const icon = {
+const icon: Sizes = {
     xs: getIcon("xs"),
     sm: getIcon("sm"),
     md: getIcon("md"),
@@ -73,7 +74,7 @@ const icon = {
     xl: getIcon("xl"),
 };
 
-const iconBefore = {
+const iconBefore: Sizes = {
     xs: getIconBeforeSize("xs"),
     sm: getIconBeforeSize("sm"),
     md: getIconBeforeSize("md"),

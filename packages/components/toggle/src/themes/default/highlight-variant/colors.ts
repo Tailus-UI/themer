@@ -1,4 +1,5 @@
 import config from "../../../toggle.config";
+import type { Colors } from "../../types";
 
 const colors = {
     primary: {
@@ -48,13 +49,14 @@ const colors = {
     },
 };
 
-const rootColors = {
+const rootColors: Colors = {
     primary: colors.primary[config.appearance],
     secondary: colors.secondary[config.appearance],
     accent: colors.accent[config.appearance],
     danger: colors.danger[config.appearance],
     warning: colors.warning[config.appearance],
     success: colors.success[config.appearance],
+    info: colors.info[config.appearance],
     gray: colors.gray[config.appearance],
     neutral: colors.neutral[config.appearance],
 };

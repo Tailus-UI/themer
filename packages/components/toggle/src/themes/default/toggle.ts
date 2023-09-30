@@ -1,3 +1,4 @@
+import { Toggle } from "../types";
 import * as baseToggle from "./base";
 
 const iconAfter = {
@@ -11,7 +12,7 @@ const iconAfter = {
     neutral: baseToggle.getIconAfterSizes("neutral"),
 };
 
-const toggle = {
+const toggle: Toggle = {
     root: baseToggle.root,
     icon: baseToggle.icon,
     iconBefore: baseToggle.iconBefore,
