@@ -61,6 +61,16 @@ The following property can be customized:
 
 -   `borderRadius`
 
+```ts
+tailus: {
+    components: {
+        annonce: {
+            borderRadius: "xl";
+        }
+    }
+}
+```
+
 ## Usage
 
 To use the annonce component theme, simply import the appropriate variant and add the appropriate Tailwindcss utilities to the annonce element and its child elements. For example, to create a default annonce component, you would import the `annonce` variant and add its properties to the annonce element.
