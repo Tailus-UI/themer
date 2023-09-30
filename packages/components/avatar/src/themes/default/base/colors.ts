@@ -1,14 +1,19 @@
-const root = "relative block rounded-[--avatar-border-radius]";
+import { fallback as baseFallback } from ".";
+import type { Fallback } from "../../avatar.types";
+import config from "../../../avatar.config";
 
-const sizes = {
-    xs: "text-sm h-6 w-6",
-    sm: "text-base h-8 w-8",
-    md: "text-lg h-10 w-10",
-    lg: "text-lg h-12 w-12",
-    xl: "text-xl h-14 w-14",
+const solidColors = {
+    primary: "text-white bg-primary-600",
+    secondary: "text-white bg-secondary-600",
+    accent: "text-white bg-accent-600",
+    danger: "text-white bg-danger-600",
+    success: "text-white bg-success-600",
+    warning: "text-white bg-warning-700",
+    info: "text-white bg-info-600",
+    gray: "text-white bg-gray-600",
 };
 
-const colors = {
+const softColors = {
     primary: {
         light: "text-primary-900 bg-primary-200",
         dark: "text-primary-200 bg-primary-900",
@@ -56,25 +61,26 @@ const colors = {
     },
 };
 
-const image = "h-full w-full rounded-[--avatar-border-radius] object-cover";
-
-const avatarStatus = {
-    base: "before:absolute before:z-[1] before:right-[--avatar-status-position] before:h-3 before:w-3 before:rounded-full before:border-2",
-    appearances: {
-        light: "before:border-white",
-        dark: "before:border-gray-950",
-        both: "before:border-white dark:before:border-gray-950",
-    },
+const solidFallback: Fallback = {
+    primary: baseFallback + " " + solidColors.primary,
+    secondary: baseFallback + " " + solidColors.secondary,
+    accent: baseFallback + " " + solidColors.accent,
+    danger: baseFallback + " " + solidColors.danger,
+    success: baseFallback + " " + solidColors.success,
+    warning: baseFallback + " " + solidColors.warning,
+    info: baseFallback + " " + solidColors.info,
+    gray: baseFallback + " " + solidColors.gray,
 };
 
-const statusColors = {
-    online: "before:bg-success-500",
-    offline: "before:bg-gray-500",
-    away: "before:bg-warning-600",
-    busy: "before:bg-danger-500",
+const softFallback: Fallback = {
+    primary: baseFallback + " " + softColors.primary[config.appearance],
+    secondary: baseFallback + " " + softColors.secondary[config.appearance],
+    accent: baseFallback + " " + softColors.accent[config.appearance],
+    danger: baseFallback + " " + softColors.danger[config.appearance],
+    success: baseFallback + " " + softColors.success[config.appearance],
+    warning: baseFallback + " " + softColors.warning[config.appearance],
+    info: baseFallback + " " + softColors.info[config.appearance],
+    gray: baseFallback + " " + softColors.gray[config.appearance],
 };
 
-const fallback =
-    "absolute inset-0 m-auto h-full flex items-center justify-center rounded-[--avatar-border-radius] w-full font-medium";
-
-export { root, image, sizes, colors, avatarStatus, statusColors, fallback };
+export { solidFallback, softFallback };

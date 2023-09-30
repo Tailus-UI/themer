@@ -1,13 +1,13 @@
 import * as baseAvatar from "./base";
 import { Avatar } from "../avatar.types";
 
-const avatar: Avatar = {
+const softFallbackAvatar: Avatar = {
     root: baseAvatar.root,
     image: baseAvatar.image,
-    fallback: baseAvatar.solidFallback,
+    fallback: baseAvatar.softFallback,
     topStatus: baseAvatar.topStatus,
     bottomStatus: baseAvatar.bottomStatus,
 };
 
-export default avatar;
-export { avatar };
+export default softFallbackAvatar;
+export { softFallbackAvatar };
