@@ -1,0 +1,21 @@
+export default {
+    button: "full",
+    accordion: "3xl",
+    annonce: "full",
+    avatar: "full",
+    badge: "full",
+    card: "3xl",
+    flag: "3xl",
+    field: "lg",
+    popover: "3xl",
+    tooltip: "full",
+    menu: "xl",
+    alert: "3xl",
+    switch: "full",
+    toast: "3xl",
+    tabs: {
+        default: "full",
+        soft: "full",
+        bottomIndicator: "full",
+    },
+};
