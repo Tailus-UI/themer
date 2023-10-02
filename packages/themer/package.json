@@ -33,7 +33,9 @@
     },
     "author": "tailus.io",
     "license": "MIT",
-    "dependencies": {
-        "lilconfig": "^2.1.0"
+    "devDependencies": {
+        "autoprefixer": "^10.4.16",
+        "postcss": "^8.4.31",
+        "tailwindcss": "^3.3.3"
     }
 }
