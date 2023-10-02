@@ -5,9 +5,9 @@ import type { Accordion } from "../accordion.types";
 const item = {
     base: `${baseAccordion.item} group/item px-6 data-[state=open]:rounded-[--accordion-border-radius] data-[state=open]:border-transparent data-[state=open]:accordion-shadow`,
     appearances: {
-        light: "bg-white",
-        dark: "bg-[--accordion-dark-bg]",
-        both: "bg-white bg-[--accordion-dark-bg] dark:data-[state=open]:bg-[--card-dark-bg]",
+        light: "data-[state=open]:bg-white",
+        dark: "data-[state=open]:bg-[--accordion-dark-bg]",
+        both: "data-[state=open]:bg-white dark:data-[state=open]:bg-[--accordion-dark-bg]",
     },
 };
 const parentAppearances = {
