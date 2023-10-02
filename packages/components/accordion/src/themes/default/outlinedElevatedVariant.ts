@@ -7,7 +7,7 @@ const item = {
     appearances: {
         light: "bg-white border-[--ui-light-border-color] hover:border-[--ui-light-border-hover-color]",
         dark: "bg-[--accordion-dark-bg] border-[--ui-dark-border-color] hover:border-[--ui-dark-border-hover-color] data-[state=open]:bg-[--card-dark-bg]",
-        both: "bg-white dark:bg-[--accordion-dark-bg] border-[--ui-light-border-color] hover:border-[--ui-light-border-hover-color] dark:border-[--ui-dark-border-color] dark:hover:border-[--ui-dark-border-hover-color] dark:data-[state=open]:bg-[--card-dark-bg]",
+        both: "bg-white dark:bg-[--accordion-dark-bg] border-[--ui-light-border-color] hover:border-[--ui-light-border-hover-color] dark:border-[--ui-dark-border-color] dark:hover:border-[--ui-dark-border-hover-color] dark:data-[state=open]:bg-[--accordion-dark-bg]",
     },
 };
 
