@@ -3,11 +3,11 @@ import * as baseAccordion from "./base";
 import type { Accordion } from "../accordion.types";
 
 const item = {
-    base: `${baseAccordion.item} group/item px-6 data-[state=open]:rounded-[--accordion-border-radius] data-[state=open]:border-transparent`,
+    base: `${baseAccordion.item} group/item px-6 data-[state=open]:rounded-[--accordion-border-radius] data-[state=open]:border-transparent data-[state=open]:accordion-shadow`,
     appearances: {
-        light: "data-[state=open]:card-shadow",
-        dark: "data-[state=open]:card-shadow",
-        both: "data-[state=open]:card-shadow dark:data-[state=open]:bg-[--card-dark-bg]",
+        light: "bg-white",
+        dark: "bg-[--accordion-dark-bg]",
+        both: "bg-white bg-[--accordion-dark-bg] dark:data-[state=open]:bg-[--card-dark-bg]",
     },
 };
 const parentAppearances = {

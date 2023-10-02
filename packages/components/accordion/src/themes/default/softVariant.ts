@@ -5,9 +5,9 @@ import * as baseAccordion from "./base";
 const item = {
     base: `${baseAccordion.item} px-6 rounded-[--accordion-border-radius]`,
     appearances: {
-        light: "bg-gray-100 hover:bg-gray-200",
-        dark: "bg-gray-900 hover:bg-gray-800",
-        both: "bg-gray-100 hover:bg-gray-200 dark:bg-gray-900 dark:hover:bg-gray-800",
+        light: "bg-[--accordion-soft-light-bg]",
+        dark: "bg-[--accordion-soft-dark-bg]",
+        both: "bg-[--accordion-soft-light-bg] dark:bg-[--accordion-soft-dark-bg]",
     },
 };
 

@@ -5,9 +5,9 @@ import * as baseAccordion from "./base";
 const item = {
     base: `${baseAccordion.item} group/item px-6 data-[state=open]:rounded-[--accordion-border-radius] data-[state=open]:border-transparent`,
     appearances: {
-        light: "data-[state=open]:bg-gray-100",
-        dark: "data-[state=open]:bg-gray-900",
-        both: "data-[state=open]:bg-gray-100 dark:data-[state=open]:bg-gray-900",
+        light: "data-[state=open]:bg-[--accordion-ghost-light-bg]",
+        dark: "data-[state=open]:bg-[--accordion-ghost-dark-bg]",
+        both: "data-[state=open]:bg-[--accordion-ghost-light-bg] dark:data-[state=open]:bg-[--accordion-ghost-dark-bg]",
     },
 };
 const parentAppearances = {

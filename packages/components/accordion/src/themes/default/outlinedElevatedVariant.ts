@@ -3,11 +3,11 @@ import config from "./../../accordion.config";
 import * as baseAccordion from "./base";
 
 const item = {
-    base: `${baseAccordion.item} px-6 rounded-[--accordion-border-radius] border data-[state=open]:card-shadow`,
+    base: `${baseAccordion.item} px-6 rounded-[--accordion-border-radius] border data-[state=open]:accordion-shadow`,
     appearances: {
-        light: "border-[--ui-light-border-color] hover:border-[--ui-light-border-hover-color]",
-        dark: "border-[--ui-dark-border-color] hover:border-[--ui-dark-border-hover-color] data-[state=open]:bg-[--card-dark-bg]",
-        both: "border-[--ui-light-border-color] hover:border-[--ui-light-border-hover-color] dark:border-[--ui-dark-border-color] dark:hover:border-[--ui-dark-border-hover-color] dark:data-[state=open]:bg-[--card-dark-bg]",
+        light: "bg-white border-[--ui-light-border-color] hover:border-[--ui-light-border-hover-color]",
+        dark: "bg-[--accordion-dark-bg] border-[--ui-dark-border-color] hover:border-[--ui-dark-border-hover-color] data-[state=open]:bg-[--card-dark-bg]",
+        both: "bg-white dark:bg-[--accordion-dark-bg] border-[--ui-light-border-color] hover:border-[--ui-light-border-hover-color] dark:border-[--ui-dark-border-color] dark:hover:border-[--ui-dark-border-hover-color] dark:data-[state=open]:bg-[--card-dark-bg]",
     },
 };
 
