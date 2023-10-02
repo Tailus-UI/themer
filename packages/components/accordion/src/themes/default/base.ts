@@ -1,4 +1,5 @@
-const item = "overflow-hidden transition-all duration-300 data-[state=open]:z-10";
+const item =
+    "overflow-hidden transition-all duration-300 data-[state=open]:z-10 data-[state=open]:relative";
 
 const trigger = {
     parent: {
