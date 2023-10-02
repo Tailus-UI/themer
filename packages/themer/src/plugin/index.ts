@@ -2,6 +2,7 @@ import plugin from "tailwindcss/plugin";
 import { background, borderColors, padding, radius } from "./../config/preconfigs";
 import getShadows from "./shadow";
 import type { Config } from "./types";
+import { setAccordionConfig } from "../config";
 
 export const themer = plugin.withOptions(
     function (options: Config) {
@@ -16,128 +17,130 @@ export const themer = plugin.withOptions(
                 border: options.border || "light", // lighter | light | dark | darker | darkest
                 background: options.background || "lighter", // light | lighter | hight | higher
                 padding: options.padding || "larger", // small | medium | large | larger | largest
+                components: {
+                    accordion: setAccordionConfig(options.components.accordion),
+                },
             };
             addBase({
                 ":root": {
-                    // Border Colors
-                    "--ui-light-border-color": theme(
-                        `colors.gray.${borderColors[config.border].ui}`
+                    //Accordion
+                    "--accordion-border-radius": theme(
+                        `borderRadius.${
+                            config.components.accordion.rounded ?? radius[config.radius].accordion
+                        }`
                     ),
+                    "--accordion-ghost-light-bg": theme(
+                        `colors.gray.${
+                            config.components.accordion.ghostBg ??
+                            background[options.background].accordion.ghost
+                        }`
+                    ),
+                    "--accordion-soft-light-bg": theme(
+                        `colors.gray.${
+                            config.components.accordion.softBg ??
+                            background[options.background].accordion.soft
+                        }`
+                    ),
+                    "--accordion-ghost-dark-bg": theme(
+                        `colors.gray.${
+                            config.components.accordion.dark.ghostBg ??
+                            background[options.background].dark.accordion.ghost
+                        }`
+                    ),
+                    "--accordion-soft-dark-bg": theme(
+                        `colors.gray.${
+                            config.components.accordion.dark.softBg ??
+                            background[options.background].dark.accordion.soft
+                        }`
+                    ),
+                    "--accordion-dark-bg": theme(
+                        `colors.gray.${
+                            config.components.accordion.dark.elevatedBg ??
+                            background[options.background].dark.accordion.elevated
+                        }`
+                    ),
+                    "--accordion-shadow":
+                        getShadows("accordion")[config.components.accordion.shadow.size] ??
+                        getShadows("accordion")[config.shadow.size],
+                    "--accordion-shadow-opacity": `${
+                        config.components.accordion.shadow.opacity ?? config.shadow.opacity
+                    }%`,
+
+                    //Alert
+                    "--alert-border-radius": theme(`borderRadius.${radius[options.radius].alert}`),
+                    "--alert-shadow": getShadows("alert")[config.shadow.size],
+                    "--alert-shadow-opacity": `${config.shadow.opacity}%`,
+
+                    //Annonce
+                    "--annonce-border-radius": theme(
+                        `borderRadius.${radius[options.radius].annonce}`
+                    ),
+
+                    // Avatar
+                    "--avatar-border-radius": theme(
+                        `borderRadius.${radius[options.radius].avatar}`
+                    ),
+                    "--avatar-status-position": theme("spacing.px"),
+
+                    // Badge
+                    "--badge-border-radius": theme(`borderRadius.${radius[options.radius].badge}`),
+
+                    // Button
+                    "--btn-border-radius": theme(`borderRadius.${radius[options.radius].button}`),
+                    "--btn-border-width": "1.5px",
+
+                    // Card
+                    "--card-border-radius": theme(`borderRadius.${radius[options.radius].card}`),
+                    "--card-shadow": getShadows("card")[config.shadow.size],
+                    "--card-shadow-opacity": `${config.shadow.opacity}%`,
+                    "--card-padding": theme(`spacing.${padding[options.padding].card}`),
+                    "--card-light-bg": theme(`colors.gray.${background[options.background].card}`),
+                    "--card-dark-bg": theme(
+                        `colors.gray.${background[options.background].dark.card}`
+                    ),
+
+                    // Menu
+                    "--menu-border-radius": theme(`borderRadius.${radius[options.radius].menu}`),
+                    "--menu-light-bg-opacity": "90%",
+                    "--menu-dark-bg-opacity": theme("50%"),
+                    "--menu-dark-bg": theme(
+                        `colors.gray.${background[options.background].dark.menu}`
+                    ),
+                    "--menu-shadow": getShadows("menu")[config.shadow.size],
+                    "--menu-shadow-opacity": `${config.shadow.opacity}%`,
+                    "--menu-light-backdrop-blur": "2rem",
+                    "--menu-dark-backdrop-blur": "2rem",
                     "--menu-light-border-color": theme(
                         `colors.gray.${borderColors[config.border].menu}`
-                    ),
-                    "--tabs-light-border-color": theme(
-                        `colors.gray.${borderColors[config.border].tabs}`
-                    ),
-                    "--feedback-light-border-color": theme(
-                        `colors.gray.${borderColors[config.border].feedback}`
-                    ),
-                    "--separator-light-color": theme(
-                        `colors.gray.${borderColors[config.border].ui}`
-                    ),
-                    "--field-light-border-color": theme(
-                        `colors.gray.${borderColors[config.border].field}`
-                    ),
-                    "--ui-light-border-hover-color": theme(
-                        `colors.gray.${borderColors[config.border].hover}`
-                    ),
-                    "--ui-dark-border-color": theme(
-                        `colors.gray.${borderColors[config.border].dark.ui}`
                     ),
                     "--menu-dark-border-color": theme(
                         `colors.gray.${borderColors[config.border].dark.menu}`
                     ),
-                    "--tabs-dark-border-color": theme(
-                        `colors.gray.${borderColors[config.border].dark.tabs}`
+
+                    // Feedback
+                    "--feedback-shadow": getShadows("feedback")[config.shadow.size],
+                    "--feedback-shadow-opacity": `${config.shadow.opacity}%`,
+                    "--feedback-dark-bg": theme(
+                        `colors.gray.${background[options.background].dark.feedback}`
+                    ),
+                    "--feedback-light-border-color": theme(
+                        `colors.gray.${borderColors[config.border].feedback}`
                     ),
                     "--feedback-dark-border-color": theme(
                         `colors.gray.${borderColors[config.border].dark.feedback}`
                     ),
-                    "--separator-dark-color": theme(
-                        `colors.gray.${borderColors[config.border].dark.ui}`
-                    ),
-                    "--field-dark-border-color": theme(
-                        `colors.gray.${borderColors[config.border].dark.field}`
-                    ),
-                    "--ui-dark-border-hover-color": theme(
-                        `colors.gray.${borderColors[config.border].dark.hover}`
-                    ),
 
-                    // Border radius
-
-                    "--accordion-border-radius": theme(
-                        `borderRadius.${radius[config.radius].accordion}`
-                    ),
-
-                    "--alert-border-radius": theme(`borderRadius.${radius[options.radius].alert}`),
-                    "--annonce-border-radius": theme(
-                        `borderRadius.${radius[options.radius].annonce}`
-                    ),
-                    "--avatar-border-radius": theme(
-                        `borderRadius.${radius[options.radius].avatar}`
-                    ),
-                    "--badge-border-radius": theme(`borderRadius.${radius[options.radius].badge}`),
-                    "--btn-border-radius": theme(`borderRadius.${radius[options.radius].button}`),
-                    "--card-border-radius": theme(`borderRadius.${radius[options.radius].card}`),
-                    "--menu-border-radius": theme(`borderRadius.${radius[options.radius].menu}`),
+                    // Flag
                     "--flag-border-radius": theme(`borderRadius.${radius[options.radius].flag}`),
-                    "--field-border-radius": theme(`borderRadius.${radius[options.radius].field}`),
-                    "--popover-border-radius": theme(
-                        `borderRadius.${radius[options.radius].popover}`
-                    ),
-                    "--toast-border-radius": theme(`borderRadius.${radius[options.radius].toast}`),
-                    "--switch-border-radius": theme(
-                        `borderRadius.${radius[options.radius].switch}`
-                    ),
-                    "--tabs-border-radius": theme(
-                        `borderRadius.${radius[options.radius].tabs.default}`
-                    ),
-                    "--tabs-soft-border-radius": theme(
-                        `borderRadius.${radius[options.radius].tabs.soft}`
-                    ),
-                    "--tabs-bottom-indicator-border-radius": theme(
-                        `borderRadius.${radius[options.radius].tabs.bottomIndicator}`
-                    ),
-                    "--tooltip-border-radius": theme(
-                        `borderRadius.${radius[options.radius].tooltip}`
-                    ),
-
-                    // Padding
-                    "--card-padding": theme(`spacing.${padding[options.padding].card}`),
                     "--flag-padding": theme(`spacing.${padding[options.padding].flag}`),
-                    "--popover-padding": theme(`spacing.${padding[options.padding].popover}`),
 
-                    // Background
-                    "--accordion-ghost-light-bg": theme(
-                        `colors.gray.${background[options.background].accordion.ghost}`
-                    ),
-                    "--accordion-soft-light-bg": theme(
-                        `colors.gray.${background[options.background].accordion.soft}`
-                    ),
-                    "--accordion-ghost-dark-bg": theme(
-                        `colors.gray.${background[options.background].dark.accordion.ghost}`
-                    ),
-                    "--accordion-soft-dark-bg": theme(
-                        `colors.gray.${background[options.background].dark.accordion.soft}`
-                    ),
-                    "--accordion-elevated-dark-bg": theme(
-                        `colors.gray.${background[options.background].dark.accordion.elevated}`
-                    ),
-
-                    "--card-light-bg": theme(`colors.gray.${background[options.background].card}`),
-                    "--tabs-light-bg": theme(`colors.gray.${background[options.background].tabs}`),
+                    // Field
+                    "--field-border-radius": theme(`borderRadius.${radius[options.radius].field}`),
                     "--field-light-bg": theme(
                         `colors.gray.${background[options.background].field}`
                     ),
                     "--field-light-focus-bg": theme(
                         `colors.gray.${background[options.background].fieldFocus}`
-                    ),
-
-                    "--card-dark-bg": theme(
-                        `colors.gray.${background[options.background].dark.card}`
-                    ),
-                    "--tabs-dark-bg": theme(
-                        `colors.gray.${background[options.background].dark.tabs.list}`
                     ),
                     "--field-dark-bg": theme(
                         `colors.gray.${background[options.background].dark.field}`
@@ -145,11 +148,29 @@ export const themer = plugin.withOptions(
                     "--field-dark-focus-bg": theme(
                         `colors.gray.${background[options.background].dark.fieldFocus}`
                     ),
-                    "--menu-dark-bg": theme(
-                        `colors.gray.${background[options.background].dark.menu}`
+                    "--field-light-border-color": theme(
+                        `colors.gray.${borderColors[config.border].field}`
                     ),
-                    "--feedback-dark-bg": theme(
-                        `colors.gray.${background[options.background].dark.feedback}`
+                    "--field-dark-border-color": theme(
+                        `colors.gray.${borderColors[config.border].dark.field}`
+                    ),
+
+                    // Popover
+                    "--popover-border-radius": theme(
+                        `borderRadius.${radius[options.radius].popover}`
+                    ),
+                    "--popover-padding": theme(`spacing.${padding[options.padding].popover}`),
+
+                    // Switch
+                    "--switch-border-radius": theme(
+                        `borderRadius.${radius[options.radius].switch}`
+                    ),
+
+                    // Tabs
+                    "--tabs-border-radius": theme(`borderRadius.${radius[options.radius].tabs}`),
+                    "--tabs-light-bg": theme(`colors.gray.${background[options.background].tabs}`),
+                    "--tabs-dark-bg": theme(
+                        `colors.gray.${background[options.background].dark.tabs.list}`
                     ),
                     "--tabs-indicator-dark-bg": theme(
                         `colors.gray.${background[options.background].dark.tabs.indicator}`
@@ -159,33 +180,60 @@ export const themer = plugin.withOptions(
                     ),
                     "--tabs-bottom-indicator-light-bg": theme("colors.primary.600"),
                     "--tabs-bottom-indicator-dark-bg": theme("colors.primary.400"),
+                    "--tabs-light-border-color": theme(
+                        `colors.gray.${borderColors[config.border].tabs}`
+                    ),
+                    "--tabs-dark-border-color": theme(
+                        `colors.gray.${borderColors[config.border].dark.tabs}`
+                    ),
+                    "--tabs-soft-border-radius": theme(
+                        `borderRadius.${radius[options.radius].tabs.soft}`
+                    ),
+                    "--tabs-bottom-indicator-border-radius": theme(
+                        `borderRadius.${radius[options.radius].tabs.bottomIndicator}`
+                    ),
 
-                    // Shadow
-                    "--alert-shadow": getShadows("alert")[config.shadow.size],
-                    "--card-shadow": getShadows("card")[config.shadow.size],
-                    "--feedback-shadow": getShadows("feedback")[config.shadow.size],
-                    "--menu-shadow": getShadows("menu")[config.shadow.size],
-                    "--accordion-shadow": getShadows("accordion")[config.shadow.size],
+                    // Tooltip
+                    "--tooltip-border-radius": theme(
+                        `borderRadius.${radius[options.radius].tooltip}`
+                    ),
 
-                    "--card-shadow-opacity": `${config.shadow.opacity}%`,
-                    "--alert-shadow-opacity": `${config.shadow.opacity}%`,
-                    "--feedback-shadow-opacity": `${config.shadow.opacity}%`,
-                    "--menu-shadow-opacity": `${config.shadow.opacity}%`,
-                    "--accordion-shadow-opacity": `${config.shadow.opacity}%`,
+                    // Toast
+                    "--toast-border-radius": theme(`borderRadius.${radius[options.radius].toast}`),
 
-                    // Specific
-                    "--btn-border-width": "1.5px",
-                    "--avatar-status-position": theme("spacing.px"),
+                    // Separator
+                    "--separator-light-color": theme(
+                        `colors.gray.${borderColors[config.border].ui}`
+                    ),
+                    "--separator-dark-color": theme(
+                        `colors.gray.${borderColors[config.border].dark.ui}`
+                    ),
 
-                    "--menu-light-bg-opacity": "90%",
-                    "--menu-dark-bg-opacity": theme("50%"),
-                    "--menu-light-backdrop-blur": "2rem",
-                    "--menu-dark-backdrop-blur": "2rem",
+                    // UI
+                    "--ui-light-border-color": theme(
+                        `colors.gray.${borderColors[config.border].ui}`
+                    ),
+                    "--ui-dark-border-color": theme(
+                        `colors.gray.${borderColors[config.border].dark.ui}`
+                    ),
+                    "--ui-light-border-hover-color": theme(
+                        `colors.gray.${borderColors[config.border].hover}`
+                    ),
+                    "--ui-dark-border-hover-color": theme(
+                        `colors.gray.${borderColors[config.border].dark.hover}`
+                    ),
 
+                    // Select
                     "--select-dark-bg": theme("colors.gray.950"),
                 },
             });
             addComponents({
+                ".accordion-shadow": {
+                    boxShadow: `var(--accordion-shadow)`,
+                },
+                ".alert-shadow": {
+                    boxShadow: `var(--alert-shadow)`,
+                },
                 ".card-shadow": {
                     boxShadow: `var(--card-shadow)`,
                 },
@@ -194,12 +242,6 @@ export const themer = plugin.withOptions(
                 },
                 ".menu-shadow": {
                     boxShadow: `var(--menu-shadow)`,
-                },
-                ".alert-shadow": {
-                    boxShadow: `var(--alert-shadow)`,
-                },
-                ".accordion-shadow": {
-                    boxShadow: `var(--accordion-shadow)`,
                 },
             });
             matchUtilities({

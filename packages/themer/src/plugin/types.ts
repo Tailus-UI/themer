@@ -1,3 +1,5 @@
+import { AccordionConfig } from "./../config/components";
+
 export type Config = {
     appearance?: "light" | "dark" | "both";
     radius?: "boxy" | "sharp" | "smooth" | "smoothest";
@@ -8,7 +10,9 @@ export type Config = {
     border?: "lighter" | "light" | "dark" | "darker" | "darkest";
     background?: "light" | "lighter" | "high" | "higher";
     padding?: "small" | "medium" | "large" | "larger" | "largest";
-    components?: {};
+    components?: {
+        accordion?: AccordionConfig;
+    };
 };
 
 export type Shadows = {
