@@ -8,6 +8,7 @@ import {
     setAnnonceConfig,
     setAvatarConfig,
     setBadgeConfig,
+    setButtonConfig,
 } from "../config";
 
 export const themer = plugin.withOptions(
@@ -29,6 +30,7 @@ export const themer = plugin.withOptions(
                     annonce: setAnnonceConfig(options.components.annonce),
                     avatar: setAvatarConfig(options.components.avatar),
                     badge: setBadgeConfig(options.components.badge),
+                    button: setButtonConfig(options.components.button),
                 },
             };
             addBase({
@@ -115,8 +117,12 @@ export const themer = plugin.withOptions(
                     ),
 
                     // Button
-                    "--btn-border-radius": theme(`borderRadius.${radius[options.radius].button}`),
-                    "--btn-border-width": "1.5px",
+                    "--btn-border-radius": theme(
+                        `borderRadius.${
+                            config.components.button.rounded ?? radius[options.radius].button
+                        }`
+                    ),
+                    "--btn-border-width": `${config.components.button.borderWith}px` ?? "1.5px",
 
                     // Card
                     "--card-border-radius": theme(`borderRadius.${radius[options.radius].card}`),

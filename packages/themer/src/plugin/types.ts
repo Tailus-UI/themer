@@ -4,6 +4,7 @@ import {
     AnnonceConfig,
     AvatarConfig,
     BadgeConfig,
+    ButtonConfig,
 } from "./../config/components";
 
 export type Config = {
@@ -127,6 +128,13 @@ export type Config = {
          * - rounded
          */
         badge?: BadgeConfig;
+        /**
+         * The config of the button component.
+         * Customizable props:
+         * - rounded
+         * - borderWidth : applied only to the outlined variant
+         */
+        button?: ButtonConfig;
     };
 };
 
