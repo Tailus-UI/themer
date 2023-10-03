@@ -13,6 +13,7 @@ import {
     setFeedbackConfig,
     setFlagConfig,
     setMenuConfig,
+    setFieldConfig,
 } from "../config";
 
 export const themer = plugin.withOptions(
@@ -39,6 +40,7 @@ export const themer = plugin.withOptions(
                     menu: setMenuConfig(options.components.menu),
                     feedback: setFeedbackConfig(options.components.feedback),
                     flag: setFlagConfig(options.components.flag),
+                    field: setFieldConfig(options.components.field),
                 },
             };
             addBase({
@@ -233,24 +235,44 @@ export const themer = plugin.withOptions(
                     ),
 
                     // Field
-                    "--field-border-radius": theme(`borderRadius.${radius[options.radius].field}`),
+                    "--field-border-radius": theme(
+                        `borderRadius.${
+                            config.components.field.rounded ?? radius[options.radius].field
+                        }`
+                    ),
                     "--field-light-bg": theme(
-                        `colors.gray.${background[options.background].field}`
+                        `colors.gray.${
+                            config.components.field.softBg ?? background[options.background].field
+                        }`
                     ),
                     "--field-light-focus-bg": theme(
-                        `colors.gray.${background[options.background].fieldFocus}`
+                        `colors.gray.${
+                            config.components.field.softBgFocus ??
+                            background[options.background].fieldFocus
+                        }`
                     ),
                     "--field-dark-bg": theme(
-                        `colors.gray.${background[options.background].dark.field}`
+                        `colors.gray.${
+                            config.components.field.dark.softBg ??
+                            background[options.background].dark.field
+                        }`
                     ),
                     "--field-dark-focus-bg": theme(
-                        `colors.gray.${background[options.background].dark.fieldFocus}`
+                        `colors.gray.${
+                            config.components.field.dark.softBgFocus ??
+                            background[options.background].dark.fieldFocus
+                        }`
                     ),
                     "--field-light-border-color": theme(
-                        `colors.gray.${borderColors[config.border].field}`
+                        `colors.gray.${
+                            config.components.field.borderColor ?? borderColors[config.border].field
+                        }`
                     ),
                     "--field-dark-border-color": theme(
-                        `colors.gray.${borderColors[config.border].dark.field}`
+                        `colors.gray.${
+                            config.components.field.dark.borderColor ??
+                            borderColors[config.border].dark.field
+                        }`
                     ),
 
                     // Popover

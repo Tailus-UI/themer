@@ -7,9 +7,10 @@ import {
     ButtonConfig,
     CardConfig,
     FeedbackConfig,
+    FieldConfig,
     FlagConfig,
     MenuConfig,
-} from "./../config/components";
+} from "./../config/";
 
 export type Config = {
     /**
@@ -152,7 +153,7 @@ export type Config = {
         /**
          * The config of the menu component.
          * Customizable props:
-         * - rounded : @type string
+         * - rounded
          * - borderColor
          * - bgOpacity,
          * - backdropBlur
@@ -180,6 +181,17 @@ export type Config = {
          * - padding
          */
         flag?: FlagConfig;
+        /**
+         * ### Field components
+         * The config of the field components: `TextField` and `TextArea`.
+         * #### Customizable props:
+         * - rounded
+         * - borderColor
+         * - softBg
+         * - softBgFocus
+         * - dark : borderColor, softBg, softBgFocus
+         */
+        field?: FieldConfig;
     };
 };
 

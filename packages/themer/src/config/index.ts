@@ -8,3 +8,4 @@ export { setCardConfig, CardConfig } from "./components";
 export { setMenuConfig, MenuConfig } from "./components";
 export { setFeedbackConfig, FeedbackConfig } from "./components";
 export { setFlagConfig, FlagConfig } from "./components";
+export { setFieldConfig, FieldConfig } from "./components";
