@@ -40,8 +40,8 @@ type BlurNumbers = 0 | 0.25 | 0.5 | 0.75 | 1 | 1.5 | 2 | 3 | 4 | 5 | 8 | 10;
 type PaddingNumbers = 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 12 | 14 | 16;
 type ShadeNumbers = 50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | 950;
 
-type nSpacing = "-px" | "-0.5" | "-1" | "-1.5";
-type pSpacing = "px" | "0.5" | "1" | "1.5";
+type nSpacing = "-px" | "-0.5" | "-1" | "-1.5" | "-2";
+type pSpacing = "px" | "0" | "0.5" | "1" | "1.5" | "2";
 
 export type Sizes = "none" | "DEFAULT" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "full";
 export type SizesWithoutFull = "none" | "DEFAULT" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl";
