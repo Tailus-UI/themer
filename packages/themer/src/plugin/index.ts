@@ -11,6 +11,7 @@ import {
     setButtonConfig,
     setCardConfig,
     setFeedbackConfig,
+    setFlagConfig,
     setMenuConfig,
 } from "../config";
 
@@ -37,6 +38,7 @@ export const themer = plugin.withOptions(
                     card: setCardConfig(options.components.card),
                     menu: setMenuConfig(options.components.menu),
                     feedback: setFeedbackConfig(options.components.feedback),
+                    flag: setFlagConfig(options.components.flag),
                 },
             };
             addBase({
@@ -221,8 +223,14 @@ export const themer = plugin.withOptions(
                     ),
 
                     // Flag
-                    "--flag-border-radius": theme(`borderRadius.${radius[options.radius].flag}`),
-                    "--flag-padding": theme(`spacing.${padding[options.padding].flag}`),
+                    "--flag-border-radius": theme(
+                        `borderRadius.${
+                            config.components.flag.rounded ?? radius[options.radius].flag
+                        }`
+                    ),
+                    "--flag-padding": theme(
+                        `spacing.${config.components.flag.padding ?? padding[options.padding].flag}`
+                    ),
 
                     // Field
                     "--field-border-radius": theme(`borderRadius.${radius[options.radius].field}`),

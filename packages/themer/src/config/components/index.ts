@@ -7,3 +7,4 @@ export { setButtonConfig, ButtonConfig } from "./button";
 export { setCardConfig, CardConfig } from "./card";
 export { setMenuConfig, MenuConfig } from "./menu";
 export { setFeedbackConfig, FeedbackConfig } from "./feedback";
+export { setFlagConfig, FlagConfig } from "./flag";

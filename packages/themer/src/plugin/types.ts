@@ -7,6 +7,7 @@ import {
     ButtonConfig,
     CardConfig,
     FeedbackConfig,
+    FlagConfig,
     MenuConfig,
 } from "./../config/components";
 
@@ -172,6 +173,13 @@ export type Config = {
          * - dark : borderColor, bg
          */
         feedback?: FeedbackConfig;
+        /**
+         * The config of the flag component.
+         * Customizable props:
+         * - rounded
+         * - padding
+         */
+        flag?: FlagConfig;
     };
 };
 
