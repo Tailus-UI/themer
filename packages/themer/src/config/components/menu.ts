@@ -1,24 +1,26 @@
+import { BlurSizes, Opacity, Shade, ShadowSizes, SizesWithoutFull } from "../types";
+
 export type MenuConfig = {
     /**
      * The border radius of the Menu components, applied to : dropdown-menu and context-menu.
      */
-    rounded?: "none" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl";
+    rounded?: SizesWithoutFull;
     /**
      * The border width of the Menu components, applied to : dropdown-menu, context-menu, select and popover.
      */
-    borderColor?: string | number;
+    borderColor?: Shade;
     /**
      * The opacity of the background of the dropdown-menu and context-menu components.
      * **Note:** Use values between `1` and `100` !.
      * @default 80
      */
-    bgOpacity?: string | number;
+    bgOpacity?: Opacity;
     /**
      * The blur of the backdrop of the dropdown-menu and context-menu components.
      * **Note:** We use `rem` unit for the backdrop blur, don't add any unit to the value that you provide !.
      * @default 2
      */
-    backdropBlur?: string | number;
+    backdropBlur?: BlurSizes;
     /**
      * The shadow of the menu components and popover.
      */
@@ -27,12 +29,12 @@ export type MenuConfig = {
          * The size of the shadow.
          * **Note:** The `2xl` value is not supported, use `xxl` instead !.
          */
-        size?: "none" | "default" | "sm" | "md" | "lg" | "xl" | "xxl";
+        size?: ShadowSizes;
         /**
          * The opacity of the shadow.
          * **Note:** Use values between `1` and `100` !.
          */
-        opacity?: string | number;
+        opacity?: Opacity;
     };
     /**
      * The dark mode of the background, borders, backdrop-blur and bg-opacity.
@@ -41,23 +43,23 @@ export type MenuConfig = {
         /**
          * The gray border color shade of the dropdown-menu and context-menu components.
          */
-        borderColor?: string | number;
+        borderColor?: Shade;
         /**
          * The gray background shade of the dropdown-menu, context-menu and popover components.
          */
-        bg?: string | number;
+        bg?: Shade;
         /**
          * The opacity of the background of the dropdown-menu and context-menu components.
          * **Note:** Use values between `1` and `100` !.
          * @default 50
          */
-        bgOpacity?: string | number;
+        bgOpacity?: Opacity;
         /**
          * The blur of the backdrop of the dropdown-menu and context-menu components on dark mode.
          * **Note:** We use `rem` unit for the backdrop blur, don't add any unit to the value that you provide !.
          * @default 2
          */
-        backdropBlur?: string | number;
+        backdropBlur?: BlurSizes;
     };
 };
 

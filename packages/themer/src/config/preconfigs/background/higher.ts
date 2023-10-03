@@ -1,4 +1,4 @@
-import type { Background } from "./index";
+import type { Background } from ".";
 
 export const higher: Background = {
     card: "300",
@@ -21,7 +21,7 @@ export const higher: Background = {
         field: "700",
         fieldFocus: "700",
         accordion: {
-            elevated: " 700",
+            elevated: "700",
             soft: "700",
             ghost: "700",
         },

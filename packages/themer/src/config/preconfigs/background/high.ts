@@ -1,4 +1,4 @@
-import type { Background } from "./index";
+import type { Background } from ".";
 
 export const high: Background = {
     card: "200",

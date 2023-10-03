@@ -1,4 +1,6 @@
-export default {
+import type { BorderColors } from ".";
+
+export const hight: BorderColors = {
     ui: "300",
     menu: "300",
     tabs: "300",
@@ -14,3 +16,5 @@ export default {
         hover: "600",
     },
 };
+
+export default hight;

@@ -1,4 +1,6 @@
-export default {
+import { Radius } from ".";
+
+export const smooth: Radius = {
     button: "lg",
     accordion: "xl",
     annonce: "xl",
@@ -19,3 +21,5 @@ export default {
         bottomIndicator: "xl",
     },
 };
+
+export default smooth;

@@ -1,4 +1,6 @@
-export default {
+import { Radius } from ".";
+
+export const boxy: Radius = {
     button: "none",
     accordion: "none",
     annonce: "none",
@@ -19,3 +21,5 @@ export default {
         bottomIndicator: "none",
     },
 };
+
+export default boxy;

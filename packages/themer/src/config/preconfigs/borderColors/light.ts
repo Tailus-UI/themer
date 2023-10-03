@@ -1,4 +1,6 @@
-export default {
+import { BorderColors } from ".";
+
+export const light: BorderColors = {
     ui: "200",
     menu: "200",
     tabs: "200",
@@ -14,3 +16,5 @@ export default {
         hover: "700",
     },
 };
+
+export default light;

@@ -1,4 +1,4 @@
-import type { Background } from "./index";
+import type { Background } from ".";
 
 export const lighter: Background = {
     card: "50",
@@ -21,7 +21,7 @@ export const lighter: Background = {
         field: "900",
         fieldFocus: "950",
         accordion: {
-            elevated: " 900",
+            elevated: "900",
             soft: "900",
             ghost: "900",
         },

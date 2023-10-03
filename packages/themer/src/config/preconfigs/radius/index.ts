@@ -10,3 +10,4 @@ export default {
     smoothest,
 };
 export { boxy, sharp, smooth, smoothest };
+export type { Radius } from "./../types";

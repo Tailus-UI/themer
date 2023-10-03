@@ -1,4 +1,6 @@
-export default {
+import { Radius } from ".";
+
+export const sharp: Radius = {
     button: "md",
     accordion: "md",
     annonce: "xl",
@@ -19,3 +21,5 @@ export default {
         bottomIndicator: "md",
     },
 };
+
+export default sharp;

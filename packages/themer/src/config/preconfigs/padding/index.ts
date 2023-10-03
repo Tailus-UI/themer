@@ -13,3 +13,4 @@ export default {
 };
 
 export { small, medium, large, larger, largest };
+export type { Padding } from "./../types";

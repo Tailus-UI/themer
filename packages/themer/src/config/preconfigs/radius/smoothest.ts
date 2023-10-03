@@ -1,4 +1,6 @@
-export default {
+import { Radius } from ".";
+
+export const smoothest: Radius = {
     button: "full",
     accordion: "3xl",
     annonce: "full",
@@ -19,3 +21,5 @@ export default {
         bottomIndicator: "full",
     },
 };
+
+export default smoothest;
