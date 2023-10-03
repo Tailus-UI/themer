@@ -1,4 +1,4 @@
-import { AccordionConfig } from "./../config/components";
+import { AccordionConfig, AlertConfig } from "./../config/components";
 
 export type Config = {
     appearance?: "light" | "dark" | "both";
@@ -12,6 +12,7 @@ export type Config = {
     padding?: "small" | "medium" | "large" | "larger" | "largest";
     components?: {
         accordion?: AccordionConfig;
+        alert?: AlertConfig;
     };
 };
 

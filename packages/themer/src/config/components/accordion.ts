@@ -3,7 +3,7 @@ export type AccordionConfig = {
     softBg?: string;
     ghostBg?: string;
     shadow?: {
-        size?: "none" | "default" | "sm" | "md" | "lg" | "xl" | "2xl";
+        size?: "none" | "default" | "sm" | "md" | "lg" | "xl" | "xxl";
         opacity?: number;
     };
     dark?: {

@@ -2,7 +2,7 @@ import plugin from "tailwindcss/plugin";
 import { background, borderColors, padding, radius } from "./../config/preconfigs";
 import getShadows from "./shadow";
 import type { Config } from "./types";
-import { setAccordionConfig } from "../config";
+import { setAccordionConfig, setAlertConfig } from "../config";
 
 export const themer = plugin.withOptions(
     function (options: Config) {
@@ -19,6 +19,7 @@ export const themer = plugin.withOptions(
                 padding: options.padding || "larger", // small | medium | large | larger | largest
                 components: {
                     accordion: setAccordionConfig(options.components.accordion),
+                    alert: setAlertConfig(options.components.alert),
                 },
             };
             addBase({
@@ -67,9 +68,18 @@ export const themer = plugin.withOptions(
                     }%`,
 
                     //Alert
-                    "--alert-border-radius": theme(`borderRadius.${radius[options.radius].alert}`),
-                    "--alert-shadow": getShadows("alert")[config.shadow.size],
-                    "--alert-shadow-opacity": `${config.shadow.opacity}%`,
+                    "--alert-border-radius": theme(
+                        `borderRadius.${
+                            config.components.alert.rounded ?? radius[options.radius].alert
+                        }`
+                    ),
+                    "--alert-shadow":
+                        getShadows("alert")[
+                            config.components.alert.shadow.size ?? config.shadow.size
+                        ],
+                    "--alert-shadow-opacity": `${
+                        config.components.alert.shadow.opacity ?? config.shadow.opacity
+                    }%`,
 
                     //Annonce
                     "--annonce-border-radius": theme(
