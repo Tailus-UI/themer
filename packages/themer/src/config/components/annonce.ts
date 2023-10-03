@@ -2,7 +2,7 @@ export type AnnonceConfig = {
     /**
      * The border radius of the annonce component.
      */
-    rounded?: "none" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl";
+    rounded?: "none" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "full";
 };
 
 export const setAnnonceConfig = (config?: AnnonceConfig): AnnonceConfig => {

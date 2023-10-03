@@ -2,7 +2,13 @@ import plugin from "tailwindcss/plugin";
 import { background, borderColors, padding, radius } from "./../config/preconfigs";
 import getShadows from "./shadow";
 import type { Config } from "./types";
-import { setAccordionConfig, setAlertConfig, setAnnonceConfig, setAvatarConfig } from "../config";
+import {
+    setAccordionConfig,
+    setAlertConfig,
+    setAnnonceConfig,
+    setAvatarConfig,
+    setBadgeConfig,
+} from "../config";
 
 export const themer = plugin.withOptions(
     function (options: Config) {
@@ -22,6 +28,7 @@ export const themer = plugin.withOptions(
                     alert: setAlertConfig(options.components.alert),
                     annonce: setAnnonceConfig(options.components.annonce),
                     avatar: setAvatarConfig(options.components.avatar),
+                    badge: setBadgeConfig(options.components.badge),
                 },
             };
             addBase({
@@ -101,7 +108,11 @@ export const themer = plugin.withOptions(
                     ),
 
                     // Badge
-                    "--badge-border-radius": theme(`borderRadius.${radius[options.radius].badge}`),
+                    "--badge-border-radius": theme(
+                        `borderRadius.${
+                            config.components.badge.rounded ?? radius[options.radius].badge
+                        }`
+                    ),
 
                     // Button
                     "--btn-border-radius": theme(`borderRadius.${radius[options.radius].button}`),

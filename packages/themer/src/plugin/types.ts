@@ -1,4 +1,10 @@
-import { AccordionConfig, AlertConfig, AnnonceConfig, AvatarConfig } from "./../config/components";
+import {
+    AccordionConfig,
+    AlertConfig,
+    AnnonceConfig,
+    AvatarConfig,
+    BadgeConfig,
+} from "./../config/components";
 
 export type Config = {
     /**
@@ -115,6 +121,12 @@ export type Config = {
          * - statusInset
          */
         avatar?: AvatarConfig;
+        /**
+         * The config of the badge component.
+         * Customizable props:
+         * - rounded
+         */
+        badge?: BadgeConfig;
     };
 };
 
