@@ -1,4 +1,4 @@
-import { AccordionConfig, AlertConfig, AnnonceConfig } from "./../config/components";
+import { AccordionConfig, AlertConfig, AnnonceConfig, AvatarConfig } from "./../config/components";
 
 export type Config = {
     /**
@@ -108,6 +108,13 @@ export type Config = {
          * - rounded
          */
         annonce?: AnnonceConfig;
+        /**
+         * The config of the avatar component.
+         * Customizable props:
+         * - rounded
+         * - statusInset
+         */
+        avatar?: AvatarConfig;
     };
 };
 

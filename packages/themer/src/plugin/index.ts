@@ -2,7 +2,7 @@ import plugin from "tailwindcss/plugin";
 import { background, borderColors, padding, radius } from "./../config/preconfigs";
 import getShadows from "./shadow";
 import type { Config } from "./types";
-import { setAccordionConfig, setAlertConfig, setAnnonceConfig } from "../config";
+import { setAccordionConfig, setAlertConfig, setAnnonceConfig, setAvatarConfig } from "../config";
 
 export const themer = plugin.withOptions(
     function (options: Config) {
@@ -12,7 +12,7 @@ export const themer = plugin.withOptions(
                 radius: options.radius || "smoothest", // boxy | sharp | smooth | smoothest
                 shadow: {
                     size: options.shadow.size || "xl", // none | default | sm | md | lg | xl | xxl
-                    opacity: options.shadow.opacity || "10", // 0 - 100
+                    opacity: options.shadow.opacity || 10, // 0 - 100
                 },
                 border: options.border || "light", // lighter | light | dark | darker | darkest
                 background: options.background || "lighter", // light | lighter | hight | higher
@@ -21,6 +21,7 @@ export const themer = plugin.withOptions(
                     accordion: setAccordionConfig(options.components.accordion),
                     alert: setAlertConfig(options.components.alert),
                     annonce: setAnnonceConfig(options.components.annonce),
+                    avatar: setAvatarConfig(options.components.avatar),
                 },
             };
             addBase({
@@ -85,15 +86,19 @@ export const themer = plugin.withOptions(
                     //Annonce
                     "--annonce-border-radius": theme(
                         `borderRadius.${
-                            config.components.annonce.rounded || radius[options.radius].annonce
+                            config.components.annonce.rounded ?? radius[options.radius].annonce
                         }`
                     ),
 
                     // Avatar
                     "--avatar-border-radius": theme(
-                        `borderRadius.${radius[options.radius].avatar}`
+                        `borderRadius.${
+                            config.components.avatar.rounded ?? radius[options.radius].avatar
+                        }`
                     ),
-                    "--avatar-status-position": theme("spacing.px"),
+                    "--avatar-status-position": theme(
+                        `spacing.${config.components.avatar.statusInset ?? "px"}`
+                    ),
 
                     // Badge
                     "--badge-border-radius": theme(`borderRadius.${radius[options.radius].badge}`),
