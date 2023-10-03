@@ -6,3 +6,4 @@ export { setBadgeConfig, BadgeConfig } from "./components";
 export { setButtonConfig, ButtonConfig } from "./components";
 export { setCardConfig, CardConfig } from "./components";
 export { setMenuConfig, MenuConfig } from "./components";
+export { setFeedbackConfig, FeedbackConfig } from "./components";

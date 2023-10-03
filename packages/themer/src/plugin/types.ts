@@ -6,6 +6,7 @@ import {
     BadgeConfig,
     ButtonConfig,
     CardConfig,
+    FeedbackConfig,
     MenuConfig,
 } from "./../config/components";
 
@@ -163,6 +164,14 @@ export type Config = {
          *
          */
         menu?: MenuConfig;
+        /**
+         * The config of the feedback components.
+         * Customizable props:
+         * - borderColor
+         * - shadow : size, opacity
+         * - dark : borderColor, bg
+         */
+        feedback?: FeedbackConfig;
     };
 };
 

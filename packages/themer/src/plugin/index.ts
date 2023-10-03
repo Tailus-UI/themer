@@ -10,6 +10,7 @@ import {
     setBadgeConfig,
     setButtonConfig,
     setCardConfig,
+    setFeedbackConfig,
     setMenuConfig,
 } from "../config";
 
@@ -35,6 +36,7 @@ export const themer = plugin.withOptions(
                     button: setButtonConfig(options.components.button),
                     card: setCardConfig(options.components.card),
                     menu: setMenuConfig(options.components.menu),
+                    feedback: setFeedbackConfig(options.components.feedback),
                 },
             };
             addBase({
@@ -192,16 +194,30 @@ export const themer = plugin.withOptions(
                     ),
 
                     // Feedback
-                    "--feedback-shadow": getShadows("feedback")[config.shadow.size],
-                    "--feedback-shadow-opacity": `${config.shadow.opacity}%`,
+                    "--feedback-shadow":
+                        getShadows("feedback")[
+                            config.components.feedback.shadow.size ?? config.shadow.size
+                        ],
+                    "--feedback-shadow-opacity": `${
+                        config.components.feedback.shadow.opacity ?? config.shadow.opacity
+                    }%`,
                     "--feedback-dark-bg": theme(
-                        `colors.gray.${background[options.background].dark.feedback}`
+                        `colors.gray.${
+                            config.components.feedback.dark.bg ??
+                            background[options.background].dark.feedback
+                        }`
                     ),
                     "--feedback-light-border-color": theme(
-                        `colors.gray.${borderColors[config.border].feedback}`
+                        `colors.gray.${
+                            config.components.feedback.borderColor ??
+                            borderColors[config.border].feedback
+                        }`
                     ),
                     "--feedback-dark-border-color": theme(
-                        `colors.gray.${borderColors[config.border].dark.feedback}`
+                        `colors.gray.${
+                            config.components.feedback.dark.borderColor ??
+                            borderColors[config.border].dark.feedback
+                        }`
                     ),
 
                     // Flag
