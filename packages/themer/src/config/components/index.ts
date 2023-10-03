@@ -5,3 +5,4 @@ export { setAvatarConfig, AvatarConfig } from "./avatar";
 export { setBadgeConfig, BadgeConfig } from "./badge";
 export { setButtonConfig, ButtonConfig } from "./button";
 export { setCardConfig, CardConfig } from "./card";
+export { setMenuConfig, MenuConfig } from "./menu";

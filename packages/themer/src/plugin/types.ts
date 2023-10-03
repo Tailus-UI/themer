@@ -6,6 +6,7 @@ import {
     BadgeConfig,
     ButtonConfig,
     CardConfig,
+    MenuConfig,
 } from "./../config/components";
 
 export type Config = {
@@ -146,6 +147,22 @@ export type Config = {
          * - dark : bg, softBg
          */
         card?: CardConfig;
+        /**
+         * The config of the menu component.
+         * Customizable props:
+         * - rounded : @type string
+         * - borderColor
+         * - bgOpacity,
+         * - backdropBlur
+         * - shadow : size, opacity
+         * - dark :
+         *      - borderColor
+         *      - bg
+         *      - bgOpacity
+         *      - backdropBlur
+         *
+         */
+        menu?: MenuConfig;
     };
 };
 

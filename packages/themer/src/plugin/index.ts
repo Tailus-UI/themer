@@ -10,6 +10,7 @@ import {
     setBadgeConfig,
     setButtonConfig,
     setCardConfig,
+    setMenuConfig,
 } from "../config";
 
 export const themer = plugin.withOptions(
@@ -33,6 +34,7 @@ export const themer = plugin.withOptions(
                     badge: setBadgeConfig(options.components.badge),
                     button: setButtonConfig(options.components.button),
                     card: setCardConfig(options.components.card),
+                    menu: setMenuConfig(options.components.menu),
                 },
             };
             addBase({
@@ -155,21 +157,38 @@ export const themer = plugin.withOptions(
                     ),
 
                     // Menu
-                    "--menu-border-radius": theme(`borderRadius.${radius[options.radius].menu}`),
-                    "--menu-light-bg-opacity": "90%",
-                    "--menu-dark-bg-opacity": theme("50%"),
-                    "--menu-dark-bg": theme(
-                        `colors.gray.${background[options.background].dark.menu}`
+                    "--menu-border-radius": theme(
+                        `borderRadius.${
+                            config.components.menu.rounded ?? radius[options.radius].menu
+                        }`
                     ),
-                    "--menu-shadow": getShadows("menu")[config.shadow.size],
-                    "--menu-shadow-opacity": `${config.shadow.opacity}%`,
-                    "--menu-light-backdrop-blur": "2rem",
-                    "--menu-dark-backdrop-blur": "2rem",
+                    "--menu-light-bg-opacity": `${config.components.menu.bgOpacity ?? 90}%`,
+                    "--menu-dark-bg-opacity": `${config.components.menu.dark.bgOpacity ?? 50}%`,
+                    "--menu-dark-bg": theme(
+                        `colors.gray.${
+                            config.components.menu.dark.bg ??
+                            background[options.background].dark.menu
+                        } / var(--menu-dark-bg-opacity)`
+                    ),
+                    "--menu-shadow":
+                        getShadows("menu")[
+                            config.components.menu.shadow.size ?? config.shadow.size
+                        ],
+                    "--menu-shadow-opacity": `${
+                        config.components.menu.shadow.opacity ?? config.shadow.opacity
+                    }%`,
+                    "--menu-light-backdrop-blur": `${config.components.menu.backdropBlur ?? 2}rem`,
+                    "--menu-dark-backdrop-blur": `${config.components.menu.backdropBlur ?? 2}rem`,
                     "--menu-light-border-color": theme(
-                        `colors.gray.${borderColors[config.border].menu}`
+                        `colors.gray.${
+                            config.components.menu.borderColor ?? borderColors[config.border].menu
+                        }`
                     ),
                     "--menu-dark-border-color": theme(
-                        `colors.gray.${borderColors[config.border].dark.menu}`
+                        `colors.gray.${
+                            config.components.menu.dark.borderColor ??
+                            borderColors[config.border].dark.menu
+                        }`
                     ),
 
                     // Feedback
