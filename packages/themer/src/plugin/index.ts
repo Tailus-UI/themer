@@ -177,7 +177,9 @@ export const themer = plugin.withOptions(
                     ),
 
                     // Tabs
-                    "--tabs-border-radius": theme(`borderRadius.${radius[options.radius].tabs}`),
+                    "--tabs-border-radius": theme(
+                        `borderRadius.${radius[options.radius].tabs.default}`
+                    ),
                     "--tabs-light-bg": theme(`colors.gray.${background[options.background].tabs}`),
                     "--tabs-dark-bg": theme(
                         `colors.gray.${background[options.background].dark.tabs.list}`
