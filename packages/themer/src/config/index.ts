@@ -9,3 +9,4 @@ export { setMenuConfig, MenuConfig } from "./components";
 export { setFeedbackConfig, FeedbackConfig } from "./components";
 export { setFlagConfig, FlagConfig } from "./components";
 export { setFieldConfig, FieldConfig } from "./components";
+export { setPopoverConfig, PopoverConfig } from "./components";

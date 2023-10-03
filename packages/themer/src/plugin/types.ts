@@ -10,6 +10,7 @@ import {
     FieldConfig,
     FlagConfig,
     MenuConfig,
+    PopoverConfig,
 } from "./../config/";
 
 export type Config = {
@@ -192,6 +193,13 @@ export type Config = {
          * - dark : borderColor, softBg, softBgFocus
          */
         field?: FieldConfig;
+        /**
+         * The config of the popover component.
+         * Customizable props:
+         * - rounded
+         * - padding
+         */
+        popover?: PopoverConfig;
     };
 };
 
