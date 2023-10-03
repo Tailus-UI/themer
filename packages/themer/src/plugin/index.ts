@@ -9,6 +9,7 @@ import {
     setAvatarConfig,
     setBadgeConfig,
     setButtonConfig,
+    setCardConfig,
 } from "../config";
 
 export const themer = plugin.withOptions(
@@ -31,6 +32,7 @@ export const themer = plugin.withOptions(
                     avatar: setAvatarConfig(options.components.avatar),
                     badge: setBadgeConfig(options.components.badge),
                     button: setButtonConfig(options.components.button),
+                    card: setCardConfig(options.components.card),
                 },
             };
             addBase({
@@ -125,13 +127,31 @@ export const themer = plugin.withOptions(
                     "--btn-border-width": `${config.components.button.borderWith}px` ?? "1.5px",
 
                     // Card
-                    "--card-border-radius": theme(`borderRadius.${radius[options.radius].card}`),
-                    "--card-shadow": getShadows("card")[config.shadow.size],
-                    "--card-shadow-opacity": `${config.shadow.opacity}%`,
-                    "--card-padding": theme(`spacing.${padding[options.padding].card}`),
-                    "--card-light-bg": theme(`colors.gray.${background[options.background].card}`),
+                    "--card-border-radius": theme(
+                        `borderRadius.${
+                            config.components.card.rounded ?? radius[options.radius].card
+                        }`
+                    ),
+                    "--card-shadow":
+                        getShadows("card")[
+                            config.components.card.shadow.size ?? config.shadow.size
+                        ],
+                    "--card-shadow-opacity": `${
+                        config.components.card.shadow.opacity ?? config.shadow.opacity
+                    }%`,
+                    "--card-padding": theme(
+                        `spacing.${config.components.card.padding ?? padding[options.padding].card}`
+                    ),
+                    "--card-light-bg": theme(
+                        `colors.gray.${
+                            config.components.card.bg ?? background[options.background].card
+                        }`
+                    ),
                     "--card-dark-bg": theme(
-                        `colors.gray.${background[options.background].dark.card}`
+                        `colors.gray.${
+                            config.components.card.dark.bg ??
+                            background[options.background].dark.card
+                        }`
                     ),
 
                     // Menu

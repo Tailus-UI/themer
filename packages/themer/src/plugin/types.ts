@@ -5,6 +5,7 @@ import {
     AvatarConfig,
     BadgeConfig,
     ButtonConfig,
+    CardConfig,
 } from "./../config/components";
 
 export type Config = {
@@ -135,6 +136,16 @@ export type Config = {
          * - borderWidth : applied only to the outlined variant
          */
         button?: ButtonConfig;
+        /**
+         * The config of the card component.
+         * Customizable props:
+         * - rounded
+         * - padding
+         * - softBg
+         * - shadow : size, opacity
+         * - dark : bg, softBg
+         */
+        card?: CardConfig;
     };
 };
 
