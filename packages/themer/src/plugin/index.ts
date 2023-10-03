@@ -2,7 +2,7 @@ import plugin from "tailwindcss/plugin";
 import { background, borderColors, padding, radius } from "./../config/preconfigs";
 import getShadows from "./shadow";
 import type { Config } from "./types";
-import { setAccordionConfig, setAlertConfig } from "../config";
+import { setAccordionConfig, setAlertConfig, setAnnonceConfig } from "../config";
 
 export const themer = plugin.withOptions(
     function (options: Config) {
@@ -20,6 +20,7 @@ export const themer = plugin.withOptions(
                 components: {
                     accordion: setAccordionConfig(options.components.accordion),
                     alert: setAlertConfig(options.components.alert),
+                    annonce: setAnnonceConfig(options.components.annonce),
                 },
             };
             addBase({
@@ -83,7 +84,9 @@ export const themer = plugin.withOptions(
 
                     //Annonce
                     "--annonce-border-radius": theme(
-                        `borderRadius.${radius[options.radius].annonce}`
+                        `borderRadius.${
+                            config.components.annonce.rounded || radius[options.radius].annonce
+                        }`
                     ),
 
                     // Avatar
