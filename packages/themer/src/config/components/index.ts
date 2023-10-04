@@ -14,3 +14,4 @@ export { SwitchConfig } from "./switch";
 export { UiConfig } from "./ui";
 export { ToastConfig } from "./toast";
 export { TooltipConfig } from "./tooltip";
+export { TabsConfig } from "./tabs";

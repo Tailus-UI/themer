@@ -15,7 +15,11 @@ const setPreconfigs = (options: Config) => {
     const newPreconfigs = { ...defaultPreconfigs, ...optionsPreconfigs };
     return newPreconfigs;
 };
-
+/**
+ * ### Tailus Themer plugin 🪄.
+ * @param options The options of the plugin.
+ * @returns The plugin.
+ */
 export const themer = plugin.withOptions(function (options: Config = {}) {
     const preconfigs = setPreconfigs(options);
     return function ({ addComponents, addBase, matchUtilities, theme }) {
@@ -67,7 +71,7 @@ export const themer = plugin.withOptions(function (options: Config = {}) {
                 ),
 
                 // Badge
-                "--badge-border-radius": theme(`borderRadius.${config.components.badge.rounded}px`),
+                "--badge-border-radius": theme(`borderRadius.${config.components.badge.rounded}`),
 
                 // Button
                 "--btn-border-radius": theme(`borderRadius.${config.components.button.rounded}`),
@@ -139,36 +143,34 @@ export const themer = plugin.withOptions(function (options: Config = {}) {
 
                 // Switch
                 "--switch-border-radius": theme(`borderRadius.${config.components.switch.rounded}`),
-                /*
-                    // Tabs
-                    "--tabs-border-radius": theme(
-                        `borderRadius.${radius[options.radius].tabs.default}`
-                    ),
-                    "--tabs-light-bg": theme(`colors.gray.${background[options.background].tabs}`),
-                    "--tabs-dark-bg": theme(
-                        `colors.gray.${background[options.background].dark.tabs.list}`
-                    ),
-                    "--tabs-indicator-dark-bg": theme(
-                        `colors.gray.${background[options.background].dark.tabs.indicator}`
-                    ),
-                    "--tabs-bottom-indicator-trigger-dark-bg": theme(
-                        `colors.gray.${background[options.background].dark.tabs.trigger}`
-                    ),
-                    "--tabs-bottom-indicator-light-bg": theme("colors.primary.600"),
-                    "--tabs-bottom-indicator-dark-bg": theme("colors.primary.400"),
-                    "--tabs-light-border-color": theme(
-                        `colors.gray.${borderColors[config.border].tabs}`
-                    ),
-                    "--tabs-dark-border-color": theme(
-                        `colors.gray.${borderColors[config.border].dark.tabs}`
-                    ),
-                    "--tabs-soft-border-radius": theme(
-                        `borderRadius.${radius[options.radius].tabs.soft}`
-                    ),
-                    "--tabs-bottom-indicator-border-radius": theme(
-                        `borderRadius.${radius[options.radius].tabs.bottomIndicator}`
-                    ),
-*/
+
+                // Tabs
+                "--tabs-border-radius": theme(
+                    `borderRadius.${config.components.tabs.rounded.list}`
+                ),
+                "--tabs-light-bg": theme(`colors.gray.${config.components.tabs.listBg}`),
+                "--tabs-dark-bg": theme(`colors.gray.${config.components.tabs.dark.listBg}`),
+                "--tabs-indicator-dark-bg": theme(
+                    `colors.gray.${config.components.tabs.dark.indicatorBg}`
+                ),
+                "--tabs-bottom-indicator-trigger-dark-bg": theme(
+                    `colors.gray.${config.components.tabs.dark.triggerBg}`
+                ),
+                "--tabs-bottom-indicator-light-bg": theme("colors.primary.600"),
+                "--tabs-bottom-indicator-dark-bg": theme("colors.primary.400"),
+                "--tabs-light-border-color": theme(
+                    `colors.gray.${config.components.tabs.borderColor}`
+                ),
+                "--tabs-dark-border-color": theme(
+                    `colors.gray.${config.components.tabs.dark.borderColor}`
+                ),
+                "--tabs-soft-border-radius": theme(
+                    `borderRadius.${config.components.tabs.rounded.softVariant}`
+                ),
+                "--tabs-bottom-indicator-border-radius": theme(
+                    `borderRadius.${config.components.tabs.rounded.bottomIndicatorVariant}`
+                ),
+
                 // Tooltip
                 "--tooltip-border-radius": theme(
                     `borderRadius.${config.components.tooltip.rounded}`

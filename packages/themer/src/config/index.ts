@@ -1,17 +1,21 @@
-export { AccordionConfig } from "./components";
-export { AlertConfig } from "./components";
-export { AnnonceConfig } from "./components";
-export { AvatarConfig } from "./components";
-export { BadgeConfig } from "./components";
-export { ButtonConfig } from "./components";
-export { CardConfig } from "./components";
-export { MenuConfig } from "./components";
-export { FeedbackConfig } from "./components";
-export { FlagConfig } from "./components";
-export { FieldConfig } from "./components";
-export { PopoverConfig } from "./components";
-export { SwitchConfig } from "./components";
-export { UiConfig } from "./components";
-export { ToastConfig } from "./components";
+export {
+    AccordionConfig,
+    AlertConfig,
+    AnnonceConfig,
+    AvatarConfig,
+    BadgeConfig,
+    ButtonConfig,
+    CardConfig,
+    MenuConfig,
+    FeedbackConfig,
+    FlagConfig,
+    FieldConfig,
+    PopoverConfig,
+    SwitchConfig,
+    UiConfig,
+    ToastConfig,
+    TooltipConfig,
+    TabsConfig,
+} from "./components";
+
 export { Preconfigs } from "./preconfigs/types";
-export { TooltipConfig } from "./components";

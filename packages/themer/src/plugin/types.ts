@@ -13,6 +13,7 @@ import {
     MenuConfig,
     PopoverConfig,
     SwitchConfig,
+    TabsConfig,
     ToastConfig,
     TooltipConfig,
     UiConfig,
@@ -231,6 +232,15 @@ export type Config = {
          * - rounded
          */
         tooltip?: TooltipConfig;
+        /**
+         * The config of the tabs component.
+         * Customizable props:
+         * - rounded : list, soft, bottomIndicator
+         * - bordreColor
+         * - listBg
+         * - dark : borderColor, listBg, triggerBg, indicatorBg
+         */
+        tabs?: TabsConfig;
     };
 };
 

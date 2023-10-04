@@ -110,6 +110,21 @@ export const defaultConfig = (preconfigs: Preconfigs) => {
         tooltip: {
             rounded: radius[preconfigs.radius].tooltip,
         },
+        tabs: {
+            rounded: {
+                list: radius[preconfigs.radius].tabs.default,
+                softVariant: radius[preconfigs.radius].tabs.soft,
+                bottomIndicatorVariant: radius[preconfigs.radius].tabs.bottomIndicator,
+            },
+            listBg: background[preconfigs.background].tabs,
+            borderColor: borderColors[preconfigs.border].tabs,
+            dark: {
+                listBg: background[preconfigs.background].dark.tabs.list,
+                triggerBg: background[preconfigs.background].dark.tabs.trigger,
+                indicatorBg: background[preconfigs.background].dark.tabs.indicator,
+                borderColor: borderColors[preconfigs.border].dark.tabs,
+            },
+        },
     };
     return components;
 };
