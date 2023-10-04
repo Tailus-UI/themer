@@ -41,18 +41,4 @@ export type CardConfig = {
     };
 };
 
-export const setCardConfig = (config?: CardConfig): CardConfig => {
-    return {
-        rounded: config.rounded,
-        bg: config.bg,
-        shadow: {
-            size: config.shadow.size,
-            opacity: config.shadow.opacity,
-        },
-        dark: {
-            bg: config.dark.bg,
-        },
-    };
-};
-
-export default setCardConfig;
+export default CardConfig;

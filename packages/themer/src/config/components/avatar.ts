@@ -12,10 +12,5 @@ export type AvatarConfig = {
      */
     statusInset?: AvatarStatusInset;
 };
-export const setAvatarConfig = (config?: AvatarConfig): AvatarConfig => {
-    return {
-        rounded: config.rounded,
-        statusInset: config.statusInset,
-    };
-};
-export default setAvatarConfig;
+
+export default AvatarConfig;

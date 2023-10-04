@@ -13,11 +13,4 @@ export type ButtonConfig = {
     borderWith?: ButtonBorderWidth;
 };
 
-export const setButtonConfig = (config?: ButtonConfig): ButtonConfig => {
-    return {
-        rounded: config.rounded,
-        borderWith: config.borderWith,
-    };
-};
-
-export default setButtonConfig;
+export default ButtonConfig;

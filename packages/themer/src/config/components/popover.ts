@@ -11,11 +11,4 @@ export type PopoverConfig = {
     padding?: PaddingSizes;
 };
 
-export const setPopoverConfig = (config?: PopoverConfig): PopoverConfig => {
-    return {
-        rounded: config.rounded,
-        padding: config.padding,
-    };
-};
-
-export default setPopoverConfig;
+export default PopoverConfig;

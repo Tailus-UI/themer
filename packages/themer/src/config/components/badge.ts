@@ -7,10 +7,4 @@ export type BadgeConfig = {
     rounded?: Sizes;
 };
 
-export const setBadgeConfig = (config?: BadgeConfig): BadgeConfig => {
-    return {
-        rounded: config.rounded,
-    };
-};
-
-export default setBadgeConfig;
+export default BadgeConfig;

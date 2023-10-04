@@ -11,11 +11,4 @@ export type FlagConfig = {
     padding?: PaddingSizes;
 };
 
-export const setFlagConfig = (config?: FlagConfig): FlagConfig => {
-    return {
-        rounded: config.rounded,
-        padding: config.padding,
-    };
-};
-
-export default setFlagConfig;
+export default FlagConfig;

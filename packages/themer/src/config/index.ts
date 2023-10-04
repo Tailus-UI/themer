@@ -1,12 +1,15 @@
-export { setAccordionConfig, AccordionConfig } from "./components";
-export { setAlertConfig, AlertConfig } from "./components";
-export { setAnnonceConfig, AnnonceConfig } from "./components";
-export { setAvatarConfig, AvatarConfig } from "./components";
-export { setBadgeConfig, BadgeConfig } from "./components";
-export { setButtonConfig, ButtonConfig } from "./components";
-export { setCardConfig, CardConfig } from "./components";
-export { setMenuConfig, MenuConfig } from "./components";
-export { setFeedbackConfig, FeedbackConfig } from "./components";
-export { setFlagConfig, FlagConfig } from "./components";
-export { setFieldConfig, FieldConfig } from "./components";
-export { setPopoverConfig, PopoverConfig } from "./components";
+export { AccordionConfig } from "./components";
+export { AlertConfig } from "./components";
+export { AnnonceConfig } from "./components";
+export { AvatarConfig } from "./components";
+export { BadgeConfig } from "./components";
+export { ButtonConfig } from "./components";
+export { CardConfig } from "./components";
+export { MenuConfig } from "./components";
+export { FeedbackConfig } from "./components";
+export { FlagConfig } from "./components";
+export { FieldConfig } from "./components";
+export { PopoverConfig } from "./components";
+export { SwitchConfig } from "./components";
+
+export { Preconfigs } from "./preconfigs/types";

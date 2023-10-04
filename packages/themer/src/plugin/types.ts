@@ -1,3 +1,4 @@
+import { Opacity, ShadowSizes } from "../config/types";
 import {
     AccordionConfig,
     AlertConfig,
@@ -11,6 +12,7 @@ import {
     FlagConfig,
     MenuConfig,
     PopoverConfig,
+    SwitchConfig,
 } from "./../config/";
 
 export type Config = {
@@ -55,12 +57,12 @@ export type Config = {
          * **Note:** The `2xl` value is not supported, use `xxl` instead !.
          * @default "xl"
          */
-        size: "none" | "default" | "sm" | "md" | "lg" | "xl" | "xxl";
+        size?: ShadowSizes;
         /**
          * The opacity of the shadow accepts value from `1` to `100`.
          * @default 10
          */
-        opacity: number;
+        opacity?: Opacity;
     };
     /**
      * The border of the following components :
@@ -200,6 +202,12 @@ export type Config = {
          * - padding
          */
         popover?: PopoverConfig;
+        /**
+         * The config of the switch component.
+         * Customizable props:
+         * - rounded
+         */
+        switch?: SwitchConfig;
     };
 };
 

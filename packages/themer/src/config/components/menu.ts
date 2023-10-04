@@ -63,23 +63,4 @@ export type MenuConfig = {
     };
 };
 
-export const setMenuConfig = (config?: MenuConfig): MenuConfig => {
-    return {
-        rounded: config.rounded,
-        borderColor: config.borderColor,
-        bgOpacity: config.bgOpacity,
-        backdropBlur: config.backdropBlur,
-        shadow: {
-            size: config.shadow.size,
-            opacity: config.shadow.opacity,
-        },
-        dark: {
-            borderColor: config.dark.borderColor,
-            bg: config.dark.bg,
-            bgOpacity: config.dark.bgOpacity,
-            backdropBlur: config.dark.backdropBlur,
-        },
-    };
-};
-
-export default setMenuConfig;
+export default MenuConfig;

@@ -33,18 +33,4 @@ export type FieldConfig = {
     };
 };
 
-export const setFieldConfig = (config?: FieldConfig): FieldConfig => {
-    return {
-        rounded: config.rounded,
-        borderColor: config.borderColor,
-        softBg: config.softBg,
-        softBgFocus: config.softBgFocus,
-        dark: {
-            borderColor: config.dark?.borderColor,
-            softBg: config.dark?.softBg,
-            softBgFocus: config.dark?.softBgFocus,
-        },
-    };
-};
-
-export default setFieldConfig;
+export default FieldConfig;

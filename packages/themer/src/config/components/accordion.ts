@@ -48,21 +48,4 @@ export type AccordionConfig = {
     };
 };
 
-export const setAccordionConfig = (config?: AccordionConfig): AccordionConfig => {
-    return {
-        rounded: config.rounded,
-        softBg: config.softBg,
-        ghostBg: config.ghostBg,
-        shadow: {
-            size: config.shadow.size,
-            opacity: config.shadow.opacity,
-        },
-        dark: {
-            softBg: config.dark.softBg,
-            ghostBg: config.dark.ghostBg,
-            elevatedBg: config.dark.elevatedBg,
-        },
-    };
-};
-
-export default setAccordionConfig;
+export default AccordionConfig;

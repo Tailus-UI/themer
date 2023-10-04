@@ -35,18 +35,4 @@ export type FeedbackConfig = {
     };
 };
 
-export const setFeedbackConfig = (config?: FeedbackConfig): FeedbackConfig => {
-    return {
-        borderColor: config.borderColor,
-        shadow: {
-            size: config.shadow.size,
-            opacity: config.shadow.opacity,
-        },
-        dark: {
-            borderColor: config.dark.borderColor,
-            bg: config.dark.bg,
-        },
-    };
-};
-
-export default setFeedbackConfig;
+export default FeedbackConfig;

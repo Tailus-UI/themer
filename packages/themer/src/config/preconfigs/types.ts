@@ -1,4 +1,4 @@
-import type { Shade, Sizes, SizesWithoutFull } from "../types";
+import type { Opacity, Shade, ShadowSizes, Sizes, SizesWithoutFull } from "../types";
 import type { PaddingSizes } from "../types";
 
 export type Background = {
@@ -70,5 +70,17 @@ export type Radius = {
         default: Sizes;
         soft: Sizes;
         bottomIndicator: Sizes;
+    };
+};
+
+export type Preconfigs = {
+    appearance?: "light" | "dark" | "both";
+    background?: "light" | "lighter" | "high" | "higher";
+    border?: "light" | "lighter" | "high" | "higher";
+    padding?: "small" | "medium" | "large" | "larger" | "largest";
+    radius?: "boxy" | "sharp" | "smooth" | "smoothest";
+    shadow?: {
+        size?: ShadowSizes;
+        opacity?: Opacity;
     };
 };

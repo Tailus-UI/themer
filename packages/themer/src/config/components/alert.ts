@@ -21,14 +21,4 @@ export type AlertConfig = {
     };
 };
 
-export const setAlertConfig = (config?: AlertConfig): AlertConfig => {
-    return {
-        rounded: config.rounded,
-        shadow: {
-            size: config.shadow.size,
-            opacity: config.shadow.opacity,
-        },
-    };
-};
-
-export default setAlertConfig;
+export default AlertConfig;
