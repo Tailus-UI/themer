@@ -25,6 +25,7 @@ export const higher: Background = {
             soft: "700",
             ghost: "700",
         },
+        select: "900",
     },
 };
 

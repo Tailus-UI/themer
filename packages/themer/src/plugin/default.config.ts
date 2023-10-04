@@ -125,6 +125,11 @@ export const defaultConfig = (preconfigs: Preconfigs) => {
                 borderColor: borderColors[preconfigs.border].dark.tabs,
             },
         },
+        select: {
+            dark: {
+                bg: background[preconfigs.background].dark.select,
+            },
+        },
     };
     return components;
 };

@@ -12,6 +12,7 @@ import {
     FlagConfig,
     MenuConfig,
     PopoverConfig,
+    SelectConfig,
     SwitchConfig,
     TabsConfig,
     ToastConfig,
@@ -241,6 +242,12 @@ export type Config = {
          * - dark : borderColor, listBg, triggerBg, indicatorBg
          */
         tabs?: TabsConfig;
+        /**
+         * The config of the select component.
+         * Customizable props:
+         * - dark : bg
+         */
+        select?: SelectConfig;
     };
 };
 

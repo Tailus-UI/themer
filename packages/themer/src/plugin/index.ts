@@ -198,7 +198,7 @@ export const themer = plugin.withOptions(function (options: Config = {}) {
                 ),
 
                 // Select
-                "--select-dark-bg": theme("colors.gray.950"),
+                "--select-dark-bg": theme(`colors.gray.${config.components.select.dark.bg}`),
             },
         });
         addComponents({

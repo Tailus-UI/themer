@@ -16,6 +16,7 @@ export {
     ToastConfig,
     TooltipConfig,
     TabsConfig,
+    SelectConfig,
 } from "./components";
 
 export { Preconfigs } from "./preconfigs/types";

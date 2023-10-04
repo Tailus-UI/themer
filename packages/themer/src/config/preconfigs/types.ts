@@ -26,6 +26,7 @@ export type Background = {
         };
         menu: Shade;
         feedback: Shade;
+        select: Shade;
     };
 };
 export type BorderColors = {

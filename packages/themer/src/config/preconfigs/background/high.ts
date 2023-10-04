@@ -25,6 +25,7 @@ export const high: Background = {
         },
         fieldFocus: "800",
         feedback: "800",
+        select: "900",
     },
 };
 

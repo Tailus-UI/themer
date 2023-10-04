@@ -15,3 +15,4 @@ export { UiConfig } from "./ui";
 export { ToastConfig } from "./toast";
 export { TooltipConfig } from "./tooltip";
 export { TabsConfig } from "./tabs";
+export { SelectConfig } from "./select";

@@ -25,6 +25,7 @@ export const lighter: Background = {
             soft: "900",
             ghost: "900",
         },
+        select: "950",
     },
 };
 
