@@ -53,7 +53,14 @@ export const defaultConfig = (preconfigs: Preconfigs) => {
                 bg: background[preconfigs.background].dark.card,
             },
         },
-        ui: {},
+        ui: {
+            borderColor: borderColors[preconfigs.border].ui,
+            hoverBorderColor: borderColors[preconfigs.border].hover,
+            dark: {
+                borderColor: borderColors[preconfigs.border].dark.ui,
+                hoverBorderColor: borderColors[preconfigs.border].dark.hover,
+            },
+        },
         menu: {
             rounded: radius[preconfigs.radius].menu,
             borderColor: borderColors[preconfigs.border].menu,
@@ -92,6 +99,7 @@ export const defaultConfig = (preconfigs: Preconfigs) => {
         },
         popover: {
             rounded: radius[preconfigs.radius].popover,
+            padding: padding[preconfigs.padding].popover,
         },
         switch: {
             rounded: radius[preconfigs.radius].switch,

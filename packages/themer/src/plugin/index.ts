@@ -135,20 +135,11 @@ export const themer = plugin.withOptions(function (options: Config = {}) {
                 "--popover-border-radius": theme(
                     `borderRadius.${config.components.popover.rounded}`
                 ),
-                /*
-                    "--popover-padding": theme(
-                        `spacing.${
-                            config.components.popover.padding ?? padding[options.padding].popover
-                        }`
-                    ),
-                        
-                    // Switch
-                    "--switch-border-radius": theme(
-                        `borderRadius.${
-                            config.components.switch.rounded ?? radius[options.radius].switch
-                        }`
-                    ),
+                "--popover-padding": theme(`spacing.${config.components.popover.padding}`),
 
+                // Switch
+                "--switch-border-radius": theme(`borderRadius.${config.components.switch.rounded}`),
+                /*
                     // Tabs
                     "--tabs-border-radius": theme(
                         `borderRadius.${radius[options.radius].tabs.default}`
@@ -185,32 +176,27 @@ export const themer = plugin.withOptions(function (options: Config = {}) {
 
                     // Toast
                     "--toast-border-radius": theme(`borderRadius.${radius[options.radius].toast}`),
+                */
+                // Separator
+                "--separator-light-color": theme(`colors.gray.${config.components.ui.borderColor}`),
+                "--separator-dark-color": theme(
+                    `colors.gray.${config.components.ui.dark.borderColor}`
+                ),
 
-                    // Separator
-                    "--separator-light-color": theme(
-                        `colors.gray.${borderColors[config.border].ui}`
-                    ),
-                    "--separator-dark-color": theme(
-                        `colors.gray.${borderColors[config.border].dark.ui}`
-                    ),
+                // UI
+                "--ui-light-border-color": theme(`colors.gray.${config.components.ui.borderColor}`),
+                "--ui-dark-border-color": theme(
+                    `colors.gray.${config.components.ui.dark.borderColor}`
+                ),
+                "--ui-light-border-hover-color": theme(
+                    `colors.gray.${config.components.ui.hoverBorderColor}`
+                ),
+                "--ui-dark-border-hover-color": theme(
+                    `colors.gray.${config.components.ui.dark.hoverBorderColor}`
+                ),
 
-                    // UI
-                    "--ui-light-border-color": theme(
-                        `colors.gray.${borderColors[config.border].ui}`
-                    ),
-                    "--ui-dark-border-color": theme(
-                        `colors.gray.${borderColors[config.border].dark.ui}`
-                    ),
-                    "--ui-light-border-hover-color": theme(
-                        `colors.gray.${borderColors[config.border].hover}`
-                    ),
-                    "--ui-dark-border-hover-color": theme(
-                        `colors.gray.${borderColors[config.border].dark.hover}`
-                    ),
-
-                    // Select
-                    "--select-dark-bg": theme("colors.gray.950"),
-                    */
+                // Select
+                "--select-dark-bg": theme("colors.gray.950"),
             },
         });
         addComponents({

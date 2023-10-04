@@ -13,6 +13,7 @@ import {
     MenuConfig,
     PopoverConfig,
     SwitchConfig,
+    UiConfig,
 } from "./../config/";
 
 export type Config = {
@@ -208,6 +209,10 @@ export type Config = {
          * - rounded
          */
         switch?: SwitchConfig;
+        /**
+         * The config of the ui group components : card, annonce, accordion and separator.
+         */
+        ui?: UiConfig;
     };
 };
 

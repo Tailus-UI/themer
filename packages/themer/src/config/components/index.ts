@@ -11,3 +11,4 @@ export { FlagConfig } from "./flag";
 export { FieldConfig } from "./field";
 export { PopoverConfig } from "./popover";
 export { SwitchConfig } from "./switch";
+export { UiConfig } from "./ui";
