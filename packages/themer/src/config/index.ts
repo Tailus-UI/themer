@@ -12,4 +12,6 @@ export { FieldConfig } from "./components";
 export { PopoverConfig } from "./components";
 export { SwitchConfig } from "./components";
 export { UiConfig } from "./components";
+export { ToastConfig } from "./components";
 export { Preconfigs } from "./preconfigs/types";
+export { TooltipConfig } from "./components";

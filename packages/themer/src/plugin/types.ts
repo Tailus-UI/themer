@@ -13,6 +13,8 @@ import {
     MenuConfig,
     PopoverConfig,
     SwitchConfig,
+    ToastConfig,
+    TooltipConfig,
     UiConfig,
 } from "./../config/";
 
@@ -211,8 +213,24 @@ export type Config = {
         switch?: SwitchConfig;
         /**
          * The config of the ui group components : card, annonce, accordion and separator.
+         * Customizable props:
+         * - borderColor
+         * - hoverBorderColor
+         * - dark : borderColor, hoverBorderColor
          */
         ui?: UiConfig;
+        /**
+         * The config of the toast component.
+         * Customizable props:
+         * - rounded
+         */
+        toast?: ToastConfig;
+        /**
+         * The config of the tooltip component.
+         * Customizable props:
+         * - rounded
+         */
+        tooltip?: TooltipConfig;
     };
 };
 

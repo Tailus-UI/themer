@@ -168,15 +168,15 @@ export const themer = plugin.withOptions(function (options: Config = {}) {
                     "--tabs-bottom-indicator-border-radius": theme(
                         `borderRadius.${radius[options.radius].tabs.bottomIndicator}`
                     ),
+*/
+                // Tooltip
+                "--tooltip-border-radius": theme(
+                    `borderRadius.${config.components.tooltip.rounded}`
+                ),
 
-                    // Tooltip
-                    "--tooltip-border-radius": theme(
-                        `borderRadius.${radius[options.radius].tooltip}`
-                    ),
+                // Toast
+                "--toast-border-radius": theme(`borderRadius.${config.components.toast.rounded}`),
 
-                    // Toast
-                    "--toast-border-radius": theme(`borderRadius.${radius[options.radius].toast}`),
-                */
                 // Separator
                 "--separator-light-color": theme(`colors.gray.${config.components.ui.borderColor}`),
                 "--separator-dark-color": theme(

@@ -12,3 +12,5 @@ export { FieldConfig } from "./field";
 export { PopoverConfig } from "./popover";
 export { SwitchConfig } from "./switch";
 export { UiConfig } from "./ui";
+export { ToastConfig } from "./toast";
+export { TooltipConfig } from "./tooltip";

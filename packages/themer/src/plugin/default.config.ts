@@ -104,6 +104,12 @@ export const defaultConfig = (preconfigs: Preconfigs) => {
         switch: {
             rounded: radius[preconfigs.radius].switch,
         },
+        toast: {
+            rounded: radius[preconfigs.radius].toast,
+        },
+        tooltip: {
+            rounded: radius[preconfigs.radius].tooltip,
+        },
     };
     return components;
 };
