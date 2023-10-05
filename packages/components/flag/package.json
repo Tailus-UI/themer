@@ -29,6 +29,7 @@
     "license": "MIT",
     "devDependencies": {
         "@tailus/themer": "^0.0.1",
+        "@tailus/themer-button": "^0.0.1",
         "tailwind-merge": "^1.14.0",
         "tailwindcss": "^3.3.3"
     }
