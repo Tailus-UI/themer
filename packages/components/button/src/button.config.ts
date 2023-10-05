@@ -1,4 +1,5 @@
+import { appearance } from "@tailus/themer";
+
 export default {
-    appearance: "both",
-    borderWidth: "1.5px",
+    appearance: appearance,
 };
