@@ -1,6 +1,6 @@
 {
     "name": "@tailus/themer-accordion",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Accordion themes",
     "exports": {
         ".": {
@@ -33,7 +33,7 @@
     },
     "author": "tailus.io",
     "license": "MIT",
-    "dependencies": {
+    "devDependencies": {
         "@tailus/themer": "^0.0.1",
         "tailwindcss": "^3.3.3"
     }
