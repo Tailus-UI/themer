@@ -1,6 +1,6 @@
 {
     "name": "@tailus/themer-badge",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Badge themes",
     "exports": {
         ".": {
@@ -32,5 +32,9 @@
         "url": "https://github.com/tailus-ui/themer/issues"
     },
     "author": "tailus.io",
-    "license": "MIT"
+    "license": "MIT",
+    "devDependencies": {
+        "@tailus/themer": "^0.0.1",
+        "tailwindcss": "^3.3.3"
+    }
 }
