@@ -1,9 +1,11 @@
 {
     "compilerOptions": {
-        "target": "es6",
+        "target": "ESNext",
+        "module": "ESNext",
         "esModuleInterop": false,
         "moduleResolution": "node",
         "sourceMap": true,
-        "outDir": "./dist"
+        "outDir": "./dist",
+        "allowSyntheticDefaultImports": true
     }
 }
