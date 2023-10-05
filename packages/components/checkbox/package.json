@@ -29,6 +29,8 @@
     "author": "tailus.io",
     "license": "MIT",
     "dependencies": {
-        "@types/node": "^20.5.9"
+        "@tailus/themer": "^0.0.1",
+        "@types/node": "^20.5.9",
+        "tailwindcss": "^3.3.3"
     }
 }
