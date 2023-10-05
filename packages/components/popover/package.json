@@ -29,5 +29,9 @@
         "publish": "npm run build && npm publish --access public"
     },
     "author": "tailus.io",
-    "license": "MIT"
+    "license": "MIT",
+    "devDependencies": {
+        "@tailus/themer": "^0.0.1",
+        "tailwindcss": "^3.3.3"
+    }
 }
