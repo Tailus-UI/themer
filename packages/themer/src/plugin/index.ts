@@ -2,31 +2,20 @@ import plugin from "tailwindcss/plugin";
 import getShadows from "./shadow";
 import type { Config } from "./types";
 import defaultConfig, { preconfigs as defaultPreconfigs } from "./default.config";
+import setPreconfigs from "./preconfigs";
 
-const setPreconfigs = (options: Config) => {
-    const optionsPreconfigs = {
-        appearance: options.appearance,
-        background: options.background,
-        border: options.border,
-        padding: options.padding,
-        radius: options.radius,
-        shadow: options.shadow,
-    };
-    const newPreconfigs = { ...defaultPreconfigs, ...optionsPreconfigs };
-    return newPreconfigs;
-};
 /**
  * ### Tailus Themer plugin 🪄.
  * @param options The options of the plugin.
  * @returns The plugin.
  */
 export const themer = plugin.withOptions(function (options: Config = {}) {
-    const preconfigs = setPreconfigs(options);
     return function ({ addComponents, addBase, matchUtilities, theme }) {
+        const preconfigs = setPreconfigs(defaultPreconfigs, options);
         const config = {
             components: {
                 ...defaultConfig(preconfigs),
-                ...options.components,
+                ...options,
             },
         };
         addBase({

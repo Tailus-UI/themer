@@ -1,15 +1,15 @@
 import { Preconfigs } from "../config";
 import { background, borderColors, padding, radius } from "./../config/preconfigs";
 
-export const preconfigs = {
+export const preconfigs: Preconfigs = {
     appearance: "both",
     border: "light",
     padding: "larger",
-    radius: "smooth",
+    radius: "smoothest",
     background: "light",
     shadow: {
         size: "md",
-        opacity: 5,
+        opacity: 15,
     },
 };
 
