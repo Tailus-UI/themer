@@ -1,5 +1,5 @@
+import { appearance } from "@tailus/themer";
+
 export default {
-    appearance: "both",
-    rounded: "full",
-    status: "top",
+    appearance: appearance,
 };
