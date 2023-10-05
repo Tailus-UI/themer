@@ -1,4 +1,6 @@
+import { appearance } from "@tailus/themer";
+
 export default {
-    appearance: "both",
+    appearance: appearance,
     rounded: "2xl",
 };
