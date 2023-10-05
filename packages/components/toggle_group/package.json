@@ -32,5 +32,8 @@
         "url": "https://github.com/tailus-ui/themer/issues"
     },
     "author": "tailus.io",
-    "license": "MIT"
+    "license": "MIT",
+    "dependencies": {
+        "@tailus/themer-toggle": "^0.0.1"
+    }
 }
