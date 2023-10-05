@@ -19,5 +19,4 @@ const setPreconfigs = (preconfigs: Preconfigs, options: Config) => {
     const newPreconfigs = { ...preconfigs, ...optionsPreconfigs };
     return newPreconfigs;
 };
-
 export default setPreconfigs;

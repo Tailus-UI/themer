@@ -24,7 +24,7 @@
     ],
     "scripts": {
         "lint": "eslint ./src/**/*.ts --fix",
-        "build": "npx tsc ./src/index.ts --outDir dist --declaration",
+        "build": "npx tsc ./src/index.ts --outDir dist --declaration --esModuleInterop",
         "prepublishOnly": "npm run build",
         "publish": "npm run build && npm publish --access public"
     },
