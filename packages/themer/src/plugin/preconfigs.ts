@@ -1,5 +1,6 @@
 import { Preconfigs } from "../config";
 import { Config } from "./types";
+import merge from "lodash.merge";
 
 /**
  *
@@ -7,7 +8,7 @@ import { Config } from "./types";
  * @param options
  * @returns Merges preconfigs with options
  */
-const setPreconfigs = (preconfigs: Preconfigs, options: Config) => {
+const setPreconfigs = (preconfigs: Preconfigs, options: Config): Preconfigs => {
     const optionsPreconfigs = {
         appearance: options.appearance,
         background: options.background,
@@ -16,7 +17,6 @@ const setPreconfigs = (preconfigs: Preconfigs, options: Config) => {
         radius: options.radius,
         shadow: options.shadow,
     };
-    const newPreconfigs = { ...preconfigs, ...optionsPreconfigs };
-    return newPreconfigs;
+    return merge(preconfigs, optionsPreconfigs);
 };
 export default setPreconfigs;

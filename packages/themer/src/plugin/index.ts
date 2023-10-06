@@ -5,19 +5,19 @@ import defaultConfig, { preconfigs as defaultPreconfigs } from "./default.config
 import setPreconfigs from "./preconfigs";
 
 let appearance: Config["appearance"] = "dark";
+
 /**
  * ### Tailus Themer plugin 🪄.
  * @param options The options of the plugin.
  * @returns The plugin.
  */
-const themer = plugin.withOptions(function (options: Config = {}) {
-    return function ({ addComponents, addBase, matchUtilities, theme }) {
+let themer = plugin.withOptions((options: Config = {}) => {
+    return ({ addComponents, addBase, matchUtilities, theme }) => {
         const preconfigs = setPreconfigs(defaultPreconfigs, options);
-        appearance = preconfigs.appearance;
         const config = {
             components: {
                 ...defaultConfig(preconfigs),
-                ...options,
+                ...options.components,
             },
         };
         addBase({

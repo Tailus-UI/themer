@@ -2,14 +2,14 @@ import { Preconfigs } from "../config";
 import { background, borderColors, padding, radius } from "./../config/preconfigs";
 
 export const preconfigs: Preconfigs = {
-    appearance: "both",
+    appearance: "dark",
     border: "light",
     padding: "larger",
     radius: "smoothest",
     background: "light",
     shadow: {
         size: "md",
-        opacity: 15,
+        opacity: 5,
     },
 };
 
