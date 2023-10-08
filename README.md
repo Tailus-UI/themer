@@ -12,9 +12,10 @@ Tailus Themer is based on the concept of component-level theming. This means tha
 
 Tailus Themer offers a number of benefits over other theming solutions, including:
 
--   A wide variety of pre-built themes to choose from.
+-   A Pre-built themes.
 -   Easy customization of the themes to match your brand and style.
 -   Support for component-level theming.
+-   A wide variety of components theme variants
 -   An online customizer for the global theme and specific component props.
 -   A plugin to help customize consistently all the components and the feel and the look of the website orapplication you're building.
 -   Generate a specific theme with a specific appearance, you can choose to entirely build your UI in light mode, dark mode or both and Only the utilities of your appearance will be generated in the DOM.
@@ -55,9 +56,11 @@ export default = {
             // your theme here
         },
     },
-    plugins: themer({
-        // your customizations here
-    }),
+    plugins: [
+        themer({
+            // your customizations here
+        })
+    ],
 };
 ```
 
@@ -73,24 +76,70 @@ export default {
 };
 ```
 
-4. Install the needed component theme package:
+4. Install the needed components theme packages:
 
 ```bash
+npm install @tailus/themer-form
+npm install @tailus/themer-button
 npm install @tailus/themer-card
 ```
 
-5. Import the needed component theme package into your application:
+5. Import the needed components theme package into your application:
 
 ```tsx
-import { card } from "@tailus/themer-card";
+import { outlinedForm as theme } from "@tailus/themer-form";
+import { button } from "@tailus/themer-button";
+import { card as cardTheme } from "@tailus/themer-card";
 ```
 
-6. Add the component theme to the component element:
+6. Add the components themes to the components elements:
 
 ```tsx
-<div className={card}>
-    <h3>Card Title</h3>
-</div>
+// Radix UI
+
+import * as Form from "@radix-ui/react-form";
+import { outlinedForm as theme } from "@tailus/themer-form";
+import { button } from "@tailus/themer-button";
+import { card as cardTheme } from "@tailus/themer-card";
+
+const FormUI = () => (
+    <Form.Root className={cardTheme}>
+        <div className="space-y-4">
+            <Form.Field className={theme.field} name="email">
+                <Form.Label className={theme.label.sm}>Email</Form.Label>
+                <div className="space-y-1">
+                    <Form.Control asChild>
+                        <input className={theme.input.sm} type="email" required />
+                    </Form.Control>
+                    <Form.Message className={theme.message.warning} match="valueMissing">
+                        Please enter your email
+                    </Form.Message>
+                    <Form.Message className={theme.message.danger} match="typeMismatch">
+                        Please provide a valid email
+                    </Form.Message>
+                </div>
+            </Form.Field>
+            <Form.Field className={theme.field} name="question">
+                <Form.Label className={theme.label.sm}>Question</Form.Label>
+                <div>
+                    <Form.Control asChild>
+                        <textarea className={theme.textarea.sm} rows={3} required />
+                    </Form.Control>
+                    <Form.Message className={theme.message.warning} match="valueMissing">
+                        Please enter a question
+                    </Form.Message>
+                </div>
+            </Form.Field>
+            <Form.Submit asChild>
+                <button className={button.primary.md + " w-full"}>
+                    <span>Submit</span>
+                </button>
+            </Form.Submit>
+        </div>
+    </Form.Root>
+);
+
+export default FormUI;
 ```
 
 ## Customization
