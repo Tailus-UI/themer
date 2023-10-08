@@ -1,6 +1,6 @@
 {
     "name": "@tailus/themer",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Tailus themer",
     "exports": {
         ".": {
