@@ -2,7 +2,7 @@
 
 ## Overview
 
-Tailus Themer is a theming library that provides modern and customizable themes for Marketing, Ecommerce websites, and Web Apps. It is built on top of Tailwind CSS and provides a variety of themes that can be easily customized to match your brand and style.
+Tailus Themer is a theming library that provides modern and customizable themes for building your own UI Kit regardless of the Web framework you are using. It is built on top of Tailwind CSS and provides a variety of themes that can be easily customized to match your brand and style.
 
 ## Concept
 
@@ -10,32 +10,20 @@ Tailus Themer is based on the concept of component-level theming. This means tha
 
 ## Features
 
-Tailus Themer offers a number of benefits over other theming solutions, including:
+Tailus Themer offers a number of features and benefits over other theming solutions, including:
 
--   A Pre-built themes.
--   Easy customization of the themes to match your brand and style.
+-   Pre-built themes (coming...).
+-   Easy customization of the theme to match your brand and style.
 -   Support for component-level theming.
--   A wide variety of components theme variants
--   An online customizer for the global theme and specific component props.
--   A plugin to help customize consistently all the components and the feel and the look of the website orapplication you're building.
+-   A wide variety of components themes variants
+-   An online customizer for the global theme and specific component theme.
+-   A plugin to help customize consistently all the components and the feel and the look of the website or application you're building.
 -   Generate a specific theme with a specific appearance, you can choose to entirely build your UI in light mode, dark mode or both and Only the utilities of your appearance will be generated in the DOM.
 -   Support for React, Vue, Svelte, and all modern JS Frameworks.
 
-## Benefits
-
-Tailus Themer offers a number of benefits over other theming solutions, including:
-
--   **Modern and customizable themes:** Tailus Themer provides a variety of modern and customizable themes that can be easily adapted to match your brand and style.
-
--   **Component-level theming:** Tailus Themer supports component-level theming, which makes it easy to create applications with a consistent look and feel.
-
--   **Easy to use:** Tailus Themer is easy to use and can be used to create themes for applications of all sizes.
-
--   **Open source:** Tailus Themer is an open source project, which means that you can customize it to meet your specific needs and contribute to the community.
-
 ## Use
 
-Tailus Themer is easy to use and can be used to create themes for applications of all sizes. To get started, simply install the Tailus Themer package, the needed component theme package and import it into your application. You can then customize the theme to match your brand and style using our `themer` plugin or our visual customizers.
+Tailus Themer is easy to use and can be used to create UI Kits for applications of all sizes. To get started, simply install the Tailus Themer package, the needed component theme package and import it into your application. You can then customize the theme to match your brand and style using our `themer` plugin or our online customizers.
 
 ### Installation
 
@@ -71,12 +59,12 @@ export default = {
 export default {
     content: [
         // ... other paths
-        "./node_modules/@tailus/themer-**/**/*.{js,ts}",
+        "./node_modules/@tailus/themer-**/dist/**/*.{js,ts}",
     ],
 };
 ```
 
-4. Install the needed components theme packages:
+4. Install the needed components themes packages:
 
 ```bash
 npm install @tailus/themer-form
@@ -84,7 +72,7 @@ npm install @tailus/themer-button
 npm install @tailus/themer-card
 ```
 
-5. Import the needed components theme package into your application:
+5. Import the needed components themes packages into your application:
 
 ```tsx
 import { outlinedForm as theme } from "@tailus/themer-form";
@@ -144,11 +132,11 @@ export default FormUI;
 
 ## Customization
 
-Tailus Themer provides a number of ways to customize the themes to match your brand and style. You can customize the themes using the `themer` plugin or the visual customizers.
+Tailus Themer provides a number of ways to customize the theme to match your brand and style. You can customize the theme using the `themer` plugin or the online customizers.
 
 ### Using the `themer` plugin
 
-The `themer` plugin allows you to customize the themes using a simple and consistent API. To customize the themes, you can use the following syntax:
+The `themer` plugin allows you to customize the theme using a simple and consistent API. To customize the theme, you can use the following syntax:
 
 1. **Add options to the `themer` plugin**:
 
@@ -156,7 +144,7 @@ The `themer` plugin accepts two group of options:
 
 #### Preconfigs :
 
-You can use the `preconfigs` to add consitent customizations to how the components looks.
+You can use the `preconfigs` to add consitent customizations to the components theme.
 
 -   `appearance` : Generate a theme according to your preferences, either light mode only, dark mode only or both, regardless of the `darkMode` property in Tailwind CSS.
 
@@ -285,9 +273,11 @@ This code will override the `accordion` default theme with the following values:
 }
 ```
 
+To learn more about the available options for each component, please refer to the [components reference](https://tailus.io/docs/reference/).
+
 ### Using the online customizers
 
-Tailus Themer provides a two online customizers that allow you to customize the themes visually. To use the customizers, simply visit the following links:
+Tailus Themer provides two online customizers that allow you to customize the theme visually. To use the customizers, simply visit the following links:
 
 -   [Global Theme Customizer](https://tailus.io/customizer/)
 -   Find the specific component customization on its documentation page.
