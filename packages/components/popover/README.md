@@ -80,8 +80,8 @@ The following properties can be customized:
 tailus: {
     components: {
         popover: {
-            borderRadius: "2xl",
-            padding : "6",
+            rounded : "md",
+            padding : "4",
         },
     },
 },
@@ -100,10 +100,8 @@ Customization that will be applied to other components (menu components):
 tailus: {
     components: {
         menu: {
-            borderRadius: "2xl",
+            borderRadius: "md",
             borderColor : "200",
-            backgroundOpacity : "90%",
-            backdropBlur : "xl",
             shadow : {
                 size : "lg",
                 opacity : "10"
@@ -111,10 +109,8 @@ tailus: {
             dark : {
                 borderColor : "800",
                 background : "950",
-                backgroundOpacity : "90%",
-                backdropBlur : "2xl",
             }
-        },
+        }
     },
 },
 

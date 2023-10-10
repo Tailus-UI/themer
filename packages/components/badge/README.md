@@ -78,7 +78,7 @@ The following properties can be customized:
 tailus: {
     components: {
         badge: {
-            borderRadius: "md",
+            rounded: "md",
         },
     },
 },

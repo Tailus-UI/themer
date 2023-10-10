@@ -160,44 +160,34 @@ export default TabsAppUI;
 
 The following properties can be customized for all variants:
 
--   list light border color
--   list dark border color
--   list light bg
--   list dark bg
--   indicator dark bg
--   border radius
-
-The following properties can be customized for the bottom indicator variant:
-
--   bottom indicator light bg
--   bottom indicator dark bg
+-   `listBg`
+-   `borderColor`
+-   `rounded.list`
+-   `rounded.softVariant`
+-   `rounded.bottomIndicatorVariant`
+-   `dark.borderColor`
+-   `dark.listBg`
+-   `dark.triggerBg`
+-   `dark.indicatorBg`
 
 ```js
 tailus: {
     components: {
         tabs: {
-            bottomIndicatorBg : "primary.600",
-            borderColor : "200",
-            list : {
-                borderRadius : "xl",
-                background : "100"
-            },
-            trigger : {
-                borderRadius : "md",
-                background : "200"
-            },
-            dark : {
-                borderColor : "800",
-                indicatorBackground : "950"
-                bottomIndicatorBg : "primary.400",
-                list : {
-                    background : "800"
-                },
-                trigger : {
-                    background : "800"
-                }
-            }
-        },
+          borderColor: "200",
+          listBg: "100",
+          rounded: {
+            list: "md",
+            softVariant: "md",
+            bottomIndicatorVariant: "md",
+          },
+          dark: {
+            borderColor: "800",
+            listBg: "800",
+            triggerBg: "900",
+            indicatorBg:"950"
+          }
+        }
     },
 },
 ```

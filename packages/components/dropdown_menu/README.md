@@ -128,27 +128,25 @@ The following properties can be customized:
 -   separator light color
 -   separator dark color
 
-To customize the dropdown menu component theme, you can override The Tailwind css utilitieses in your own tailwind.config file.
+**Note :** The dropdown menu shares the customizations of the menu components. To customize the dropdown menu, you must customize the menu components trough `menu` object.
 
 ```js
 tailus: {
     components: {
         menu: {
-            borderRadius: "2xl",
-            borderColor : "200",
-            separator : "200",
-            backgroundOpacity : "90%",
-            backdropBlur : "xl",
-            shadow : {
-                size : "lg",
-                opacity : "10"
+            rounded: "3xl",
+            borderColor: "200",
+            bgOpacity: 99,
+            backdropBlur: "3",
+            shadow: {
+                size: "md",
+                opacity:3,
             },
-            dark : {
-                borderColor : "800",
-                separator : "800",
-                background : "950",
-                backgroundOpacity : "90%",
-                backdropBlur : "2xl",
+            dark: {
+                bg: "950",
+                borderColor: "800",
+                bgOpacity: 50,
+                backdropBlur: "5",
             }
         },
     },

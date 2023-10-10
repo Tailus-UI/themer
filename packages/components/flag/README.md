@@ -113,18 +113,14 @@ The following properties can be customized:
 -   Dark Border color
 -   Dark background
 
+**Note:** Border Color and Background Color are customizable trough the `feedback` object.
+
 ```js
 tailus: {
     components: {
         flag: {
-            borderRadius: "md",
-            lightBorder : "100",
-            darkBorder: "800",
-            darkBackground : "950",
-            shadow : {
-                size : "lg",
-                opacity : "10"
-            }
+            rounded: "md",
+            padding: "4",
         },
     },
 },

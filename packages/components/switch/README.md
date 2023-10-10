@@ -63,7 +63,7 @@ The following property can be customized:
 tailus: {
     components: {
         switch: {
-            borderRadius: "",
+            rounded: "md",
         },
     },
 },

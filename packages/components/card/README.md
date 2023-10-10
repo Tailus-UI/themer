@@ -64,7 +64,7 @@ export default = {
         themer({
             components: {
                 card: {
-                    rounded: "rounded-lg",
+                    rounded: "rounded-md",
                     padding: "p-4",
                 },
             },

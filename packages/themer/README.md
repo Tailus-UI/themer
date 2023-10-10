@@ -63,19 +63,19 @@ You can use the `preconfigs` to add consitent customizations to how the componen
 
 -   `background` : Add consistent background colors to your theme.
 
-        **Accepts** : "light" | "lighter" | "hight" | "higher",
+    **Accepts** : "light" | "lighter" | "hight" | "higher",
 
 -   `padding` : Add consistent padding to your theme.
 
-        **Accepts** : "small" | "medium" | "large" | "larger" | "largest",
+    **Accepts** : "small" | "medium" | "large" | "larger" | "largest",
 
 -   `border` : Add consistent border colors to your theme.
 
-            **Accepts** : "lighter" | "light" | "high" | "higher",
+    **Accepts** : "lighter" | "light" | "high" | "higher",
 
 -   `radius` : Add consistent border radius to your theme.
 
-            **Accepts** : "boxy" | "sharp" | "smooth" | "smoothest",
+    **Accepts** : "boxy" | "sharp" | "smooth" | "smoothest",
 
 -   `shadow` : Add consistent shadow to your theme.
 

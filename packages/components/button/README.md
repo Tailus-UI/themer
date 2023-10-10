@@ -103,14 +103,15 @@ Each of these objects is a collection of Tailwind CSS utilities that can be used
 
 ## Customization
 
-The border-radius and border-widh of the buttons can be customized.
+The border-radius and border-width of the buttons can be customized.
+**Note :** The borderWidth property is only applied to the outlined variant.
 
 ```js
 tailus: {
     components: {
         button: {
-            borderRadius: "",
-            borderWidth:""
+            rounded: "xl",
+            borderWith:"1.5",
         },
     },
 },

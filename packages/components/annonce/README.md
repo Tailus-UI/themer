@@ -65,7 +65,7 @@ The following property can be customized:
 tailus: {
     components: {
         annonce: {
-            borderRadius: "xl";
+            rounded: "md";
         }
     }
 }

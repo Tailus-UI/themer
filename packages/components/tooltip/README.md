@@ -33,13 +33,11 @@ The following property can be customized:
 
 -   border radius
 
-You can use the `extend` section of your Tailwind CSS config file to customize the tooltip component theme. For example, to add a new border radius to the tooltip component theme, you would add the following code to your `tailwind.config.js` file:
-
 ```javascript
 tailus: {
     components: {
         tooltip: {
-            borderRadius: "md",
+            rounded: "md",
         },
     },
 },

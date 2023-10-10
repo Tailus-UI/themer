@@ -94,35 +94,20 @@ The following properties can be customized
 -   shadow opacity
 -   dark mode background
 
+**Note :** All these properties can be customized trough the `alert` and `feedback` object.
+
 ```js
 tailus: {
     components: {
-        alert: {
-            borderRadius : "",
-        },
-        overlay: {
-            background : {
-                color : "",
-                opacity : ""
-            }
-            backdropBlur : "",
-            dark : {
-                background : {
-                    color : "",
-                    opacity : ""
-                }
-                backdropBlur : "",
-            }
-        },
         feedback: {
-            borderColor : "",
-            shadow : {
-                size : "",
-                opacity : ""
+            borderColor : "200",
+            shadow: {
+                size: "md",
+                opacity:4,
             },
-            dark : {
-                borderColor : "800",
-                background : "950",
+            dark: {
+                borderColor: "600",
+                bg: "950",
             }
         },
     },

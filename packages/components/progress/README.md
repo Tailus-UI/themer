@@ -72,3 +72,5 @@ const ProgressUI = () => {
 
 export default ProgressUI;
 ```
+
+**Note:** There is no customization available for the progress component theme at this time.

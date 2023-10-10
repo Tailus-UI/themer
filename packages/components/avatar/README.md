@@ -90,12 +90,12 @@ The following properties can be customized in the avatar component theme:
 -   `borderRadius`
 -   `statusInset`
 
-```ts
+```js
 tailus: {
     components: {
         avatar: {
-            borderRadius: "full",
-            statusInset: "0.5"
+            rounded: "2xl",
+            statusInset:"-0.5"
         }
     }
 }

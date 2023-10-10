@@ -68,3 +68,5 @@ const EmptyStateUI = () => (
 
 export default EmptyStateUI;
 ```
+
+**Note:** There is no customization available for the `empty-state` component theme at this time.

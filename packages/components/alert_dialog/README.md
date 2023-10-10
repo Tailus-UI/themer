@@ -150,30 +150,17 @@ export default CentredAlertDialog;
 
 The following properties can be customized:
 
--   overlay light color
--   overlay dark color
--   alert dialog shadow
--   alert dialog light border color
--   alert dialog dark border color
--   alert dialog dark background color
--   alert dialog border radius
+-   shadow
+-   border radius
 
 ```js
 tailus: {
     components: {
         alertDialog: {
-            borderRadius: "",
-            borderColor : "",
-            alertBackground : ""
-            overlayBackground : "",
-            shadow : {
-                size : "",
-                opacity:""
-            },x
-            dark : {
-                borderColor : "",
-                alertBackground : ""
-                overlayBackground : "",
+            rounded: "xl",
+            shadow: {
+                size: "md",
+                opacity:5,
             }
         },
     },

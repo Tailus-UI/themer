@@ -56,3 +56,7 @@ The `slider` object contains the following properties:
 -   `track`: The Tailwindcss utility for the track of the slider component.
 -   `range`: The Tailwindcss utility for the range of the slider component.
 -   `thumb`: The Tailwindcss utility for the thumb of the slider component.
+
+## Customization
+
+**Note:** There is no customization available for the slider component theme at this time.

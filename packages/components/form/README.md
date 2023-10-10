@@ -130,3 +130,35 @@ const FormUI = () => (
 
 export default FormUI;
 ```
+
+## Customization
+
+The following properties can be customized in the form component theme:
+
+-   `borderRadius`
+-   `lightBorderColor`
+-   `darkBorderColor`
+-   `lightBg` : Applied to the soft variant.
+-   `lightFocusBg` : Applied to the soft variant.
+-   `darkBg` : Applied to the soft variant.
+-   `darkFocusBg` : Applied to the soft variant.
+
+All these customizations are made in the `field` object.
+
+```js
+tailus: {
+    components: {
+        field: {
+          rounded: "md",
+          softBg: "100",
+          softBgFocus: "50",
+          borderColor: "300",
+          dark: {
+            softBg: "900",
+            softBgFocus: "950",
+            borderColor: "800",
+          }
+        },
+    },
+},
+```

@@ -36,13 +36,10 @@ The toast object contains the following properties:
 The following properties can be customized:
 
 -   border radius
--   border color on light and dark mode
 
 **Customization that will be applied to other components (feedback components):**
 
 -   border color on light and dark mode
-
-You can also use the `extend` section of your Tailwind CSS config file to customize the toast component theme. For example, to add a new border radius to the toast component theme, you would add the following code to your `tailwind.config.js` file:
 
 ```javascript
 module.exports = {
@@ -50,7 +47,18 @@ module.exports = {
         tailus: {
             components: {
                 toast: {
-                    borderRdius: "xl",
+                    rounded: "md",
+                },
+                feedback: {
+                    borderColor: "200",
+                    shadow: {
+                        size: "md",
+                        opacity: 5,
+                    },
+                    dark: {
+                        borderColor: "600",
+                        bg: "950",
+                    },
                 },
             },
         },

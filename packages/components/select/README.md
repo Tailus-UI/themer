@@ -120,17 +120,17 @@ The select object contains the following properties:
 
 Following properties can be customized :
 
--   dark background : background ont dark theme
--   shadow : same as all `menu` component (context and dropdown),
--   light border color : same as all `menu` component (context and dropdown),
--   dark border color : same as all `menu` component (context and dropdown),
+-   Dark background
 
 ```js
 tailus: {
     components: {
-        flag: {
-            darkBackground : "",
-        },
+        select : {
+            dark : {
+                bg : "950"
+            }
+        }
     },
 },
+
 ```
