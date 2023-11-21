@@ -20,3 +20,4 @@ export {
 } from "./components";
 
 export { Preconfigs } from "./preconfigs/types";
+export * as Types from "./types";
