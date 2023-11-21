@@ -1,5 +1,5 @@
 import type { Accordion } from "../accordion.types";
-import config from "./../../accordion.config";
+import { appearance } from "@tailus/themer";
 import * as baseAccordion from "./base";
 
 const item = {
@@ -13,12 +13,12 @@ const item = {
 
 const outlinedVariant: Accordion = {
     root: "space-y-4",
-    item: item.base + " " + item.appearances[config.appearance],
+    item: item.base + " " + item.appearances[appearance],
     trigger: {
         parent:
             baseAccordion.trigger.parent.base +
             " " +
-            baseAccordion.trigger.parent.appearances[config.appearance],
+            baseAccordion.trigger.parent.appearances[appearance],
         content: baseAccordion.trigger.content,
         icon: baseAccordion.trigger.icon.base + " " + baseAccordion.trigger.icon.motion,
     },
@@ -27,7 +27,7 @@ const outlinedVariant: Accordion = {
         " " +
         baseAccordion.content.motion +
         " " +
-        baseAccordion.content.appearances[config.appearance],
+        baseAccordion.content.appearances[appearance],
 };
 
 export default outlinedVariant;

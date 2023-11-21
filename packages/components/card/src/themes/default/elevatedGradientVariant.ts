@@ -1,4 +1,4 @@
-import config from "../../card.config";
+import { appearance } from "@tailus/themer";
 const base = `p-px rounded-[--card-border-radius] bg-gradient-to-b to-50% card-shadow`;
 
 const appearances = {
@@ -17,8 +17,8 @@ const innnerCard = {
 };
 
 const elevatedGradientVariant = {
-    outer: base + " " + appearances[config.appearance],
-    inner: innnerCard.base + " " + innnerCard.appearances[config.appearance],
+    outer: base + " " + appearances[appearance],
+    inner: innnerCard.base + " " + innnerCard.appearances[appearance],
 };
 
 export default elevatedGradientVariant;

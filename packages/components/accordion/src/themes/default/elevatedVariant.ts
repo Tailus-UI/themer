@@ -1,4 +1,4 @@
-import config from "../../accordion.config";
+import { appearance } from "@tailus/themer";
 import * as baseAccordion from "./base";
 import type { Accordion } from "../accordion.types";
 
@@ -18,14 +18,12 @@ const parentAppearances = {
 const triggerParent = {
     base: baseAccordion.trigger.parent.base + " " + "border-b group-last/item:border-none",
     appearance:
-        baseAccordion.trigger.parent.appearances[config.appearance] +
-        " " +
-        parentAppearances[config.appearance],
+        baseAccordion.trigger.parent.appearances[appearance] + " " + parentAppearances[appearance],
 };
 
 const elevatedVariant: Accordion = {
     root: "",
-    item: item.base + " " + item.appearances[config.appearance],
+    item: item.base + " " + item.appearances[appearance],
     trigger: {
         parent: triggerParent.base + " " + triggerParent.appearance,
         content: baseAccordion.trigger.content,
@@ -36,7 +34,7 @@ const elevatedVariant: Accordion = {
         " " +
         baseAccordion.content.motion +
         " " +
-        baseAccordion.content.appearances[config.appearance],
+        baseAccordion.content.appearances[appearance],
 };
 
 export default elevatedVariant;

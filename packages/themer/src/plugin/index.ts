@@ -4,7 +4,7 @@ import type { Config } from "./types";
 import defaultConfig, { preconfigs as defaultPreconfigs } from "./default.config";
 import setPreconfigs from "./preconfigs";
 
-let appearance: Config["appearance"] = "dark";
+let appearance: Config["appearance"] = "both";
 
 /**
  * ### Tailus Themer plugin 🪄.

@@ -1,4 +1,4 @@
-import config from "./../../card.config";
+import { appearance } from "@tailus/themer";
 
 const base = `p-[--card-padding] rounded-[--card-border-radius]`;
 
@@ -8,7 +8,7 @@ const appearances = {
     both: "bg-[--card-light-bg] dark:bg-[--card-dark-bg]",
 };
 
-const softVariant = base + " " + appearances[config.appearance];
+const softVariant = base + " " + appearances[appearance];
 
 export default softVariant;
 export { softVariant };

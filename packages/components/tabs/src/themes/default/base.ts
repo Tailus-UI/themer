@@ -1,4 +1,5 @@
-import config from "./../../tabs.config";
+// import config from "./../../tabs.config";
+import { appearance } from "@tailus/themer";
 
 const baseList = {
     base: "relative w-full shrink-0 h-10 flex items-center p-1 rounded-[--tabs-border-radius]",
@@ -54,30 +55,28 @@ const baseContent = {
 const triggerIcon = "h-[1.125rem] w-[1.125rem]";
 
 const list = {
-    soft: baseList.base + " " + baseList.appearances[config.appearance],
+    soft: baseList.base + " " + baseList.appearances[appearance],
     outlined:
         baseList.base +
         " border " +
-        baseList.appearances[config.appearance] +
+        baseList.appearances[appearance] +
         " " +
-        outlinedList[config.appearance],
+        outlinedList[appearance],
 };
 
-const trigger = baseTrigger.base + " " + baseTrigger.appearances[config.appearance];
+const trigger = baseTrigger.base + " " + baseTrigger.appearances[appearance];
 
 const indicator = {
     elevated:
-        baseIndicator.base +
-        " shadow shadow-gray-950/10 " +
-        baseIndicator.appearances[config.appearance],
+        baseIndicator.base + " shadow shadow-gray-950/10 " + baseIndicator.appearances[appearance],
     outlined:
         baseIndicator.base +
         " border " +
-        baseIndicator.appearances[config.appearance] +
+        baseIndicator.appearances[appearance] +
         " " +
-        outlinedIndicator.appearances[config.appearance],
+        outlinedIndicator.appearances[appearance],
 };
-const content = baseContent.base + " " + baseContent.appearances[config.appearance];
+const content = baseContent.base + " " + baseContent.appearances[appearance];
 
 const softTabs = {
     list,

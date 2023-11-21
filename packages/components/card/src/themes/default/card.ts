@@ -1,4 +1,4 @@
-import config from "./../../card.config";
+import { appearance } from "@tailus/themer";
 
 const base = "p-[--card-padding] rounded-[--card-border-radius] border";
 
@@ -8,7 +8,7 @@ const appearances = {
     both: "bg-white border-[--ui-light-border-color] dark:border-[--ui-dark-border-color] dark:bg-[--card-dark-bg]",
 };
 
-const card = base + " " + appearances[config.appearance];
+const card = base + " " + appearances[appearance];
 
 export default card;
 export { card };
