@@ -1,3 +1,26 @@
+type Color = {
+    light: string;
+    dark: string;
+    both: string;
+};
+
+type ButtonBase = {
+    layout: string;
+    appearances: Color;
+};
+
+type ColorsBase = {
+    primary: Color;
+    secondary: Color;
+    accent: Color;
+    danger: Color;
+    success: Color;
+    warning: Color;
+    info: Color;
+    gray: Color;
+    neutral?: Color;
+};
+
 type Colors = {
     primary: string;
     secondary: string;
@@ -30,4 +53,4 @@ type Button = {
     neutral?: Sizes;
 };
 
-export { Colors, Sizes, Button };
+export { Color, ColorsBase, Colors, ButtonBase, Sizes, Button };

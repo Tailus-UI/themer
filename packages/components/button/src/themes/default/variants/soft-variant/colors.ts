@@ -1,58 +1,58 @@
 import config from "../../../../button.config";
-import { Colors } from "../../../button.types";
+import { Colors, ColorsBase } from "../../../button.types";
 
-const colorsVariants = {
+const softColors: ColorsBase = {
     primary: {
-        light: "text-primary-900 before:bg-primary-100 hover:before:bg-primary-200 focus:before:bg-primary-300/75",
-        dark: "text-primary-400 before:bg-primary-500/10 hover:before:bg-primary-500/20 focus:before:bg-primary-500/30",
-        both: "text-primary-900 dark:text-primary-400 before:bg-primary-100 hover:before:bg-primary-200 focus:before:bg-primary-300/75 dark:before:bg-primary-500/10 dark:hover:before:bg-primary-500/20 dark:focus:before:bg-primary-500/30",
+        light: "text-primary-800 bg-primary-100 hover:bg-primary-200/75 active:bg-primary-100",
+        dark: "dark:text-primary-300 dark:bg-primary-500/10 dark:hover:bg-primary-500/15 dark:active:bg-primary-500/10",
+        both: "text-primary-800 bg-primary-100 hover:bg-primary-200/75 active:bg-primary-100 dark:text-primary-300 dark:bg-primary-500/10 dark:hover:bg-primary-500/15 dark:active:bg-primary-500/10",
     },
     secondary: {
-        light: "text-secondary-900 before:bg-secondary-100 hover:before:bg-secondary-200 focus:before:bg-secondary-300/75",
-        dark: "text-secondary-400 before:bg-secondary-500/10 hover:before:bg-secondary-500/20 focus:before:bg-secondary-500/30",
-        both: "text-secondary-900 dark:text-secondary-400 before:bg-secondary-100 hover:before:bg-secondary-200 focus:before:bg-secondary-300/75 dark:before:bg-secondary-500/10 dark:hover:before:bg-secondary-500/20 dark:focus:before:bg-secondary-500/30",
+        light: "text-secondary-800 bg-secondary-100 hover:bg-secondary-200/75 active:bg-secondary-100",
+        dark: "dark:text-secondary-300 dark:bg-secondary-500/10 dark:hover:bg-secondary-500/15 dark:active:bg-secondary-500/10",
+        both: "text-secondary-800 bg-secondary-100 hover:bg-secondary-200/75 active:bg-secondary-100 dark:text-secondary-300 dark:bg-secondary-500/10 dark:hover:bg-secondary-500/15 dark:active:bg-secondary-500/10",
     },
     accent: {
-        light: "text-accent-900 before:bg-accent-100 hover:before:bg-accent-200 focus:before:bg-accent-300/75",
-        dark: "text-accent-400 before:bg-accent-500/10 hover:before:bg-accent-500/20 focus:before:bg-accent-500/30",
-        both: "text-accent-900 dark:text-accent-400 before:bg-accent-100 hover:before:bg-accent-200 focus:before:bg-accent-300/75 dark:before:bg-accent-500/10 dark:hover:before:bg-accent-500/20 dark:focus:before:bg-accent-500/30",
+        light: "text-accent-800 bg-accent-100 hover:bg-accent-200/75 active:bg-accent-100",
+        dark: "dark:text-accent-300 dark:bg-accent-500/10 dark:hover:bg-accent-500/15 dark:active:bg-accent-500/10",
+        both: "text-accent-800 bg-accent-100 hover:bg-accent-200/75 active:bg-accent-100 dark:text-accent-300 dark:bg-accent-500/10 dark:hover:bg-accent-500/15 dark:active:bg-accent-500/10",
     },
     danger: {
-        light: "text-danger-900 before:bg-danger-100 hover:before:bg-danger-200 focus:before:bg-danger-300/75",
-        dark: "text-danger-400 before:bg-danger-500/10 hover:before:bg-danger-500/20 focus:before:bg-danger-500/30",
-        both: "text-danger-900 dark:text-danger-400 before:bg-danger-100 hover:before:bg-danger-200 focus:before:bg-danger-300/75 dark:before:bg-danger-500/10 dark:hover:before:bg-danger-500/20 dark:focus:before:bg-danger-500/30",
+        light: "text-danger-800 bg-danger-100 hover:bg-danger-200/75 active:bg-danger-100",
+        dark: "dark:text-danger-300 dark:bg-danger-500/10 dark:hover:bg-danger-500/15 dark:active:bg-danger-500/10",
+        both: "text-danger-800 bg-danger-100 hover:bg-danger-200/75 active:bg-danger-100 dark:text-danger-300 dark:bg-danger-500/10 dark:hover:bg-danger-500/15 dark:active:bg-danger-500/10",
     },
     success: {
-        light: "text-success-900 before:bg-success-100 hover:before:bg-success-200 focus:before:bg-success-300/75",
-        dark: "text-success-400 before:bg-success-500/10 hover:before:bg-success-500/20 focus:before:bg-success-500/30",
-        both: "text-success-900 dark:text-success-400 before:bg-success-100 hover:before:bg-success-200 focus:before:bg-success-300/75 dark:before:bg-success-500/10 dark:hover:before:bg-success-500/20 dark:focus:before:bg-success-500/30",
-    },
-    warning: {
-        light: "text-warning-900 before:bg-warning-100 hover:before:bg-warning-200 focus:before:bg-warning-300/75",
-        dark: "text-warning-400 before:bg-warning-500/10 hover:before:bg-warning-500/20 focus:before:bg-warning-500/30",
-        both: "text-warning-900 dark:text-warning-400 before:bg-warning-100 hover:before:bg-warning-200 focus:before:bg-warning-300/75 dark:before:bg-warning-500/10 dark:hover:before:bg-warning-500/20 dark:focus:before:bg-warning-500/30",
+        light: "text-success-800 bg-success-100 hover:bg-success-200/75 active:bg-success-100",
+        dark: "dark:text-success-300 dark:bg-success-500/10 dark:hover:bg-success-500/15 dark:active:bg-success-500/10",
+        both: "text-success-800 bg-success-100 hover:bg-success-200/75 active:bg-success-100 dark:text-success-300 dark:bg-success-500/10 dark:hover:bg-success-500/15 dark:active:bg-success-500/10",
     },
     info: {
-        light: "text-info-900 before:bg-info-100 hover:before:bg-info-200 focus:before:bg-info-300/75",
-        dark: "text-info-400 before:bg-info-500/10 hover:before:bg-info-500/20 focus:before:bg-info-500/30",
-        both: "text-info-900 dark:text-info-400 before:bg-info-100 hover:before:bg-info-200 focus:before:bg-info-300/75 dark:before:bg-info-500/10 dark:hover:before:bg-info-500/20 dark:focus:before:bg-info-500/30",
+        light: "text-info-800 bg-info-100 hover:bg-info-200/75 active:bg-info-100",
+        dark: "dark:text-info-300 dark:bg-info-500/10 dark:hover:bg-info-500/15 dark:active:bg-info-500/10",
+        both: "text-info-800 bg-info-100 hover:bg-info-200/75 active:bg-info-100 dark:text-info-300 dark:bg-info-500/10 dark:hover:bg-info-500/15 dark:active:bg-info-500/10",
+    },
+    warning: {
+        light: "text-warning-800 bg-warning-100 hover:bg-warning-200/75 active:bg-warning-100",
+        dark: "dark:text-warning-300 dark:bg-warning-500/10 dark:hover:bg-warning-500/15 dark:active:bg-warning-500/10",
+        both: "text-warning-800 bg-warning-100 hover:bg-warning-200/75 active:bg-warning-100 dark:text-warning-300 dark:bg-warning-500/10 dark:hover:bg-warning-500/15 dark:active:bg-warning-500/10",
     },
     gray: {
-        light: "text-gray-900 before:bg-gray-100 hover:before:bg-gray-200 focus:before:bg-gray-300/75",
-        dark: "text-gray-400 before:bg-gray-500/10 hover:before:bg-gray-500/20 focus:before:bg-gray-500/30",
-        both: "text-gray-900 dark:text-gray-400 before:bg-gray-100 hover:before:bg-gray-200 focus:before:bg-gray-300/75 dark:before:bg-gray-500/10 dark:hover:before:bg-gray-500/20 dark:focus:before:bg-gray-500/30",
+        light: "text-gray-800 bg-gray-100 hover:bg-gray-200/75 active:bg-gray-100",
+        dark: "dark:text-gray-300 dark:bg-gray-500/10 dark:hover:bg-gray-500/15 dark:active:bg-gray-500/10",
+        both: "text-gray-800 bg-gray-100 hover:bg-gray-200/75 active:bg-gray-100 dark:text-gray-300 dark:bg-gray-500/10 dark:hover:bg-gray-500/15 dark:active:bg-gray-500/10",
     },
 };
 
 const colors: Colors = {
-    primary: colorsVariants.primary[config.appearance],
-    secondary: colorsVariants.secondary[config.appearance],
-    accent: colorsVariants.accent[config.appearance],
-    danger: colorsVariants.danger[config.appearance],
-    success: colorsVariants.success[config.appearance],
-    warning: colorsVariants.warning[config.appearance],
-    info: colorsVariants.info[config.appearance],
-    gray: colorsVariants.gray[config.appearance],
+    primary: softColors.primary[config.appearance],
+    secondary: softColors.secondary[config.appearance],
+    accent: softColors.accent[config.appearance],
+    danger: softColors.danger[config.appearance],
+    success: softColors.success[config.appearance],
+    warning: softColors.warning[config.appearance],
+    info: softColors.info[config.appearance],
+    gray: softColors.gray[config.appearance],
 };
 
 export default colors;

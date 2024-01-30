@@ -1,13 +1,13 @@
 import solidColors from "./solidColors";
 import config from "./../../button.config";
-import { Colors, Sizes } from "../button.types";
+import { Colors, Sizes, ButtonBase } from "../button.types";
 
 const base = {
-    layout: "group relative [&>*:not(.sr-only)]:relative before:absolute before:inset-0 before:rounded-[--btn-border-radius] before:transition before:duration-300 active:before:scale-95 disabled:cursor-not-allowed disabled:active:before:scale-100",
+    layout: "group flex items-center relative border rounded-[--btn-border-radius] *:select-none [&>*:not(.sr-only)]:relative text-white before:absolute before:inset-0 before:rounded-[calc(var(--btn-border-radius)-1px)] before:absolute before:inset-0 before:border before:bg-gradient-to-b *:disabled:opacity-20",
     appearances: {
-        light: "disabled:before:bg-gray-100 disabled:text-gray-950/40",
-        dark: "disabled:before:bg-gray-900 disabled:text-white/30",
-        both: "disabled:before:bg-gray-100 disabled:text-gray-950/30 dark:disabled:before:bg-gray-900 dark:disabled:text-white/30",
+        light: "disabled:before:bg-gray-100 disabled:text-gray-950/40 disabled:border-gray-200 disabled:bg-gray-100 disabled:*:text-gray-300 disabled:before:border-transparent disabled:before:bg-gray-100 disabled:before:from-transparent",
+        dark: "dark:border-0 dark:before:border-0 dark:before:border-t dark:before:shadow-inner dark:before:shadow-white/10 dark:disabled:border-gray-800/50 dark:disabled:bg-gray-900 disabled:dark:*:text-gray-700 dark:disabled:before:bg-gray-900 dark:disabled:before:from-gray-900 dark:disabled:before:shadow-none dark:disabled:border dark:*:disabled:!text-white",
+        both: "disabled:before:bg-gray-100 disabled:text-gray-950/40 disabled:border-gray-200 disabled:bg-gray-100 disabled:*:text-gray-300 disabled:before:border-transparent disabled:before:bg-gray-100 disabled:before:from-transparent dark:border-0 dark:before:border-0 dark:before:border-t dark:before:shadow-inner dark:before:shadow-white/10 dark:disabled:border  dark:disabled:border-gray-800/50 disabled:dark:bg-gray-900 disabled:dark:*:text-gray-700 dark:disabled:before:bg-gray-900 dark:disabled:before:from-gray-900 dark:disabled:before:shadow-none dark:*:disabled:!text-white",
     },
 };
 
@@ -22,35 +22,35 @@ const buttonSizes: Sizes = {
 };
 
 const iconOnlyButtonSizes: Sizes = {
-    xs: "h-7 w-7",
-    sm: "h-8 w-8",
-    md: "h-9 w-9",
-    lg: "h-10 w-10",
-    xl: "h-12 w-12",
+    xs: "size-7",
+    sm: "size-8",
+    md: "size-9",
+    lg: "size-10",
+    xl: "size-12",
 };
 
 const iconSizes: Sizes = {
-    xs: "m-auto h-3.5 w-3.5",
-    sm: "m-auto h-4 w-4",
-    md: "m-auto h-[1.125rem] w-[1.125rem]",
-    lg: "m-auto h-5 w-5",
-    xl: "m-auto h-6 w-6",
+    xs: "m-auto size-3.5",
+    sm: "m-auto size-4",
+    md: "m-auto size-[1.125rem]",
+    lg: "m-auto size-5",
+    xl: "m-auto size-6",
 };
 
 const leadingIconSizes: Sizes = {
-    xs: "-ml-1 h-3.5 w-3.5",
-    sm: "-ml-1 h-4 w-4",
-    md: "-ml-1 h-[1.125rem] w-[1.125rem]",
-    lg: "-ml-1 h-5 w-5",
-    xl: "-ml-1 h-6 w-6",
+    xs: "-ml-1 size-3.5",
+    sm: "-ml-1 size-4",
+    md: "-ml-1 size-[1.125rem]",
+    lg: "-ml-1 size-5",
+    xl: "-ml-1 size-6",
 };
 
 const trailingIconSizes: Sizes = {
-    xs: "-mr-1 h-3.5 w-3.5",
-    sm: "-mr-1 h-4 w-4",
-    md: "-mr-1 h-[1.125rem] w-[1.125rem]",
-    lg: "-mr-1 h-5 w-5",
-    xl: "-mr-1 h-6 w-6",
+    xs: "-mr-1 size-3.5",
+    sm: "-mr-1 size-4",
+    md: "-mr-1 size-[1.125rem]",
+    lg: "-mr-1 size-5",
+    xl: "-mr-1 size-6",
 };
 
 /**
@@ -61,8 +61,12 @@ const trailingIconSizes: Sizes = {
  * @returns A string containing the Tailwind utilities, including color utilities for the button.
  */
 
-const getBaseButton = (color: string, colors: Colors = solidColors): string => {
-    return `${base.layout} ${base.appearances[config.appearance]} ${colors[color]}`;
+const getBaseButton = (
+    color: string,
+    buttonBase: ButtonBase = base,
+    colors: Colors = solidColors
+): string => {
+    return `${buttonBase.layout} ${buttonBase.appearances[config.appearance]} ${colors[color]}`;
 };
 
 /**

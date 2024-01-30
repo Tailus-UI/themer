@@ -1,4 +1,4 @@
-import { Colors, Sizes } from "../../button.types";
+import { Colors, Sizes, ButtonBase } from "../../button.types";
 import { buttonSizes, iconButtonUtilities, getBaseButton } from "./../base";
 
 /**
@@ -11,13 +11,18 @@ import { buttonSizes, iconButtonUtilities, getBaseButton } from "./../base";
  * **Note:** This function should not be used for leading Icon buttons or trailing Icon buttons. For those types of buttons, use the `getIconButtonWithSizes()` function instead.
  */
 
-const getButtonSizes = (color: string, colors: Colors, sizes = buttonSizes): Sizes => {
+const getButtonSizes = (
+    color: string,
+    base: ButtonBase,
+    colors: Colors,
+    sizes = buttonSizes
+): Sizes => {
     return {
-        xs: `${getBaseButton(color, colors)} ${sizes.xs}`,
-        sm: `${getBaseButton(color, colors)} ${sizes.sm}`,
-        md: `${getBaseButton(color, colors)} ${sizes.md}`,
-        lg: `${getBaseButton(color, colors)} ${sizes.lg}`,
-        xl: `${getBaseButton(color, colors)} ${sizes.xl}`,
+        xs: `${getBaseButton(color, base, colors)} ${sizes.xs}`,
+        sm: `${getBaseButton(color, base, colors)} ${sizes.sm}`,
+        md: `${getBaseButton(color, base, colors)} ${sizes.md}`,
+        lg: `${getBaseButton(color, base, colors)} ${sizes.lg}`,
+        xl: `${getBaseButton(color, base, colors)} ${sizes.xl}`,
     };
 };
 
@@ -30,13 +35,18 @@ const getButtonSizes = (color: string, colors: Colors, sizes = buttonSizes): Siz
 
  * **Note:** This function should not be used for icon-only buttons. For icon-only buttons, use the `getButtonWithSizes()` function instead.
  */
-const getIconButtonSizes = (color: string, colors: Colors, sizes = buttonSizes): Sizes => {
+const getIconButtonSizes = (
+    color: string,
+    base: ButtonBase,
+    colors: Colors,
+    sizes = buttonSizes
+): Sizes => {
     return {
-        xs: `${getBaseButton(color, colors)} ${iconButtonUtilities} ${sizes.xs}`,
-        sm: `${getBaseButton(color, colors)} ${iconButtonUtilities} ${sizes.sm}`,
-        md: `${getBaseButton(color, colors)} ${iconButtonUtilities} ${sizes.md}`,
-        lg: `${getBaseButton(color, colors)} ${iconButtonUtilities} ${sizes.lg}`,
-        xl: `${getBaseButton(color, colors)} ${iconButtonUtilities} ${sizes.xl}`,
+        xs: `${getBaseButton(color, base, colors)} ${iconButtonUtilities} ${sizes.xs}`,
+        sm: `${getBaseButton(color, base, colors)} ${iconButtonUtilities} ${sizes.sm}`,
+        md: `${getBaseButton(color, base, colors)} ${iconButtonUtilities} ${sizes.md}`,
+        lg: `${getBaseButton(color, base, colors)} ${iconButtonUtilities} ${sizes.lg}`,
+        xl: `${getBaseButton(color, base, colors)} ${iconButtonUtilities} ${sizes.xl}`,
     };
 };
 
