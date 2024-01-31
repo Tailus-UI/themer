@@ -43,6 +43,7 @@ export type Toggle = {
         success: Sizes;
         gray: Sizes;
         neutral: Sizes;
+        info: Sizes;
     };
 };
 
