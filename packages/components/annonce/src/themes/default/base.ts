@@ -3,7 +3,7 @@ import config from "./../../annonce.config";
 import { Colors } from "../annonce.types";
 
 const root =
-    "block w-fit flex gap-2 justify-between items-center pr-3 p-1.5 transition duration-200 rounded-[--annonce-border-radius]";
+    "block w-fit flex gap-2 justify-between items-center pr-3 pl-1.5 py-1.5 transition duration-200 rounded-[--annonce-border-radius]";
 
 const baseConcerm =
     "block text-sm px-2 py-0.5 rounded-[calc(var(--annonce-border-radius)-0.375rem)]";
