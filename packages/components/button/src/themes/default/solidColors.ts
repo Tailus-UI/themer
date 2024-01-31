@@ -3,9 +3,9 @@ import { Colors, ColorsBase } from "../button.types";
 
 const colors: ColorsBase = {
     neutral: {
-        light: "text-white border-gray-800 bg-gray-900 before:border-gray-600 before:from-gray-800 hover:bg-gray-800 active:bg-gray-950",
-        dark: "dark:text-gray-950 dark:before:border-gray-200 dark:before:from-gray-400 dark:bg-white dark:before:shadow-white/10 dark:hover:bg-gray-100 dark:active:bg-gray-300 dark:active:before:from-gray-200",
-        both: "text-white border-gray-800 bg-gray-900 before:border-gray-600 before:from-gray-800 hover:bg-gray-800 active:bg-gray-950 dark:text-gray-950 dark:before:border-gray-200 dark:before:from-gray-400 dark:bg-white dark:before:shadow-white/10 dark:hover:bg-gray-100 dark:active:bg-gray-300 dark:active:before:from-gray-200",
+        light: "text-white border-gray-950 bg-gray-600 before:border-gray-600 before:from-gray-800 hover:bg-gray-900 active:bg-gray-950",
+        dark: "dark:text-gray-950 dark:before:border-gray-200 dark:before:from-gray-200 dark:bg-white dark:before:shadow-white/10 dark:hover:bg-gray-100 dark:active:bg-gray-300 dark:active:before:from-gray-200",
+        both: "text-white border-gray-950 bg-gray-600 before:border-gray-600 before:from-gray-800 hover:bg-gray-900 active:bg-gray-950 dark:text-gray-950 dark:before:border-gray-200 dark:before:from-gray-200 dark:bg-white dark:before:shadow-white/10 dark:hover:bg-gray-100 dark:active:bg-gray-300 dark:active:before:from-gray-200",
     },
     primary: {
         light: "border-primary-600 bg-primary-500 before:border-primary-500 before:from-primary-600 hover:bg-primary-600 active:bg-primary-700",
