@@ -38,14 +38,14 @@ const colors = {
         both: "text-success-900 border-success-200 before:from-success-50 hover:bg-success-100 active:bg-success-200 dark:text-success-300 dark:border-success-300/15 dark:hover:bg-success-300/5 dark:active:bg-success-300/10 dark:active:before:from-success-300/5",
     },
     gray: {
-        light: "text-gray-900 border-gray-200 before:from-gray-50 hover:bg-gray-100 active:bg-gray-200",
+        light: "text-gray-900 border-gray-200 before:from-gray-100 hover:bg-gray-100 active:bg-gray-200",
         dark: "dark:text-gray-300 dark:border-gray-300/15 dark:hover:bg-gray-300/5 dark:active:bg-gray-300/10 dark:active:before:from-gray-300/5",
-        both: "text-gray-900 border-gray-200 before:from-gray-50 hover:bg-gray-100 active:bg-gray-200 dark:text-gray-300 dark:border-gray-300/15 dark:hover:bg-gray-300/5 dark:active:bg-gray-300/10 dark:active:before:from-gray-300/5",
+        both: "text-gray-900 border-gray-200 before:from-gray-100 hover:bg-gray-100 active:bg-gray-200 dark:text-gray-300 dark:border-gray-300/15 dark:hover:bg-gray-300/5 dark:active:bg-gray-300/10 dark:active:before:from-gray-300/5",
     },
     neutral: {
-        light: "text-gray-950 border-gray-950 before:from-gray-50 hover:bg-gray-100 active:bg-gray-200",
+        light: "text-gray-950 border-gray-950 before:from-gray-100 hover:bg-gray-100 active:bg-gray-200",
         dark: "dark:text-gray-300 dark:border-white dark:hover:bg-gray-300/5 dark:active:bg-gray-300/10 dark:active:before:from-gray-300/5",
-        both: "text-gray-950 border-gray-950 before:from-gray-50 hover:bg-gray-100 active:bg-gray-200 dark:text-gray-300 dark:border-white dark:hover:bg-gray-300/5 dark:active:bg-gray-300/10 dark:active:before:from-gray-300/5",
+        both: "text-gray-950 border-gray-950 before:from-gray-100 hover:bg-gray-100 active:bg-gray-200 dark:text-gray-300 dark:border-white dark:hover:bg-gray-300/5 dark:active:bg-gray-300/10 dark:active:before:from-gray-300/5",
     },
 };
 
@@ -61,6 +61,7 @@ const outlinedColors: Colors = {
     warning: getOutlinedColor("warning"),
     info: getOutlinedColor("info"),
     gray: getOutlinedColor("gray"),
+    neutral: getOutlinedColor("neutral"),
 };
 
 export default outlinedColors;
