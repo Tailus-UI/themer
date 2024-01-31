@@ -10,6 +10,7 @@ const iconAfter = {
     success: baseToggle.getIconAfterSizes("success"),
     gray: baseToggle.getIconAfterSizes("gray"),
     neutral: baseToggle.getIconAfterSizes("neutral"),
+    info: baseToggle.getIconAfterSizes("info"),
 };
 
 const toggle: Toggle = {
