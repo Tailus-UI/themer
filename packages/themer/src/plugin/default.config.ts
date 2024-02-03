@@ -9,7 +9,7 @@ export const preconfigs: Preconfigs = {
     background: "light",
     shadow: {
         size: "md",
-        opacity: 5,
+        opacity: 4,
     },
 };
 

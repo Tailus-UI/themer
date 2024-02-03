@@ -59,7 +59,6 @@ export type Config = {
     shadow?: {
         /**
          * The size of the shadow.
-         * **Note:** The `2xl` value is not supported, use `xxl` instead !.
          * @default "xl"
          */
         size?: ShadowSizes;
@@ -257,6 +256,6 @@ export type Shadows = {
     md: string;
     lg: string;
     xl: string;
-    xxl: string;
+    "2xl": string;
     none: string;
 };
