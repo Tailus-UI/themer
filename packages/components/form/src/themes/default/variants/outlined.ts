@@ -1,4 +1,5 @@
 import * as base from "../base/index";
+import message from "../message";
 
 const getInputSize = (size: base.InputSize) => {
     return base.getInput(size, base.baseInputSizes, base.inputVariants);
@@ -28,10 +29,7 @@ const label = {
     xs: base.getLabel(base.label, "xs"),
     sm: base.getLabel(base.label, "sm"),
     md: base.getLabel(base.label, "md"),
-};
-
-const message = {
-    ...base.messageColors,
+    lg: base.getLabel(base.label, "lg"),
 };
 
 const outlinedForm = {

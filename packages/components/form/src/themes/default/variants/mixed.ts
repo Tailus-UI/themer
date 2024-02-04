@@ -2,11 +2,11 @@ import * as base from "../base/index";
 import message from "../message";
 
 const getInputSize = (size: base.InputSize) => {
-    return base.getInput(size, base.baseInputSizes, base.inputVariants, "soft");
+    return base.getInput(size, base.baseInputSizes, base.inputVariants, "mixed");
 };
 
 const getTextareaSize = (size: base.InputSize) => {
-    return base.getInput(size, base.baseTextareaSizes, base.textareaVariants, "soft");
+    return base.getInput(size, base.baseTextareaSizes, base.textareaVariants, "mixed");
 };
 
 const input = {
@@ -32,7 +32,7 @@ const label = {
     lg: base.getLabel(base.label, "lg"),
 };
 
-const softForm = {
+const mixedForm = {
     field: base.field,
     input,
     textarea,
@@ -40,5 +40,5 @@ const softForm = {
     message,
 };
 
-export default softForm;
-export { softForm };
+export default mixedForm;
+export { mixedForm };

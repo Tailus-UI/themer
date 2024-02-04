@@ -1,1 +1,1 @@
-export { outlinedForm, softForm } from "./themes";
+export { outlinedForm, softForm, mixedForm } from "./themes";

@@ -1,5 +1,12 @@
 export { messageColors } from "./colors";
-export { getInput, getLabel, InputSize, baseTextareaSizes, baseInputSizes } from "./sizes";
+export {
+    getInput,
+    getLabel,
+    getMessage,
+    InputSize,
+    baseTextareaSizes,
+    baseInputSizes,
+} from "./sizes";
 export {
     field,
     inputVariants,

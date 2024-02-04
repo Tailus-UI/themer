@@ -1,9 +1,17 @@
-type LabelSizes = "xs" | "sm" | "md";
+import { messageColors, type Color } from "./colors";
+type LabelSizes = "xs" | "sm" | "md" | "lg";
 type InputSize = "xs" | "sm" | "md" | "lg" | "xl";
-type InputVariant = "outlined" | "soft";
+type InputVariant = "outlined" | "soft" | "mixed";
 type InputVariants = {
     outlined: string;
     soft: string;
+    mixed: string;
+};
+export type MessageSizes = {
+    xs: string;
+    sm: string;
+    md: string;
+    lg: string;
 };
 
 const baseInputSizes = {
@@ -26,6 +34,7 @@ const baseLabelSizes = {
     xs: "text-xs",
     sm: "text-sm",
     md: "text-base",
+    lg: "text-lg",
 };
 
 /**
@@ -62,6 +71,7 @@ function getInput(
  *    * `xs`
  *   * `sm`
  *  * `md`
+ * * `lg`
  * @returns Tailwindcss utilities for the label element.
  */
 
@@ -69,4 +79,25 @@ function getLabel(label: string, size: LabelSizes): string {
     return label + " " + baseLabelSizes[size];
 }
 
-export { getInput, InputSize, getLabel, baseTextareaSizes, baseInputSizes };
+/**
+ * Creates a string containing tailwindcss utilities for a message element with the specified size.
+ *
+ * @param label The message element.
+ * @param size The size of the message element. Can be one of the following values:
+ *    * `xs`
+ *   * `sm`
+ *  * `md`
+ * * `lg`
+ * @returns Tailwindcss utilities for the message element.
+ */
+
+function getMessage(color: Color): MessageSizes {
+    return {
+        xs: messageColors[color] + " " + baseLabelSizes.xs,
+        sm: messageColors[color] + " " + baseLabelSizes.sm,
+        md: messageColors[color] + " " + baseLabelSizes.md,
+        lg: messageColors[color] + " " + baseLabelSizes.lg,
+    };
+}
+
+export { getInput, InputSize, getLabel, baseTextareaSizes, baseInputSizes, getMessage };
