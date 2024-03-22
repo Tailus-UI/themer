@@ -4,6 +4,7 @@ import type { Config } from "./types";
 import defaultConfig, { preconfigs as defaultPreconfigs } from "./default.config";
 import setPreconfigs from "./preconfigs";
 import { palettes } from "./../config/preconfigs";
+import * as themerGrays from "./../lib/colors/additionalGrays";
 
 let appearance: Config["appearance"] = "both";
 
@@ -253,7 +254,9 @@ const themer = plugin.withOptions(
                         success: colors[palettes[preconfigs.palette].success],
                         danger: colors[palettes[preconfigs.palette].danger],
                         warning: colors[palettes[preconfigs.palette].warning],
-                        gray: colors[palettes[preconfigs.palette].gray],
+                        gray:
+                            colors[palettes[preconfigs.palette].gray] ||
+                            themerGrays[palettes[preconfigs.palette].gray],
                     }),
                 },
             },
