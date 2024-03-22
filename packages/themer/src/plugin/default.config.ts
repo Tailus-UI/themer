@@ -3,6 +3,7 @@ import { background, borderColors, padding, radius } from "./../config/preconfig
 
 export const preconfigs: Preconfigs = {
     appearance: "both",
+    palette: "trust",
     border: "light",
     padding: "larger",
     radius: "smoothest",

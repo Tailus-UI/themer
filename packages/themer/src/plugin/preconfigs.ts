@@ -11,6 +11,7 @@ import merge from "lodash.merge";
 const setPreconfigs = (preconfigs: Preconfigs, options: Config): Preconfigs => {
     const optionsPreconfigs = {
         appearance: options.appearance,
+        palette: options.palette,
         background: options.background,
         border: options.border,
         padding: options.padding,

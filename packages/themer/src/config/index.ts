@@ -19,5 +19,5 @@ export {
     SelectConfig,
 } from "./components";
 
-export { Preconfigs } from "./preconfigs/types";
+export type { Preconfigs } from "./preconfigs/types";
 export * as Types from "./types";

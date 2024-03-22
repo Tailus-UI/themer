@@ -1,5 +1,6 @@
 import type { Opacity, Shade, ShadowSizes, Sizes, SizesWithoutFull } from "../types";
 import type { PaddingSizes } from "../types";
+import type { Color, Gray, Info, Success, Danger, Warning } from "../types";
 
 export type Background = {
     card: Shade;
@@ -74,8 +75,20 @@ export type Radius = {
     };
 };
 
+export type Palette =
+    | "trust"
+    | "mystery"
+    | "romance"
+    | "energy"
+    | "winter"
+    | "passion"
+    | "nature"
+    | "spring"
+    | "dose";
+
 export type Preconfigs = {
     appearance?: "light" | "dark" | "both";
+    palette?: Palette;
     background?: "light" | "lighter" | "high" | "higher";
     border?: "light" | "lighter" | "high" | "higher";
     padding?: "small" | "medium" | "large" | "larger" | "largest";

@@ -1,4 +1,5 @@
-import { Opacity, ShadowSizes } from "../config/types";
+import type { Opacity, ShadowSizes } from "../config/types";
+import type { Palette } from "./../config/preconfigs/types";
 import {
     AccordionConfig,
     AlertConfig,
@@ -30,6 +31,20 @@ export type Config = {
      * @default "both"
      */
     appearance?: "light" | "dark" | "both";
+    /**
+     * The palette of the theme.
+     * - `trust`
+     * - `mystery`
+     * - `romance`
+     * - `energy`
+     * - `winter`
+     * - `passion`
+     * - `nature`
+     * - `spring`
+     * - `dose`
+     * @default "trust"
+     */
+    palette?: Palette;
     /**
      * The border radius of the the following components :
      * - accordion

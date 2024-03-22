@@ -52,3 +52,48 @@ export type AvatarStatusInset = nSpacing | pSpacing;
 export type ButtonBorderWidth = "0" | "1.5" | "2" | "2.5";
 export type PaddingSizes = PaddingStrings | PaddingNumbers;
 export type BlurSizes = BlurStrings | BlurNumbers;
+
+export type Intent =
+    | "primary"
+    | "secondary"
+    | "success"
+    | "danger"
+    | "warning"
+    | "accent"
+    | "gray"
+    | "info";
+
+export type Color =
+    | "red"
+    | "orange"
+    | "amber"
+    | "yellow"
+    | "lime"
+    | "green"
+    | "emerald"
+    | "teal"
+    | "cyan"
+    | "sky"
+    | "blue"
+    | "indigo"
+    | "violet"
+    | "purple"
+    | "fuchsia"
+    | "pink"
+    | "rose"
+    | "stone"
+    | "neutral"
+    | "zinc"
+    | "gray"
+    | "slate"
+    | "greenish"
+    | "indigray"
+    | "cyanish";
+export type Gray = Extract<
+    Color,
+    "stone" | "neutral" | "zinc" | "gray" | "slate" | "greenish" | "indigray" | "cyanish"
+>;
+export type Success = Extract<Color, "lime" | "green" | "emerald" | "teal">;
+export type Warning = Extract<Color, "amber" | "yellow">;
+export type Danger = Extract<Color, "red" | "rose">;
+export type Info = Extract<Color, "cyan" | "sky" | "blue">;
