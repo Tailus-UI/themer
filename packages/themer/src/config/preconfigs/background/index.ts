@@ -11,4 +11,4 @@ export default {
 };
 
 export { light, lighter, high, higher };
-export type { Background } from "./../types";
+export type { Background } from "./types";

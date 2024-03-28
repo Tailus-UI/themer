@@ -1,97 +1,23 @@
-import type { Opacity, Shade, ShadowSizes, Sizes, SizesWithoutFull } from "../types";
-import type { PaddingSizes } from "../types";
-import type { Color, Gray, Info, Success, Danger, Warning } from "../types";
-
-export type Background = {
-    card: Shade;
-    tabs: Shade;
-    field: Shade;
-    fieldFocus: Shade;
-    accordion: {
-        soft: Shade;
-        ghost: Shade;
-    };
-    dark: {
-        card: Shade;
-        tabs: {
-            list: Shade;
-            indicator: Shade;
-            trigger: Shade;
-        };
-        field: Shade;
-        fieldFocus: Shade;
-        accordion: {
-            elevated: Shade;
-            soft: Shade;
-            ghost: Shade;
-        };
-        menu: Shade;
-        feedback: Shade;
-        select: Shade;
-    };
-};
-export type BorderColors = {
-    ui: Shade;
-    menu: Shade;
-    tabs: Shade;
-    feedback: Shade;
-    field: Shade;
-    hover: Shade;
-    dark: {
-        ui: Shade;
-        menu: Shade;
-        tabs: Shade;
-        feedback: Shade;
-        field: Shade;
-        hover: Shade;
-    };
-};
-
-export type Padding = {
-    card: PaddingSizes;
-    flag: PaddingSizes;
-    popover: PaddingSizes;
-};
-
-export type Radius = {
-    button: Sizes;
-    accordion: SizesWithoutFull;
-    annonce: Sizes;
-    avatar: Sizes;
-    badge: Sizes;
-    card: SizesWithoutFull;
-    flag: SizesWithoutFull;
-    field: Sizes;
-    popover: SizesWithoutFull;
-    tooltip: Sizes;
-    menu: SizesWithoutFull;
-    alert: SizesWithoutFull;
-    switch: Sizes;
-    toast: SizesWithoutFull;
-    tabs: {
-        default: Sizes;
-        soft: Sizes;
-        bottomIndicator: Sizes;
-    };
-};
-
-export type Palette =
-    | "trust"
-    | "mystery"
-    | "romance"
-    | "energy"
-    | "winter"
-    | "passion"
-    | "nature"
-    | "spring"
-    | "dose";
+import type { Opacity, ShadowSizes } from "../types";
+import type { PaletteConfig, Palette } from "./palette/types";
+import type { Color, ColorShades, Info, Warning, Danger, Success, Gray } from "./../types";
 
 export type Preconfigs = {
     appearance?: "light" | "dark" | "both";
-    palette?: Palette;
+    palette?: {
+        extend: Palette;
+        primary?: Color | ColorShades;
+        secondary?: Color | ColorShades;
+        accent?: Color | ColorShades;
+        info?: Info | ColorShades;
+        warning?: Warning | ColorShades;
+        danger?: Danger | ColorShades;
+        success?: Success | ColorShades;
+        gray?: Gray | ColorShades;
+    };
     background?: "light" | "lighter" | "high" | "higher";
     border?: "light" | "lighter" | "high" | "higher";
-    padding?: "small" | "medium" | "large" | "larger" | "largest";
+    padding?: "small" | "normal" | "medium" | "large" | "larger" | "largest";
     radius?: "boxy" | "sharp" | "smooth" | "smoothest";
     shadow?: {
         size?: ShadowSizes;

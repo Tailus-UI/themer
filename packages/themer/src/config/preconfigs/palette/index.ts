@@ -66,7 +66,7 @@ export const spring: PaletteContent = {
     gray: "greenish",
 };
 
-export const dose: PaletteContent = {
+export const oz: PaletteContent = {
     ...feedbackColors,
     primary: "indigo",
     secondary: "cyan",

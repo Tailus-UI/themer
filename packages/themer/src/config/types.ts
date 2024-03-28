@@ -3,7 +3,7 @@ type Enumerate<N extends number, Acc extends number[] = []> = Acc["length"] exte
     : Enumerate<N, [...Acc, Acc["length"]]>;
 
 type IntRange<F extends number, T extends number> = Exclude<Enumerate<T>, Enumerate<F>>;
-
+type HexColor = `#${string & { length: 6 }}`;
 type ShadeStrings =
     | "50"
     | "100"
@@ -97,3 +97,16 @@ export type Success = Extract<Color, "lime" | "green" | "emerald" | "teal">;
 export type Warning = Extract<Color, "amber" | "yellow">;
 export type Danger = Extract<Color, "red" | "rose">;
 export type Info = Extract<Color, "cyan" | "sky" | "blue">;
+export type ColorShades = {
+    50: HexColor;
+    100: HexColor;
+    200: HexColor;
+    300: HexColor;
+    400: HexColor;
+    500: HexColor;
+    600: HexColor;
+    700: HexColor;
+    800: HexColor;
+    900: HexColor;
+    950: HexColor;
+};

@@ -1,5 +1,7 @@
 import type { Opacity, ShadowSizes } from "../config/types";
-import type { Palette } from "./../config/preconfigs/types";
+import type { PaletteConfig, Palette } from "./../config/preconfigs/palette/types";
+import type { Color, Info, Gray, Danger, Warning, Success, ColorShades } from "./../config/types";
+
 import {
     AccordionConfig,
     AlertConfig,
@@ -29,6 +31,7 @@ export type Config = {
      * - `dark` : Generate a dark theme only.
      * - `both` : Generate both light and dark themes.
      * @default "both"
+     * @deprecated Themer renders now the entire theme in `light` and `dark` mode, the `appearance` prop will be removed in the next major release.
      */
     appearance?: "light" | "dark" | "both";
     /**
@@ -41,10 +44,23 @@ export type Config = {
      * - `passion`
      * - `nature`
      * - `spring`
-     * - `dose`
+     * - `oz`
+     * - `{ extend: "paletteName", primary: "color", secondary: "color", accent: "color", info: "color", success: "color", danger: "color", warning: "color", gray: "color" }`
      * @default "trust"
      */
-    palette?: Palette;
+    palette?:
+        | Palette
+        | {
+              extend: Palette;
+              primary?: Color | ColorShades;
+              secondary?: Color | ColorShades;
+              accent?: Color | ColorShades;
+              info?: Info | ColorShades;
+              warning?: Warning | ColorShades;
+              danger?: Danger | ColorShades;
+              success?: Success | ColorShades;
+              gray?: Gray | ColorShades;
+          };
     /**
      * The border radius of the the following components :
      * - accordion

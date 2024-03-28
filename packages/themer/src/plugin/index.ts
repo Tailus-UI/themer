@@ -5,6 +5,7 @@ import defaultConfig, { preconfigs as defaultPreconfigs } from "./default.config
 import setPreconfigs from "./preconfigs";
 import { palettes } from "./../config/preconfigs";
 import * as themerGrays from "./../lib/colors/additionalGrays";
+import { getIntentValue } from "./../lib/colors/getIntent";
 
 let appearance: Config["appearance"] = "both";
 
@@ -242,21 +243,46 @@ const themer = plugin.withOptions(
     },
 
     (options) => {
-        const preconfigs = setPreconfigs(defaultPreconfigs, options);
+        const { palette } = setPreconfigs(defaultPreconfigs, options);
         return {
             theme: {
                 extend: {
                     colors: ({ colors }) => ({
-                        primary: colors[palettes[preconfigs.palette].primary],
-                        secondary: colors[palettes[preconfigs.palette].secondary],
-                        accent: colors[palettes[preconfigs.palette].accent],
-                        info: colors[palettes[preconfigs.palette].info],
-                        success: colors[palettes[preconfigs.palette].success],
-                        danger: colors[palettes[preconfigs.palette].danger],
-                        warning: colors[palettes[preconfigs.palette].warning],
+                        primary: getIntentValue(
+                            colors,
+                            palette.primary,
+                            palettes[palette.extend].primary
+                        ),
+                        secondary: getIntentValue(
+                            colors,
+                            palette.secondary,
+                            palettes[palette.extend].secondary
+                        ),
+                        accent: getIntentValue(
+                            colors,
+                            palette.accent,
+                            palettes[palette.extend].accent
+                        ),
+                        info: getIntentValue(colors, palette.info, palettes[palette.extend].info),
+                        success: getIntentValue(
+                            colors,
+                            palette.success,
+                            palettes[palette.extend].success
+                        ),
+                        danger: getIntentValue(
+                            colors,
+                            palette.danger,
+                            palettes[palette.extend].danger
+                        ),
+                        warning: getIntentValue(
+                            colors,
+                            palette.warning,
+                            palettes[palette.extend].warning
+                        ),
                         gray:
-                            colors[palettes[preconfigs.palette].gray] ||
-                            themerGrays[palettes[preconfigs.palette].gray],
+                            getIntentValue(colors, palette.gray, palettes[palette.extend].gray) ||
+                            colors[palettes[palette.extend].gray] ||
+                            themerGrays[palettes[palette.extend].gray],
                     }),
                 },
             },

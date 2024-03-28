@@ -1,9 +1,9 @@
 import { Padding } from ".";
 
 export const small: Padding = {
-    card: "2",
-    flag: "2",
-    popover: "2",
+    card: "3",
+    flag: "3",
+    popover: "3",
 };
 
 export default small;

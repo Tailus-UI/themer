@@ -11,4 +11,4 @@ export default {
 };
 
 export { lighter, light, high, higher };
-export type { BorderColors } from "./../types";
+export type { BorderColors } from "./types";
