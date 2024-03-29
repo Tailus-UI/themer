@@ -3,11 +3,11 @@ import config from "./../../button.config";
 import { Colors, Sizes, ButtonBase } from "../button.types";
 
 const base = {
-    layout: "group flex items-center relative border rounded-[--btn-border-radius] *:select-none [&>*:not(.sr-only)]:relative text-white before:absolute before:inset-0 before:rounded-[calc(var(--btn-border-radius)-1px)] before:absolute before:inset-0 before:border before:bg-gradient-to-b *:disabled:opacity-20",
+    layout: "group font-medium [--radial-opacity:0.4] dark:[--radial-opacity:0] rounded-[--btn-border-radius] [background-image:radial-gradient(76%_151%_at_52%_-52%,rgba(255,255,255,var(--radial-opacity))_0%,transparent_100%)] flex items-center justify-center transition-[filter] duration-150 ease-in-out active:brightness-95 dark:shadow-inner dark:border-t dark:border-t-white/35 outline-2 outline-offset-2 focus-visible:outline outline-primary-600 dark:shadow-white/20 disabled:bg-gray-200 disabled:text-gray-400 disabled:shadow-none disabled:hover:brightness-100 dark:disabled:bg-gray-500/10 dark:disabled:[background-image:none] dark:disabled:text-gray-700 dark:disabled:shadow-none dark:disabled:border-none",
     appearances: {
-        light: "disabled:before:bg-gray-100 disabled:text-gray-950/40 disabled:border-gray-200 disabled:bg-gray-100 disabled:*:text-gray-300 disabled:before:border-transparent disabled:before:bg-gray-100 disabled:before:from-transparent",
-        dark: "dark:border-0 dark:before:border-0 dark:before:border-t dark:before:shadow-inner dark:before:shadow-white/10 dark:disabled:border-gray-800/50 dark:disabled:bg-gray-900 disabled:dark:*:text-gray-700 dark:disabled:before:bg-gray-900 dark:disabled:before:from-gray-900 dark:disabled:before:shadow-none dark:disabled:border dark:*:disabled:!text-white",
-        both: "disabled:before:bg-gray-100 disabled:text-gray-950/40 disabled:border-gray-200 disabled:bg-gray-100 disabled:*:text-gray-300 disabled:before:border-transparent disabled:before:bg-gray-100 disabled:before:from-transparent dark:border-0 dark:before:border-0 dark:before:border-t dark:before:shadow-inner dark:before:shadow-white/10 dark:disabled:border  dark:disabled:border-gray-800/50 disabled:dark:bg-gray-900 disabled:dark:*:text-gray-700 dark:disabled:before:bg-gray-900 dark:disabled:before:from-gray-900 dark:disabled:before:shadow-none dark:*:disabled:!text-white",
+        light: "",
+        dark: "",
+        both: "",
     },
 };
 
@@ -61,11 +61,7 @@ const trailingIconSizes: Sizes = {
  * @returns A string containing the Tailwind utilities, including color utilities for the button.
  */
 
-const getBaseButton = (
-    color: string,
-    buttonBase: ButtonBase = base,
-    colors: Colors = solidColors
-): string => {
+const getBaseButton = (color: string, buttonBase = base, colors: Colors = solidColors): string => {
     return `${buttonBase.layout} ${buttonBase.appearances[config.appearance]} ${colors[color]}`;
 };
 
