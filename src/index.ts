@@ -10,3 +10,5 @@ export {
     type Button as ButtonType,
     type IconType as ButtonIconType,
 } from "./components/button";
+
+export { badge, type Badge as BadgeType } from "./components/badge";
