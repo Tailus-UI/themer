@@ -1,7 +1,7 @@
 import { tv, type VariantProps } from "tailwind-variants";
 
 const baseBadge = tv({
-    base: "rounded-[--badge-border-radius] font-medium block w-fit",
+    base: "rounded-[--badge-radius] font-medium block w-fit",
     variants: {
         size: {
             xs: "px-1.5 py-0.5 text-xs",
