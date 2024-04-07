@@ -14,3 +14,4 @@ export {
 export { badge, type Badge as BadgeType } from "./components/badge";
 
 export { accordion, type Accordion } from "./components/accordion";
+export { alertDialog } from "./components/alertDialog";
