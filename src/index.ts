@@ -23,3 +23,13 @@ export {
     type AnnonceRootVariants,
     type AnnonceConcernVariants,
 } from "./components/annonce";
+
+export {
+    avatar,
+    fallback,
+    image,
+    solid as solidFallback,
+    soft as softFallback,
+    type AvatarRootProps,
+    type AvatarFallbackProps,
+} from "./components/avatar";
