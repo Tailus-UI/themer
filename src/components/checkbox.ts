@@ -1,4 +1,4 @@
-import { tv, type VariantProps } from "tailwind-variants";
+import { tv } from "tailwind-variants";
 
 export const checkbox = tv({
     base: "border border-[--form-border-color] shadow-sm group rounded peer flex justify-center items-center size-5 outline-2 outline-primary-600 outline-offset-2 text-white hover:brightness-95 focus-visible:outline dark:bg-gray-500/10 data-[state=checked]:border-none data-[state=indeterminate]:border-none disabled:bg-gray-100 dark:disabled:bg-gray-800 disabled:opacity-50 disabled:border-gray-300 dark:disabled:border-gray-700 disabled:shadow-none disabled:data-[state=checked]:bg-gray-300 dark:disabled:data-[state=checked]:bg-gray-700 dark:disabled:data-[state=indeterminate]:bg-gray-700 disabled:data-[state=checked]:shadow-none disabled:data-[state=indeterminate]:bg-gray-300 disabled:data-[state=indeterminate]:shadow-none",
@@ -27,4 +27,7 @@ export const fancyCheckbox = tv({
     },
 });
 
-export type CheckboxProps = VariantProps<typeof checkbox>;
+export type CheckboxProps = {
+    variant?: keyof typeof checkbox.variants.intent;
+    fancy?: boolean;
+};

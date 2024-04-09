@@ -1,4 +1,4 @@
-import { tv, type VariantProps } from "tailwind-variants";
+import { tv } from "tailwind-variants";
 
 export const radio = tv({
     slots: {
@@ -45,4 +45,7 @@ export const fancyRadio = tv({
     },
 });
 
-export type RadioProps = VariantProps<typeof radio>;
+export type RadioProps = {
+    intent?: keyof typeof radio.variants.intent;
+    fancy?: boolean;
+};

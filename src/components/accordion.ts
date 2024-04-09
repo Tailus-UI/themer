@@ -1,4 +1,4 @@
-import { type VariantProps, tv } from "tailwind-variants";
+import { tv } from "tailwind-variants";
 
 export const fancyBorder =
     "border dark:border-gray-950/75 outline outline-1 -outline-offset-[2px] outline-white/5 dark:outline-[--ui-border-color]";
@@ -43,4 +43,6 @@ export const accordion = tv({
     },
 });
 
-export type Accordion = VariantProps<typeof accordion>["variant"];
+export type AccordionProps = {
+    variant?: keyof typeof accordion.variants.variant;
+};

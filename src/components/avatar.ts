@@ -1,4 +1,4 @@
-import { tv, type VariantProps } from "tailwind-variants";
+import { tv } from "tailwind-variants";
 
 const status =
     "before:absolute before:z-[1] before:right-px before:size-2.5 before:rounded-full before:border-2 before:border-white dark:before:border-gray-950";
@@ -133,7 +133,12 @@ export const fallback = {
     soft,
 };
 
-export type AvatarRootProps = VariantProps<typeof avatar>;
+export type AvatarRootProps = {
+    size?: keyof typeof avatar.variants.size;
+    status?: keyof typeof avatar.variants.status;
+    topStatus?: boolean;
+    bottomStatus?: boolean;
+};
 export type AvatarFallbackProps = {
     variant?: keyof typeof fallback;
     intent?: keyof typeof solid.variants.intent;

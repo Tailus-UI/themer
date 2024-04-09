@@ -29,5 +29,9 @@ export const gradientCard = tv({
     },
 });
 
-export type CardProps = VariantProps<typeof card>;
-export type GradientCardProps = VariantProps<typeof gradientCard>;
+export type CardProps = {
+    variant?: keyof typeof card.variants.variant;
+};
+export type GradientCardProps = {
+    variant?: keyof typeof gradientCard.variants.variant;
+};

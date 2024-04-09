@@ -73,4 +73,7 @@ export const badge = {
     soft,
 };
 
-export type Badge = VariantProps<typeof badge.solid> & { variant: keyof typeof badge };
+export type Badge = {
+    variant?: keyof typeof solid.variants.intent;
+    size?: keyof typeof baseBadge.variants.size;
+};

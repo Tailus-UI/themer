@@ -1,4 +1,4 @@
-import { tv, type VariantProps } from "tailwind-variants";
+import { tv } from "tailwind-variants";
 export const switchTheme = tv({
     slots: {
         root: "relative inline-block border-[0.5px] border-[--form-border-color] group rounded-full h-5 w-8 bg-gray-300 dark:bg-white/15 outline-2 outline-primary-600 outline-offset-2 overflow-hidden before:absolute before:inset-0 before:rounded-full before:transition-[transform,background,shadow] before:duration-300 before:-translate-x-3 data-[state=checked]:before:-translate-x-0 focus-visible:outline data-[state=checked]:border-transparent disabled:bg-gray-100 dark:disabled:bg-gray-800 disabled:opacity-50 disabled:shadow-none disabled:data-[state=checked]:before:bg-gray-300 dark:disabled:data-[state=checked]:before:bg-gray-700 disabled:data-[state=checked]:before:shadow-none",
@@ -44,4 +44,7 @@ export const fancySwitch = tv({
     },
 });
 
-export type SwitchProps = VariantProps<typeof switchTheme>;
+export type SwitchProps = {
+    intent?: keyof typeof switchTheme.variants.intent;
+    fancy?: boolean;
+};

@@ -1,4 +1,4 @@
-import { tv, type VariantProps } from "tailwind-variants";
+import { tv } from "tailwind-variants";
 
 export const annonceRoot = tv({
     base: "block group w-fit flex gap-3 items-center rounded-[--annonce-radius]",
@@ -38,5 +38,11 @@ export const annonceConcern = tv({
     },
 });
 
-export type AnnonceRootVariants = VariantProps<typeof annonceRoot>;
-export type AnnonceConcernVariants = VariantProps<typeof annonceConcern>;
+export type AnnonceRootProps = {
+    size?: keyof typeof annonceRoot.variants.size;
+    variant?: keyof typeof annonceRoot.variants.variant;
+};
+export type AnnonceConcernProps = {
+    size?: keyof typeof annonceConcern.variants.size;
+    intent?: keyof typeof annonceConcern.variants.intent;
+};
