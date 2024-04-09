@@ -35,3 +35,4 @@ export {
 } from "./components/avatar";
 
 export { card, gradientCard, type CardProps, type GradientCardProps } from "./components/card";
+export { checkbox, fancyCheckbox, type CheckboxProps } from "./components/checkbox";
