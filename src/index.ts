@@ -33,3 +33,5 @@ export {
     type AvatarRootProps,
     type AvatarFallbackProps,
 } from "./components/avatar";
+
+export { card, gradientCard, type CardProps, type GradientCardProps } from "./components/card";
