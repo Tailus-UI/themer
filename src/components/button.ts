@@ -5,7 +5,7 @@ export type ButtonProps = {
     intent?: keyof typeof solid.variants.intent;
     size?: keyof typeof baseButton.variants.size;
 };
-export type IconButtonProps = {
+export type ButtonIconProps = {
     type?: keyof typeof icon.variants.type;
     size?: keyof typeof icon.variants.size;
 };

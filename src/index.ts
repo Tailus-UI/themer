@@ -8,7 +8,7 @@ export {
     button,
     icon as buttonIcon,
     type ButtonProps,
-    type IconButtonProps,
+    type ButtonIconProps,
 } from "./components/button";
 
 export { badge, type BadgeProps } from "./components/badge";
