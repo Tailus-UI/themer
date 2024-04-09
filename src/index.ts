@@ -36,3 +36,4 @@ export {
 
 export { card, gradientCard, type CardProps, type GradientCardProps } from "./components/card";
 export { checkbox, fancyCheckbox, type CheckboxProps } from "./components/checkbox";
+export { radio, fancyRadio, type RadioProps } from "./components/radio";
