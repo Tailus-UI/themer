@@ -1,4 +1,4 @@
-import { tv, type VariantProps } from "tailwind-variants";
+import { tv } from "tailwind-variants";
 
 const baseBadge = tv({
     base: "rounded-[--badge-radius] font-medium block w-fit",
@@ -73,7 +73,8 @@ export const badge = {
     soft,
 };
 
-export type Badge = {
-    variant?: keyof typeof solid.variants.intent;
+export type BadgeProps = {
+    variant?: keyof typeof badge;
     size?: keyof typeof baseBadge.variants.size;
+    intent?: keyof typeof solid.variants.intent;
 };
