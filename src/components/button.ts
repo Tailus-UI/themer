@@ -56,13 +56,13 @@ const outlined = tv({
     variants: {
         intent: {
             primary:
-                "[--btn-border-color:theme(colors.primary.300)] dark:[--btn-border-color:theme(colors.primary.900)] text-primary-800 bg-primary-100 dark:text-primary-300 dark:bg-primary-300/5 dark:hover:bg-primary-300/10 dark:active:bg-primary-300/15",
-            danger: "[--btn-border-color:theme(colors.danger.300)] dark:[--btn-border-color:theme(colors.danger.900)] text-danger-800 bg-danger-100 dark:text-danger-300 dark:bg-danger-300/5 dark:hover:bg-danger-300/10 dark:active:bg-danger-300/15",
+                "[--btn-border-color:theme(colors.primary.300)] dark:[--btn-border-color:theme(colors.primary.500/0.25)] text-primary-800 bg-primary-100 dark:text-primary-300 dark:bg-primary-500/5 dark:hover:bg-primary-500/10 dark:active:bg-primary-500/5",
+            danger: "[--btn-border-color:theme(colors.danger.300)] dark:[--btn-border-color:theme(colors.danger.500/0.25)] text-danger-800 bg-danger-100 dark:text-danger-300 dark:bg-danger-500/5 dark:hover:bg-danger-500/10 dark:active:bg-danger-500/5",
             warning:
-                "[--btn-border-color:theme(colors.warning.300)] dark:[--btn-border-color:theme(colors.warning.900)] text-warning-800 bg-warning-100 dark:text-warning-300 dark:bg-warning-300/5 dark:hover:bg-warning-300/10 dark:active:bg-warning-300/15",
-            gray: "[--btn-border-color:theme(colors.gray.300)] dark:[--btn-border-color:theme(colors.gray.800)] text-gray-800 bg-gray-100 dark:text-gray-300 dark:bg-gray-300/5 dark:hover:bg-gray-300/10 dark:active:bg-gray-300/15",
+                "[--btn-border-color:theme(colors.warning.300)] dark:[--btn-border-color:theme(colors.warning.500/0.25)] text-warning-800 bg-warning-100 dark:text-warning-300 dark:bg-warning-500/5 dark:hover:bg-warning-500/10 dark:active:bg-warning-500/5",
+            gray: "[--btn-border-color:theme(colors.gray.300)] dark:[--btn-border-color:theme(colors.gray.500/0.25)] text-gray-800 bg-gray-100 dark:text-gray-300 dark:bg-gray-500/5 dark:hover:bg-gray-500/10 dark:active:bg-gray-500/5",
             neutral:
-                "[--btn-border-color:theme(colors.gray.400)] dark:[--btn-border-color:theme(colors.gray.800)] text-gray-800 bg-gray-100 dark:text-gray-300 dark:bg-gray-300/5 dark:hover:bg-gray-300/10 dark:active:bg-gray-300/15",
+                "[--btn-border-color:theme(colors.gray.400)] dark:[--btn-border-color:theme(colors.white)] text-gray-800 bg-gray-100 dark:text-white dark:bg-gray-500/5 dark:hover:bg-gray-500/10 dark:active:bg-gray-500/5",
         },
     },
 });
