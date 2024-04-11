@@ -1,6 +1,6 @@
 import { tv } from "tailwind-variants";
 
-export const alertDialog = tv({
+export const dialog = tv({
     slots: {
         content:
             "rounded-[--feedback-radius] p-[--feedback-padding] feedback-bg feedback-shadow data-[state=open]:animate-contentShow fixed left-[50%] top-[50%] max-h-[85vh] w-[90vw] translate-x-[-50%] translate-y-[-50%]",
@@ -22,7 +22,7 @@ export const alertDialog = tv({
     },
 });
 
-export type AlertDialogProps = {
+export type DialogProps = {
     mixed?: boolean;
     fancy?: boolean;
 };
