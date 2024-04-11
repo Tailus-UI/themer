@@ -14,7 +14,7 @@ export {
 export { badge, type BadgeProps } from "./components/badge";
 
 export { accordion, type AccordionProps } from "./components/accordion";
-export { alertDialog } from "./components/alertDialog";
+export { alertDialog, type AlertDialogProps } from "./components/alertDialog";
 export { separator, type SeparatorProps } from "./components/separator";
 
 export {
