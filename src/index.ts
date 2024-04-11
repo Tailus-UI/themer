@@ -38,3 +38,13 @@ export { card, gradientCard, type CardProps, type GradientCardProps } from "./co
 export { checkbox, fancyCheckbox, type CheckboxProps } from "./components/checkbox";
 export { radio, fancyRadio, type RadioProps } from "./components/radio";
 export { switchTheme, fancySwitch, type SwitchProps } from "./components/switch";
+
+export {
+    solid,
+    soft,
+    menu,
+    separator as menuSeparator,
+    defaultMenuProps,
+    type MenuProps,
+    type SeparatorProps as MenuSeparatorProps,
+} from "./components/menu";
