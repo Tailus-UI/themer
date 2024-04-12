@@ -48,3 +48,18 @@ export {
     type MenuProps,
     type SeparatorProps as MenuSeparatorProps,
 } from "./components/menu";
+
+export {
+    display,
+    title,
+    text,
+    caption,
+    link,
+    type Align,
+    type Weight,
+    type DisplayProps,
+    type TitleProps,
+    type TextProps,
+    type CaptionProps,
+    type LinkProps,
+} from "./components/typography";
