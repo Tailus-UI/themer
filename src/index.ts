@@ -57,6 +57,8 @@ export {
     link,
     type Align,
     type Weight,
+    type TextAlignProp,
+    type TextWeightProp,
     type DisplayProps,
     type TitleProps,
     type TextProps,
