@@ -31,6 +31,9 @@ export const caption = tv(
                 sm: "text-sm",
                 base: "text-base",
             },
+            neutral: {
+                true: "text-gray-950 dark:text-white",
+            },
         },
         defaultVariants: {
             size: "sm",
@@ -52,6 +55,9 @@ export const text = tv(
                 base: "text-base",
                 lg: "text-lg",
                 xl: "text-xl",
+            },
+            neutral: {
+                true: "text-gray-950 dark:text-white",
             },
         },
         defaultVariants: {
@@ -186,10 +192,12 @@ type BaseTextProps = {
 
 export type CaptionProps = BaseTextProps & {
     size?: keyof typeof caption.variants.size;
+    neutral?: boolean;
 };
 
 export type TextProps = BaseTextProps & {
     size?: keyof typeof text.variants.size;
+    neutral?: boolean;
 };
 
 export type LinkProps = BaseTextProps & {
@@ -207,20 +215,24 @@ export type DisplayProps = BaseTextProps & {
     size?: keyof typeof display.variants.size;
 };
 
-export type TextWeightProp = {
-    initial?: Weight;
-    sm?: Weight;
-    md?: Weight;
-    lg?: Weight;
-    xl?: Weight;
-    xxl?: Weight;
-};
+export type TextWeightProp =
+    | Weight
+    | {
+          initial?: Weight;
+          sm?: Weight;
+          md?: Weight;
+          lg?: Weight;
+          xl?: Weight;
+          xxl?: Weight;
+      };
 
-export type TextAlignProp = {
-    initial?: Align;
-    sm?: Align;
-    md?: Align;
-    lg?: Align;
-    xl?: Align;
-    xxl?: Align;
-};
+export type TextAlignProp =
+    | Align
+    | {
+          initial?: Align;
+          sm?: Align;
+          md?: Align;
+          lg?: Align;
+          xl?: Align;
+          xxl?: Align;
+      };
