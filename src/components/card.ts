@@ -1,4 +1,4 @@
-import { tv, type VariantProps } from "tailwind-variants";
+import { tv } from "tailwind-variants";
 
 export const card = tv({
     base: "block p-[--card-padding] rounded-[--card-radius] bg-[--ui-bg]",
@@ -8,6 +8,9 @@ export const card = tv({
             elevated: "card-shadow",
             soft: "bg-[--ui-soft-bg]",
             mixed: "border card-shadow",
+        },
+        fancy: {
+            true: "fancy-border",
         },
     },
 });
@@ -31,6 +34,7 @@ export const gradientCard = tv({
 
 export type CardProps = {
     variant?: keyof typeof card.variants.variant;
+    fancy?: boolean;
 };
 export type GradientCardProps = {
     variant?: keyof typeof gradientCard.variants.variant;
