@@ -70,6 +70,32 @@ export const text = tv(
     },
 );
 
+export const list = tv(
+    {
+        extend: text,
+        base: "list-outside pl-4",
+        variants: {
+            type: {
+                disc: "list-disc",
+                decimal: "list-decimal",
+                none: "list-none",
+            },
+            inside: {
+                true: "list-outside pl-0",
+            },
+        },
+        defaultVariants: {
+            size: "base",
+            type: "disc",
+            weight: "normal",
+            inside: false,
+        },
+    },
+    {
+        responsiveVariants: ["sm", "md", "lg", "xl", "2xl"],
+    },
+);
+
 export const link = tv(
     {
         extend: base,
@@ -197,6 +223,13 @@ export type CaptionProps = BaseTextProps & {
 
 export type TextProps = BaseTextProps & {
     size?: keyof typeof text.variants.size;
+    neutral?: boolean;
+};
+
+export type ListProps = BaseTextProps & {
+    size?: keyof typeof text.variants.size;
+    type?: keyof typeof list.variants.type;
+    inside?: boolean;
     neutral?: boolean;
 };
 

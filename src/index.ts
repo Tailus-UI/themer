@@ -55,6 +55,7 @@ export {
     text,
     caption,
     link,
+    list,
     type Align,
     type Weight,
     type TextAlignProp,
@@ -64,4 +65,5 @@ export {
     type TextProps,
     type CaptionProps,
     type LinkProps,
+    type ListProps,
 } from "./components/typography";
