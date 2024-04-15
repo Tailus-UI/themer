@@ -29,6 +29,8 @@ export const annonceConcern = tv({
         },
         intent: {
             primary: "bg-primary-600",
+            secondary: "bg-secondary-600",
+            accent: "bg-accent-600",
             danger: "bg-danger-600",
             warning: "bg-warning-400 text-warning-950",
             gray: "bg-gray-600",

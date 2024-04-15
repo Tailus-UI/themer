@@ -40,6 +40,8 @@ const solid = tv({
     variants: {
         intent: {
             primary: "bg-primary-600 [--btn-border-color:theme(colors.primary.600)]",
+            secondary: "bg-secondary-600 [--btn-border-color:theme(colors.secondary.600)]",
+            accent: "bg-accent-600 [--btn-border-color:theme(colors.accent.600)]",
             danger: "bg-danger-600 [--btn-border-color:theme(colors.danger.600)]",
             warning:
                 "bg-warning-500 text-warning-950 [--btn-border-color:theme(colors.warning.600)]",
@@ -57,6 +59,9 @@ const outlined = tv({
         intent: {
             primary:
                 "[--btn-border-color:theme(colors.primary.300)] dark:[--btn-border-color:theme(colors.primary.500/0.3)] text-primary-800 bg-primary-100 dark:text-primary-300 dark:bg-primary-500/5 dark:hover:bg-primary-500/10 dark:active:bg-primary-500/5",
+            secondary:
+                "[--btn-border-color:theme(colors.secondary.300)] dark:[--btn-border-color:theme(colors.secondary.500/0.3)] text-secondary-800 bg-secondary-100 dark:text-secondary-300 dark:bg-secondary-500/5 dark:hover:bg-secondary-500/10 dark:active:bg-secondary-500/5",
+            accent: "[--btn-border-color:theme(colors.accent.300)] dark:[--btn-border-color:theme(colors.accent.500/0.3)] text-accent-800 bg-accent-100 dark:text-accent-300 dark:bg-accent-500/5 dark:hover:bg-accent-500/10 dark:active:bg-accent-500/5",
             danger: "[--btn-border-color:theme(colors.danger.300)] dark:[--btn-border-color:theme(colors.danger.500/0.3)] text-danger-800 bg-danger-100 dark:text-danger-300 dark:bg-danger-500/5 dark:hover:bg-danger-500/10 dark:active:bg-danger-500/5",
             warning:
                 "[--btn-border-color:theme(colors.warning.300)] dark:[--btn-border-color:theme(colors.warning.500/0.3)] text-warning-800 bg-warning-100 dark:text-warning-300 dark:bg-warning-500/5 dark:hover:bg-warning-500/10 dark:active:bg-warning-500/5",
@@ -73,6 +78,9 @@ const soft = tv({
         intent: {
             primary:
                 "text-primary-700 bg-primary-100 hover:bg-primary-200/75 active:bg-primary-100 dark:text-primary-300 dark:bg-primary-500/10 dark:hover:bg-primary-500/15 dark:active:bg-primary-500/10",
+            secondary:
+                "text-secondary-700 bg-secondary-100 hover:bg-secondary-200/75 active:bg-secondary-100 dark:text-secondary-300 dark:bg-secondary-500/10 dark:hover:bg-secondary-500/15 dark:active:bg-secondary-500/10",
+            accent: "text-accent-700 bg-accent-100 hover:bg-accent-200/75 active:bg-accent-100 dark:text-accent-300 dark:bg-accent-500/10 dark:hover:bg-accent-500/15 dark:active:bg-accent-500/10",
             danger: "text-danger-700 bg-danger-100 hover:bg-danger-200/75 active:bg-danger-100 dark:text-danger-300 dark:bg-danger-500/10 dark:hover:bg-danger-500/15 dark:active:bg-danger-500/10",
             warning:
                 "text-warning-700 bg-warning-100 hover:bg-warning-200/75 active:bg-warning-100 dark:text-warning-300 dark:bg-warning-500/10 dark:hover:bg-warning-500/15 dark:active:bg-warning-500/10",
@@ -89,6 +97,9 @@ const ghost = tv({
         intent: {
             primary:
                 "text-primary-600 hover:bg-primary-100 active:bg-primary-200/75 dark:text-primary-400 dark:hover:bg-primary-500/10 dark:active:bg-primary-500/15",
+            secondary:
+                "text-secondary-600 hover:bg-secondary-100 active:bg-secondary-200/75 dark:text-secondary-400 dark:hover:bg-secondary-500/10 dark:active:bg-secondary-500/15",
+            accent: "text-accent-600 hover:bg-accent-100 active:bg-accent-200/75 dark:text-accent-400 dark:hover:bg-accent-500/10 dark:active:bg-accent-500/15",
             danger: "text-danger-600 hover:bg-danger-100 active:bg-danger-200/75 dark:text-danger-400 dark:hover:bg-danger-500/10 dark:active:bg-danger-500/15",
             warning:
                 "text-warning-600 hover:bg-warning-100 active:bg-warning-200/75 dark:text-warning-400 dark:hover:bg-warning-500/10 dark:active:bg-warning-500/15",
