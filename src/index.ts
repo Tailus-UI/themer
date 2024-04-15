@@ -67,3 +67,5 @@ export {
     type LinkProps,
     type ListProps,
 } from "./components/typography";
+
+export { calendar, type CalendarProps } from "./components/calendar";
