@@ -76,6 +76,6 @@ export const calendar = tv({
 });
 
 export type CalendarProps = {
-    variant?: keyof typeof calendar.variants.intent;
+    intent?: keyof typeof calendar.variants.intent;
     range?: boolean;
 };
