@@ -77,3 +77,4 @@ export { calendar, type CalendarProps } from "./components/calendar";
 
 export { banner, type BannerProps } from "./components/banner";
 export { slider, type SliderProps } from "./components/slider";
+export { tooltip, type TooltipProps } from "./components/tooltip";
