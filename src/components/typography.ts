@@ -99,6 +99,7 @@ export const list = tv(
 export const link = tv(
     {
         extend: base,
+        base: "transition",
         variants: {
             size: {
                 xs: "text-xs",
@@ -108,10 +109,12 @@ export const link = tv(
                 xl: "text-xl",
             },
             intent: {
-                primary: "text-primary-600 dark:text-primary-400",
-                info: "text-info-600 dark:text-info-400",
+                primary:
+                    "text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500",
+                info: "text-info-600 hover:text-primary-700 dark:text-info-400 dark:hover:text-primary-500",
                 gray: "text-[--body-text-color]",
-                neutral: "text-gray-950 dark:text-white",
+                neutral:
+                    "text-gray-950 hover:text-gray-800 dark:text-white dark:hover:text-gray-200",
             },
             variant: {
                 plain: "",
@@ -150,10 +153,31 @@ export const link = tv(
                 intent: "gray",
                 class: "before:bg-gray-600/50 dark:before:bg-gray-400/50",
             },
+            {
+                variant: "underlined",
+                intent: "primary",
+                class: "decoration-primary-600/50 dark:decoration-primary-400/50",
+            },
+            {
+                variant: "underlined",
+                intent: "info",
+                class: "decoration-info-600/50 dark:decoration-info-400/50",
+            },
+            {
+                variant: "underlined",
+                intent: "gray",
+                class: "decoration-gray-600/50 dark:decoration-gray-400/50",
+            },
+            {
+                variant: "underlined",
+                intent: "neutral",
+                class: "decoration-gray-950/25 dark:decoration-white/25",
+            },
         ],
         defaultVariants: {
             intent: "primary",
             variant: "ghost",
+            size: "base",
         },
     },
     {
@@ -243,6 +267,28 @@ export type LinkProps = BaseTextProps & {
 export type TitleProps = BaseTextProps & {
     size?: keyof typeof title.variants.size;
 };
+
+export type TitleSizeProp =
+    | TitleProps["size"]
+    | {
+          initial?: TitleProps["size"];
+          sm?: TitleProps["size"];
+          md?: TitleProps["size"];
+          lg?: TitleProps["size"];
+          xl?: TitleProps["size"];
+          xxl?: TitleProps["size"];
+      };
+
+export type TextSizeProp =
+    | TextProps["size"]
+    | {
+          initial?: TextProps["size"];
+          sm?: TextProps["size"];
+          md?: TextProps["size"];
+          lg?: TextProps["size"];
+          xl?: TextProps["size"];
+          xxl?: TextProps["size"];
+      };
 
 export type DisplayProps = BaseTextProps & {
     size?: keyof typeof display.variants.size;
