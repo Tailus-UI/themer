@@ -111,7 +111,15 @@ export const link = tv(
             intent: {
                 primary:
                     "text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500",
-                info: "text-info-600 hover:text-primary-700 dark:text-info-400 dark:hover:text-primary-500",
+                secondary:
+                    "text-secondary-600 hover:text-secondary-700 dark:text-secondary-400 dark:hover:text-secondary-500",
+                accent: "text-accent-600 hover:text-accent-700 dark:text-accent-400 dark:hover:text-accent-500",
+                info: "text-info-600 hover:text-info-700 dark:text-info-400 dark:hover:text-info-500",
+                danger: "text-danger-600 hover:text-danger-700 dark:text-danger-400 dark:hover:text-danger-500",
+                success:
+                    "text-success-600 hover:text-success-700 dark:text-success-400 dark:hover:text-success-500",
+                warning:
+                    "text-warning-700 hover:text-warning-600 dark:text-warning-400 dark:hover:text-warning-500",
                 gray: "text-[--body-text-color]",
                 neutral:
                     "text-gray-950 hover:text-gray-800 dark:text-white dark:hover:text-gray-200",
@@ -154,6 +162,31 @@ export const link = tv(
                 class: "before:bg-gray-600/50 dark:before:bg-gray-400/50",
             },
             {
+                variant: "animated",
+                intent: "secondary",
+                class: "before:bg-secondary-600/50 dark:before:bg-secondary-400/50",
+            },
+            {
+                variant: "animated",
+                intent: "accent",
+                class: "before:bg-accent-600/50 dark:before:bg-accent-400/50",
+            },
+            {
+                variant: "animated",
+                intent: "danger",
+                class: "before:bg-danger-600/50 dark:before:bg-danger-400/50",
+            },
+            {
+                variant: "animated",
+                intent: "success",
+                class: "before:bg-success-600/50 dark:before:bg-success-400/50",
+            },
+            {
+                variant: "animated",
+                intent: "warning",
+                class: "before:bg-warning-600/50 dark:before:bg-warning-400/50",
+            },
+            {
                 variant: "underlined",
                 intent: "primary",
                 class: "decoration-primary-600/50 dark:decoration-primary-400/50",
@@ -172,6 +205,31 @@ export const link = tv(
                 variant: "underlined",
                 intent: "neutral",
                 class: "decoration-gray-950/25 dark:decoration-white/25",
+            },
+            {
+                variant: "underlined",
+                intent: "secondary",
+                class: "decoration-secondary-600/50 dark:decoration-secondary-400/50",
+            },
+            {
+                variant: "underlined",
+                intent: "accent",
+                class: "decoration-accent-600/50 dark:decoration-accent-400/50",
+            },
+            {
+                variant: "underlined",
+                intent: "danger",
+                class: "decoration-danger-600/50 dark:decoration-danger-400/50",
+            },
+            {
+                variant: "underlined",
+                intent: "success",
+                class: "decoration-success-600/50 dark:decoration-success-400/50",
+            },
+            {
+                variant: "underlined",
+                intent: "warning",
+                class: "decoration-warning-600/50 dark:decoration-warning-400/50",
             },
         ],
         defaultVariants: {
