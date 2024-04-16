@@ -57,6 +57,7 @@ export {
     link,
     list,
     codeTheme,
+    kbdTheme,
     type Align,
     type Weight,
     type TextAlignProp,
