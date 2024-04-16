@@ -56,6 +56,7 @@ export {
     caption,
     link,
     list,
+    codeTheme,
     type Align,
     type Weight,
     type TextAlignProp,
@@ -68,6 +69,7 @@ export {
     type CaptionProps,
     type LinkProps,
     type ListProps,
+    type CodeThemeProps,
 } from "./components/typography";
 
 export { calendar, type CalendarProps } from "./components/calendar";
