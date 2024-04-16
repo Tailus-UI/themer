@@ -270,7 +270,7 @@ export const display = tv(
 export const title = tv(
     {
         extend: base,
-        base: "block text-[--display-text-color]",
+        base: "block text-[--title-text-color]",
         variants: {
             size: {
                 base: "text-base",

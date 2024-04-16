@@ -71,3 +71,5 @@ export {
 } from "./components/typography";
 
 export { calendar, type CalendarProps } from "./components/calendar";
+
+export { banner, type BannerProps } from "./components/banner";
