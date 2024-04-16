@@ -1,7 +1,7 @@
 import { tv } from "tailwind-variants";
 
 export const fancyBorder =
-    "border-[0.5px] dark:border-gray-950 !outline !outline-[0.5px] -outline-offset-[1.5px] !outline-white/5 dark:!outline-[--ui-border-color]";
+    "border dark:border-gray-950 !outline !outline-1 -outline-offset-2 !outline-white/5 dark:!outline-[--ui-border-color]";
 
 export const accordion = tv({
     slots: {
