@@ -32,6 +32,8 @@ export const annonceConcern = tv({
             secondary: "bg-secondary-600",
             accent: "bg-accent-600",
             danger: "bg-danger-600",
+            success: "bg-success-600",
+            info: "bg-info-600",
             warning: "bg-warning-400 text-warning-950",
             gray: "bg-gray-600",
             gradient: "bg-gradient-to-r from-primary-600 to-accent-400",

@@ -43,6 +43,8 @@ const solid = tv({
             secondary: "bg-secondary-600 [--btn-border-color:theme(colors.secondary.600)]",
             accent: "bg-accent-600 [--btn-border-color:theme(colors.accent.600)]",
             danger: "bg-danger-600 [--btn-border-color:theme(colors.danger.600)]",
+            info: "bg-info-600 [--btn-border-color:theme(colors.info.600)]",
+            success: "bg-success-600 [--btn-border-color:theme(colors.success.600)]",
             warning:
                 "bg-warning-500 text-warning-950 [--btn-border-color:theme(colors.warning.600)]",
             gray: "bg-gray-600 [--btn-border-color:theme(colors.gray.600)]",
@@ -63,6 +65,9 @@ const outlined = tv({
                 "[--btn-border-color:theme(colors.secondary.300)] dark:[--btn-border-color:theme(colors.secondary.500/0.3)] text-secondary-800 bg-secondary-100 dark:text-secondary-300 dark:bg-secondary-500/5 dark:hover:bg-secondary-500/10 dark:active:bg-secondary-500/5",
             accent: "[--btn-border-color:theme(colors.accent.300)] dark:[--btn-border-color:theme(colors.accent.500/0.3)] text-accent-800 bg-accent-100 dark:text-accent-300 dark:bg-accent-500/5 dark:hover:bg-accent-500/10 dark:active:bg-accent-500/5",
             danger: "[--btn-border-color:theme(colors.danger.300)] dark:[--btn-border-color:theme(colors.danger.500/0.3)] text-danger-800 bg-danger-100 dark:text-danger-300 dark:bg-danger-500/5 dark:hover:bg-danger-500/10 dark:active:bg-danger-500/5",
+            info: "[--btn-border-color:theme(colors.info.300)] dark:[--btn-border-color:theme(colors.info.500/0.3)] text-info-800 bg-info-100 dark:text-info-300 dark:bg-info-500/5 dark:hover:bg-info-500/10 dark:active:bg-info-500/5",
+            success:
+                "[--btn-border-color:theme(colors.success.300)] dark:[--btn-border-color:theme(colors.success.500/0.3)] text-success-800 bg-success-100 dark:text-success-300 dark:bg-success-500/5 dark:hover:bg-success-500/10 dark:active:bg-success-500/5",
             warning:
                 "[--btn-border-color:theme(colors.warning.300)] dark:[--btn-border-color:theme(colors.warning.500/0.3)] text-warning-800 bg-warning-100 dark:text-warning-300 dark:bg-warning-500/5 dark:hover:bg-warning-500/10 dark:active:bg-warning-500/5",
             gray: "[--btn-border-color:theme(colors.gray.300)] dark:[--btn-border-color:theme(colors.gray.500/0.3)] text-gray-800 bg-gray-100 dark:text-gray-300 dark:bg-gray-500/5 dark:hover:bg-gray-500/10 dark:active:bg-gray-500/5",
@@ -82,6 +87,9 @@ const soft = tv({
                 "text-secondary-700 bg-secondary-100 hover:bg-secondary-200/75 active:bg-secondary-100 dark:text-secondary-300 dark:bg-secondary-500/10 dark:hover:bg-secondary-500/15 dark:active:bg-secondary-500/10",
             accent: "text-accent-700 bg-accent-100 hover:bg-accent-200/75 active:bg-accent-100 dark:text-accent-300 dark:bg-accent-500/10 dark:hover:bg-accent-500/15 dark:active:bg-accent-500/10",
             danger: "text-danger-700 bg-danger-100 hover:bg-danger-200/75 active:bg-danger-100 dark:text-danger-300 dark:bg-danger-500/10 dark:hover:bg-danger-500/15 dark:active:bg-danger-500/10",
+            info: "text-info-700 bg-info-100 hover:bg-info-200/75 active:bg-info-100 dark:text-info-300 dark:bg-info-500/10 dark:hover:bg-info-500/15 dark:active:bg-info-500/10",
+            success:
+                "text-success-700 bg-success-100 hover:bg-success-200/75 active:bg-success-100 dark:text-success-300 dark:bg-success-500/10 dark:hover:bg-success-500/15 dark:active:bg-success-500/10",
             warning:
                 "text-warning-700 bg-warning-100 hover:bg-warning-200/75 active:bg-warning-100 dark:text-warning-300 dark:bg-warning-500/10 dark:hover:bg-warning-500/15 dark:active:bg-warning-500/10",
             gray: "text-gray-800 bg-gray-100 hover:bg-gray-200/75 active:bg-gray-100 dark:text-gray-300 dark:bg-gray-500/10 dark:hover:bg-gray-500/15 dark:active:bg-gray-500/10",
@@ -101,6 +109,9 @@ const ghost = tv({
                 "text-secondary-600 hover:bg-secondary-100 active:bg-secondary-200/75 dark:text-secondary-400 dark:hover:bg-secondary-500/10 dark:active:bg-secondary-500/15",
             accent: "text-accent-600 hover:bg-accent-100 active:bg-accent-200/75 dark:text-accent-400 dark:hover:bg-accent-500/10 dark:active:bg-accent-500/15",
             danger: "text-danger-600 hover:bg-danger-100 active:bg-danger-200/75 dark:text-danger-400 dark:hover:bg-danger-500/10 dark:active:bg-danger-500/15",
+            info: "text-info-600 hover:bg-info-100 active:bg-info-200/75 dark:text-info-400 dark:hover:bg-info-500/10 dark:active:bg-info-500/15",
+            success:
+                "text-success-600 hover:bg-success-100 active:bg-success-200/75 dark:text-success-400 dark:hover:bg-success-500/10 dark:active:bg-success-500/15",
             warning:
                 "text-warning-600 hover:bg-warning-100 active:bg-warning-200/75 dark:text-warning-400 dark:hover:bg-warning-500/10 dark:active:bg-warning-500/15",
             gray: "text-gray-800 hover:bg-gray-100 active:bg-gray-200/75 dark:text-gray-300 dark:hover:bg-gray-500/10 dark:active:bg-gray-500/15",
