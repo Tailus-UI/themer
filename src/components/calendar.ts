@@ -20,7 +20,7 @@ export const calendar = tv({
         day: `size-9 rounded-[--calendar-radius] text-gray-800 hover:bg-gray-100 active:bg-gray-200/75 dark:text-gray-300 dark:hover:bg-gray-500/10 dark:active:bg-gray-500/15 flex items-center justify-center font-normal aria-selected:opacity-100 ${focusVisible}`,
         day_range_start: "day-range-start",
         day_range_end: "day-range-end",
-        day_selected: "aria-selected:text-white aria-selected:border-transparent",
+        day_selected: "!text-white aria-selected:text-white aria-selected:border-transparent",
         day_today: "size-9 !font-medium rounded-[--calendar-radius] border",
         day_outside: "day-outside opacity-50 aria-selected:bg-gray-500/50 aria-selected:opacity-30",
         day_disabled: "opacity-50",
@@ -31,7 +31,7 @@ export const calendar = tv({
         range: {
             true: {
                 months: "flex flex-col sm:flex-row gap-8",
-                month: "relative last:before:hidden before:hidden sm:before:block before:absolute before:-inset-y-[--feedback-padding] before:-right-4 before:w-0.5 before:border-r before:bg-gray-white dark:before:bg-gray-950 dark:before:border-gray-800 before:mx-auto",
+                month: "relative last:before:hidden before:hidden sm:before:block before:absolute before:-inset-y-[--feedback-padding] before:-right-4 before:w-px before:border-r before:bg-gray-white dark:before:bg-gray-950 dark:before:border-gray-800 before:mx-auto",
                 table: "space-y-0",
                 head_cell: "gap-0",
                 head_row: "gap-0",
@@ -41,7 +41,8 @@ export const calendar = tv({
         },
         intent: {
             primary: {
-                day_selected: "bg-primary-600 hover:bg-primary-600 dark:hover:bg-primary-600",
+                day_selected:
+                    "bg-primary-600 text-primary-600 hover:bg-primary-600 dark:hover:bg-primary-600",
                 day_today:
                     "border-primary-300 text-primary-600 dark:border-primary-500 dark:text-primary-300",
                 day_range_middle:
@@ -63,19 +64,62 @@ export const calendar = tv({
             },
             neutral: {
                 day_selected:
-                    "bg-gray-950 hover:bg-gray-950 dark:aria-selected:text-gray-950 dark:bg-white dark:hover:bg-white",
+                    "bg-gray-950 hover:bg-gray-950 dark:aria-selected:text-gray-950 dark:!text-gray-950 dark:bg-white dark:hover:bg-white",
                 day_today: "border-gray-300 text-gray-950 dark:border-gray-500/30 dark:text-white",
                 day_range_middle:
                     "aria-selected:!text-gray-600 aria-selected:bg-gray-100 dark:aria-selected:!text-gray-300 dark:aria-selected:bg-gray-500/10",
             },
         },
+        handDrawn: {
+            true: {
+                day_selected:
+                    "relative text-gray-950 !font-medium bg-transparent rounded-full dark:bg-transparent dark:text-white hover:bg-transparent dark:hover:bg-transparent before:absolute before:inset-0 before:[-webkit-mask-image:url('/circle.svg')] before:[mask-image:url('/circle.svg')]",
+            },
+        },
+        fancy: {
+            true: {
+                month: "before:w-0.5",
+            },
+        },
     },
+    compoundVariants: [
+        {
+            handDrawn: true,
+            intent: "primary",
+            class: {
+                day_selected: "!text-primary-950 dark:!text-white before:bg-primary-600",
+            },
+        },
+        {
+            handDrawn: true,
+            intent: "secondary",
+            class: {
+                day_selected: "!text-secondary-950 dark:!text-white before:bg-secondary-600",
+            },
+        },
+        {
+            handDrawn: true,
+            intent: "accent",
+            class: {
+                day_selected: "!text-accent-950 dark:!text-white before:bg-accent-600",
+            },
+        },
+        {
+            handDrawn: true,
+            intent: "neutral",
+            class: {
+                day_selected: "before:bg-gray-950 dark:before:bg-white dark:!text-white",
+            },
+        },
+    ],
     defaultVariants: {
         intent: "primary",
     },
 });
 
-export type CalendarProps = {
+export type CalendarVariants = {
     intent?: keyof typeof calendar.variants.intent;
     range?: boolean;
+    handDrawn?: boolean;
+    fancy?: boolean;
 };
