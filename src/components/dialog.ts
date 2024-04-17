@@ -7,6 +7,7 @@ export const dialog = tv({
         overlay:
             "fixed inset-0 bg-[--overlay-bg] backdrop-blur-[--overlay-backdrop-blur] data-[state=open]:animate-overlayShow",
         actions: "flex justify-end gap-3 mt-[--feedback-padding]",
+        close: "absolute top-1 right-1",
     },
     variants: {
         mixed: {
