@@ -117,7 +117,7 @@ export const calendar = tv({
     },
 });
 
-export type CalendarVariants = {
+export type CalendarProps = {
     intent?: keyof typeof calendar.variants.intent;
     range?: boolean;
     handDrawn?: boolean;
