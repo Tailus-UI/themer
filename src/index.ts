@@ -87,3 +87,5 @@ export {
     type LabelProps,
     type MessageProps,
 } from "./components/form";
+
+export { aligner, type AlignerProps } from "./components/aligner";
