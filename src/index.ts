@@ -79,3 +79,11 @@ export { banner, type BannerProps } from "./components/banner";
 export { slider, type SliderProps } from "./components/slider";
 export { tooltip, type TooltipProps } from "./components/tooltip";
 export { popover, type PopoverProps } from "./components/popover";
+
+export {
+    form,
+    type FormProps,
+    type InputProps,
+    type LabelProps,
+    type MessageProps,
+} from "./components/form";
