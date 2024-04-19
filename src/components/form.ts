@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const form = tv({
     slots: {
-        label: "text-[--title-text-color]",
+        label: "text-nowrap text-[--title-text-color]",
         input: "w-full px-[--input-px] bg-transparent peer transition-[outline] placeholder-[--placeholder-text-color] text-[--title-text-color] rounded-[--input-radius]",
         message: "mt-2 text-[--caption-text-color]",
         icon: "absolute inset-y-0 my-auto text-[--placeholder-text-color] pointer-events-none",
