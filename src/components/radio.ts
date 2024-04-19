@@ -11,6 +11,12 @@ export const radio = tv({
             primary: {
                 item: "data-[state=checked]:bg-primary-600",
             },
+            secondary: {
+                item: "data-[state=checked]:bg-secondary-600",
+            },
+            accent: {
+                item: "data-[state=checked]:bg-accent-600",
+            },
             gray: {
                 item: "data-[state=checked]:bg-gray-600",
             },
@@ -34,6 +40,12 @@ export const fancyRadio = tv({
         intent: {
             primary: {
                 item: "data-[state=checked]:[--checkbox-border-color:theme(colors.primary.600)]",
+            },
+            secondary: {
+                item: "data-[state=checked]:[--checkbox-border-color:theme(colors.secondary.600)]",
+            },
+            accent: {
+                item: "data-[state=checked]:[--checkbox-border-color:theme(colors.accent.600)]",
             },
             gray: {
                 item: "data-[state=checked]:[--checkbox-border-color:theme(colors.gray.600)]",
