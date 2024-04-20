@@ -225,7 +225,7 @@ export type RootProps = {
     variant?: keyof typeof progress.variants.variant;
 };
 
-export type IndicatorVariants = {
+export type IndicatorProps = {
     intent?: keyof typeof progress.variants.intent;
     indeterminate?: keyof typeof progress.variants.indeterminate;
     complete?: keyof typeof progress.variants.complete;
