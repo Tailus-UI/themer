@@ -90,3 +90,4 @@ export {
 
 export { aligner, type AlignerProps } from "./components/aligner";
 export { scrollArea } from "./components/scrollArea";
+export { progress, type RootProps as ProgressRootProps } from "./components/progress";
