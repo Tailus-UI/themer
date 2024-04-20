@@ -1,3 +1,5 @@
+// The solid and outlined variants are based on CSS Pro 3D Buttons code (https://csspro.com/css-3d-buttons/)
+
 import { tv } from "tailwind-variants";
 
 export type ButtonProps = {
