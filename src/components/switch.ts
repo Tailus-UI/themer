@@ -9,6 +9,12 @@ export const switchTheme = tv({
             primary: {
                 root: "data-[state=checked]:before:bg-primary-600",
             },
+            secondary: {
+                root: "data-[state=checked]:before:bg-secondary-600",
+            },
+            accent: {
+                root: "data-[state=checked]:before:bg-accent-600",
+            },
             gray: {
                 root: "data-[state=checked]:before:bg-gray-600 dark:before:data-[state=checked]:bg-gray-400",
                 thumb: "dark:data-[state=checked]:bg-gray-950",
@@ -33,6 +39,12 @@ export const fancySwitch = tv({
         intent: {
             primary: {
                 root: "data-[state=checked]:[--switch-border-color:theme(colors.primary.600)]",
+            },
+            secondary: {
+                root: "data-[state=checked]:[--switch-border-color:theme(colors.secondary.600)]",
+            },
+            accent: {
+                root: "data-[state=checked]:[--switch-border-color:theme(colors.accent.600)]",
             },
             gray: {
                 root: "data-[state=checked]:[--switch-border-color:theme(colors.gray.600)]",
