@@ -89,3 +89,4 @@ export {
 } from "./components/form";
 
 export { aligner, type AlignerProps } from "./components/aligner";
+export { scrollArea } from "./components/scrollArea";
