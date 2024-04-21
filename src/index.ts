@@ -103,5 +103,6 @@ export {
 export {
     tooltip as vTooltip,
     cartesianGrid,
+    axis,
     type TooltipProps as VTooltipProps,
 } from "./components/visualizations";
