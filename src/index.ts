@@ -106,3 +106,5 @@ export {
     axis,
     type TooltipProps as VTooltipProps,
 } from "./components/visualizations";
+
+export { area, gradientStop, type AreaProps } from "./components/visualizations";

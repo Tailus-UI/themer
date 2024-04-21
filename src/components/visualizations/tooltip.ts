@@ -10,7 +10,7 @@ export const tooltip = tv({
         entryValue: "text-sm text-[--caption-text-color]",
         entryNameContainer: "flex gap-3 items-center",
         entryName: "text-sm text-[--body-text-color]",
-        entryIndicator: "size-2 rounded-full ring-2 ring-[--entry-indicator-color]",
+        entryIndicator: "size-1.5 rounded-full ring-[1.5px] ring-[--entry-indicator-color]",
     },
     variants: {
         mixed: {
