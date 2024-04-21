@@ -91,3 +91,11 @@ export {
 export { aligner, type AlignerProps } from "./components/aligner";
 export { scrollArea } from "./components/scrollArea";
 export { progress, type RootProps, type IndicatorProps } from "./components/progress";
+export {
+    select,
+    soft as selectSoft,
+    solid as selectSolid,
+    trigger,
+    type SelectProps,
+    type TriggerProps,
+} from "./components/select";
