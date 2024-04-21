@@ -99,3 +99,8 @@ export {
     type SelectProps,
     type TriggerProps,
 } from "./components/select";
+
+export {
+    tooltip as vTooltip,
+    type TooltipProps as VTooltipProps,
+} from "./components/visualizations";
