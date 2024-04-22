@@ -109,3 +109,4 @@ export {
 
 export { area, gradientStop, type AreaProps } from "./components/visualizations";
 export { toast, type ToastProps } from "./components/toast";
+export { drawer, type DrawerProps } from "./components/drawer";
