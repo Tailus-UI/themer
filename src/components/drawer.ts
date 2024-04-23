@@ -33,7 +33,7 @@ export const drawer = tv({
         withControler: {
             true: {
                 content:
-                    "pt-[calc(var(--feedback-padding)*2)] before:inset-x-0 before:h-1.5 before:w-14 before:mx-auto before:absolute before:top-[calc(var(--feedback-padding)/2)] before:bg-[--ui-border-color] before:rounded-full",
+                    "before:inset-x-0 before:h-1.5 before:w-14 before:mx-auto before:absolute before:bg-[--ui-border-color] before:rounded-full",
             },
         },
     },
@@ -42,7 +42,16 @@ export const drawer = tv({
             direction: "bottom",
             withControler: true,
             class: {
-                content: "",
+                content:
+                    "pt-[calc(var(--feedback-padding)*2)] before:top-[calc(var(--feedback-padding)/2)]",
+            },
+        },
+        {
+            direction: "top",
+            withControler: true,
+            class: {
+                content:
+                    "pb-[calc(var(--feedback-padding)*2)] before:bottom-[calc(var(--feedback-padding)/2)]",
             },
         },
     ],
