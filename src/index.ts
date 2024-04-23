@@ -115,3 +115,5 @@ export {
     type ListProps as TabsListProps,
     type IndicatorProps as TabsIndicatorProps,
 } from "./components/tabs";
+
+export { toggle, type ToggleRootProps, type ToggleIconProps } from "./components/toggle";
