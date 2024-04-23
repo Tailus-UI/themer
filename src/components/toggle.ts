@@ -2,6 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const toggle = tv({
     slots: {
+        group: "flex gap-px",
         root: "group flex justify-center text-[--body-text-color] items-center rounded-[--btn-radius] outline-2 outline-offset-2 focus-visible:outline outline-primary-600 disabled:bg-gray-200 disabled:text-gray-400 disabled:shadow-none disabled:hover:brightness-100 dark:disabled:bg-gray-500/10 dark:disabled:[background-image:none] dark:disabled:text-gray-700 dark:disabled:shadow-none dark:disabled:border-none",
         icon: "flex-shrink-0",
     },
@@ -14,18 +15,22 @@ export const toggle = tv({
             sm: {
                 root: "w-8 h-8",
                 icon: "size-4",
+                group: "gap-0.5",
             },
             md: {
                 root: "h-9 w-9",
                 icon: "size-[1.125rem]",
+                group: "gap-1",
             },
             lg: {
                 root: "w-10 h-10",
                 icon: "size-5",
+                group: "gap-1.5",
             },
             xl: {
                 root: "h-12 w-12",
                 icon: "size-6",
+                group: "gap-2",
             },
         },
         withLabel: {
