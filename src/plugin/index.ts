@@ -3,12 +3,8 @@ import getShadows from "./shadow";
 import type { Config } from "./types";
 import defaultConfig, { preconfigs as defaultPreconfigs } from "./default.config";
 import setPreconfigs from "./preconfigs";
-import { palettes } from "../config/preconfigs";
-import * as themerGrays from "../lib/colors/additionalGrays";
-import { getIntentValue } from "../lib/colors/getIntent";
 import { palettePlugin } from "./palette";
-
-let appearance: Config["appearance"] = "both";
+import { animationsPlugin } from "./animations";
 
 /**
  * ### Tailus Themer plugin 🪄.
@@ -243,9 +239,9 @@ const themer = plugin.withOptions(
         };
     },
 
-    (options) => {
+    () => {
         return {
-            plugins: [palettePlugin],
+            plugins: [palettePlugin, animationsPlugin],
         };
     },
 );
