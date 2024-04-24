@@ -6,18 +6,6 @@ export const components = plugin(({ addBase, theme, addComponents, matchUtilitie
         ":root": {
             color: "var(--body-text-color)",
             "--overlay-backdrop-blur": theme("blur[none]"),
-            "--card-radius": theme("borderRadius.xl"),
-            "--accordion-radius": "var(--card-radius)",
-            "--feedback-radius": "var(--card-radius)",
-            "--annonce-radius": theme("borderRadius.full"),
-            "--btn-radius": theme("borderRadius[lg]"),
-            "--badge-radius": "var(--btn-radius)",
-            "--menu-radius": "var(--feedback-radius)",
-            "--calendar-radius": "var(--btn-radius)",
-            "--tabs-radius": "var(--btn-radius)",
-            "--avatar-radius": theme("borderRadius[full]"),
-            "--input-radius": "var(--btn-radius)",
-
             "--card-padding": theme("spacing[6]"),
             "--accordion-padding": "1rem",
             "--feedback-padding": "var(--card-padding)",

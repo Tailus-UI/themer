@@ -3,6 +3,7 @@ export { palette } from "./plugin/palette";
 export { animations } from "./plugin/animations";
 export { components } from "./plugin/components";
 export { background } from "./plugin/background";
+export { rounded } from "./plugin/rounded";
 
 export {
     button,
