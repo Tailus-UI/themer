@@ -3,7 +3,7 @@ import { tv } from "tailwind-variants";
 export const form = tv({
     slots: {
         label: "text-nowrap text-[--title-text-color]",
-        input: "w-full px-[--input-px] bg-transparent peer transition-[outline] placeholder-[--placeholder-text-color] text-[--title-text-color] rounded-[--input-radius]",
+        input: "bg-transparent w-full px-[--input-px] bg-transparent peer transition-[outline] placeholder-[--placeholder-text-color] text-[--title-text-color] rounded-[--input-radius]",
         message: "mt-2 text-[--caption-text-color]",
         icon: "absolute inset-y-0 my-auto text-[--placeholder-text-color] pointer-events-none",
         field: "relative group has-[:disabled]:opacity-50 data-[invalid]:[--caption-text-color:theme(colors.danger.600)] dark:data-[invalid]:[--caption-text-color:theme(colors.danger.400)] data-[valid]:[--caption-text-color:theme(colors.success.600)] dark:data-[valid]:[--caption-text-color:theme(colors.success.400)]",
@@ -18,7 +18,7 @@ export const form = tv({
                 input: "outline-none bg-[--input-bg] focus:brightness-95 dark:focus:brightness-105 data-[invalid]:[--input-bg:theme(colors.danger.100)] dark:data-[invalid]:[--input-bg:theme(colors.danger.800/0.25)] data-[valid]:[--input-bg:theme(colors.success.100)] dark:data-[valid]:[--input-bg:theme(colors.success.800/0.25)]",
             },
             mixed: {
-                input: "shadow-sm shadow-gray-950/5 outline-2 focus:outline-primary-600 focus:outline -outline-offset-1 border dark:bg-[--input-bg] dark:shadow-gray-950/35 data-[invalid]:border-danger-600 focus:data-[invalid]:outline-danger-600 dark:data-[invalid]:border-danger-500 dark:focus:data-[invalid]:outline-danger-500 data-[valid]:border-success-600 focus:data-[valid]:outline-success-600 dark:data-[valid]:border-success-500 dark:focus:data-[valid]:outline-success-500",
+                input: "shadow-sm shadow-gray-950/5 outline-2 focus:outline-primary-600 focus:outline -outline-offset-1 border dark:bg-[--ui-soft-bg] dark:shadow-gray-950/35 data-[invalid]:border-danger-600 focus:data-[invalid]:outline-danger-600 dark:data-[invalid]:border-danger-500 dark:focus:data-[invalid]:outline-danger-500 data-[valid]:border-success-600 focus:data-[valid]:outline-success-600 dark:data-[valid]:border-success-500 dark:focus:data-[valid]:outline-success-500",
             },
             plain: {
                 input: "rounded-none px-0 outline-none bg-transparent invalid:text-danger-600 dark:invalid:text-danger-400",

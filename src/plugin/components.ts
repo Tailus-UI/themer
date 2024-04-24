@@ -4,7 +4,6 @@ import getShadows from "./shadow";
 export const components = plugin(({ addBase, theme, addComponents, matchUtilities }) => {
     addBase({
         ":root": {
-            color: "var(--body-text-color)",
             "--overlay-backdrop-blur": theme("blur[none]"),
             "--card-padding": theme("spacing[6]"),
             "--accordion-padding": "1rem",
