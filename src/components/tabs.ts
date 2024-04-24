@@ -7,7 +7,7 @@ export const tabs = tv({
     slots: {
         list: "relative flex items-center p-[--tabs-list-padding] rounded-[--tabs-radius]",
         trigger:
-            "relative text-[--body-text-color] h-full flex-1 flex items-center justify-center leading-none select-none rounded-[calc(var(--tabs-border-radius)-0.25rem)] cursor-pointer data-[disabled]:opacity-50",
+            "relative text-[--body-text-color] h-full flex-1 flex items-center justify-center leading-none select-none rounded-[calc(var(--tabs-radius)-0.25rem)] cursor-pointer data-[disabled]:opacity-50",
         indicator: "absolute block transition-[width,left] duration-200 ease-in-out",
     },
     variants: {
@@ -16,13 +16,13 @@ export const tabs = tv({
                 list: "bg-[--ui-soft-bg]",
             },
             outlined: {
-                list: "border",
+                list: "bg-[--ui-bg] border dark:bg-[--ui-soft-bg]",
             },
             mixed: {
                 list: "border bg-[--ui-soft-bg]",
             },
             plain: {
-                list: "[--tabs-list-padding:theme(spacing[0])]",
+                list: "[--tabs-list-padding:0]",
             },
             bottomOutlined: {
                 list: "border-b rounded-none px-0 pt-0 pb-[--tabs-list-padding]",
