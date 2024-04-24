@@ -1001,6 +1001,7 @@ export const palette = plugin(
                 white: colors.white,
                 black: colors.black,
                 current: colors.current,
+                transparent: colors.transparent,
             }),
         },
     },
