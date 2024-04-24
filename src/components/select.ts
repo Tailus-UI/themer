@@ -80,7 +80,7 @@ export const solid = tv({
         fancy: {
             true: {
                 content: "fancy-border",
-                separator: "h-0.5 border-b bg-transparent dark:bg-gray-950",
+                separator: "h-0.5 border-b bg-transparent dark:bg-[--ui-fancy-bg]",
             },
         },
     },

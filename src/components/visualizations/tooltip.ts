@@ -21,8 +21,7 @@ export const tooltip = tv({
         fancy: {
             true: {
                 root: "fancy-border",
-                separator:
-                    "h-0.5 border-b bg-transparent dark:bg-gray-950 dark:border-[--ui-border-color]",
+                separator: "h-0.5 border-b bg-transparent dark:bg-[--ui-fancy-bg]",
             },
         },
     },

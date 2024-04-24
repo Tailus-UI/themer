@@ -93,7 +93,7 @@ export const separator = tv({
     base: "block my-1.5 mx-3 h-px bg-[--ui-border-color]",
     variants: {
         fancy: {
-            true: "h-0.5 border-b bg-transparent dark:bg-gray-950 dark:border-[--ui-border-color]",
+            true: "h-0.5 border-b bg-transparent dark:bg-[--ui-fancy-bg]",
         },
     },
 });

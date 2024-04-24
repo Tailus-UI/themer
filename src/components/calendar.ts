@@ -31,7 +31,7 @@ export const calendar = tv({
         range: {
             true: {
                 months: "flex flex-col sm:flex-row gap-8",
-                month: "relative last:before:hidden before:hidden sm:before:block before:absolute before:-inset-y-[--feedback-padding] before:-right-4 before:w-px before:border-r before:bg-gray-white dark:before:bg-gray-950 dark:before:border-gray-800 before:mx-auto",
+                month: "relative last:before:hidden before:hidden sm:before:block before:absolute before:-inset-y-[--feedback-padding] before:-right-4 before:w-px before:border-r before:bg-white dark:before:bg-[--ui-fancy-bg] before:mx-auto",
                 table: "space-y-0",
                 head_cell: "gap-0",
                 head_row: "gap-0",

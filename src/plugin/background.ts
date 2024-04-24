@@ -9,6 +9,7 @@ const baseShades = {
 
     "@media(prefers-color-scheme:dark)": {
         "--input-bg": "var(--ui-bg)",
+        "--ui-fancy-bg": "rgb(var(--colors-gray-950))",
     },
 };
 
@@ -28,6 +29,7 @@ export const background = plugin(({ addBase, theme, addComponents }) => {
                 "--ui-border-color": "rgb(var(--colors-gray-700))",
                 "--ui-bg": "rgb(var(--colors-gray-800))",
                 "--ui-soft-bg": "rgb(var(--colors-gray-900))",
+                "--ui-fancy-bg": "rgb(var(--colors-gray-925))",
             },
         },
         '[data-background="950"]': {
@@ -55,6 +57,7 @@ export const background = plugin(({ addBase, theme, addComponents }) => {
                 "--ui-border-color": "rgb(var(--colors-gray-50)/0.10)",
                 "--ui-bg": "rgb(var(--colors-gray-700)/var(--ui-bg-opacity))",
                 "--ui-soft-bg": "rgb(var(--colors-gray-800)/0.95)",
+                "--ui-fancy-bg": "rgb(var(--colors-gray-950)/0.75)",
             },
         },
     });
