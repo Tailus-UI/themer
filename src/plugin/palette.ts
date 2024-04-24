@@ -49,6 +49,21 @@ const defaultAssistiveColors = {
     "--colors-info-950": "var(--colors-blue-950)",
 };
 
+export const grayColorVariables = {
+    50: "rgb(var(--colors-gray-50) / <alpha-value>)",
+    100: "rgb(var(--colors-gray-100) / <alpha-value>)",
+    200: "rgb(var(--colors-gray-200) / <alpha-value>)",
+    300: "rgb(var(--colors-gray-300) / <alpha-value>)",
+    400: "rgb(var(--colors-gray-400) / <alpha-value>)",
+    500: "rgb(var(--colors-gray-500) / <alpha-value>)",
+    600: "rgb(var(--colors-gray-600) / <alpha-value>)",
+    700: "rgb(var(--colors-gray-700) / <alpha-value>)",
+    800: "rgb(var(--colors-gray-800) / <alpha-value>)",
+    900: "rgb(var(--colors-gray-900) / <alpha-value>)",
+    925: "rgb(var(--colors-gray-925) / <alpha-value>)",
+    950: "rgb(var(--colors-gray-950) / <alpha-value>)",
+};
+
 export const palette = plugin(
     ({ addBase }) => {
         addBase({
