@@ -7,7 +7,7 @@ export const calendar = tv({
         months: "",
         month: "space-y-6",
         caption: "mb-4 flex justify-center relative items-center",
-        caption_label: "text-sm font-medium",
+        caption_label: "text-sm font-medium text-[--title-text-color]",
         nav: "absolute inset-x-0 gap-6 justify-between flex items-center",
         nav_button: `size-8 rounded-[--calendar-radius] flex justify-center items-center text-gray-800 hover:bg-gray-100 active:bg-gray-200/75 dark:text-gray-300 dark:hover:bg-gray-500/10 dark:active:bg-gray-500/15 disabled:opacity-50 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent ${focusVisible}`,
         nav_button_previous: "absolute left-0",
