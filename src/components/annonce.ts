@@ -1,7 +1,7 @@
 import { tv } from "tailwind-variants";
 
 export const annonceRoot = tv({
-    base: "block group w-fit flex gap-3 items-center rounded-[--annonce-radius]",
+    base: "block text-[--title-text-color] group w-fit flex gap-3 items-center rounded-[--annonce-radius]",
     variants: {
         size: {
             xs: "py-0.5 pl-0.5 pr-3 [&>span]:rounded-[calc(var(--annonce-radius)-2px)]",
