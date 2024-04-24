@@ -4,7 +4,7 @@ export const slider = tv({
     slots: {
         root: "relative group flex items-center select-none touch-none outline-2 outline-primary-600 outline-offset-2 focus-visible:outline data-[disabled]:cursor-not-allowed",
         thumb: "block duration-200 active:scale-110 outline-2 outline-primary-600 outline-offset-2 focus:outline-none focus-visible:outline",
-        track: "relative grow rounded-full bg-gray-200 dark:bg-gray-500/15 data-[disabled]:opacity-50",
+        track: "relative grow rounded-full data-[disabled]:opacity-50",
         range: "absolute rounded-full h-full data-[disabled]:opacity-50 data-[disabled]:bg-gray-200 dark:data-[disabled]:bg-gray-500/10",
     },
     variants: {
@@ -54,6 +54,17 @@ export const slider = tv({
             },
             fancy: {
                 thumb: "rounded bg-white border cursor-ew-resize shadow shadow-gray-950/5 border-gray-300 dark:border-gray-950",
+            },
+        },
+        trackVariant: {
+            soft: {
+                track: "bg-gray-200 dark:bg-gray-500/15",
+            },
+            outlined: {
+                track: "border",
+            },
+            mixed: {
+                track: "bg-gray-200 dark:bg-gray-500/15 border",
             },
         },
     },
@@ -154,6 +165,7 @@ export const slider = tv({
         variant: "solid",
         size: "md",
         intent: "primary",
+        trackVariant: "soft",
     },
 });
 
@@ -161,4 +173,8 @@ export type SliderProps = {
     variant?: keyof typeof slider.variants.variant;
     size?: keyof typeof slider.variants.size;
     intent?: keyof typeof slider.variants.intent;
+};
+
+export type SliderTrackProps = {
+    variant?: keyof typeof slider.variants.trackVariant;
 };

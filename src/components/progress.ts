@@ -4,7 +4,7 @@ export const progress = tv({
     slots: {
         root: "[--ui-soft-bg:theme(colors.gray.200)] rounded-full overflow-hidden",
         indicator:
-            "ease-[cubic-bezier(0.65,0,0.35,1)] size-full transition-transform duration-[660ms]",
+            "ease-[cubic-bezier(0.65,0,0.35,1)] rounded-full size-full transition-transform duration-[660ms]",
     },
     variants: {
         variant: {
@@ -169,7 +169,7 @@ export const progress = tv({
         withStripes: {
             true: {
                 indicator:
-                    "relative overflow-hidden before:absolute before:inset-y-0 before:-inset-x-6 before:[--stripes-color:theme(colors.white/0.15)] before:[background-size:14px_14px] before:[background-image:linear-gradient(-45deg,var(--stripes-color)_25%,transparent_25%,transparent_50%,var(--stripes-color)_50%,var(--stripes-color)_75%,_transparent_75%,transparent)] before:animate-stripesSlide data-[state=complete]:before:animate-none",
+                    "relative overflow-hidden before:absolute before:inset-y-0 before:-inset-x-6 before:[--stripes-color:theme(colors.white/0.15)] before:[background-size:14px_14px] before:[background-image:linear-gradient(-45deg,var(--stripes-color)_25%,transparent_25%,transparent_50%,var(--stripes-color)_50%,var(--stripes-color)_75%,_transparent_75%,transparent)] before:animate-stripesSlide data-[state=complete]:before:hidden",
             },
         },
         withHighlight: {
