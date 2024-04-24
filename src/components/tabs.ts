@@ -235,7 +235,7 @@ export const tabs = tv({
             intent: "gray",
             class: {
                 trigger:
-                    "text-gray-800 dark:text-gray-300 bg-gray-100 dark:bg-gray-950/15 data-[state=active]:bg-gray-600 data-[state=active]:text-white",
+                    "text-gray-800 dark:text-gray-300 bg-gray-100 dark:bg-gray-500/15 data-[state=active]:bg-gray-600 data-[state=active]:text-white",
             },
         },
         {
@@ -243,7 +243,7 @@ export const tabs = tv({
             intent: "neutral",
             class: {
                 trigger:
-                    "text-gray-800 dark:text-gray-300 bg-gray-100 dark:bg-gray-950/15 data-[state=active]:bg-gray-600 data-[state=active]:text-white",
+                    "text-gray-800 dark:text-gray-300 bg-gray-100 dark:bg-gray-500/15 data-[state=active]:bg-gray-950 data-[state=active]:text-white dark:data-[state=active]:bg-white data-[state=active]:text-gray-950",
             },
         },
         {
