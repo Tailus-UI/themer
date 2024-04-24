@@ -6,8 +6,9 @@ const baseShades = {
     "--ui-soft-bg": "rgb(var(--colors-gray-100))",
     "--input-bg": "rgb(var(--colors-gray-200))",
     "--overlay-bg": "rgb(var(--colors-gray-950)/0.5)",
+    "--ui-bg-opacity": "1",
 
-    "@media(prefers-color-scheme:dark)": {
+    "@media(prefers-color-scheme:dark),.dark": {
         "--input-bg": "var(--ui-bg)",
         "--ui-fancy-bg": "rgb(var(--colors-gray-950))",
     },
@@ -17,7 +18,7 @@ export const background = plugin(({ addBase, theme, addComponents }) => {
     addBase({
         '[data-background="900"]': {
             ...baseShades,
-            "@media(prefers-color-scheme:dark)": {
+            "@media(prefers-color-scheme:dark),.dark": {
                 "--ui-border-color": "rgb(var(--colors-gray-800))",
                 "--ui-bg": "rgb(var(--colors-gray-900))",
                 "--ui-soft-bg": "rgb(var(--colors-gray-800))",
@@ -25,7 +26,7 @@ export const background = plugin(({ addBase, theme, addComponents }) => {
         },
         '[data-background="800"]': {
             ...baseShades,
-            "@media(prefers-color-scheme:dark)": {
+            "@media(prefers-color-scheme:dark),.dark": {
                 "--ui-border-color": "rgb(var(--colors-gray-700))",
                 "--ui-bg": "rgb(var(--colors-gray-800))",
                 "--ui-soft-bg": "rgb(var(--colors-gray-900))",
@@ -34,7 +35,7 @@ export const background = plugin(({ addBase, theme, addComponents }) => {
         },
         '[data-background="950"]': {
             ...baseShades,
-            "@media(prefers-color-scheme:dark)": {
+            "@media(prefers-color-scheme:dark),.dark": {
                 "--ui-border-color": "rgb(var(--colors-gray-800))",
                 "--ui-bg": "rgb(var(--colors-gray-950))",
                 "--ui-soft-bg": "rgb(var(--colors-gray-900))",
@@ -42,7 +43,7 @@ export const background = plugin(({ addBase, theme, addComponents }) => {
         },
         '[data-background="925"]': {
             ...baseShades,
-            "@media(prefers-color-scheme:dark)": {
+            "@media(prefers-color-scheme:dark),.dark": {
                 "--ui-border-color": "rgb(var(--colors-gray-800))",
                 "--ui-bg": "rgb(var(--colors-gray-925))",
                 "--ui-soft-bg": "rgb(var(--colors-gray-800))",
@@ -50,11 +51,11 @@ export const background = plugin(({ addBase, theme, addComponents }) => {
         },
         '[data-background="glassy"]': {
             ...baseShades,
-            "--ui-bg-opacity": "0.50",
+            "--ui-bg-opacity": "0.5",
             "--ui-bd-blur": theme("blur[2xl]"),
             "--ui-bg": theme("colors.white/var(--ui-bg-opacity)"),
-            "@media(prefers-color-scheme:dark)": {
-                "--ui-border-color": "rgb(var(--colors-gray-50)/0.10)",
+            "@media(prefers-color-scheme:dark),.dark": {
+                "--ui-border-color": "rgb(var(--colors-gray-50)/0.1)",
                 "--ui-bg": "rgb(var(--colors-gray-700)/var(--ui-bg-opacity))",
                 "--ui-soft-bg": "rgb(var(--colors-gray-800)/0.95)",
                 "--ui-fancy-bg": "rgb(var(--colors-gray-950)/0.75)",
