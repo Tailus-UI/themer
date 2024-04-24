@@ -1,6 +1,6 @@
 import plugin from "tailwindcss/plugin";
 
-export const animationsPlugin = plugin(() => {}, {
+export const animations = plugin(() => {}, {
     theme: {
         extend: {
             keyframes: {

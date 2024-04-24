@@ -1,7 +1,7 @@
 import { tv } from "tailwind-variants";
 export const switchTheme = tv({
     slots: {
-        root: "relative inline-block border-[0.5px] border-[--form-border-color] group rounded-full h-5 w-8 bg-gray-300 dark:bg-white/15 outline-2 outline-primary-600 outline-offset-2 overflow-hidden before:absolute before:inset-0 before:rounded-full before:transition-[transform,background,shadow] before:duration-300 before:-translate-x-3 data-[state=checked]:before:-translate-x-0 focus-visible:outline data-[state=checked]:border-transparent disabled:bg-gray-100 dark:disabled:bg-gray-800 disabled:opacity-50 disabled:shadow-none disabled:data-[state=checked]:before:bg-gray-300 dark:disabled:data-[state=checked]:before:bg-gray-700 disabled:data-[state=checked]:before:shadow-none",
+        root: "relative inline-block border-[0.5px] border group rounded-full h-5 w-8 bg-gray-300 dark:bg-white/15 outline-2 outline-primary-600 outline-offset-2 overflow-hidden before:absolute before:inset-0 before:rounded-full before:transition-[transform,background,shadow] before:duration-300 before:-translate-x-3 data-[state=checked]:before:-translate-x-0 focus-visible:outline data-[state=checked]:border-transparent disabled:bg-gray-100 dark:disabled:bg-gray-800 disabled:opacity-50 disabled:shadow-none disabled:data-[state=checked]:before:bg-gray-300 dark:disabled:data-[state=checked]:before:bg-gray-700 disabled:data-[state=checked]:before:shadow-none",
         thumb: "absolute inset-x-[3px] inset-y-0 my-auto size-3.5 rounded-full bg-white shadow-sm shadow-gray-950/25 transition-[transform,width] ease-in-out duration-300 will-change-transform data-[state=checked]:translate-x-[11px]",
     },
     variants: {

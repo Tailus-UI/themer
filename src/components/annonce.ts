@@ -13,7 +13,7 @@ export const annonceRoot = tv({
             plain: "",
             outlined: "border",
             soft: "bg-[--ui-soft-bg]",
-            mixed: "border bg-white shadow-sm shadow-gray-950/5 dark:shadow-gray-950/25 dark:bg-[--feedback-bg]",
+            mixed: "border bg-white shadow-sm shadow-gray-950/5 dark:shadow-gray-950/25 dark:bg-[--ui-bg]",
         },
     },
 });

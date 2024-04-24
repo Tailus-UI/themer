@@ -1,8 +1,8 @@
-import { themer } from "./plugin";
-export default themer;
-export { themer } from "./plugin";
-export * as preconfigs from "./config/preconfigs";
-export { Types } from "./config/index";
+export { default as themer } from "./plugin";
+export { palette } from "./plugin/palette";
+export { animations } from "./plugin/animations";
+export { components } from "./plugin/components";
+export { background } from "./plugin/background";
 
 export {
     button,

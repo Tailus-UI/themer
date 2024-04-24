@@ -1,73 +1,73 @@
 import plugin from "tailwindcss/plugin";
+import getShadows from "./shadow";
 
-export const componentsPlugin = plugin(({ addBase, addComponents }) => {
+export const components = plugin(({ addBase, theme, addComponents, matchUtilities }) => {
     addBase({
         ":root": {
-            "--ui-border-color": "theme(colors.gray.200)",
-            "--form-border-color": "theme(colors.gray.300)",
-            "--feedback-border-color": "var(--ui-border-color)",
-            "--vtooltip-border-color": ["theme(colors.gray.700)", "var(--ui-border-color)"],
-            "--ui-bg": "theme(colors.white)",
-            "--ui-soft-bg": "theme(colors.gray.100)",
-            "--accordion-bg": "theme(colors.gray.100)",
-            "--input-bg": "theme(colors.gray.200)",
-            "--tabs-bg": "var(--input-bg)",
-            "--feedback-bg": 'theme("colors.white/var(--feedback-bg-opacity)")',
-            "--overlay-bg": 'theme("colors.gray.800/0.5")',
-            "--ui-bd-blur": "theme(blur[2xl])",
-            "--feedback-bg-opacity": "theme(opacity[100])",
-            "--overlay-backdrop-blur": "theme(blur[none])",
-            "--card-radius": "theme(borderRadius.xl)",
+            color: "var(--body-text-color)",
+            "--overlay-backdrop-blur": theme("blur[none]"),
+            "--card-radius": theme("borderRadius.xl"),
             "--accordion-radius": "var(--card-radius)",
             "--feedback-radius": "var(--card-radius)",
-            "--annonce-radius": "2rem",
-            "--btn-radius": "0.5rem",
+            "--annonce-radius": theme("borderRadius.full"),
+            "--btn-radius": theme("borderRadius[lg]"),
             "--badge-radius": "var(--btn-radius)",
-            "--menu-radius": "1rem",
+            "--menu-radius": "var(--feedback-radius)",
             "--calendar-radius": "var(--btn-radius)",
             "--tabs-radius": "var(--btn-radius)",
-            "--avatar-radius": "9999px",
+            "--avatar-radius": theme("borderRadius[full]"),
             "--input-radius": "var(--btn-radius)",
-            "--card-padding": "theme(spacing[6])",
+
+            "--card-padding": theme("spacing[6]"),
             "--accordion-padding": "1rem",
             "--feedback-padding": "var(--card-padding)",
-            "--toast-padding": "theme(spacing[4])",
-            "--caption-text-color": "theme(colors.gray.500)",
-            "--body-text-color": "theme(colors.gray.600)",
-            "--placeholder-text-color": "theme(colors.gray.400)",
-            "--area-primary-stroke": "theme(colors.primary.600)",
-            "--area-secondary-stroke": "theme(colors.secondary.600)",
-            "--area-accent-stroke": "theme(colors.accent.600)",
-            "--area-gray-stroke": "theme(colors.gray.600)",
-            "--area-neutral-stroke": "theme(colors.gray.950)",
+            "--toast-padding": theme("spacing[4]"),
+
+            "--display-text-color": "rgb(var(--colors-gray-950))",
+            "--title-text-color": "rgb(var(--colors-gray-950))",
+            "--caption-text-color": "rgb(var(--colors-gray-500))",
+            "--body-text-color": "rgb(var(--colors-gray-600))",
+            "--placeholder-text-color": "rgb(var(--colors-gray-400))",
+
+            "--area-primary-stroke": "rgb(var(--colors-primary-600))",
+            "--area-secondary-stroke": "rgb(var(--colors-secondary-600))",
+            "--area-accent-stroke": "rgb(var(--colors-accent-600))",
+            "--area-gray-stroke": "rgb(var(--colors-gray-600))",
+            "--area-neutral-stroke": "rgb(var(--colors-gray-950))",
+
+            "--card-shadow-opacity": theme("opacity[5]"),
+            "--feedback-shadow-opacity": theme("opacity[5]"),
+            "--menu-shadow-opacity": theme("opacity[5]"),
+            "--accordion-shadow-opacity": theme("opacity[5]"),
+
+            "@media(prefers-color-scheme:dark)": {
+                "--body-text-color": "rgb(var(--colors-gray-400))",
+                "--area-neutral-stroke": theme("colors.white"),
+                "--title-text-color": theme("colors.white"),
+                "--display-text-color": theme("colors.white"),
+            },
         },
         body: {
             "@apply dark:bg-gray-950": {},
-            color: `var(--body-text-color)`,
         },
     });
     addComponents({
         ".accordion-shadow": {
-            boxShadow: `var(--accordion-shadow)`,
+            boxShadow: getShadows("accordion").md,
         },
         ".card-shadow": {
-            boxShadow: `var(--card-shadow)`,
+            boxShadow: getShadows("card").md,
         },
         ".feedback-shadow": {
-            boxShadow: `var(--feedback-shadow)`,
+            boxShadow: getShadows("feedback").lg,
         },
         ".menu-shadow": {
-            boxShadow: `var(--menu-shadow)`,
-        },
-        ".border, .border-t, .border-b, .border-l, .border-r, .border-y, .border-x": {
-            borderColor: "var(--ui-border-color)",
-        },
-        ".feedback-bg": {
-            "@apply bg-[var(--feedback-bg)] backdrop-blur-[var(--ui-bd-blur)]": {},
-        },
-        ".fancy-border": {
-            "@apply border dark:border-gray-950 !outline !outline-1 -outline-offset-2 !outline-white/5 dark:!outline-white/5":
-                {},
+            boxShadow: getShadows("menu").lg,
         },
     });
-});
+    matchUtilities({
+        perspective: (value) => ({
+            perspective: value,
+        }),
+    });
+}, {});

@@ -8,7 +8,7 @@ export const drawer = tv({
     variants: {
         mixed: {
             true: {
-                content: "border border-[--feedback-border-color]",
+                content: "border",
             },
         },
         fancy: {

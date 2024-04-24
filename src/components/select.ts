@@ -8,19 +8,19 @@ export const trigger = tv({
     variants: {
         variant: {
             outlined: {
-                parent: "outline-2 focus:outline-primary-600 -outline-offset-1 focus:outline border border-[--form-border-color] data-[invalid]:border-danger-600 focus:data-[invalid]:outline-danger-600 dark:data-[invalid]:border-danger-500 dark:focus:data-[invalid]:outline-danger-500 data-[valid]:border-success-600 focus:data-[valid]:outline-success-600 dark:data-[valid]:border-success-500 dark:focus:data-[valid]:outline-success-500",
+                parent: "outline-2 focus:outline-primary-600 -outline-offset-1 focus:outline border data-[invalid]:border-danger-600 focus:data-[invalid]:outline-danger-600 dark:data-[invalid]:border-danger-500 dark:focus:data-[invalid]:outline-danger-500 data-[valid]:border-success-600 focus:data-[valid]:outline-success-600 dark:data-[valid]:border-success-500 dark:focus:data-[valid]:outline-success-500",
             },
             soft: {
                 parent: "outline-none bg-[--input-bg] focus:brightness-95 dark:focus:brightness-105 data-[invalid]:[--input-bg:theme(colors.danger.100)] dark:data-[invalid]:[--input-bg:theme(colors.danger.800/0.25)] data-[valid]:[--input-bg:theme(colors.success.100)] dark:data-[valid]:[--input-bg:theme(colors.success.800/0.25)]",
             },
             mixed: {
-                parent: "shadow-sm shadow-gray-950/5 outline-2 focus:outline-primary-600 focus:outline -outline-offset-1 border border-[--form-border-color] dark:bg-[--input-bg] dark:shadow-gray-950/35 data-[invalid]:border-danger-600 focus:data-[invalid]:outline-danger-600 dark:data-[invalid]:border-danger-500 dark:focus:data-[invalid]:outline-danger-500 data-[valid]:border-success-600 focus:data-[valid]:outline-success-600 dark:data-[valid]:border-success-500 dark:focus:data-[valid]:outline-success-500",
+                parent: "shadow-sm shadow-gray-950/5 outline-2 focus:outline-primary-600 focus:outline -outline-offset-1 border dark:bg-[--input-bg] dark:shadow-gray-950/35 data-[invalid]:border-danger-600 focus:data-[invalid]:outline-danger-600 dark:data-[invalid]:border-danger-500 dark:focus:data-[invalid]:outline-danger-500 data-[valid]:border-success-600 focus:data-[valid]:outline-success-600 dark:data-[valid]:border-success-500 dark:focus:data-[valid]:outline-success-500",
             },
             plain: {
                 parent: "outline-none hover:bg-[--input-bg] bg-transparent invalid:text-danger-600 dark:invalid:text-danger-400 data-[state=open]:bg-[--input-bg]",
             },
             bottomOutlined: {
-                parent: "rounded-none transition-[border] px-0 focus:outline-none border-b border-[--form-border-color] focus:border-b-2 focus:border-primary-600 data-[invalid]:border-danger-400 dark:data-[invalid]:border-danger-600 data-[valid]:border-success-400 dark:data-[valid]:border-success-600",
+                parent: "rounded-none transition-[border] px-0 focus:outline-none border-b focus:border-b-2 focus:border-primary-600 data-[invalid]:border-danger-400 dark:data-[invalid]:border-danger-600 data-[valid]:border-success-400 dark:data-[valid]:border-success-600",
             },
         },
         size: {
@@ -80,8 +80,7 @@ export const solid = tv({
         fancy: {
             true: {
                 content: "fancy-border",
-                separator:
-                    "h-0.5 border-b bg-transparent dark:bg-gray-950 dark:border-[--ui-border-color]",
+                separator: "h-0.5 border-b bg-transparent dark:bg-gray-950",
             },
         },
     },

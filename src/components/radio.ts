@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const radio = tv({
     slots: {
-        item: "border border-[--form-border-color] bg-white shadow-sm group rounded-full peer flex justify-center items-center size-5 outline-2 outline-primary-600 outline-offset-2 hover:brightness-95 focus-visible:outline dark:bg-gray-500/10 data-[state=checked]:border-none disabled:bg-gray-100 dark:disabled:bg-gray-800 disabled:opacity-50 disabled:border-gray-300 dark:disabled:border-gray-700 disabled:shadow-none disabled:data-[state=checked]:bg-gray-300 dark:disabled:data-[state=checked]:bg-gray-700 disabled:data-[state=checked]:shadow-none",
+        item: "border bg-white shadow-sm group rounded-full peer flex justify-center items-center size-5 outline-2 outline-primary-600 outline-offset-2 hover:brightness-95 focus-visible:outline dark:bg-gray-500/10 data-[state=checked]:border-none disabled:bg-gray-100 dark:disabled:bg-gray-800 disabled:opacity-50 disabled:border-gray-300 dark:disabled:border-gray-700 disabled:shadow-none disabled:data-[state=checked]:bg-gray-300 dark:disabled:data-[state=checked]:bg-gray-700 disabled:data-[state=checked]:shadow-none",
         indicator:
             "relative size-full before:shadow before:shadow-gray-950/25 before:absolute before:inset-0 before:m-auto before:transition before:duration-150 before:size-2 before:rounded-full before:bg-white",
     },

@@ -1,24 +1,12 @@
-import plugin from "tailwindcss/plugin";
-import { palettePlugin } from "./palette";
-import { animationsPlugin } from "./animations";
-import { componentsPlugin } from "./components";
+import { palette } from "./palette";
+import { components } from "./components";
+import { withTV } from "tailwind-variants/dist/transformer";
+import { animations } from "./animations";
+import { background } from "./background";
 
-/**
- * ### Tailus Themer plugin 🪄.
- * @returns The plugin.
- */
-export const themer = plugin(
-    () => {
-        return ({ matchUtilities }) => {
-            matchUtilities({
-                perspective: (value) => ({
-                    perspective: value,
-                }),
-            });
-        };
-    },
+/** @type {import('tailwindcss').Config} */
 
-    {
-        plugins: [palettePlugin, animationsPlugin, componentsPlugin],
-    },
-);
+export default withTV({
+    content: [],
+    plugins: [palette, components, animations, background],
+});

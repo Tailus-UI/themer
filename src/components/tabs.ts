@@ -1,7 +1,7 @@
 import { tv } from "tailwind-variants";
 
 const indicatorBase =
-    "bg-white shadow shadow-gray-950/5 inset-y-[--tabs-list-padding] rounded-[calc(var(--tabs-radius)-var(--tabs-list-padding))] dark:bg-[--tabs-bg]";
+    "bg-[-ui-bg] shadow shadow-gray-950/5 inset-y-[--tabs-list-padding] rounded-[calc(var(--tabs-radius)-var(--tabs-list-padding))] dark:bg-[--ui-bg]";
 
 export const tabs = tv({
     slots: {
@@ -57,7 +57,7 @@ export const tabs = tv({
             },
             plain: {
                 trigger:
-                    "hover:bg-[--ui-soft-bg] data-[state=active]:hover:bg-transparent data-[state=active]:text-[--title-text-color]",
+                    "hover:bg-[--ui-soft-bg] data-[state=active]:hover:bg-transparent data-[state=active]:text-[--title-text-color] dark:data-[state=active]:hover:bg-transparent",
             },
         },
         size: {
