@@ -5,61 +5,43 @@ const baseShades = {
     "--ui-bg": 'theme("colors.white/var(--ui-bg-opacity)")',
     "--ui-soft-bg": "rgb(var(--colors-gray-100))",
     "--input-bg": "rgb(var(--colors-gray-200))",
-    "--overlay-bg": "rgb(var(--colors-gray-950)/0.5)",
     "--ui-bg-opacity": "1",
 
-    "@media(prefers-color-scheme:dark),.dark": {
-        "--input-bg": "var(--ui-bg)",
-        "--ui-fancy-bg": "rgb(var(--colors-gray-950))",
-    },
+    "@apply [--overlay-bg:rgb(var(--colors-gray-950)/0.25)] dark:[--overlay-bg:rgb(var(--colors-gray-950)/0.5)] dark:[--input-bg:rgb(var(--ui-bg))] dark:[--ui-bg:rgb(var(--colors-gray-900))] dark:[--ui-fancy-bg:rgb(var(--colors-gray-950))]":
+        {},
 };
 
 export const background = plugin(({ addBase, theme, addComponents }) => {
     addBase({
-        '[data-background="900"]': {
-            ...baseShades,
-            "@media(prefers-color-scheme:dark),.dark": {
-                "--ui-border-color": "rgb(var(--colors-gray-800))",
-                "--ui-bg": "rgb(var(--colors-gray-900))",
-                "--ui-soft-bg": "rgb(var(--colors-gray-800))",
-            },
-        },
         '[data-background="800"]': {
             ...baseShades,
-            "@media(prefers-color-scheme:dark),.dark": {
-                "--ui-border-color": "rgb(var(--colors-gray-700))",
-                "--ui-bg": "rgb(var(--colors-gray-800))",
-                "--ui-soft-bg": "rgb(var(--colors-gray-900))",
-                "--ui-fancy-bg": "rgb(var(--colors-gray-925))",
-            },
+            "@apply dark:[--ui-border-color:rgb(var(--colors-gray-700))] dark:[--ui-bg:rgb(var(--colors-gray-800))] dark:[--ui-soft-bg:rgb(var(--colors-gray-900))] dark:[--ui-fancy-bg:rgb(var(--colors-gray-925))]":
+                {},
         },
-        '[data-background="950"]': {
+
+        '[data-background="900"]': {
             ...baseShades,
-            "@media(prefers-color-scheme:dark),.dark": {
-                "--ui-border-color": "rgb(var(--colors-gray-800))",
-                "--ui-bg": "rgb(var(--colors-gray-950))",
-                "--ui-soft-bg": "rgb(var(--colors-gray-900))",
-            },
+            "@apply dark:[--ui-border-color:rgb(var(--colors-gray-800))] dark:[--ui-bg:rgb(var(--colors-gray-900))] dark:[--ui-soft-bg:rgb(var(--colors-gray-800))]":
+                {},
         },
+
         '[data-background="925"]': {
             ...baseShades,
-            "@media(prefers-color-scheme:dark),.dark": {
-                "--ui-border-color": "rgb(var(--colors-gray-800))",
-                "--ui-bg": "rgb(var(--colors-gray-925))",
-                "--ui-soft-bg": "rgb(var(--colors-gray-800))",
-            },
+            "@apply dark:[--ui-border-color:rgb(var(--colors-gray-800))] dark:[--ui-bg:rgb(var(--colors-gray-925))] dark:[--ui-soft-bg:rgb(var(--colors-gray-800))]":
+                {},
         },
+
         '[data-background="glassy"]': {
             ...baseShades,
-            "--ui-bg-opacity": "0.5",
             "--ui-bd-blur": theme("blur[2xl]"),
-            "--ui-bg": theme("colors.white/var(--ui-bg-opacity)"),
-            "@media(prefers-color-scheme:dark),.dark": {
-                "--ui-border-color": "rgb(var(--colors-gray-50)/0.1)",
-                "--ui-bg": "rgb(var(--colors-gray-700)/var(--ui-bg-opacity))",
-                "--ui-soft-bg": "rgb(var(--colors-gray-800)/0.95)",
-                "--ui-fancy-bg": "rgb(var(--colors-gray-950)/0.75)",
-            },
+            "@apply [--ui-bg-opacity:0.75] [--ui-bg:theme(colors.white/var(--ui-bg-opacity))] dark:[--ui-bg-opacity:0.5] dark:[--ui-border-color:rgb(var(--colors-gray-50)/0.1)] dark:[--ui-bg:rgb(var(--colors-gray-700)/var(--ui-bg-opacity))] dark:[--ui-soft-bg:rgb(var(--colors-gray-800)/0.95)] dark:[--ui-fancy-bg:rgb(var(--colors-gray-950)/0.75)]":
+                {},
+        },
+
+        '[data-background="950"]': {
+            ...baseShades,
+            "@apply dark:[--ui-border-color:rgb(var(--colors-gray-800))] dark:[--ui-bg:rgb(var(--colors-gray-950))] dark:[--ui-soft-bg:rgb(var(--colors-gray-900))]":
+                {},
         },
     });
     addComponents({
@@ -71,7 +53,7 @@ export const background = plugin(({ addBase, theme, addComponents }) => {
             "@apply backdrop-blur-[var(--ui-bd-blur)]": {},
         },
         ".fancy-border": {
-            "@apply border dark:border-gray-950 !outline !outline-1 -outline-offset-2 !outline-white/5 dark:!outline-white/5":
+            "@apply border dark:border-gray-950 !outline outline-1 -outline-offset-2 !outline-white/5 dark:!outline-white/10":
                 {},
         },
     });

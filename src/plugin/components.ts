@@ -28,12 +28,8 @@ export const components = plugin(({ addBase, theme, addComponents, matchUtilitie
             "--menu-shadow-opacity": theme("opacity[5]"),
             "--accordion-shadow-opacity": theme("opacity[5]"),
 
-            "@media(prefers-color-scheme:dark),.dark": {
-                "--body-text-color": "rgb(var(--colors-gray-400))",
-                "--area-neutral-stroke": theme("colors.white"),
-                "--title-text-color": theme("colors.white"),
-                "--display-text-color": theme("colors.white"),
-            },
+            "@apply dark:[--body-text-color:rgb(var(--colors-gray-400))] dark:[--area-neutral-stroke:theme('colors.white')] dark:[--title-text-color:theme('colors.white')] dark:[--display-text-color:theme('colors.white')]":
+                {},
         },
         body: {
             "@apply dark:bg-gray-950": {},
