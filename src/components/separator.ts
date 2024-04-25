@@ -1,14 +1,23 @@
 import { tv } from "tailwind-variants";
 
 export const separator = tv({
+    base: "bg-[--ui-border-color]",
     variants: {
-        variant: {
-            fancy: "data-[orientation=vertical]:w-0.5 data-[orientation=vertical]:h-full data-[orientation=vertical]:border-l data-[orientation=horizontal]:w-full data-[orientation=horizontal]:h-0.5 data-[orientation=horizontal]:border-b data-[orientation=horizontal]:bg-transparent bg-[--ui-border-color] data-[orientation=vertical]:border-white dark:data-[orientation=horizontal]:bg-[--ui-fancy-bg] dark:data-[orientation=horizontal]:border-[--ui-dark-border-color] dark:data-[orientation=vertical]:bg-[--ui-dark-border-color] dark:data-[orientation=vertical]:border-[--ui-fancy-bg]",
-            simple: "data-[orientation=vertical]:w-px data-[orientation=vertical]:h-full data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full bg-[--ui-border-color]",
+        fancy: {
+            true: "bg-white dark:bg-[--ui-fancy-bg] dark:border-[--ui-fancy-border-color]",
         },
+        orientation: {
+            vertical: "border-l w-0.5 h-full",
+            horizontal: "border-b h-0.5 w-full",
+        },
+    },
+    defaultVariants: {
+        fancy: false,
+        orientation: "horizontal",
     },
 });
 
 export type SeparatorProps = {
-    variant?: keyof typeof separator.variants.variant;
+    fancy?: boolean;
+    orientation?: keyof typeof separator.variants.orientation;
 };

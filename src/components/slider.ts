@@ -66,6 +66,9 @@ export const slider = tv({
             mixed: {
                 track: "bg-gray-200 dark:bg-gray-500/15 border",
             },
+            fancy: {
+                track: "bg-gray-200 dark:bg-gray-500/15 border shadow-inner shadow-gray-950/5 dark:shadow-gray-950/35",
+            },
         },
     },
     compoundVariants: [
