@@ -15,7 +15,7 @@ export const form = tv({
                 input: "outline-2 focus:outline-primary-600 -outline-offset-1 focus:outline border data-[invalid]:border-danger-600 focus:data-[invalid]:outline-danger-600 dark:data-[invalid]:border-danger-500 dark:focus:data-[invalid]:outline-danger-500 data-[valid]:border-success-600 focus:data-[valid]:outline-success-600 dark:data-[valid]:border-success-500 dark:focus:data-[valid]:outline-success-500",
             },
             soft: {
-                input: "outline-none bg-[--input-bg] focus:brightness-95 dark:focus:brightness-105 data-[invalid]:[--input-bg:theme(colors.danger.100)] dark:data-[invalid]:[--input-bg:theme(colors.danger.800/0.25)] data-[valid]:[--input-bg:theme(colors.success.100)] dark:data-[valid]:[--input-bg:theme(colors.success.800/0.25)]",
+                input: "outline-none bg-[--input-bg] focus:brightness-95 dark:focus:brightness-105 data-[invalid]:[--input-bg:theme(colors.danger.100)] dark:bg-[--ui-soft-bg] dark:data-[invalid]:[--input-bg:theme(colors.danger.800/0.25)] data-[valid]:[--input-bg:theme(colors.success.100)] dark:data-[valid]:[--input-bg:theme(colors.success.800/0.25)]",
             },
             mixed: {
                 input: "shadow-sm shadow-gray-950/5 outline-2 focus:outline-primary-600 focus:outline -outline-offset-1 border dark:bg-[--ui-soft-bg] dark:shadow-gray-950/35 data-[invalid]:border-danger-600 focus:data-[invalid]:outline-danger-600 dark:data-[invalid]:border-danger-500 dark:focus:data-[invalid]:outline-danger-500 data-[valid]:border-success-600 focus:data-[valid]:outline-success-600 dark:data-[valid]:border-success-500 dark:focus:data-[valid]:outline-success-500",
