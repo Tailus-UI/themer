@@ -2,7 +2,7 @@ export { default as themer } from "./plugin";
 export { palette, grayColorVariables } from "./plugin/palette";
 export { animations } from "./plugin/animations";
 export { components } from "./plugin/components";
-export { background } from "./plugin/background";
+export { shade } from "./plugin/shade";
 export { rounded } from "./plugin/rounded";
 
 export {
