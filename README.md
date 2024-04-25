@@ -79,7 +79,7 @@ The available palettes are:
 
 #### Multi-Theming
 
-The `palette` plugin comes with a variety of palettes built with the tailwindcss default colors. You can effortlessly switch between these palettes or even allow your users to select the theme they prefer.
+The `palette` plugin comes with a variety of palettes built with the tailwindcss default colors. You can effortlessly switch between these palettes or even allow your users to select the palette they prefer.
 
 [Learn more about muilti-theming]()
 
