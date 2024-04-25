@@ -8,12 +8,12 @@ Imagine Tailus Themer as a secret style vault for our UI Kits. It uses Tailwind 
 
 ## Features
 
--   Built-in Palettes
--   Multi-Theming
--   Effortless Customization
--   Expanded Component Variants
--   Accessibility First
--   Modern & Trendy
+-   🎨 Built-in Palettes
+-   🎨 Multi-Theming
+-   🛠️ Effortless Customization
+-   🚀 Expanded Component Variants
+-   ♿ Accessibility First
+-   🌟 Modern & Trendy
 
 ## Quick Start
 
