@@ -7,10 +7,22 @@ export const separator = tv({
             true: "bg-white dark:bg-[--ui-fancy-bg] dark:border-[--ui-fancy-border-color]",
         },
         orientation: {
-            vertical: "border-l w-0.5 h-full",
-            horizontal: "border-b h-0.5 w-full",
+            vertical: "w-px h-full",
+            horizontal: "h-px w-full",
         },
     },
+    compoundVariants: [
+        {
+            fancy: true,
+            orientation: "vertical",
+            class: "border-r w-0.5",
+        },
+        {
+            fancy: true,
+            orientation: "horizontal",
+            class: "border-b h-0.5",
+        },
+    ],
     defaultVariants: {
         fancy: false,
         orientation: "horizontal",

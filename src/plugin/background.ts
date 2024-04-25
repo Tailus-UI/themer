@@ -28,7 +28,7 @@ export const background = plugin(
 
             '[data-background="925"]': {
                 ...baseShades,
-                "@apply dark:[--ui-border-color:rgb(var(--colors-gray-800))] dark:[--ui-bg:rgb(var(--colors-gray-925))] dark:[--ui-soft-bg:rgb(var(--colors-gray-800))] dark:[--ui-fancy-border-color:rgb(var(--colors-gray-900))]":
+                "@apply dark:[--ui-border-color:rgb(var(--colors-gray-800))] dark:[--ui-bg:rgb(var(--colors-gray-925))] dark:[--ui-soft-bg:rgb(var(--colors-gray-800))] dark:[--ui-fancy-border-color:rgb(var(--colors-gray-800)/0.75)]":
                     {},
             },
 
@@ -41,7 +41,7 @@ export const background = plugin(
 
             '[data-background="950"]': {
                 ...baseShades,
-                "@apply dark:[--ui-border-color:rgb(var(--colors-gray-800))] dark:[--ui-bg:rgb(var(--colors-gray-950))] dark:[--ui-soft-bg:rgb(var(--colors-gray-900))]":
+                "@apply dark:[--ui-border-color:rgb(var(--colors-gray-800))] dark:[--ui-bg:rgb(var(--colors-gray-950))] dark:[--ui-soft-bg:rgb(var(--colors-gray-800))] dark:[--ui-fancy-border-color:rgb(var(--colors-gray-500)/0.15)]":
                     {},
             },
         });

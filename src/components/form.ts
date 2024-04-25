@@ -54,6 +54,9 @@ export const form = tv({
                 field: "[--input-px:theme(spacing[5])]",
             },
         },
+        fancy: {
+            input: "shadow-inner shadow-gray-950/5 dark:shadow-gray-950/50",
+        },
         floating: {
             true: {
                 label: "absolute block inset-y-0 text-base left-[--input-px] h-fit text-nowrap my-auto text-[--caption-text-color] pointer-events-none transition duration-150 scale-[.8] origin-top-left peer-placeholder-shown:scale-100 peer-focus:scale-[.8] peer-placeholder-shown:translate-y-0",
@@ -125,7 +128,7 @@ export const form = tv({
             size: ["sm", "md", "lg"],
             variant: ["outlined", "mixed"],
             class: {
-                label: "peer-placeholder-shown:before:scale-x-0 peer-focus:before:scale-x-100 before:scale-x-100 before:absolute peer-placeholder-shown:before:transition-none before:transition-none peer-focus:before:transition peer-focus:before:delay-[.01s] before:duration-500 before:-z-[1] peer-placeholder-shown:before:-top-[9px] before:top-[48%] peer-focus:before:top-[44%] before:-inset-x-1 before:h-0.5 before:my-auto group-has-[:focus]:before:h-[3px] before:bg-[--ui-bg]",
+                label: "peer-placeholder-shown:before:scale-x-0 peer-focus:before:scale-x-100 before:scale-x-100 before:absolute peer-placeholder-shown:before:transition-none before:transition-none peer-focus:before:transition peer-focus:before:delay-[.01s] before:duration-500 before:-z-[1] peer-placeholder-shown:before:-top-[9px] before:top-[48%] peer-focus:before:top-[44%] before:-inset-x-1 before:h-0.5 before:my-auto group-has-[:focus]:before:h-[3px] before:bg-white dark:before:bg-[--ui-bg]",
             },
         },
         {
@@ -198,6 +201,7 @@ export type FormProps = {
 
 export type InputProps = Omit<FormProps, "asTextarea"> & {
     size?: Exclude<FormProps["size"], "xs">;
+    fancy?: boolean;
 };
 export type LabelProps = FormProps & {
     size?: Exclude<FormProps["size"], "xs">;
