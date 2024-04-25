@@ -8,16 +8,12 @@ Imagine Tailus Themer as a secret style vault for our UI Kits. It uses Tailwind 
 
 ## Features
 
--   **Built-in Palettes:** Hit the ground running with a collection of pre-designed color schemes to jumpstart your project.
-
--   **Multi-Themed Apps:** Effortlessly create web applications with multiple themes, offering users a personalized experience.
-
--   **Effortless Customization:** Tailor the look and feel to your exact needs. Choose between the intuitive Themer plugins or leverage the power of CSS variables.
-
--   **Expanded Component Variants:** Enjoy a wider range of component variations for even greater design flexibility.
-
--   **Accessibility First:** Build UIs that are inclusive and user-friendly for everyone.
--   **Modern & Trendy:** Stay ahead of the curve with Tailus Themer's focus on modern design trends.
+-   Built-in Palettes
+-   Multi-Theming
+-   Effortless Customization
+-   Expanded Component Variants
+-   Accessibility First
+-   Modern & Trendy
 
 ## Quick Start
 
