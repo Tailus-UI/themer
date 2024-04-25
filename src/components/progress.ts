@@ -17,6 +17,9 @@ export const progress = tv({
             mixed: {
                 root: "bg-[--ui-soft-bg] dark:bg-gray-500/15 border",
             },
+            fancy: {
+                root: "bg-[--ui-soft-bg] bg-gray-200 dark:bg-gray-500/15 border shadow-inner shadow-gray-950/5 dark:shadow-gray-950/50",
+            },
         },
         intent: {
             primary: {

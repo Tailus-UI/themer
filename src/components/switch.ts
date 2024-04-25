@@ -33,7 +33,7 @@ export const switchTheme = tv({
 export const fancySwitch = tv({
     extend: switchTheme,
     slots: {
-        root: "before:inset-px before:transition-transform data-[state=checked]:[--radial-opacity:0.3] before:[box-shadow:rgba(255,255,255,0.1)_0px_1px_0px_0px_inset,var(--switch-border-color)_0px_0px_0px_1px] before:[background-image:radial-gradient(76%_151%_at_52%_-52%,rgba(255,255,255,var(--radial-opacity))_0%,transparent_100%)] disabled:before:[background-image:none]",
+        root: "shadow-inner shadow-gray-950/5 dark:shadow-gray-950/50 before:inset-px before:transition-transform data-[state=checked]:[--radial-opacity:0.3] before:[box-shadow:rgba(255,255,255,0.1)_0px_1px_0px_0px_inset,var(--switch-border-color)_0px_0px_0px_1px] before:[background-image:radial-gradient(76%_151%_at_52%_-52%,rgba(255,255,255,var(--radial-opacity))_0%,transparent_100%)] disabled:before:[background-image:none]",
     },
     variants: {
         intent: {

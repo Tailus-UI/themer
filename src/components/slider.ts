@@ -2,9 +2,9 @@ import { tv } from "tailwind-variants";
 
 export const slider = tv({
     slots: {
-        root: "relative group flex items-center select-none touch-none outline-2 outline-primary-600 outline-offset-2 focus-visible:outline data-[disabled]:cursor-not-allowed",
+        root: "[--ui-soft-bg:theme(colors.gray.200)] relative group flex items-center select-none touch-none outline-2 outline-primary-600 outline-offset-2 focus-visible:outline data-[disabled]:cursor-not-allowed",
         thumb: "block duration-200 active:scale-110 outline-2 outline-primary-600 outline-offset-2 focus:outline-none focus-visible:outline",
-        track: "relative grow rounded-full data-[disabled]:opacity-50",
+        track: "relative grow rounded-full bg-[--ui-soft-bg] data-[disabled]:opacity-50",
         range: "absolute rounded-full h-full data-[disabled]:opacity-50 data-[disabled]:bg-gray-200 dark:data-[disabled]:bg-gray-500/10",
     },
     variants: {
@@ -58,16 +58,16 @@ export const slider = tv({
         },
         trackVariant: {
             soft: {
-                track: "bg-gray-200 dark:bg-gray-500/15",
+                track: "bg-[--ui-soft-bg] dark:bg-gray-500/15",
             },
             outlined: {
                 track: "border",
             },
             mixed: {
-                track: "bg-gray-200 dark:bg-gray-500/15 border",
+                track: "bg-[--ui-soft-bg] border dark:bg-gray-500/15",
             },
             fancy: {
-                track: "bg-gray-200 dark:bg-gray-500/15 border shadow-inner shadow-gray-950/5 dark:shadow-gray-950/35",
+                track: "bg-[--ui-soft-bg] border dark:bg-gray-500/15 shadow-inner shadow-gray-950/5 dark:shadow-gray-950/50",
             },
         },
     },
