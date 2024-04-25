@@ -1,307 +1,165 @@
-# Tailus Themer: A Modern and Customizable Theming Library
+# Tailus Themer
 
-## Overview
-
-Tailus Themer is a theming library that provides modern and customizable themes for building your own UI Kit regardless of the Web framework you are using. It is built on top of Tailwind CSS and provides a variety of themes that can be easily customized to match your brand and style.
+Tailwind CSS Styling Library for Building Modern, Consistent and Accessible Web UIs with Radix UI, Melt UI, and Radix Vue.
 
 ## Concept
 
-Tailus Themer is based on the concept of component-level theming. This means that each component in your application has its own theme, which can be customized independently of the other components. This makes it easy to create applications with a consistent look and feel, while still allowing you to customize the individual components to meet your specific needs.
+Imagine Tailus Themer as a secret style vault for our UI Kits. It uses Tailwind CSS, making it super easy to customize the look and feel of your components. This means you get a consistent design foundation across all these UI Kits, but with the freedom to tweak things to perfectly match your brand.
 
 ## Features
 
-Tailus Themer offers a number of features and benefits over other theming solutions, including:
+-   **Built-in Palettes:** Hit the ground running with a collection of pre-designed color schemes to jumpstart your project.
 
--   Pre-built themes (coming...).
--   Easy customization of the theme to match your brand and style.
--   Support for component-level theming.
--   A wide variety of components themes variants
--   An online customizer for the global theme and specific component theme.
--   A plugin to help customize consistently all the components and the feel and the look of the website or application you're building.
--   Generate a specific theme with a specific appearance, you can choose to entirely build your UI in light mode, dark mode or both and Only the utilities of your appearance will be generated in the DOM.
--   Support for React, Vue, Svelte, and all modern JS Frameworks.
+-   **Multi-Themed Apps:** Effortlessly create web applications with multiple themes, offering users a personalized experience.
 
-## Use
+-   **Effortless Customization:** Tailor the look and feel to your exact needs. Choose between the intuitive Themer plugins or leverage the power of CSS variables.
 
-Tailus Themer is easy to use and can be used to create UI Kits for applications of all sizes. To get started, simply install the Tailus Themer package, the needed component theme package and import it into your application. You can then customize the theme to match your brand and style using our `themer` plugin or our online customizers.
+-   **Expanded Component Variants:** Enjoy a wider range of component variations for even greater design flexibility.
 
-### Installation
+-   **Accessibility First:** Build UIs that are inclusive and user-friendly for everyone.
+-   **Modern & Trendy:** Stay ahead of the curve with Tailus Themer's focus on modern design trends.
 
-1. Install the Tailus Themer package:
+## Quick Start
+
+1. **Install Tailus Themer:**
 
 ```bash
 npm install @tailus/themer
 ```
 
-2. Add the themer as a tailwindcss plugin:
+2. **Update your tailwindcss config**
 
-```js
-// tailwind.config.js
-import themer from "@tailus/themer";
-export default = {
-    theme: {
-        extend: {
-            // your theme here
-        },
-    },
-    plugins: [
-        themer({
-            // your customizations here
-        })
-    ],
-};
-```
-
-3. Add a path to the `@tailus` components themes:
-
-```js
-// tailwind.config.js
-export default {
-    content: [
-        // ... other paths
-        "./node_modules/@tailus/themer-**/dist/**/*.{js,ts}",
-    ],
-};
-```
-
-4. Install the needed components themes packages:
-
-```bash
-npm install @tailus/themer-form
-npm install @tailus/themer-button
-npm install @tailus/themer-card
-```
-
-5. Import the needed components themes packages into your application:
-
-```tsx
-import { outlinedForm as theme } from "@tailus/themer-form";
-import { button } from "@tailus/themer-button";
-import { card as cardTheme } from "@tailus/themer-card";
-```
-
-6. Add the components themes to the components elements:
-
-```tsx
-// Radix UI
-
-import * as Form from "@radix-ui/react-form";
-import { outlinedForm as theme } from "@tailus/themer-form";
-import { button } from "@tailus/themer-button";
-import { card as cardTheme } from "@tailus/themer-card";
-
-const FormUI = () => (
-    <Form.Root className={cardTheme}>
-        <div className="space-y-4">
-            <Form.Field className={theme.field} name="email">
-                <Form.Label className={theme.label.sm}>Email</Form.Label>
-                <div className="space-y-1">
-                    <Form.Control asChild>
-                        <input className={theme.input.sm} type="email" required />
-                    </Form.Control>
-                    <Form.Message className={theme.message.warning} match="valueMissing">
-                        Please enter your email
-                    </Form.Message>
-                    <Form.Message className={theme.message.danger} match="typeMismatch">
-                        Please provide a valid email
-                    </Form.Message>
-                </div>
-            </Form.Field>
-            <Form.Field className={theme.field} name="question">
-                <Form.Label className={theme.label.sm}>Question</Form.Label>
-                <div>
-                    <Form.Control asChild>
-                        <textarea className={theme.textarea.sm} rows={3} required />
-                    </Form.Control>
-                    <Form.Message className={theme.message.warning} match="valueMissing">
-                        Please enter a question
-                    </Form.Message>
-                </div>
-            </Form.Field>
-            <Form.Submit asChild>
-                <button className={button.primary.md + " w-full"}>
-                    <span>Submit</span>
-                </button>
-            </Form.Submit>
-        </div>
-    </Form.Root>
-);
-
-export default FormUI;
-```
-
-## Customization
-
-Tailus Themer provides a number of ways to customize the theme to match your brand and style. You can customize the theme using the `themer` plugin or the online customizers.
-
-### Using the `themer` plugin
-
-The `themer` plugin allows you to customize the theme using a simple and consistent API. To customize the theme, you can use the following syntax:
-
-1. **Add options to the `themer` plugin**:
-
-The `themer` plugin accepts two group of options:
-
-#### Preconfigs :
-
-You can use the `preconfigs` to add consitent customizations to the components theme.
-
--   `appearance` : Generate a theme according to your preferences, either light mode only, dark mode only or both, regardless of the `darkMode` property in Tailwind CSS.
-
-    **Accepts** : "light" | "dark" | "both",
-
--   `background` : Add consistent background colors to your theme.
-
-    **Accepts** : "light" | "lighter" | "hight" | "higher",
-
--   `padding` : Add consistent padding to your theme.
-
-    **Accepts** : "small" | "medium" | "large" | "larger" | "largest",
-
--   `border` : Add consistent border colors to your theme.
-
-    **Accepts** : "lighter" | "light" | "high" | "higher",
-
--   `radius` : Add consistent border radius to your theme.
-
-    **Accepts** : "boxy" | "sharp" | "smooth" | "smoothest",
-
--   `shadow` : Add consistent shadow to your theme.
-
-    **Accepts** : `{ size: "sm" | "md" | "lg" | "xl" | "xxl", opacity: number }`,
-
-#### Components :
-
-You can use the `components` block to customize the components individually. The following components are supported:
-
--   `accordion`
--   `alert`
--   `annonce`
--   `avatar`
--   `badge`
--   `button`
--   `card`
--   `feedback` : Customizations for feedback components.
--   `field`
--   `flag`
--   `menu` : Customizations for menu components.
--   `popover`
--   `select`
--   `switch`
--   `tabs`
--   `tost`
--   `tooltip`
--   `ui` : Border colors for accordion, annonce, card and separator components.
+    Import the themer preset to set default theme and enable data-attributes customizations
 
 ```javascript
-module.exports = {
-    plugins: [
-        themer({
-            appearance: "light", // light | dark | both
-            background: "lighter", // light | lighter | hight | higher
-            padding: "largest", // small | medium | large | larger | largest
-            border: "light", // lighter | light | high | higher
-            radius: "smoothest", // boxy | sharp | smooth | smoothest
-            shadow: {
-                size: "md",
-                opacity: 5,
-            },
-            components: {
-                // ... components specific options
-            },
-        }),
-    ],
-};
-```
+import type { Config } from 'tailwindcss'
+import { themer, grayColorVariables } from '@tailus/themer'
 
-Once you have added Tailus Themer to your Tailwind CSS configuration file, you can customize all the components with our preconfigs or specific components options.
-
-##### Example
-
-The following example shows how to customize the accordion theme:
-
-```javascript
-module.exports = {
-    plugins: [
-        themer({
-            appearance: "light", // light | dark | both
-            background: "lighter", // light | lighter | hight | higher
-            padding: "largest", // small | medium | large | larger | largest
-            border: "light", // lighter | light | high | higher
-            radius: "smoothest", // boxy | sharp | smooth | smoothest
-            shadow: {
-                size: "md",
-                opacity: 5,
-            },
-            components: {
-                accordion: {
-                    rounded: "xl",
-                    softBg: "100",
-                    ghostBg: "100",
-                    shadow: {
-                        size: "xxl",
-                        opacity: 5,
-                    },
-                    dark: {
-                        softBg: "900",
-                        ghostBg: "900",
-                        elevatedBg: "900",
-                    },
-                },
-            },
-        }),
-    ],
-};
-```
-
-This code will override the `accordion` default theme with the following values:
-
-```javascript
-{
-    rounded: "xl",
-    softBg: "100",
-    ghostBg: "100",
-    shadow: {
-        size: "xxl",
-        opacity: 5,
+module.exports =  {
+  content: [
+    // your other paths
+    "./node_modules/@tailus/themer/dist/**/*.{js,ts}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        gray: grayColorVariables,
+      },
     },
-    dark: {
-        softBg: "900",
-        ghostBg: "900",
-        elevatedBg: "900",
-    },
-}
+  },
+  presets: [
+    themer
+  ]
+} satisfies Config
 ```
 
-To learn more about the available options for each component, please refer to the [components reference](https://tailus.io/docs/reference/).
+Under normal circumstances, it's not necessary to add the `gray` color to your Tailwind CSS configuration. However, because Tailwind CSS generates the `gray` color from the `defaultTheme` object, you must include it in your configuration to prevent any errors.
 
-### Using the online customizers
+## Customize your theme
 
-Tailus Themer provides two online customizers that allow you to customize the theme visually. To use the customizers, simply visit the following links:
+Use `data-attributes` to customize your theme
 
--   [Global Theme Customizer](https://tailus.io/customizer/)
--   Find the specific component customization on its documentation page.
+### Palette
 
-## Contribution
+Use the `data-palette` attribute to change the color palette of your theme.
 
-Tailus Themer is an open source project and we welcome contributions from the community. If you have any ideas or suggestions for how to improve Tailus Themer, please feel free to open an issue or submit a pull request.
+```html
+<html data-palette="trust"></html>
+```
+
+[Learn more about palette customization]()
+
+The available palettes are:
+
+-   `trust`
+-   `romance`
+-   `passion`
+-   `nature`
+-   `energy`
+-   `mystery`
+-   `oz`
+-   `spring`
+-   `winter`
+
+#### Multi-Theming
+
+The `palette` plugin comes with a variety of palettes built with the tailwindcss default colors. You can effortlessly switch between these palettes or even allow your users to select the theme they prefer.
+
+[Learn more about muilti-theming]()
+
+### Shade
+
+You can adjust the background and border colors of your theme using the `data-shade` attribute. This change is more noticeable in dark mode.
+
+```html
+<html data-shade="900"></html>
+```
+
+The available shades are:
+
+-   `800`
+-   `900`
+-   `925`
+-   `950`
+-   `glassy`
+
+[Learn more about the shade plugin]()
+
+### Rounded
+
+You can adjust the border radius of your theme using the `data-rounded` attribute.
+
+```html
+<html data-rounded="xlarge"></html>
+```
+
+The available rounded values are:
+
+-   `none`
+-   `default`
+-   `small`
+-   `medium`
+-   `large`
+-   `xlarge`
+-   `2xlarge`
+-   `3xlarge`
+-   `full`
+
+[Learn more about the rounded plugin]()
+
+### Shadow
+
+You can adjust the shadow of your theme using the `data-shadow` attribute. ( ⚠️ Not yet available)
+
+```html
+<html data-shadow="medium"></html>
+```
+
+The available shadow values are:
+
+[Learn more about the rounded plugin]()
+
+## Contributing
+
+Tailus Themer is an open source project and contributions from the community are always the welcome. If you have any ideas or suggestions for how to improve Tailus Themer, please feel free to open an issue or submit a pull request.
 
 ## Support
 
-If you have any questions or need help with using Tailus Themer, please feel free to reach out to us on Twitter.
+If you have any questions or need help with using Tailus Themer, please feel free to reach out on Twitter.
 
 ## License
 
 Tailus Themer is licensed under the MIT license.
 
+## Author
+
+-   [Méschac Irung](https://twitter.com/meschacirung)
+
 ## Credits
 
-Tailus Themer is built on top of Tailwind CSS and uses the following open source libraries:
-
--   [Tailwind CSS](https://tailwindcss.com/)
--   [TypeScript](https://www.typescriptlang.org/)
--   [PostCSS](https://postcss.org/)
-
-**Additional Information**
-
-We are responsive to user feedback, so if you have any suggestions or requests, you can be sure that they will be considered.
+-   [Tailwind CSS](https://www.tailwindcss.com)
+-   [Radix UI](https://www.radix-ui.com/)
+-   [Tailwind Variants](https://www.tailwind-variants.org/docs/introduction)
+-   [Flowbite Theme](https://flowbite.com/)
+-   Special thanks to [Shekinah Tshiokufila](https://twitter.com/tshiokufila) for the continuous support and feedback.
+-   Special thanks to [Théo Balick](https://twitter.com/theo_balick) whose brainstorming sessions and research fueled the creation of Tailus Themer.
