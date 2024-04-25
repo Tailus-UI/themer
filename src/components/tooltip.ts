@@ -3,7 +3,7 @@ import { tv } from "tailwind-variants";
 export const tooltip = tv({
     slots: {
         content:
-            "rounded-[--btn-radius] shadow shadow-gray-500/5 text-sm py-1.5 px-3 border feedback-bg data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade will-change-[transform,opacity]",
+            "rounded-[--btn-radius] shadow text-[--title-text-color] shadow-gray-500/5 text-sm py-1.5 px-3 border feedback-bg data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade will-change-[transform,opacity]",
         arrow: "fill-[--ui-bg]",
     },
     variants: {
