@@ -24,9 +24,9 @@ export const rounded = plugin(({ addBase, theme }) => {
             "--avatar-radius": theme("borderRadius.none"),
         },
         '[data-rounded="default"]': {
-            "--card-radius": theme("borderRadius.default"),
-            "--btn-radius": theme("borderRadius.default"),
-            "--annonce-radius": theme("borderRadius.default"),
+            "--card-radius": theme("borderRadius.DEFAULT"),
+            "--btn-radius": theme("borderRadius.DEFAULT"),
+            "--annonce-radius": theme("borderRadius.DEFAULT"),
         },
         '[data-rounded="small"]': {
             "--card-radius": theme("borderRadius.sm"),
@@ -34,11 +34,11 @@ export const rounded = plugin(({ addBase, theme }) => {
             "--annonce-radius": theme("borderRadius.sm"),
         },
         '[data-rounded="medium"]': {
-            "--card-radius": theme("borderRadius.lg"),
+            "--card-radius": theme("borderRadius.md"),
             "--btn-radius": theme("borderRadius.md"),
         },
         '[data-rounded="large"]': {
-            "--card-radius": theme("borderRadius.xl"),
+            "--card-radius": theme("borderRadius.lg"),
             "--btn-radius": theme("borderRadius.lg"),
         },
         '[data-rounded="xlarge"]': {
