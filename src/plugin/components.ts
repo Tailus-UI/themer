@@ -30,9 +30,6 @@ export const components = plugin(({ addBase, theme, addComponents, matchUtilitie
             "@apply dark:[--body-text-color:theme(colors.gray.300)] dark:[--area-neutral-stroke:theme('colors.white')] dark:[--title-text-color:theme('colors.white')] dark:[--display-text-color:theme('colors.white')] dark:[--placeholder-text-color:theme('colors.gray.600')]":
                 {},
         },
-        body: {
-            "@apply dark:bg-gray-950": {},
-        },
     });
     addComponents({
         ".accordion-shadow": {

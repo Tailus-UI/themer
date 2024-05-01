@@ -1,4 +1,3 @@
-import { palette } from "./palette";
 import { components } from "./components";
 import { withTV } from "tailwind-variants/dist/transformer";
 import { animations } from "./animations";
@@ -9,5 +8,6 @@ import { rounded } from "./rounded";
 
 export default withTV({
     content: [],
-    plugins: [palette, components, animations, shade, rounded],
+    theme: {},
+    plugins: [components, animations, shade, rounded],
 });

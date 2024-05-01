@@ -4,6 +4,7 @@ export { animations } from "./plugin/animations";
 export { components } from "./plugin/components";
 export { shade } from "./plugin/shade";
 export { rounded } from "./plugin/rounded";
+export { palettes, grays, defaultFeedbackColors } from "./plugin/palettes";
 
 export {
     button,
