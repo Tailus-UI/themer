@@ -6,12 +6,25 @@ export const separator = tv({
         fancy: {
             true: "bg-white dark:bg-[--ui-fancy-bg] dark:border-[--ui-fancy-border-color]",
         },
+        dashed: {
+            true: "border-dashed bg-transparent dark:bg-transparent",
+        },
         orientation: {
             vertical: "w-px h-full",
             horizontal: "h-px w-full",
         },
     },
     compoundVariants: [
+        {
+            dashed: true,
+            orientation: "vertical",
+            class: "border-r",
+        },
+        {
+            dashed: true,
+            orientation: "horizontal",
+            class: "border-b",
+        },
         {
             fancy: true,
             orientation: "vertical",
