@@ -44,5 +44,6 @@ export const separator = tv({
 
 export type SeparatorProps = {
     fancy?: boolean;
+    dashed?: boolean;
     orientation?: keyof typeof separator.variants.orientation;
 };

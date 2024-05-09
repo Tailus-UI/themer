@@ -84,6 +84,11 @@ export const solid = tv({
                     "h-0.5 border-b bg-transparent dark:bg-[--ui-fancy-bg] dark:border-[--ui-fancy-border-color]",
             },
         },
+        dashed: {
+            true: {
+                separator: "border-b border-dashed bg-transparent dark:bg-transparent",
+            },
+        },
     },
     defaultVariants: {
         intent: "primary",
@@ -129,4 +134,9 @@ export type SelectProps = {
     intent?: keyof typeof solid.variants.intent;
     fancy?: boolean;
     mixed?: boolean;
+};
+
+export type SeparatorProps = {
+    fancy?: boolean;
+    dashed?: boolean;
 };

@@ -95,6 +95,9 @@ export const separator = tv({
         fancy: {
             true: "h-0.5 border-b bg-transparent dark:bg-[--ui-fancy-bg] dark:border-[--ui-fancy-border-color]",
         },
+        dashed: {
+            true: "bg-transparent border-b border-dashed dark:bg-transparent",
+        },
     },
 });
 
@@ -112,6 +115,7 @@ export const defaultMenuProps: MenuProps = {
 
 export type SeparatorProps = {
     fancy?: boolean;
+    dashed?: boolean;
 };
 
 export type MenuProps = {
