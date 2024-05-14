@@ -1,10 +1,13 @@
-export { default as themer } from "./plugin";
-export { palette } from "./plugin/palette";
-export { animations } from "./plugin/animations";
-export { components } from "./plugin/components";
-export { shade } from "./plugin/shade";
-export { rounded } from "./plugin/rounded";
-export { palettes, grays, defaultFeedbackColors } from "./plugin/palettes";
+export {
+    palette,
+    animations,
+    components,
+    shade,
+    rounded,
+    palettes,
+    grays,
+    defaultFeedbackColors,
+} from "@tailus/themer-plugins";
 
 export {
     button,
