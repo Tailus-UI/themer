@@ -33,7 +33,7 @@
     "author": "tailus.io",
     "license": "MIT",
     "dependencies": {
-        "@tailus/themer-plugins": "^0.1.0",
+        "@tailus/themer-plugins": "^latest",
         "tailwind-variants": "^0.2.1"
     }
 }
