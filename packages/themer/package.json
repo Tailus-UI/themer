@@ -1,7 +1,7 @@
 {
     "name": "@tailus/themer",
     "version": "0.1.0",
-    "description": "Tailus themer",
+    "description": "Tailus UI styles",
     "exports": {
         ".": {
             "import": {
@@ -19,8 +19,7 @@
     "module": "./dist/index.d.ts",
     "types": "./dist/index.d.ts",
     "files": [
-        "dist",
-        "README.md"
+        "dist"
     ],
     "scripts": {
         "lint": "eslint ./src/**/*.ts --fix",
@@ -33,14 +32,7 @@
     },
     "author": "tailus.io",
     "license": "MIT",
-    "devDependencies": {
-        "autoprefixer": "^10.4.16",
-        "lodash.merge": "^4.6.2",
-        "postcss": "^8.4.31",
-        "tailwindcss": "^3.4.3",
-        "@changesets/cli": "^2.27.1",
-        "install": "^0.13.0",
-        "npm": "^10.5.1",
-        "prettier-plugin-tailwindcss": "^0.5.13"
+    "dependencies": {
+        "tailwind-variants": "^0.2.1"
     }
 }
