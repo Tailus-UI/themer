@@ -37,7 +37,7 @@ const outlined = tv({
             primary:
                 "border-primary-200 text-primary-800 dark:border-primary-300/15 dark:text-primary-300",
             secondary:
-                "border-secodary-200 text-secodary-800 dark:border-secodary-300/15 dark:text-secodary-300",
+                "border-secondary-200 text-secondary-800 dark:border-secondary-300/15 dark:text-secondary-300",
             accent: "border-accent-200 text-accent-800 dark:border-accent-300/15 dark:text-accent-300",
             info: "border-info-200 text-info-800 dark:border-info-300/15 dark:text-info-300",
             success:
