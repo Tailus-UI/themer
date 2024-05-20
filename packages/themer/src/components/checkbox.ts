@@ -1,7 +1,7 @@
 import { tv } from "tailwind-variants";
 
 export const checkbox = tv({
-    base: "border shadow-sm group rounded peer flex justify-center items-center size-5 text-white outline-2 outline-primary-600 outline-offset-2 text-white hover:brightness-95 focus-visible:outline dark:bg-gray-500/10 data-[state=checked]:border-none data-[state=indeterminate]:border-none disabled:bg-gray-100 dark:disabled:bg-gray-800 disabled:opacity-50 disabled:border-gray-300 dark:disabled:border-gray-700 disabled:shadow-none disabled:data-[state=checked]:bg-gray-300 dark:disabled:data-[state=checked]:bg-gray-700 dark:disabled:data-[state=indeterminate]:bg-gray-800 disabled:data-[state=checked]:shadow-none disabled:data-[state=indeterminate]:bg-gray-300 disabled:data-[state=indeterminate]:shadow-none",
+    base: "border shadow-sm group rounded peer flex justify-center items-center size-[1.125rem] text-white outline-2 outline-primary-600 outline-offset-2 text-white hover:brightness-95 focus-visible:outline dark:bg-gray-500/10 data-[state=checked]:border-none data-[state=indeterminate]:border-none disabled:bg-gray-100 dark:disabled:bg-gray-800 disabled:opacity-50 disabled:border-gray-300 dark:disabled:border-gray-700 disabled:shadow-none disabled:data-[state=checked]:bg-gray-300 dark:disabled:data-[state=checked]:bg-gray-700 dark:disabled:data-[state=indeterminate]:bg-gray-800 disabled:data-[state=checked]:shadow-none disabled:data-[state=indeterminate]:bg-gray-300 disabled:data-[state=indeterminate]:shadow-none",
     variants: {
         intent: {
             primary:
