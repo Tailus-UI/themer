@@ -38,20 +38,23 @@ const baseButton = tv({
 
 const solid = tv({
     extend: baseButton,
-    base: "[--radial-opacity:0.4] [box-shadow:rgba(255,255,255,0.35)_0px_1px_0px_0px_inset,var(--btn-border-color)_0px_0px_0px_1px] text-white hover:brightness-[1.1] dark:[--radial-opacity:0] [background-image:radial-gradient(76%_151%_at_52%_-52%,rgba(255,255,255,var(--radial-opacity))_0%,transparent_100%)] transition-[filter] duration-150 ease-in-out active:brightness-95 dark:shadow-inner dark:border-t dark:border-t-white/35 dark:shadow-white/20",
+    base: "bg-gradient-to-b [box-shadow:rgba(255,255,255,0.25)_0px_1px_0px_0px_inset,var(--btn-border-color)_0px_0px_0px_1px] text-white hover:brightness-[1.1] transition-[filter] duration-150 ease-in-out active:brightness-95 dark:shadow-inner dark:to-0% dark:border-t dark:shadow-white/10 disabled:from-gray-100 disabled:to-gray-100",
     variants: {
         intent: {
-            primary: "bg-primary-600 [--btn-border-color:theme(colors.primary.600)]",
-            secondary: "bg-secondary-600 [--btn-border-color:theme(colors.secondary.600)]",
-            accent: "bg-accent-600 [--btn-border-color:theme(colors.accent.600)]",
-            danger: "bg-danger-600 [--btn-border-color:theme(colors.danger.600)]",
-            info: "bg-info-600 [--btn-border-color:theme(colors.info.600)]",
-            success: "bg-success-600 [--btn-border-color:theme(colors.success.600)]",
+            primary:
+                "from-primary-500 to-primary-600 [--btn-border-color:theme(colors.primary.700)] dark:border-primary-400/75",
+            secondary:
+                "from-secondary-500 to-secondary-600 [--btn-border-color:theme(colors.secondary.700)] dark:border-secondary-400/75",
+            accent: "from-accent-500 to-accent-600 [--btn-border-color:theme(colors.accent.700)] dark:border-accent-400/75",
+            danger: "from-danger-500 to-danger-600 [--btn-border-color:theme(colors.danger.700)] dark:border-danger-400/75",
+            info: "from-info-500 to-info-600 [--btn-border-color:theme(colors.info.700)] dark:border-info-400/75",
+            success:
+                "from-success-500 to-success-600 [--btn-border-color:theme(colors.success.700)] dark:border-success-400/75",
             warning:
-                "bg-warning-500 text-warning-950 [--btn-border-color:theme(colors.warning.600)]",
-            gray: "bg-gray-600 [--btn-border-color:theme(colors.gray.600)]",
+                "from-warning-400 to-warning-500 text-warning-950 [--btn-border-color:theme(colors.warning.600)] dark:border-warning-300",
+            gray: "from-gray-500 to-gray-600 [--btn-border-color:theme(colors.gray.700)] dark:border-gray-500",
             neutral:
-                "bg-gray-900 [box-shadow:rgba(255,255,255,0.2)_0px_1px_0px_0px_inset,theme(colors.gray.900)_0px_0px_0px_1px] hover:brightness-125 dark:bg-white dark:text-gray-950",
+                "bg-gray-900 [background-image:radial-gradient(76%_151%_at_52%_-52%,rgba(255,255,255,0.5)_0%,transparent_100%)] [box-shadow:rgba(255,255,255,0.3)_0px_1px_0px_0px_inset,theme(colors.gray.950)_0px_0px_0px_1px] hover:brightness-125 dark:bg-white dark:text-gray-950 dark:border-gray-300",
         },
     },
 });
