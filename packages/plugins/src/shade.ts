@@ -35,7 +35,7 @@ export const shade = plugin(
                 "--ui-bg-opacity": "0.75",
                 "--ui-bg": theme("colors.white/var(--ui-bg-opacity)"),
 
-                "@apply dark:[--ui-bg-opacity:0.5] dark:[--ui-border-color:theme(colors.gray.50/0.1)] dark:[--ui-bg:theme(colors.gray.700/var(--ui-bg-opacity))] dark:[--ui-soft-bg:theme(colors.gray.800/0.95)] dark:[--ui-fancy-bg:theme(colors.gray.900)] dark:[--ui-fancy-border-color:theme(colors.gray.700)]":
+                "@apply dark:[--ui-bg-opacity:0.5] dark:[--ui-border-color:theme(colors.gray.50/0.1)] dark:[--ui-bg:theme(colors.gray.700/var(--ui-bg-opacity))] dark:[--ui-soft-bg:theme(colors.gray.600/0.50)] dark:[--ui-fancy-bg:theme(colors.gray.900)] dark:[--ui-fancy-border-color:theme(colors.gray.700)]":
                     {},
             },
 
