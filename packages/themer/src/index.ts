@@ -5,8 +5,10 @@ export {
     shade,
     rounded,
     palettes,
+    palettesArray,
     grays,
     defaultFeedbackColors,
+    type Palette,
 } from "@tailus/themer-plugins";
 
 export {
