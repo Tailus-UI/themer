@@ -7,3 +7,15 @@ export type Shadows = {
     "2xl": string;
     none: string;
 };
+
+export type Palette =
+    | "trust"
+    | "oz"
+    | "passion"
+    | "energy"
+    | "romance"
+    | "nature"
+    | "spring"
+    | "winter"
+    | "mystery"
+    | "tls";

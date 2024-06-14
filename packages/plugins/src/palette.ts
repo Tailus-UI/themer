@@ -1,5 +1,17 @@
 import plugin from "tailwindcss/plugin";
 
+export const palettesArray = [
+    "trust",
+    "oz",
+    "mystery",
+    "romance",
+    "passion",
+    "energy",
+    "spring",
+    "nature",
+    "winter",
+];
+
 const defaultFeedbackColors = {
     "--colors-warning-50": "var(--colors-yellow-50)",
     "--colors-warning-100": "var(--colors-yellow-100)",
