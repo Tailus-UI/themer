@@ -1,5 +1,8 @@
 import { tv } from "tailwind-variants";
 
+/**
+ * @deprecated The `area` style is deprecated, use `--dv` css variables instead
+ */
 export const area = tv({
     variants: {
         intent: {
@@ -47,6 +50,10 @@ export const gradientStop = tv({
             primary: "text-primary-200 dark:text-primary-600/50",
             secondary: "text-secondary-200 dark:text-secondary-600/50",
             accent: "text-accent-200 dark:text-accent-600/50",
+            info: "text-info-200 dark:text-info-600/50",
+            success: "text-success-200 dark:text-success-600/50",
+            danger: "text-danger-200 dark:text-danger-600/50",
+            warning: "text-warning-200 dark:text-warning-600/50",
             gray: "text-gray-200 dark:text-gray-600/50",
             neutral: "text-gray-500 dark:text-gray-600",
         },
