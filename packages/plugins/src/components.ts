@@ -16,6 +16,8 @@ export const components = plugin(({ addBase, theme, addComponents, matchUtilitie
             "--body-text-color": 'theme("colors.gray.700")',
             "--placeholder-text-color": 'theme("colors.gray.400")',
 
+            // data visualization colors
+            
             "--dv-primary": 'theme("colors.primary.600")',
             "--dv-secondary": 'theme("colors.secondary.600")',
             "--dv-accent": 'theme("colors.accent.600")',
@@ -31,7 +33,7 @@ export const components = plugin(({ addBase, theme, addComponents, matchUtilitie
             "--menu-shadow-opacity": theme("opacity[5]"),
             "--accordion-shadow-opacity": theme("opacity[5]"),
 
-            "@apply dark:[--body-text-color:theme(colors.gray.300)] dark:[--area-neutral-stroke:theme('colors.white')] dark:[--title-text-color:theme('colors.white')] dark:[--display-text-color:theme('colors.white')] dark:[--placeholder-text-color:theme('colors.gray.600')]":
+            "@apply dark:[--body-text-color:theme(colors.gray.300)] dark:[--dv-neutral:theme('colors.white')] dark:[--title-text-color:theme('colors.white')] dark:[--display-text-color:theme('colors.white')] dark:[--placeholder-text-color:theme('colors.gray.600')]":
                 {},
         },
     });
@@ -47,6 +49,32 @@ export const components = plugin(({ addBase, theme, addComponents, matchUtilitie
         },
         ".menu-shadow": {
             boxShadow: getShadows("menu").lg,
+        },
+
+        //typography components
+        ".text-display": {
+            color: "var(--display-text-color)",
+        },
+        ".text-title": {
+            color: "var(--title-text-color)",
+        },
+        ".text-caption": {
+            color: "var(--caption-text-color)",
+        },
+        ".text-body": {
+            color: "var(--body-text-color)",
+        },
+        ".text-placeholder": {
+            color: "var(--placeholder-text-color)",
+        },
+
+        //radius components
+        ".rounded-card": {
+            borderRadius: "var(--card-radius)",
+        },
+
+        ".rounded-btn": {
+            borderRadius: "var(--btn-radius)",
         },
     });
     matchUtilities({
