@@ -25,11 +25,11 @@ npm install @tailus/themer
 
 2. **Update your tailwindcss config**
 
-    Import the themer preset to set default theme and enable data-attributes customizations
+    Import the themer plugins to set your theme and enable data-attributes customizations
 
 ```javascript
 import type { Config } from 'tailwindcss'
-import { themer, grayColorVariables } from '@tailus/themer'
+import { shade, components, rounded, animations, palettes, palette } from '@tailus/themer'
 
 module.exports =  {
   content: [
@@ -38,18 +38,18 @@ module.exports =  {
   ],
   theme: {
     extend: {
-      colors: {
-        gray: grayColorVariables,
-      },
+      colors: palettes.trust,
     },
   },
-  presets: [
-    themer
+  plugins: [
+    shade,
+    rounded,
+    components,
+    animations,
+    palette
   ]
 } satisfies Config
 ```
-
-Under normal circumstances, it's not necessary to add the `gray` color to your Tailwind CSS configuration. However, because Tailwind CSS generates the `gray` color from the `defaultTheme` object, you must include it in your configuration to prevent any errors.
 
 ## Customize your theme
 
@@ -63,7 +63,7 @@ Use the `data-palette` attribute to change the color palette of your theme.
 <html data-palette="trust"></html>
 ```
 
-[Learn more about palette customization]()
+[Learn more about palette customization](https://ui.tailus.io/react/theming/palette)
 
 The available palettes are:
 
@@ -81,7 +81,7 @@ The available palettes are:
 
 The `palette` plugin comes with a variety of palettes built with the tailwindcss default colors. You can effortlessly switch between these palettes or even allow your users to select the palette they prefer.
 
-[Learn more about muilti-theming]()
+[Learn more about muilti-theming](https://ui.tailus.io/react/theming/palette#multi-theming)
 
 ### Shade
 
@@ -99,7 +99,7 @@ The available shades are:
 -   `950`
 -   `glassy`
 
-[Learn more about the shade plugin]()
+[Learn more about the shade plugin](https://ui.tailus.io/react/theming/shade)
 
 ### Rounded
 
@@ -121,19 +121,7 @@ The available rounded values are:
 -   `3xlarge`
 -   `full`
 
-[Learn more about the rounded plugin]()
-
-### Shadow
-
-You can adjust the shadow of your theme using the `data-shadow` attribute. ( ⚠️ Not yet available)
-
-```html
-<html data-shadow="medium"></html>
-```
-
-The available shadow values are:
-
-[Learn more about the rounded plugin]()
+[Learn more about the rounded plugin](https://ui.tailus.io/react/theming/rounded)
 
 ## Contributing
 
