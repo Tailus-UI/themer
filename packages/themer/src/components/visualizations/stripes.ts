@@ -1,5 +1,8 @@
 import { tv } from 'tailwind-variants';
 
+/**
+ * @deprecated The `area` style is deprecated, use `--dv` css variables instead
+ */
 export const stripes = tv({
     variants: {
         intent: {

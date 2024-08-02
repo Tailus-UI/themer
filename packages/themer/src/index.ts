@@ -7,6 +7,7 @@ export {
     palettes,
     palettesArray,
     grays,
+    visualizations,
     defaultFeedbackColors,
     type Palette,
 } from "@tailus/themer-plugins";
