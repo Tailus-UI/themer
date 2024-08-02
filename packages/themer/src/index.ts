@@ -115,7 +115,7 @@ export {
     type TooltipProps as VTooltipProps,
 } from "./components/visualizations";
 
-export { area, gradientStop, type AreaProps } from "./components/visualizations";
+export { area, gradientStop, type AreaProps, TooltipProps as DVTooltipProps } from "./components/visualizations";
 export { toast, type ToastProps } from "./components/toast";
 export { drawer, type DrawerProps } from "./components/drawer";
 export {

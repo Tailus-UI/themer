@@ -49,3 +49,10 @@ export const tooltip = tv({
         singleEntry: false
     }
 });
+
+export type TooltipProps = {
+    mixed: boolean;
+    fancy: boolean;
+    singleEntry: boolean;
+    indicator : keyof typeof tooltip.variants.indicator
+}
