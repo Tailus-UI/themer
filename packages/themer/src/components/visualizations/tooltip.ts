@@ -51,8 +51,8 @@ export const tooltip = tv({
 });
 
 export type TooltipProps = {
-    mixed: boolean;
-    fancy: boolean;
-    singleEntry: boolean;
-    indicator : keyof typeof tooltip.variants.indicator
+    mixed?: boolean;
+    fancy?: boolean;
+    singleEntry?: boolean;
+    indicator? : keyof typeof tooltip.variants.indicator
 }
