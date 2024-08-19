@@ -1,6 +1,6 @@
 {
     "name": "@tailus/themer-plugins",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "TailwindCSS Plugins for Tailus UI Themer",
     "exports": {
         ".": {

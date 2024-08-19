@@ -10,3 +10,4 @@ export const axis = tv({
 
 export { tooltip, type TooltipProps } from "./tooltip";
 export { area, gradientStop, type AreaProps } from "./area";
+export { stripes, type StripesIntent } from "./stripes"
