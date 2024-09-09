@@ -1,9 +1,9 @@
 import { tv } from "tailwind-variants";
 export const drawer = tv({
     slots: {
-        content: "p-[--feedback-padding] feedback-bg feedback-shadow fixed",
+        content: "p-[--feedback-padding] feedback-bg feedback-shadow fixed z-[calc(var(--overlay-backdrop-z)+10)]",
         overlay:
-            "fixed inset-0 bg-[--overlay-bg] backdrop-blur-[--overlay-backdrop-blur] data-[state=open]:animate-overlayShow",
+            "fixed inset-0 bg-[--overlay-bg] backdrop-blur-[--overlay-backdrop-blur] z-[--overlay-backdrop-z] data-[state=open]:animate-overlayShow ",
     },
     variants: {
         mixed: {

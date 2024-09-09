@@ -5,6 +5,8 @@ export const components = plugin(({ addBase, theme, addComponents, matchUtilitie
     addBase({
         ":root": {
             "--overlay-backdrop-blur": theme("blur[none]"),
+            "--overlay-backdrop-z": theme("zIndex[40]"),
+
             "--card-padding": theme("spacing[6]"),
             "--accordion-padding": "1rem",
             "--feedback-padding": "var(--card-padding)",
